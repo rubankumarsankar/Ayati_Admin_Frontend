@@ -1,14 +1,21 @@
-import Sidebar from "../components/Sidebar";
-import Navbar from "../components/Navbar";
+import React from "react";
+import { Outlet } from "react-router-dom";
 
-export default function AdminLayout({ children }) {
+import Navbar from "../components/Navbar";
+import Sidebar from "../components/Sidebar";
+
+const AdminLayout = () => {
   return (
-    <div className="flex min-h-screen bg-gray-100">
+    <div className="flex min-h-screen">
       <Sidebar />
-      <div className="flex flex-col flex-1">
+      <div className="flex-1">
         <Navbar />
-        <main className="p-6">{children}</main>
+        <main className="p-4">
+          <Outlet />
+        </main>
       </div>
     </div>
   );
-}
+};
+
+export default AdminLayout;

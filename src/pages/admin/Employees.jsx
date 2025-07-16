@@ -1,11 +1,11 @@
 import { useEffect, useState, useContext } from "react";
-import { AuthContext } from "../context/AuthContext";
+import { AuthContext } from "../../context/AuthContext";
 import {
   getEmployees,
   createEmployee,
   updateEmployee,
-} from "../api/employees";
-import { getRoles } from "../api/roles"; // ✅ New API to fetch roles
+} from "../../api/employees";
+import { getRoles } from "../../api/roles"; // ✅ New API to fetch roles
 import Swal from "sweetalert2";
 import { Dialog } from "@headlessui/react";
 import { PlusIcon, PencilIcon } from "@heroicons/react/24/solid";

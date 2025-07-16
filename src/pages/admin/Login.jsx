@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
-import { loginAdmin } from "../api/auth";
-import { AuthContext } from "../context/AuthContext";
+import { loginAdmin } from "../../api/auth";
+import { AuthContext } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline";
 import Swal from "sweetalert2";

@@ -1,11 +1,11 @@
 import { useEffect, useState, useContext } from "react";
-import { AuthContext } from "../context/AuthContext";
+import { AuthContext } from "../../context/AuthContext";
 import {
   getRoles,
   createRole,
   updateRole,
   deleteRole,
-} from "../api/roles";
+} from "../../api/roles";
 import Swal from "sweetalert2";
 import { Dialog } from "@headlessui/react";
 import {

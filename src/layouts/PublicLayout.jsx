@@ -1,7 +1,18 @@
-export default function PublicLayout({ children }) {
+import React from "react";
+import { Outlet } from "react-router-dom";
+import MainNavbar from "../components/MainNavbar ";
+// import PublicFooter from "../components/PublicFooter";
+
+const PublicLayout = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      {children}
+    <div>
+      <MainNavbar />
+      <main className="min-h-screen pt-16">
+        <Outlet />
+      </main>
+      {/* <PublicFooter /> */}
     </div>
   );
-}
+};
+
+export default PublicLayout;
