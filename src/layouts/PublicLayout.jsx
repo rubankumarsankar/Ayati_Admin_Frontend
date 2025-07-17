@@ -1,16 +1,17 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import MainNavbar from "../components/MainNavbar ";
-// import PublicFooter from "../components/PublicFooter";
+import {CenteredLogoNavbar} from "../components/MainNavbar "
+import MainFooter from "../components/MainFooter";
+
 
 const PublicLayout = () => {
   return (
     <div>
-      <MainNavbar />
-      <main className="min-h-screen pt-16">
+      <CenteredLogoNavbar/>
+      <main className="min-h-screen">
         <Outlet />
       </main>
-      {/* <PublicFooter /> */}
+      <MainFooter />
     </div>
   );
 };

@@ -8,13 +8,15 @@ import PublicLayout from "./layouts/PublicLayout";
 import AdminLayout from "./layouts/AdminLayout";
 
 // Public Pages
-import Home from "./pages/main/Home";
+import NotFound from "./components/NotFound";
+import HomePage from "./pages/main/HomePage";
 
 // Admin Pages
 import Login from "./pages/admin/Login";
 import Dashboard from "./pages/admin/Dashboard";
 import Employees from "./pages/admin/Employees";
 import Roles from "./pages/admin/Roles";
+
 
 // ✅ Protected Route Component
 function PrivateRoute({ children }) {
@@ -29,7 +31,8 @@ function App() {
         <Routes>
           {/* ✅ Public Routes (use PublicLayout) */}
           <Route element={<PublicLayout />}>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
 
           {/* ✅ Admin Login (public, but uses PublicLayout) */}
@@ -48,6 +51,8 @@ function App() {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/employees" element={<Employees />} />
             <Route path="/roles" element={<Roles />} />
+
+            
           </Route>
         </Routes>
       </Router>
