@@ -70,7 +70,10 @@ export default function PromoHero() {
           Here’s to a year of growth, creativity, and purpose—powered by Utsah!
           Let’s make it unforgettable!
         </h3>
+            <div className="border-b border-black/70 shadow-xl my-8"></div>
+
       </motion.div>
+
     </section>
   );
 }

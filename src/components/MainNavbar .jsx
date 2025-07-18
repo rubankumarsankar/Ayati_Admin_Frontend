@@ -234,7 +234,7 @@ export function CenteredLogoNavbar() {
   const navigate = useNavigate();
 
   return (
-    <div className="fixed top-12 left-1/2 -translate-x-1/2 z-50">
+    <div className="fixed top-8 left-1/2 -translate-x-1/2 z-50">
       {!expanded && (
         <button
           onClick={() => setExpanded(true)}

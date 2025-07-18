@@ -11,7 +11,7 @@ export default function MainFooter() {
         
         {/* Left - Logo & Links */}
         <div className="flex flex-col md:flex-row items-center md:space-x-6 text-gray-600 text-sm text-center md:text-left gap-2">
-          <img src="/logo.png" alt="Ayatiworks" className="h-6" />
+          <img src="/ayatiworks_logo.svg" alt="Ayatiworks" className="h-6" />
           <div className="flex flex-wrap gap-2 justify-center md:gap-4">
             <Link
               to="/privacy-policy"
