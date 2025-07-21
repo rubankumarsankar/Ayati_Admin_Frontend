@@ -97,9 +97,14 @@ const serviceCategories = [
 ];
 
 // ✅ Reusable Dropdown Menu Component
-function DropdownMenu({ title, items }) {
+function DropdownMenu({ title, items, onItemClick }) {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
+
+  const handleClick = (path) => {
+    navigate(path);
+    if (onItemClick) onItemClick(path); // ✅ Auto close navbar
+  };
 
   return (
     <Menu open={open} handler={setOpen}>
@@ -117,21 +122,12 @@ function DropdownMenu({ title, items }) {
           />
         </Button>
       </MenuHandler>
-      <MenuList
-  className="
-    grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3
-    gap-4 p-4
-    w-[90vw] sm:w-[700px]
-    rounded-xl mt-5
-    max-h-[300px] overflow-y-auto
-    scrollbar-hide
-  "
->
+      <MenuList className="p-4 mt-5 rounded-xl shadow-lg">
         {items.map((item, i) => (
           <Typography
             key={i}
             as="div"
-            onClick={() => navigate(item.path)}
+            onClick={() => handleClick(item.path)}
             className="block text-sm text-primary font-secondary px-2 py-1 hover:bg-gray-100 rounded cursor-pointer"
           >
             {item.label}
@@ -143,9 +139,14 @@ function DropdownMenu({ title, items }) {
 }
 
 // ✅ Services Mega Menu
-function ServicesMegaMenu() {
+function ServicesMegaMenu({ onItemClick }) {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
+
+  const handleClick = (path) => {
+    navigate(path);
+    if (onItemClick) onItemClick(path); // ✅ Auto close navbar
+  };
 
   return (
     <Menu open={open} handler={setOpen}>
@@ -163,7 +164,9 @@ function ServicesMegaMenu() {
           />
         </Button>
       </MenuHandler>
-      <MenuList className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 w-[90vw] sm:w-[700px] rounded-xl mt-5">
+
+      {/* ✅ Scrollable */}
+      <MenuList className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 w-[90vw] sm:w-[700px] rounded-xl mt-5 max-h-[300px] overflow-y-auto scrollbar-hide">
         {serviceCategories.map((cat, idx) => (
           <div key={idx}>
             <Typography
@@ -177,7 +180,7 @@ function ServicesMegaMenu() {
               {cat.items.map((item, i) => (
                 <li
                   key={i}
-                  onClick={() => navigate(item.path)}
+                  onClick={() => handleClick(item.path)}
                   className="text-xs text-gray-700 font-secondary hover:text-primary cursor-pointer transition"
                 >
                   {item.label}
@@ -195,6 +198,12 @@ function ServicesMegaMenu() {
 export function CenteredLogoNavbar() {
   const [expanded, setExpanded] = useState(false);
   const navigate = useNavigate();
+
+  // ✅ Function to handle navigation & close navbar
+  const handleNavigation = (path) => {
+    navigate(path);
+    setExpanded(false); // Close navbar after navigation
+  };
 
   return (
     <div className="fixed top-8 left-1/2 -translate-x-1/2 z-50 flex justify-center items-center">
@@ -219,40 +228,39 @@ export function CenteredLogoNavbar() {
           <Navbar
             className="
               relative
-              bg-white
-              rounded-xl sm:rounded-full 
-              font-primary
-              shadow-3xl
-              px-4 sm:px-8
-              py-3
-              flex flex-col sm:flex-row
-              flex-wrap
-              justify-center items-center
-              gap-3 sm:gap-4
-              transition-all duration-500
-            "
+              bg-white rounded-xl sm:rounded-full font-primary shadow-3xl 
+              px-4 sm:px-8 py-3
+              flex flex-col sm:flex-row flex-wrap justify-center items-center
+              gap-3 sm:gap-4 transition-all duration-500"
           >
-            {/* ✅ Navbar Items */}
+            {/* ✅ Close Button (Top Right Corner on Mobile) */}
+            <button
+              onClick={() => setExpanded(false)}
+              className="absolute top-2 right-2 p-2 rounded-full text-primary 
+                         hover:bg-gray-100 transition duration-300 sm:hidden"
+            >
+              <XMarkIcon className="h-5 w-5" />
+            </button>
+            {/* ✅ Navbar Items (Auto Close After Navigation) */}
             <Button
               variant="text"
-              onClick={() => navigate("/")}
+              onClick={() => handleNavigation("/")}
               className="font-medium text-black hover:bg-primary font-primary 
                          hover:text-white hover:shadow-md rounded-full px-4 py-2 
                          transition-all duration-300"
             >
               Home
             </Button>
-
             <DropdownMenu
               title="Crew & Clues"
               items={[
                 { label: "About", path: "/about" },
                 { label: "Teams", path: "/teams" },
               ]}
+              onItemClick={handleNavigation} // ✅ Pass to auto close
             />
-
-            <ServicesMegaMenu />
-
+            <ServicesMegaMenu onItemClick={handleNavigation} />{" "}
+            {/* ✅ Auto close */}
             <DropdownMenu
               title="Our Work"
               items={[
@@ -260,33 +268,17 @@ export function CenteredLogoNavbar() {
                 { label: "Careers", path: "/careers" },
                 { label: "Blogs", path: "/blogs" },
               ]}
+              onItemClick={handleNavigation}
             />
-
             <Button
               variant="text"
-              onClick={() => navigate("/contact")}
+              onClick={() => handleNavigation("/contact")}
               className="font-medium text-black hover:bg-primary font-primary 
                          hover:text-white hover:shadow-md rounded-full px-4 py-2 
                          transition-all duration-300"
             >
               Contact
             </Button>
-
-            {/* ✅ Close Button at Far-Right Corner */}
-            <button
-              onClick={() => setExpanded(false)}
-              className="
-                absolute 
-                top-2 right-2
-                p-2 
-                rounded-full 
-                text-primary 
-                hover:bg-gray-100 
-                transition duration-300
-              "
-            >
-              <XMarkIcon className="h-5 w-5" />
-            </button>
           </Navbar>
         </div>
       )}

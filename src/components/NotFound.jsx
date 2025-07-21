@@ -13,9 +13,9 @@ export default function NotFound() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        src="/logo.png"
+        src="/ayatiworks_logo.svg"
         alt="Logo"
-        className="h-16 w-16 mb-6 cursor-pointer"
+        className="h-20 w-20 mb-6 cursor-pointer"
         onClick={() => navigate("/")}
       />
 
