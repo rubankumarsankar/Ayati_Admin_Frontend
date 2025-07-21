@@ -117,7 +117,16 @@ function DropdownMenu({ title, items }) {
           />
         </Button>
       </MenuHandler>
-      <MenuList className="p-4 mt-5 rounded-xl shadow-lg">
+      <MenuList
+  className="
+    grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3
+    gap-4 p-4
+    w-[90vw] sm:w-[700px]
+    rounded-xl mt-5
+    max-h-[300px] overflow-y-auto
+    scrollbar-hide
+  "
+>
         {items.map((item, i) => (
           <Typography
             key={i}
