@@ -23,3 +23,19 @@
   text-orientation: upleft;
 }
 
+
+
+
+@font-face {
+  font-family: 'JockeyOne';
+  src: url('/fonts/JockeyOne-Regular.ttf') format('truetype');
+  font-weight: 'normal';
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/Nexa-Regular.ttf') format('truetype');
+  font-weight: 'normal';
+  font-style: normal;
+}

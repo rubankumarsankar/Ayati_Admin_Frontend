@@ -7,8 +7,8 @@ import {
   Button,
   Typography,
 } from "@material-tailwind/react";
-import { ChevronDownIcon } from "@heroicons/react/24/solid";
-import { useNavigate } from "react-router-dom"; // ✅ Import navigation
+import { ChevronDownIcon, XMarkIcon } from "@heroicons/react/24/solid";
+import { useNavigate } from "react-router-dom";
 
 // ✅ Service Categories
 const serviceCategories = [
@@ -96,17 +96,54 @@ const serviceCategories = [
   },
 ];
 
+// ✅ Reusable Dropdown Menu Component
+function DropdownMenu({ title, items }) {
+  const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+
+  return (
+    <Menu open={open} handler={setOpen}>
+      <MenuHandler>
+        <Button
+          variant="text"
+          className="flex items-center gap-2 font-primary text-black hover:bg-primary hover:text-white hover:shadow-md rounded-full px-4 py-2 transition-all duration-300"
+        >
+          {title}
+          <ChevronDownIcon
+            strokeWidth={2}
+            className={`h-3 w-3 transition-transform ${
+              open ? "rotate-180" : ""
+            }`}
+          />
+        </Button>
+      </MenuHandler>
+      <MenuList className="p-4 mt-5 rounded-xl shadow-lg">
+        {items.map((item, i) => (
+          <Typography
+            key={i}
+            as="div"
+            onClick={() => navigate(item.path)}
+            className="block text-sm text-primary font-secondary px-2 py-1 hover:bg-gray-100 rounded cursor-pointer"
+          >
+            {item.label}
+          </Typography>
+        ))}
+      </MenuList>
+    </Menu>
+  );
+}
+
 // ✅ Services Mega Menu
 function ServicesMegaMenu() {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
 
   return (
-    <Menu open={open} handler={setOpen} allowHover>
+    <Menu open={open} handler={setOpen}>
       <MenuHandler>
         <Button
           variant="text"
-          className="flex items-center gap-4 font-medium text-black hover:bg-primary hover:text-white hover:shadow-md rounded-full px-4 py-2 transition-all duration-300"
+          className="flex items-center gap-2 font-primary text-black hover:bg-primary hover:text-white hover:shadow-md rounded-full px-4 py-2 transition-all duration-300"
         >
           Services
           <ChevronDownIcon
@@ -117,13 +154,13 @@ function ServicesMegaMenu() {
           />
         </Button>
       </MenuHandler>
-      <MenuList className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 w-[700px] rounded-xl mt-5">
+      <MenuList className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 w-[90vw] sm:w-[700px] rounded-xl mt-5">
         {serviceCategories.map((cat, idx) => (
           <div key={idx}>
             <Typography
               variant="small"
               color="blue-gray"
-              className="font-bold text-blue-700 uppercase mb-2"
+              className="font-bold text-primary font-primary uppercase mb-2"
             >
               {cat.title}
             </Typography>
@@ -132,7 +169,7 @@ function ServicesMegaMenu() {
                 <li
                   key={i}
                   onClick={() => navigate(item.path)}
-                  className="text-xs text-gray-700 hover:text-blue-600 cursor-pointer transition"
+                  className="text-xs text-gray-700 font-secondary hover:text-primary cursor-pointer transition"
                 >
                   {item.label}
                 </li>
@@ -145,128 +182,102 @@ function ServicesMegaMenu() {
   );
 }
 
-// ✅ Crew & Clues Dropdown
-function CrewCluesMenu() {
-  const [open, setOpen] = useState(false);
-  const navigate = useNavigate();
-  const items = [
-    { label: "About", path: "/about" },
-    { label: "Teams", path: "/teams" },
-  ];
-
-  return (
-    <Menu open={open} handler={setOpen} allowHover>
-      <MenuHandler>
-        <Button
-          variant="text"
-          className="flex items-center gap-1 font-medium text-black hover:bg-primary hover:text-white hover:shadow-md rounded-full px-4 py-2 transition-all duration-300"
-        >
-          Crew & Clues
-          <ChevronDownIcon
-            strokeWidth={2}
-            className={`h-3 w-3 transition-transform ${
-              open ? "rotate-180" : ""
-            }`}
-          />
-        </Button>
-      </MenuHandler>
-      <MenuList className="p-4 mt-5">
-        {items.map((item, i) => (
-          <Typography
-            key={i}
-            as="div"
-            onClick={() => navigate(item.path)}
-            className="block text-sm text-primary px-2 py-1 hover:bg-gray-100 rounded cursor-pointer"
-          >
-            {item.label}
-          </Typography>
-        ))}
-      </MenuList>
-    </Menu>
-  );
-}
-
-// ✅ Our Work Dropdown
-function OurWorkMenu() {
-  const [open, setOpen] = useState(false);
-  const navigate = useNavigate();
-  const items = [
-    { label: "Case Study", path: "/case-study" },
-    { label: "Careers", path: "/careers" },
-    { label: "Blogs", path: "/blogs" },
-  ];
-
-  return (
-    <Menu open={open} handler={setOpen} allowHover>
-      <MenuHandler>
-        <Button
-          variant="text"
-          className="flex items-center gap-1 font-medium text-black hover:bg-primary hover:text-white hover:shadow-md rounded-full px-4 py-2 transition-all duration-300"
-        >
-          Our Work
-          <ChevronDownIcon
-            strokeWidth={2}
-            className={`h-3 w-3 transition-transform ${
-              open ? "rotate-180" : ""
-            }`}
-          />
-        </Button>
-      </MenuHandler>
-      <MenuList className="p-4 mt-5">
-        {items.map((item, i) => (
-          <Typography
-            key={i}
-            as="div"
-            onClick={() => navigate(item.path)}
-            className="block text-sm text-primary px-2 py-1 hover:bg-white rounded cursor-pointer"
-          >
-            {item.label}
-          </Typography>
-        ))}
-      </MenuList>
-    </Menu>
-  );
-}
-
-// ✅ Main Navbar
+// ✅ Main Navbar with Responsive Behavior
 export function CenteredLogoNavbar() {
   const [expanded, setExpanded] = useState(false);
   const navigate = useNavigate();
 
   return (
-    <div className="fixed top-8 left-1/2 -translate-x-1/2 z-50">
+    <div className="fixed top-8 left-1/2 -translate-x-1/2 z-50 flex justify-center items-center">
+      {/* ✅ Logo Button (Initial State) */}
       {!expanded && (
         <button
           onClick={() => setExpanded(true)}
-          className="bg-white shadow-2xl w-[150px] rounded-full p-4 hover:scale-105 hover:shadow-2xl transition-transform duration-300 flex items-center justify-center"
+          className="bg-white shadow-2xl w-[120px] sm:w-[150px] rounded-full p-4 
+                     hover:scale-105 hover:shadow-2xl transition-transform duration-300 
+                     flex items-center justify-center"
         >
           <img src="/logo.png" alt="Logo" className="h-8 w-8" />
         </button>
       )}
 
+      {/* ✅ Expanded Navbar */}
       {expanded && (
         <div
           className="animate-fadeIn"
           style={{ animation: "fadeInScale 0.4s ease-out" }}
         >
-          <Navbar className="bg-white rounded-full shadow-3xl px-8 py-3 flex flex-wrap justify-center items-center gap-4 transition-all duration-500">
+          <Navbar
+            className="
+              relative
+              bg-white
+              rounded-xl sm:rounded-full 
+              font-primary
+              shadow-3xl
+              px-4 sm:px-8
+              py-3
+              flex flex-col sm:flex-row
+              flex-wrap
+              justify-center items-center
+              gap-3 sm:gap-4
+              transition-all duration-500
+            "
+          >
+            {/* ✅ Navbar Items */}
             <Button
               variant="text"
               onClick={() => navigate("/")}
-              className="font-medium text-black hover:bg-primary hover:text-white hover:shadow-md rounded-full px-4 py-2 transition-all duration-300"
+              className="font-medium text-black hover:bg-primary font-primary 
+                         hover:text-white hover:shadow-md rounded-full px-4 py-2 
+                         transition-all duration-300"
             >
               Home
             </Button>
-            <CrewCluesMenu />
+
+            <DropdownMenu
+              title="Crew & Clues"
+              items={[
+                { label: "About", path: "/about" },
+                { label: "Teams", path: "/teams" },
+              ]}
+            />
+
             <ServicesMegaMenu />
-            <OurWorkMenu />
+
+            <DropdownMenu
+              title="Our Work"
+              items={[
+                { label: "Case Study", path: "/case-study" },
+                { label: "Careers", path: "/careers" },
+                { label: "Blogs", path: "/blogs" },
+              ]}
+            />
+
             <Button
               variant="text"
               onClick={() => navigate("/contact")}
-              className="font-medium text-black hover:bg-primary hover:text-white hover:shadow-md rounded-full px-4 py-2 transition-all duration-300"
+              className="font-medium text-black hover:bg-primary font-primary 
+                         hover:text-white hover:shadow-md rounded-full px-4 py-2 
+                         transition-all duration-300"
             >
               Contact
             </Button>
+
+            {/* ✅ Close Button at Far-Right Corner */}
+            <button
+              onClick={() => setExpanded(false)}
+              className="
+                absolute 
+                top-2 right-2
+                p-2 
+                rounded-full 
+                text-primary 
+                hover:bg-gray-100 
+                transition duration-300
+              "
+            >
+              <XMarkIcon className="h-5 w-5" />
+            </button>
           </Navbar>
         </div>
       )}
