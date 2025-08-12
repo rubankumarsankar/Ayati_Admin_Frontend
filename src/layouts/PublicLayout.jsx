@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import {CenteredLogoNavbar} from "../components/MainNavbar "
+import {CenteredLogoNavbar} from "../components/MainNavbar"
 import MainFooter from "../components/MainFooter";
 
 

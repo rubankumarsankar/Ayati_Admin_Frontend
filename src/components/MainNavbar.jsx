@@ -111,7 +111,7 @@ function DropdownMenu({ title, items, onItemClick }) {
       <MenuHandler>
         <Button
           variant="text"
-          className="flex items-center gap-2 font-primary text-black hover:bg-primary hover:text-white hover:shadow-md rounded-full px-4 py-2 transition-all duration-300"
+          className="flex items-center gap-2 font-primary text-black hover:bg-secondary hover:text-white hover:shadow-md rounded-full px-4 py-2 transition-all duration-300"
         >
           {title}
           <ChevronDownIcon
@@ -128,7 +128,7 @@ function DropdownMenu({ title, items, onItemClick }) {
             key={i}
             as="div"
             onClick={() => handleClick(item.path)}
-            className="block text-sm text-primary font-secondary px-2 py-1 hover:bg-gray-100 rounded cursor-pointer"
+            className="block text-sm text-primary font-secondary px-2 py-1 hover:bg-gray-200 rounded cursor-pointer"
           >
             {item.label}
           </Typography>
@@ -153,7 +153,7 @@ function ServicesMegaMenu({ onItemClick }) {
       <MenuHandler>
         <Button
           variant="text"
-          className="flex items-center gap-2 font-primary text-black hover:bg-primary hover:text-white hover:shadow-md rounded-full px-4 py-2 transition-all duration-300"
+          className="flex items-center gap-2 font-primary text-black hover:bg-secondary hover:text-white hover:shadow-md rounded-full px-4 py-2 transition-all duration-300"
         >
           Services
           <ChevronDownIcon
@@ -166,7 +166,7 @@ function ServicesMegaMenu({ onItemClick }) {
       </MenuHandler>
 
       {/* ✅ Scrollable */}
-      <MenuList className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 w-[90vw] sm:w-[700px] rounded-xl mt-5 max-h-[300px] overflow-y-auto scrollbar-hide">
+      <MenuList className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 w-[90vw] sm:w-[700px] rounded-xl mt-5 max-h-[350px] overflow-y-auto scrollbar-hide">
         {serviceCategories.map((cat, idx) => (
           <div key={idx}>
             <Typography
@@ -181,7 +181,7 @@ function ServicesMegaMenu({ onItemClick }) {
                 <li
                   key={i}
                   onClick={() => handleClick(item.path)}
-                  className="text-xs text-gray-700 font-secondary hover:text-primary cursor-pointer transition"
+                  className="text-xs text-gray-700 font-secondary hover:bg-gray-200 rounded-md hover:text-primary cursor-pointer transition"
                 >
                   {item.label}
                 </li>
@@ -237,7 +237,7 @@ export function CenteredLogoNavbar() {
             <button
               onClick={() => setExpanded(false)}
               className="absolute top-2 right-2 p-2 rounded-full text-primary 
-                         hover:bg-gray-100 transition duration-300 sm:hidden"
+                         hover:bg-gray-200 transition duration-300 sm:hidden"
             >
               <XMarkIcon className="h-5 w-5" />
             </button>
@@ -245,7 +245,7 @@ export function CenteredLogoNavbar() {
             <Button
               variant="text"
               onClick={() => handleNavigation("/")}
-              className="font-medium text-black hover:bg-primary font-primary 
+              className="font-medium text-black hover:bg-secondary font-primary 
                          hover:text-white hover:shadow-md rounded-full px-4 py-2 
                          transition-all duration-300"
             >
@@ -273,7 +273,7 @@ export function CenteredLogoNavbar() {
             <Button
               variant="text"
               onClick={() => handleNavigation("/contact")}
-              className="font-medium text-black hover:bg-primary font-primary 
+              className="font-medium text-black hover:bg-secondary font-primary 
                          hover:text-white hover:shadow-md rounded-full px-4 py-2 
                          transition-all duration-300"
             >
