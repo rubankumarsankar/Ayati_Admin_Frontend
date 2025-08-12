@@ -16,6 +16,8 @@ import Login from "./pages/admin/Login";
 import Dashboard from "./pages/admin/Dashboard";
 import Employees from "./pages/admin/Employees";
 import Roles from "./pages/admin/Roles";
+import AboutUs from "./pages/main/AboutUs";
+import Teams from "./pages/main/TeamsPage"; // Assuming TeamsPage is the correct import for Teams
 
 
 // ✅ Protected Route Component
@@ -32,6 +34,8 @@ function App() {
           {/* ✅ Public Routes (use PublicLayout) */}
           <Route element={<PublicLayout />}>
             <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutUs />} />
+               <Route path="/teams" element={<Teams />} />
             <Route path="*" element={<NotFound />} />
           </Route>
 
