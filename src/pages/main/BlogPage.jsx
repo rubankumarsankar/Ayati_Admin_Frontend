@@ -1,18 +1,19 @@
 import React from "react";
 import HeroSection from "./Home/HeroSection";
-import TeamIntro from "./Teams/TeamIntro";
-import TeamMember from "./Teams/TeamMember";
+import ByteSize from "./Blog/ByteSize";
 import Connection from "./Teams/Connection";
+import Grid from "./Blog/grid";
 
-function TeamsPage() {
+
+function BlogPage() {
   return (
     <>
       <HeroSection />
-      <TeamIntro />
-      <TeamMember />
+      <ByteSize />
+      <Grid />
       <Connection />
     </>
   );
 }
 
-export default TeamsPage;
+export default BlogPage;

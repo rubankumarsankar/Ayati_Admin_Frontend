@@ -18,7 +18,7 @@ import Employees from "./pages/admin/Employees";
 import Roles from "./pages/admin/Roles";
 import AboutUs from "./pages/main/AboutUs";
 import Teams from "./pages/main/TeamsPage"; // Assuming TeamsPage is the correct import for Teams
-
+import Blog from "./pages/main/BlogPage"; // Assuming BlogPage is the correct import for Blog 
 
 // ✅ Protected Route Component
 function PrivateRoute({ children }) {
@@ -35,7 +35,8 @@ function App() {
           <Route element={<PublicLayout />}>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutUs />} />
-               <Route path="/teams" element={<Teams />} />
+            <Route path="/teams" element={<Teams />} />
+            <Route path="/blogs" element={<Blog />} />
             <Route path="*" element={<NotFound />} />
           </Route>
 
