@@ -19,6 +19,9 @@ import Roles from "./pages/admin/Roles";
 import AboutUs from "./pages/main/AboutUs";
 import Teams from "./pages/main/TeamsPage"; // Assuming TeamsPage is the correct import for Teams
 import Blog from "./pages/main/BlogPage"; // Assuming BlogPage is the correct import for Blog 
+import ContactUs from "./pages/main/ContactUs"; // Assuming ContactUs is the correct import for   Contact
+
+
 
 // ✅ Protected Route Component
 function PrivateRoute({ children }) {
@@ -37,6 +40,7 @@ function App() {
             <Route path="/about" element={<AboutUs />} />
             <Route path="/teams" element={<Teams />} />
             <Route path="/blogs" element={<Blog />} />
+            <Route path="/contact" element={<ContactUs />} />
             <Route path="*" element={<NotFound />} />
           </Route>
 
