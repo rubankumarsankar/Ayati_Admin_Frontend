@@ -4,22 +4,22 @@ import doodleIcon from "/assets/doodle.png"; // replace with your doodle icon pa
 
 export default function AboutImg() {
   return (
-    <section className="bg-white py-12 px-6 md:px-16">
-            <div className="flex items-center space-x-4">
-      {/* Left side - ABOUT US with underline */}
-      <div className="relative">
-        <h2 className="text-blue-900 text-3xl font-extrabold">ABOUT US</h2>
-       <span className="block h-1 w-24 bg-blue-700 mt-1 mx-auto md:mx-0"></span>
+    <section className="bg-white py-12 px-6 md:px-16 ">
+      <div className="flex items-center space-x-4 mb-8">
+        {/* Left side - ABOUT US with underline */}
+        <div className="relative ">
+          <h2 className="text-blue-900 text-3xl font-extrabold">ABOUT US</h2>
+          <span className="block h-1 w-24 bg-blue-700 mt-1 mx-auto md:mx-0"></span>
+        </div>
+
+        {/* Doodle Icon */}
+        <img src={doodleIcon} alt="Doodle Icon" className="w-8 h-8" />
+
+        {/* Tagline */}
+        <h3 className="text-sky-600 text-xl md:text-2xl font-bold">
+          Innovating with A Dash of Madness Since 2017!
+        </h3>
       </div>
-
-      {/* Doodle Icon */}
-      <img src={doodleIcon} alt="Doodle Icon" className="w-8 h-8" />
-
-      {/* Tagline */}
-      <h3 className="text-sky-600 text-xl md:text-2xl font-bold">
-        Innovating with A Dash of Madness Since 2017!
-      </h3>
-    </div>
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Left side - TV Image */}
@@ -27,17 +27,16 @@ export default function AboutImg() {
           <img
             src={tvImage}
             alt="The Year of Utsah"
-            className="max-w-sm w-full"
+            className="max-w-base w-full"
           />
         </div>
 
         {/* Right side - Text */}
         <div>
           {/* Heading */}
-         
 
           {/* Description */}
-          <p className="text-gray-700 leading-relaxed mb-6">
+          <p className="text-gray-700 leading-relaxed mb-6 space-x-4">
             This year at Ayatworks, we’re embracing Utsah—the enthusiasm and
             energy that fuel everything we do. For us, Utsah means approaching
             every challenge with positivity, bringing fresh ideas to the table,
@@ -57,8 +56,7 @@ export default function AboutImg() {
         </div>
       </div>
 
-       <div className="border-b border-black/70 shadow-xl my-8"></div>
-
+      <div className="border-b border-black/70 shadow-xl my-8"></div>
     </section>
   );
 }

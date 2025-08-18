@@ -19,7 +19,7 @@ export default function YearSlider() {
     <section className="bg-white py-12 px-6 md:px-16">
       <div className="max-w-7xl mx-auto">
         {/* Timeline Nav */}
-        <div className="flex items-center justify-between text-sky-600 font-bold mb-12 overflow-x-auto">
+        {/* <div className="flex items-center justify-between text-sky-600 font-bold mb-12 overflow-x-auto">
           {years.map((year, idx) => (
             <div
               key={year}
@@ -31,6 +31,56 @@ export default function YearSlider() {
               {year}
             </div>
           ))}
+        </div> */}
+        <div className="flex items-center justify-center text-sky-600 font-bold mb-12 overflow-x-auto relative">
+          {/* Left Arrow */}
+          <button
+            className="text-blue-600 px-2"
+            onClick={() =>
+              setActiveIndex((prev) => (prev - 1 + years.length) % years.length)
+            }
+          >
+            ◀
+          </button>
+
+          {/* Timeline */}
+          <div className="flex items-center">
+            {years.map((year, idx) => (
+              <div key={year} className="flex items-center">
+                {/* Year */}
+                <div
+                  className={`px-3 p-2 cursor-pointer relative transition ${
+                    idx === activeIndex
+                      ? "text-blue-700 font-bold"
+                      : "text-sky-500"
+                  }`}
+                  onClick={() => setActiveIndex(idx)}
+                >
+                  {/* Top/Bottom Highlight only for Active */}
+                  {idx === activeIndex && (
+                    <>
+                      <div className="absolute top-0 left-0 right-0 h-1 bg-primary/60 "></div>
+                      <div className="absolute bottom-0 left-0 right-0 h-1 bg-primary/60 "></div>
+                    </>
+                  )}
+                  {year}
+                </div>
+
+                {/* Line (except after last year) */}
+                {idx !== years.length - 1 && (
+                  <div className="w-14 h-0.5 bg-primary/60 mx-1"></div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Right Arrow */}
+          <button
+            className="text-blue-600 px-2"
+            onClick={() => setActiveIndex((prev) => (prev + 1) % years.length)}
+          >
+            ▶
+          </button>
         </div>
 
         {/* Content Grid */}
@@ -75,7 +125,9 @@ export default function YearSlider() {
                       exit={{ opacity: 0, y: -20 }}
                       transition={{ duration: 0.6 }}
                       className={`font-extrabold ${
-                        isActive ? "text-5xl text-blue-700" : "text-3xl text-gray-400"
+                        isActive
+                          ? "text-5xl text-blue-700"
+                          : "text-3xl text-gray-400"
                       }`}
                     >
                       {year}

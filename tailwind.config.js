@@ -22,17 +22,18 @@ module.exports = withMT({
         primary: ["Jockey", "sans-serif"], // For Section Headers
         secondary: ["Nexa", "sans-serif"], // For Paragraph Text
       },
-      fontSize: {
-        sectionHeader: ["70px", { lineHeight: "100px" }],
-        subSectionHeader: ["40px", { lineHeight: "auto" }],
-        minorHeading: ["50px", { lineHeight: "auto" }],
-        highlights: ["20px", { lineHeight: "30px" }],
-        paragraphText: ["18px", { lineHeight: "42px" }],
-        paragraph2: ["20px", { lineHeight: "42px" }],
-        captions: ["20px", { lineHeight: "auto" }],
-        paragraphSmall: ["16px", { lineHeight: "auto" }],
-        paragraphMedium: ["18px", { lineHeight: "30px" }],
+      spacing: {
+        'xs': '4px',
+        'sm': '8px',
+        'md': '16px',
+        'lg': '24px',
+        'xl': '32px',
+        '2xl': '40px',
+        '3xl': '48px',
+        '4xl': '56px',
+        '5xl': '64px',
       },
+      
     },
   },
   plugins: [],
