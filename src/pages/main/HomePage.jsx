@@ -7,8 +7,9 @@ import PartnersInClimb from "./Home/PartnersInClimb";
 import AwardsSection from "./Home/AwardsSection";
 import PixelsPerfected from "./Home/PixelsPerfected";
 import DottedWorldMap from "./Home/MapLocation";
-import GridSection from "./Blog/grid";
+
 import Connection from "./Teams/Connection";
+import HomeGridSection from "./Home/HomeGrid";
 
 function HomePage() {
   return (
@@ -21,7 +22,7 @@ function HomePage() {
       <AwardsSection />
       <PixelsPerfected />
       <DottedWorldMap />
-      <GridSection />
+      <HomeGridSection />
       <Connection />
     </>
   );

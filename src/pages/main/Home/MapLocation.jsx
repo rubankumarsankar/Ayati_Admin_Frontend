@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-
 export default function DottedWorldMap() {
   const [hovered, setHovered] = useState(null);
 
@@ -10,30 +9,36 @@ export default function DottedWorldMap() {
     { name: "INDIA", x: "69%", y: "52%", logo: "/logo-1.png" },
     { name: "SINGAPORE", x: "75%", y: "62%", logo: "/logo-1.png" },
   ];
-
   const stats = [
-    { icon: "/assets/award-icon.png", value: "+30", label: "Awards" },
-    { icon: "/assets/client-icon.png", value: "+20", label: "Clients" },
-    { icon: "/assets/city-icon.png", value: "+05", label: "Cities" },
-    { icon: "/assets/country-icon.png", value: "+05", label: "Countries" },
+    { icon: "/icon/business.png", value: "+30", label: "Awards" },
+    { icon: "/icon/users.png", value: "+20", label: "Clients" },
+    { icon: "/icon/locations.png", value: "+05", label: "Cities" },
+    { icon: "/icon/earth.png", value: "+05", label: "Countries" },
   ];
 
   return (
-    <section className="bg-white py-12 px-4 md:px-12 lg:px-20">
+    <section className="bg-white section">
       {/* Heading */}
-      <div className="text-center mb-8">
-        <h2 className="text-2xl md:text-3xl font-bold text-blue-900">
+
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="section-container text-left relative mb-12"
+      >
+        <h2 className="section-title relative inline-block">
           Globally Planted, Digitally Rooted
+          <img
+            src="/logo-left.png"
+            alt="climb"
+            className="absolute right-[-45px] bottom-[-30px] w-10 md:w-12 lg:w-14"
+          />
         </h2>
-        <img
-          src="/assets/map-heading-icon.png"
-          alt="Heading Icon"
-          className="mx-auto mt-2 w-10"
-        />
-      </div>
+      </motion.div>
 
       {/* Map */}
-      <div className="relative w-full max-w-5xl mx-auto">
+      <div className="relative w-full section-container">
         {/* ✅ Dotted Map Background */}
         <img
           src="/assets/map.png"
@@ -75,9 +80,9 @@ export default function DottedWorldMap() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10 text-center max-w-3xl mx-auto">
         {stats.map((item, i) => (
           <div key={i} className="flex flex-col items-center">
-            <img src={item.icon} alt={item.label} className="h-8 w-8 mb-2" />
-            <p className="text-blue-900 font-bold text-lg">{item.value}</p>
-            <p className="text-gray-600 text-sm">{item.label}</p>
+            <img src={item.icon} alt={item.label} className="h-15 w-15 mb-2" />
+            <p className="text-black font-bold text-4xl">{item.value}</p>
+            <p className="text-gray-600 text-lg font-secondary">{item.label}</p>
           </div>
         ))}
       </div>

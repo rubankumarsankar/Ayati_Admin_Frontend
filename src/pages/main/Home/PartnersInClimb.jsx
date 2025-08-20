@@ -142,7 +142,7 @@ export default function PartnersInClimb() {
       </div>
 
       {/* Divider */}
-      <div className="border-t border-black/20 shadow-sm mt-10"></div>
+      <div className="border-b border-black mt-8 sm:mt-10 section-container"></div>
     </section>
   );
 }

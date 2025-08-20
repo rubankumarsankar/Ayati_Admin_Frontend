@@ -27,57 +27,63 @@ export default function PixelsPerfected() {
   ];
 
   return (
-    <section className="bg-white py-12 px-4 md:px-12 lg:px-20">
+    <section className="bg-white section">
       {/* Heading */}
-      <motion.h2
+      <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-2xl md:text-3xl font-bold text-blue-900 mb-10 flex items-center gap-2"
+        className="section-container text-left relative mb-12"
       >
-        Pixels Perfected
-        <img
-          src="/icons/pixel-icon.png"
-          alt="pixel-icon"
-          className="h-6 w-6"
-        />
-      </motion.h2>
+        <h2 className="section-title relative inline-block">
+          Pixels Perfected
+          <img
+            src="/logo-left.png"
+            alt="climb"
+            className="absolute right-[-45px] bottom-[-30px] w-10 md:w-12 lg:w-14"
+          />
+        </h2>
+      </motion.div>
 
       {/* Campaigns */}
-      <div className="space-y-12">
+      <div className="section-container space-y-16">
         {campaigns.map((item, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
+            transition={{ duration: 0.6, delay: index * 0.2 }}
             viewport={{ once: true }}
-            className="flex flex-col md:flex-row gap-6 items-start"
+            className={`grid grid-cols-1 md:grid-cols-2 gap-10 items-top ${
+              index % 2 !== 0 ? "md:flex-row-reverse" : ""
+            }`}
           >
             {/* Image */}
-            <div className="relative w-full md:w-1/2">
+            <div className="w-full">
               <img
                 src={item.img}
                 alt={item.title}
-                className="rounded-lg shadow-xl w-full object-cover"
+                className="rounded-xl shadow-lg w-full h-auto object-cover"
               />
             </div>
 
             {/* Content */}
-            <div className="md:w-1/2">
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-1">
+            <div className="w-full">
+              <h3 className="font-primary text-2xl md:text-3xl font-bold text-black/80 mb-3">
                 {item.title}
               </h3>
               {item.sub && (
-                <p className="text-blue-700 font-semibold mb-2">{item.sub}</p>
+                <p className="text-black font-semibold mb-3">{item.sub}</p>
               )}
-              <p className="text-gray-700 leading-relaxed mb-4">{item.desc}</p>
-              <div className="flex gap-3 flex-wrap">
+              <p className="text-gray-600 leading-relaxed mb-5">{item.desc}</p>
+
+              {/* Tags */}
+              <div className="flex flex-wrap gap-3">
                 {item.tags.map((tag, i) => (
                   <span
                     key={i}
-                    className="px-3 py-1 border border-blue-700 text-blue-700 text-sm rounded-full hover:bg-blue-700 hover:text-white transition"
+                    className="px-4 py-1.5 border border-blue-700 text-blue-700 text-sm rounded-full hover:bg-blue-700 hover:text-white transition"
                   >
                     {tag}
                   </span>
