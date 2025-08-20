@@ -16,7 +16,7 @@ export default function Navbar() {
       text: "You will be logged out of your account.",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#3085d6",
+      confirmButtonColor: "#2563eb",
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes, logout",
     }).then((result) => {
@@ -40,22 +40,32 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="flex justify-between items-center bg-white shadow px-6 py-4">
-      <h1 className="font-bold text-lg text-gray-700">Admin Dashboard</h1>
+    <header className="flex justify-between items-center bg-white shadow-md px-6 py-4 sticky top-0 z-50">
+      {/* Brand */}
+      <h1 className="font-bold text-xl text-blue-600 tracking-wide">
+        Admin Dashboard
+      </h1>
 
       {/* User Profile Dropdown */}
       <div className="relative" ref={dropdownRef}>
         <button
           onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-          className="flex items-center gap-2 bg-gray-100 px-3 py-2 rounded-lg hover:bg-gray-200 transition"
+          className="flex items-center gap-2 bg-gray-50 px-4 py-2 rounded-lg hover:bg-gray-100 transition border border-gray-200"
         >
           <UserCircleIcon className="h-6 w-6 text-gray-700" />
-          <span className="text-gray-700 font-medium">{user?.email}</span>
-          <ChevronDownIcon className="h-4 w-4 text-gray-600" />
+          <span className="hidden sm:block text-gray-700 font-medium">
+            {user?.email || "User"}
+          </span>
+          <ChevronDownIcon
+            className={`h-4 w-4 text-gray-600 transition-transform duration-200 ${
+              isDropdownOpen ? "rotate-180" : "rotate-0"
+            }`}
+          />
         </button>
 
+        {/* Dropdown */}
         {isDropdownOpen && (
-          <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border">
+          <div className="absolute right-0 mt-2 w-52 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden animate-fadeIn">
             <ul className="py-2 text-sm text-gray-700">
               <li>
                 <button
@@ -63,7 +73,7 @@ export default function Navbar() {
                     setIsDropdownOpen(false);
                     Swal.fire("Profile", "Profile page coming soon!", "info");
                   }}
-                  className="w-full text-left px-4 py-2 hover:bg-gray-100"
+                  className="w-full text-left px-5 py-2 hover:bg-gray-50 transition"
                 >
                   Profile
                 </button>
@@ -71,7 +81,7 @@ export default function Navbar() {
               <li>
                 <button
                   onClick={handleLogout}
-                  className="w-full text-left px-4 py-2 text-red-600 hover:bg-gray-100"
+                  className="w-full text-left px-5 py-2 text-red-600 hover:bg-red-50 transition"
                 >
                   Logout
                 </button>

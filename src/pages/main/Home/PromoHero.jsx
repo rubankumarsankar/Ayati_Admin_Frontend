@@ -4,22 +4,26 @@ import FadeInWhenVisible from "../../../components/FadeInWhenVisible";
 
 export default function PromoHero() {
   return (
-    <section className="w-full bg-white py-6 px-4 md:px-10 lg:px-20 flex flex-col items-center font-primary">
+    <section className="section bg-white items-center">
       {/* ✅ Top Banner */}
       <FadeInWhenVisible y={-30}>
-        <div className="bg-primary text-white rounded-xl px-10 py-8 flex flex-col md:flex-row items-center justify-between gap-4 w-full max-w-7xl">
-          <div className="text-center md:text-left text-xl md:text-2xl lg:text-3xl leading-snug">
-            <p>
-              Learn what agencies do daily—run ads, scale brands, <br />
-              and get certified in just
-              <span className="text-secondary bg-white font-bold ml-2 px-2 py-0.5 rounded-md">
+        <div className="bg-primary text-white rounded-xl px-4 sm:px-6 md:px-10 py-6 sm:py-8 flex flex-col md:flex-row items-center justify-between gap-4 section-container">
+          <div className="text-center md:text-left text-lg sm:text-xl md:text-2xl lg:text-4xl leading-snug">
+            <p className="font-primary font-medium leading-normal p-2 sm:p-4">
+              Learn what agencies do daily — run ads, <br className="hidden sm:block" />
+              scale brands, and get certified in just
+              <span className="text-secondary bg-white font-primary font-medium ml-2 px-2 py-0.5 rounded-md">
                 30 days!
               </span>
             </p>
           </div>
           <a
             href="#"
-            className="bg-secondary/80 hover:bg-secondary text-white font-bold px-5 py-2 rounded-full text-sm sm:text-base hover:opacity-90 transition"
+            className="inline-block bg-secondary hover:bg-secondary/90 
+             font-secondary font-bold text-white 
+             px-4 sm:px-6 py-2.5 sm:py-3 rounded-full 
+             text-sm sm:text-base lg:text-lg
+             transition duration-300 ease-in-out shadow-md hover:shadow-lg"
           >
             CLICK HERE TO KNOW MORE
           </a>
@@ -28,11 +32,11 @@ export default function PromoHero() {
 
       {/* ✅ Sub-header */}
       <FadeInWhenVisible delay={0.2}>
-        <div className="w-full max-w-6xl mt-10 text-center flex flex-col sm:flex-row justify-between items-center gap-3">
-          <h2 className="text-primary font-bold text-2xl sm:text-3xl lg:text-4xl">
+        <div className="w-full section-container mt-8 sm:mt-10 text-center flex flex-col sm:flex-row justify-between items-center gap-3">
+          <h2 className="section-title text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
             Behind the Clicks
           </h2>
-          <p className="text-secondary text-sm sm:text-base font-secondary">
+          <p className="text-secondary font-primary text-lg sm:text-xl md:text-2xl lg:text-3xl leading-snug">
             Innovating with A Dash of Madness Since 2017!
           </p>
         </div>
@@ -40,31 +44,36 @@ export default function PromoHero() {
 
       {/* ✅ TV Image */}
       <FadeInWhenVisible delay={0.4} y={10}>
-        <div className="mt-10 max-w-xl w-full flex justify-center">
+        <div className="mt-8 sm:mt-10 max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl w-full mx-auto flex justify-center items-center">
           <img
             src={TVImage}
             alt="The Year of Utsah"
-            className="w-full h-auto rounded-xl shadow-lg"
+            className="mx-auto w-full h-auto object-contain"
           />
         </div>
       </FadeInWhenVisible>
 
       {/* ✅ Description */}
       <FadeInWhenVisible delay={0.6}>
-        <div className="w-full max-w-6xl mt-10 text-center sm:text-left px-2">
-          <p className="text-gray-700 text-base sm:text-lg leading-relaxed font-secondary">
-            This year at <span className="font-bold text-primary">Ayatiworks</span>, we’re embracing
-            <span className="font-bold text-secondary"> Utsah</span>—the enthusiasm and energy that
-            fuel everything we do...
+        <div className="w-full max-w-5xl mt-8 sm:mt-10 mx-auto flex justify-center sm:text-left px-4">
+          <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed font-secondary text-center sm:text-left">
+            This year at Ayatiworks, we’re embracing Utsah—the enthusiasm and
+            energy that fuel everything we do. For us, Utsah means approaching
+            every challenge with positivity, bringing fresh ideas to the table,
+            and creating meaningful work that makes a difference. It’s about
+            going the extra mile for our clients, supporting each other as a
+            team, and finding joy in every milestone, big or small. As we step
+            into 2025, Utsah reminds us to stay passionate, stay inspired, and
+            stay connected.
           </p>
-
-          <h3 className="text-lg sm:text-xl text-primary text-center font-bold mt-6">
-            Here’s to a year of growth, creativity, and purpose—powered by Utsah!
-            Let’s make it unforgettable!
-          </h3>
-
-          <div className="border-b border-black/70 shadow-md my-8"></div>
         </div>
+        <div className="w-full max-w-5xl mt-8 sm:mt-10 mx-auto sm:text-left px-4">
+          <h3 className="text-base sm:text-lg md:text-xl text-primary font-secondary text-center sm:text-left font-medium mt-6">
+            Here’s to a year of growth, creativity, and purpose—powered by
+            Utsah! Let’s make it unforgettable!
+          </h3>
+        </div>
+        <div className="border-b border-black mt-8 sm:mt-10 section-container"></div>
       </FadeInWhenVisible>
     </section>
   );

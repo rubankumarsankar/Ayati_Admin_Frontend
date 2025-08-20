@@ -1,112 +1,146 @@
-import React from "react";
 import { motion } from "framer-motion";
 
-export default function WhatAyati() {
-  const cardData = [
+export default function SolutionsSection() {
+  const fadeUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: i * 0.2, duration: 0.6, ease: "easeOut" },
+    }),
+  };
+
+  const cards = [
     {
-      title: "BRANDWIDTH",
-      subtitle: "CTRL + ALT + BRAND",
-      points: [
+      cat: "BRANDWIDTH",
+      title: "CTRL + ALT + BRAND",
+      icon: "/icon/brand.png",
+      list: [
         "Branding Services",
-        "Branding Strategy and Positioning",
-        "Experience Design",
-        "Creative Marketing",
-        "Marketing Strategy Consulting",
+        "Brand Positioning",
+        "Creative Solutions",
+        "Marketing Consulting",
         "Customer Acquisition",
       ],
     },
     {
-      title: "GRAM & GLORY",
-      subtitle: "The Vibe Bureaux",
-      points: [
-        "Instagram Ads Optimization",
-        "Content Strategy for Reels",
-        "Audience Engagement Growth",
-        "Creative Campaign Execution",
-        "Analytics & Performance Reports",
-      ],
-    },
-    {
-      title: "The Vibe Bureaux",
-      subtitle: "Good Vibes",
-      points: [
+      cat: "GRAM & GLORY",
+      title: "The Vibe Bureaus",
+      icon: "/icon/vibe.png",
+      list: [
         "Influencer Marketing",
         "Instagram Marketing",
-        "Social Media Marketing",
-        "Interactive Social Media Agency",
-        "Response Management (If Offered)",
-        "Multilingual Marketing",
+        "Social Media Strategy",
+        "Community Engagement",
+        "Performance Marketing",
       ],
     },
     {
-      title: "360 CREATIVE HUB",
-      subtitle: "End-to-End Solutions",
-      points: [
-        "Brand Identity Design",
-        "Digital Campaign Planning",
-        "Print & Outdoor Marketing",
-        "Video Production",
-        "UI/UX Design for Web & App",
+      cat: "COMMERCECODE",
+      title: "Click & Convert",
+      icon: "/icon/click.png",
+      list: [
+        "Web Development",
+        "Shopify / Magento",
+        "Custom E-commerce",
+        "Mobile App Development",
+        "Payment Integration",
+      ],
+    },
+    {
+      cat: "PERFORMO",
+      title: "Pixel Perfect",
+      icon: "/icon/seo.png",
+      list: [
+        "SEO Services",
+        "Programmatic Ads",
+        "Performance Marketing",
+        "Analytics & Tracking",
+        "Email Marketing",
+      ],
+    },
+    {
+      cat: "CONTENTMENT ZONE",
+      title: "Contentual Healing",
+      icon: "/icon/content.png",
+      list: [
+        "Content Writing",
+        "Blog & Copywriting",
+        "Digital PR",
+        "Marketing Strategy",
+        "Content Consultancy",
+      ],
+    },
+    {
+      cat: "IDEATORIUM",
+      title: "MadLab",
+      icon: "/icon/madlab.png",
+      list: [
+        "Ad Campaign Strategy",
+        "Creative Concepts",
+        "Consumer Research",
+        "Brand Thinking",
+        "Marketing Innovation",
       ],
     },
   ];
 
   return (
-    <section className="w-full bg-white py-6 px-4 md:px-10 lg:px-20 flex flex-col">
-            <div className="border-t border-black/70 shadow-xl my-8"></div>
-
-      {/* What Ayati Brew’s + 360 Integrated Solutions */}
+    <section className="w-full section">
+      {/* Title */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4 mb-10"
+        className="flex flex-col md:flex-row justify-between items-center section-container mb-10"
       >
-        <h3 className="text-2xl font-bold text-blue-900 relative">
-          What Ayati Brew’s
-          <span className="block h-1 w-24 bg-blue-700 mt-1 mx-auto md:mx-0"></span>
-        </h3>
-        <h3 className="text-2xl font-bold text-blue-900 relative">
+        <h3 className="section-title">What Ayati Brew’s</h3>
+        <h3 className="text-secondary font-primary text-2xl sm:text-3xl lg:text-3xl text-center md:text-right">
           360 Integrated Solutions
-          <span className="block h-1 w-24 bg-blue-700 mt-1 mx-auto md:mx-0"></span>
         </h3>
       </motion.div>
 
-      {/* Cards - 2 rows × 2 columns */}
-      <div className="grid md:grid-cols-2 gap-6">
-        {cardData.map((card, i) => (
+      {/* Grid */}
+      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10">
+        {cards.map((card, i) => (
           <motion.div
             key={i}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: i * 0.2 }}
+            custom={i}
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
-            className="relative bg-white shadow-lg hover:shadow-2xl rounded-xl p-6 border-t-4 border-blue-700 transition flex"
+            whileHover={{ scale: 1.03, y: -5 }}
+            className="relative flex flex-col bg-white p-8 rounded-2xl shadow-lg h-[360px] transition-all duration-300"
           >
-            {/* Left Side - Content */}
-            <div className="flex-1">
-              <h4 className="text-blue-800 font-bold text-lg uppercase mb-1">
-                {card.subtitle && <span className="text-gray-500">{card.subtitle}</span>}
-              </h4>
-              <ul className="list-disc list-inside space-y-1 text-gray-600 text-sm">
-                {card.points.map((point, j) => (
-                  <li key={j}>{point}</li>
-                ))}
-              </ul>
+            {/* Vertical Label */}
+            <div className="absolute inset-y-0 right-0 flex items-center justify-center">
+              <span className="rotate-90 font-primary font-bold text-lg md:text-xl text-blue-600 tracking-widest whitespace-nowrap">
+                {card.cat}
+              </span>
             </div>
 
-            {/* Right Side - Vertical Title */}
-            <div className="ml-4 flex items-center">
-              <p className="text-blue-800 font-bold text-sm md:text-lg tracking-widest writing-vertical">
+            {/* Title + Icon */}
+            <div className="flex items-center gap-3 mb-6">
+              <img src={card.icon} alt={card.title} className="w-12 h-12" />
+              <h3 className="font-extrabold text-xl text-gray-800">
                 {card.title}
-              </p>
+              </h3>
             </div>
+
+            {/* List */}
+            <ul className="space-y-2 text-gray-600 text-sm flex-1 leading-relaxed">
+              {card.list.map((service, j) => (
+                <li key={j}>• {service}</li>
+              ))}
+            </ul>
           </motion.div>
         ))}
       </div>
-            <div className="border-b border-black/70 shadow-xl my-8"></div>
 
+      {/* Divider */}
+      <div className="border-b border-black mt-10 section-container"></div>
     </section>
   );
 }
