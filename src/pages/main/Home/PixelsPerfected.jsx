@@ -92,6 +92,22 @@ export default function PixelsPerfected() {
             </div>
           </motion.div>
         ))}
+        <div className="flex justify-center mt-6">
+          <motion.button
+            className="relative bg-secondary/90 hover:bg-secondary text-white font-primary text-lg md:text-xl font-medium py-3 px-10 rounded-full shadow-md hover:shadow-xl transition-all duration-300"
+            initial={{ scale: 0.9, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            whileHover={{
+              scale: 1.08,
+              boxShadow: "0px 12px 25px rgba(0,0,0,0.15)",
+            }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            SEE MORE
+          </motion.button>
+        </div>
       </div>
     </section>
   );

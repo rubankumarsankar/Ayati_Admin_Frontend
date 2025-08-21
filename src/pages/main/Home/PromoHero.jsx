@@ -1,6 +1,7 @@
 import React from "react";
 import TVImage from "/assets/tv-utsah.png";
 import FadeInWhenVisible from "../../../components/FadeInWhenVisible";
+import { motion } from "framer-motion";
 
 export default function PromoHero() {
   return (
@@ -10,7 +11,8 @@ export default function PromoHero() {
         <div className="bg-primary text-white rounded-xl px-4 sm:px-6 md:px-10 py-6 sm:py-8 flex flex-col md:flex-row items-center justify-between gap-4 section-container">
           <div className="text-center md:text-left text-lg sm:text-xl md:text-2xl lg:text-4xl leading-snug">
             <p className="font-primary font-medium leading-normal p-2 sm:p-4">
-              Learn what agencies do daily — run ads, <br className="hidden sm:block" />
+              Learn what agencies do daily — run ads,{" "}
+              <br className="hidden sm:block" />
               scale brands, and get certified in just
               <span className="text-secondary bg-white font-primary font-medium ml-2 px-2 py-0.5 rounded-md">
                 30 days!
@@ -73,8 +75,15 @@ export default function PromoHero() {
             Utsah! Let’s make it unforgettable!
           </h3>
         </div>
-        <div className="border-b border-black mt-8 sm:mt-10 section-container"></div>
       </FadeInWhenVisible>
+      {/* Divider */}
+      <motion.div
+        initial={{ scaleX: 0 }}
+        whileInView={{ scaleX: 1 }}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
+        viewport={{ once: true }}
+        className="border-b border-black mt-8 sm:mt-10 section-container"
+      ></motion.div>
     </section>
   );
 }

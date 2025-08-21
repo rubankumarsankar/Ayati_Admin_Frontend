@@ -97,7 +97,7 @@ export default function AwardsSection() {
                   alt={award.title}
                   className="h-40 object-contain mb-4"
                 />
-                <p className="text-blue-900 font-semibold text-sm leading-tight">
+                <p className="text-white font-primary font-medium text-lg leading-tight">
                   {award.title}
                 </p>
                 <button

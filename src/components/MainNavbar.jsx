@@ -89,7 +89,7 @@ export function CenteredLogoNavbar() {
           style={{ animation: "fadeInScale 0.4s ease-out" }}
         >
           <Navbar
-            className="relative md:w-[720px] lg:w-[720px] 
+            className="relative md:w-[740px] lg:w-[740px] 
             bg-white font-primary shadow-glow hover:shadow-3xl
             px-2 sm:px-4 py-3
             flex flex-col sm:flex-row flex-wrap justify-center items-center
@@ -139,26 +139,32 @@ export function CenteredLogoNavbar() {
             />
 
             <DropdownMenu
-              title="Insights"
+              title="Industries"
               items={[
-                { label: "Blogs", path: "/blogs" },
-                { label: "Awards", path: "/awards" },
-                { label: "Case Studies", path: "/case-studies" },
-                { label: "Guides", path: "/guides" },
+                { label: "Automobile", path: "/automobile" },
+                { label: "Retail & E-Commerce", path: "/e-commerce" },
+                { label: "Healthcare", path: "/healthcare" },
+                { label: "Technology & SaaS", path: "/technology-saas" },
+                { label: "Beauty & Personal Care", path: "/personal-care" },
+                { label: "Real Estate", path: "/real-estate" },
               ]}
               onItemClick={handleNavigation}
               activePath={activePath}
             />
 
-            <Button
-              variant="text"
-              onClick={() => handleNavigation("/industries")}
-              className={`font-bold text-sm font-secondary rounded-full px-4 py-2 transition-all duration-300
-                ${activePath === "/industries" ? "bg-primary text-white shadow-md" : "text-black hover:bg-primary hover:text-white hover:shadow-md"}`}
-            >
-              Industries
-            </Button>
-
+            <DropdownMenu
+              title="Insights"
+              items={[
+                { label: "Blogs", path: "/blogs" },
+                { label: "Awards", path: "/awards" },
+                { label: "Case Studies", path: "/case-studies" },
+                // { label: "News", path: "/news" },
+                // { label: "Guides", path: "/guides" },
+              ]}
+              onItemClick={handleNavigation}
+              activePath={activePath}
+            />
+            
             <Button
               variant="text"
               onClick={() => handleNavigation("/contact")}
