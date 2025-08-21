@@ -13,7 +13,7 @@ export default function SolutionsSection() {
   const cards = [
     {
       cat: "BRANDWIDTH",
-      title: "CTRL + ALT + BRAND",
+      title: "",
       icon: "/icon/brand.png",
       list: [
         "Branding Services",
@@ -25,7 +25,7 @@ export default function SolutionsSection() {
     },
     {
       cat: "GRAM & GLORY",
-      title: "The Vibe Bureaus",
+      title: "",
       icon: "/icon/vibe.png",
       list: [
         "Influencer Marketing",
@@ -37,7 +37,7 @@ export default function SolutionsSection() {
     },
     {
       cat: "COMMERCECODE",
-      title: "Click & Convert",
+      title: "",
       icon: "/icon/click.png",
       list: [
         "Web Development",
@@ -49,7 +49,7 @@ export default function SolutionsSection() {
     },
     {
       cat: "PERFORMO",
-      title: "Pixel Perfect",
+      title: "",
       icon: "/icon/seo.png",
       list: [
         "SEO Services",
@@ -57,30 +57,6 @@ export default function SolutionsSection() {
         "Performance Marketing",
         "Analytics & Tracking",
         "Email Marketing",
-      ],
-    },
-    {
-      cat: "CONTENTMENT ZONE",
-      title: "Contentual Healing",
-      icon: "/icon/content.png",
-      list: [
-        "Content Writing",
-        "Blog & Copywriting",
-        "Digital PR",
-        "Marketing Strategy",
-        "Content Consultancy",
-      ],
-    },
-    {
-      cat: "IDEATORIUM",
-      title: "MadLab",
-      icon: "/icon/madlab.png",
-      list: [
-        "Ad Campaign Strategy",
-        "Creative Concepts",
-        "Consumer Research",
-        "Brand Thinking",
-        "Marketing Innovation",
       ],
     },
   ];
@@ -116,7 +92,7 @@ export default function SolutionsSection() {
           >
             {/* Vertical Label */}
             <div className="absolute inset-y-0 right-0 flex items-center justify-center">
-              <span className="rotate-90 font-primary font-bold text-lg md:text-xl text-blue-600 tracking-widest whitespace-nowrap">
+              <span className="rotate-90 font-primary font-bold text-3xl md:text-3xl text-secondary tracking-widest whitespace-nowrap">
                 {card.cat}
               </span>
             </div>
@@ -130,9 +106,9 @@ export default function SolutionsSection() {
             </div>
 
             {/* List */}
-            <ul className="space-y-2 text-gray-600 text-sm flex-1 leading-relaxed">
+            <ul className="space-y-2 text-gray-600 font-secondary text-xl flex-1 leading-relaxed">
               {card.list.map((service, j) => (
-                <li key={j}>• {service}</li>
+                <li key={j}>{service}</li>
               ))}
             </ul>
           </motion.div>

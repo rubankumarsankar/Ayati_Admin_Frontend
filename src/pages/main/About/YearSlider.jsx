@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import doodleIcon from "/assets/doodle.png"; // replace with doodle path
-
+import dottedBg from "/assets/dotted-bg.png";
 const years = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017];
 
 // Content for each year
@@ -16,7 +15,7 @@ const yearContent = {
     team, and finding joy in every milestone, big or small. As we step
     into 2025, Utsah reminds us to stay passionate, stay inspired, and
     stay connected. Here’s to a year of growth, creativity, and
-    purpose—powered by Utsah! Let’s make it unforgettable!`
+    purpose—powered by Utsah! Let’s make it unforgettable!`,
   },
   2024: {
     title: "The Year of Unnati",
@@ -26,7 +25,7 @@ const yearContent = {
     we’re not just counting coins but celebrating experiences, knowledge,
     and shared wins. Standing tall at the summit of success, the spirit
     of Unnati is launching us into a future brimming with promise and
-    opportunities galore! Let’s soar together!`
+    opportunities galore! Let’s soar together!`,
   },
   2023: {
     title: "The Year of Fruition",
@@ -34,7 +33,7 @@ const yearContent = {
     that to heart! As we enter our 7th year, our hard work is finally
     paying off, and we’re ready to savor the fruits of our labor. With
     hope in our hearts, fresh insights, and stronger goals, we’re striding
-    forward. At AyatiWorks, the next big thing is upon us now!`
+    forward. At AyatiWorks, the next big thing is upon us now!`,
   },
   2022: {
     title: "The Year of Blooming",
@@ -42,7 +41,7 @@ const yearContent = {
     workplace is ready to rock with 5 fabulous departments: Creative,
     Content, Strategy, Web & Product Development, Social Media, and
     Client Success. At AyatiWorks, we’re not just growing; we’re soaring
-    into the future! Next stop? The Now!`
+    into the future! Next stop? The Now!`,
   },
   2021: {
     title: "The Year of Recognition",
@@ -51,7 +50,7 @@ const yearContent = {
     there and snagged the award for “Excellence in Digital Marketing.”
     Our pioneer clients stuck with us, and new ones flocked in for our
     magic touch. With all this buzz, our team grew to an awesome 20 pros
-    ready to rock the digital world!`
+    ready to rock the digital world!`,
   },
   2020: {
     title: "The Year We Hoped and Hustled",
@@ -60,7 +59,7 @@ const yearContent = {
     Space, Vels Group, Indian Terrain, Royal Enfield, and Benelli jumped
     on board, and we helped them soar. 2020 kept our hopes high and
     crowned us Best Brand of Tamil Nadu. Not bad for a “lockdown year,”
-    right?`
+    right?`,
   },
   2019: {
     title: "The Year We Leveled Up",
@@ -69,7 +68,7 @@ const yearContent = {
     digital magic was spot on. But wait, there’s more! We created our very
     own learning management system for the Singapore Government (yep, we
     went BIG). And our team? Grew to 10 legends ready to take on the
-    world!`
+    world!`,
   },
   2018: {
     title: "The Year We Went Global (And Doubled Up!)",
@@ -77,7 +76,7 @@ const yearContent = {
     to landing our first overseas client—schools in Singapore! With our ROI
     wizardry, they trusted us to deliver. Our team? Went from 2 to 6 in no
     time! New clients like Pettikadai, Vinayak Motors, and Noritake joined
-    the fun, making 2018 a year packed with promise and big wins!`
+    the fun, making 2018 a year packed with promise and big wins!`,
   },
   2017: {
     title: "The Year We Went from Zero to Zoom!",
@@ -86,8 +85,8 @@ const yearContent = {
     we knew it, bigger players like Kesavardhini and Syscom knocked on our
     door, wanting a slice of our digital magic! With our offbeat
     strategies, we didn’t just help them grow — we blasted their digital
-    sales into the stratosphere!`
-  }
+    sales into the stratosphere!`,
+  },
 };
 
 export default function YearSlider() {
@@ -105,8 +104,8 @@ export default function YearSlider() {
   const { title, text } = yearContent[currentYear];
 
   return (
-    <section className="bg-white py-12 px-6 md:px-16">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-white section">
+      <div className="section-container mx-auto">
         {/* Timeline Nav */}
         <div className="flex items-center justify-center text-sky-600 font-bold mb-12 overflow-x-auto relative">
           {/* Left Arrow */}
@@ -126,8 +125,8 @@ export default function YearSlider() {
                 <div
                   className={`px-3 p-2 cursor-pointer relative transition ${
                     idx === activeIndex
-                      ? "text-blue-700 font-bold"
-                      : "text-sky-500"
+                      ? "text-secondary font-medium font-primary"
+                      : "text-secondary font-normal font-primary"
                   }`}
                   onClick={() => setActiveIndex(idx)}
                 >
@@ -159,34 +158,48 @@ export default function YearSlider() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
           {/* Left - Content */}
           <div>
-            <h2 className="text-blue-700 text-3xl md:text-4xl font-extrabold flex items-center mb-3">
+            <h2 className="text-secondary font-primary text-lg sm:text-xl md:text-2xl lg:text-3xl leading-snug max-w-xl">
               {title}
-              {/* <img
-                src={doodleIcon}
-                alt="Doodle"
-                className="ml-2 w-8 h-8 inline-block"
-              /> */}
             </h2>
             <span className="block w-20 h-1 bg-sky-500 mb-6"></span>
-            <p className="text-gray-700 leading-relaxed mb-6">{text}</p>
+            <p className="text-gray-700 font-secondary leading-relaxed mb-6">
+              {text}
+            </p>
           </div>
 
           {/* Right - Vertical Auto Slider */}
-          <div className="flex flex-col items-center justify-center h-full">
-            <div className="space-y-6 text-center">
-              <AnimatePresence>
+          <div
+            className="relative flex items-center justify-center h-64 overflow-hidden"
+            style={{
+              backgroundImage: `url(${dottedBg})`,
+              backgroundSize: "cover",
+              backgroundRepeat: "repeat",
+            }}
+          >
+            {/* Animated Years - Vertical Stack */}
+            <div className="flex flex-col items-center justify-center space-y-6">
+              <AnimatePresence initial={false}>
                 {years.map((year, idx) => {
+                  const offset = idx - activeIndex;
+
+                  // Only show current, prev, and next
+                  if (Math.abs(offset) > 1) return null;
+
                   const isActive = idx === activeIndex;
                   return (
                     <motion.div
                       key={year}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: isActive ? 1 : 0.3, y: 0 }}
-                      exit={{ opacity: 0, y: -20 }}
+                      initial={{ opacity: 0, y: 50 }}
+                      animate={{
+                        opacity: isActive ? 1 : 0.3,
+                        y: 0,
+                        scale: isActive ? 1.3 : 1,
+                      }}
+                      exit={{ opacity: 0, y: -50 }}
                       transition={{ duration: 0.6 }}
-                      className={`font-extrabold ${
+                      className={`font-primary font-extrabold ${
                         isActive
-                          ? "text-5xl text-blue-700"
+                          ? "text-5xl text-secondary"
                           : "text-3xl text-gray-400"
                       }`}
                     >
@@ -199,6 +212,14 @@ export default function YearSlider() {
           </div>
         </div>
       </div>
+      {/* Divider */}
+      <motion.div
+        initial={{ scaleX: 0 }}
+        whileInView={{ scaleX: 1 }}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
+        viewport={{ once: true }}
+        className="border-b border-black mt-8 sm:mt-10 section-container"
+      ></motion.div>
     </section>
   );
 }

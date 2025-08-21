@@ -77,12 +77,20 @@ export default function DottedWorldMap() {
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10 text-center max-w-3xl mx-auto">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 sm:gap-10 mt-20 text-center max-w-5xl mx-auto px-4">
         {stats.map((item, i) => (
-          <div key={i} className="flex flex-col items-center">
-            <img src={item.icon} alt={item.label} className="h-15 w-15 mb-2" />
-            <p className="text-black font-bold text-4xl">{item.value}</p>
-            <p className="text-gray-600 text-lg font-secondary">{item.label}</p>
+          <div key={i} className="flex flex-col items-center space-y-3">
+            <img
+              src={item.icon}
+              alt={item.label}
+              className="h-16 w-16 sm:h-16 sm:w-16 object-contain mb-2"
+            />
+            <p className="text-black font-extrabold text-2xl sm:text-3xl md:text-4xl">
+              {item.value}
+            </p>
+            <p className="text-gray-600 text-sm sm:text-base md:text-lg font-secondary">
+              {item.label}
+            </p>
           </div>
         ))}
       </div>

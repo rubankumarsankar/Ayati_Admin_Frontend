@@ -1,8 +1,8 @@
 import React from "react";
 import HeroSection from "./Home/HeroSection";
 import ByteSize from "./Blog/ByteSize";
-import Connection from "./Teams/Connection";
 import GridSection from "./Blog/grid";
+import Connection from "./Home/Connection";
 
 function BlogPage() {
   return (

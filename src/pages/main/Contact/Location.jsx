@@ -1,4 +1,5 @@
-import { FaMapMarkerAlt } from "react-icons/fa";
+import { SlLocationPin } from "react-icons/sl";
+import { motion } from "framer-motion";
 
 export default function Location() {
   const locations = [
@@ -6,7 +7,7 @@ export default function Location() {
       city: "Chennai",
       address:
         "18/24, TTK Road, 1st Cross St, Alwarpet, Chennai, Tamil Nadu, India - 600018",
-      active: true,
+      active: false,
     },
     {
       city: "Gurgaon",
@@ -38,30 +39,62 @@ export default function Location() {
     },
   ];
 
+  // Animation variants
+  const fadeUp = {
+    hidden: { opacity: 0, y: 40, scale: 0.95 },
+    visible: (i = 1) => ({
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        delay: i * 0.1,
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    }),
+  };
+
   return (
-    <div className="bg-white py-12 px-4 sm:px-8 lg:px-16">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="bg-white section">
+      <div className="section-container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {locations.map((loc, idx) => (
-          <div
+          <motion.div
             key={idx}
-            className={`rounded-md shadow-md p-6 transition-all duration-300 cursor-pointer group ${
+            className={`shadow-md p-6 transition-all duration-300 cursor-pointer group ${
               loc.active
-                ? "bg-[#004996] text-white hover:bg-blue-900"
-                : "bg-white text-gray-800 border border-gray-100 hover:bg-blue-800 hover:text-white"
+                ? "bg-primary  text-white"
+                : "bg-white text-gray-800 border hover:bg-primary hover:text-white border-gray-200"
             }`}
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            custom={idx * 0.2}
+            whileHover={{
+              y: -6,
+              boxShadow: "0 12px 25px rgba(0,0,0,0.12)",
+              transition: { duration: 0.3 },
+            }}
           >
+            {/* Icon + City */}
             <div className="flex items-center gap-3 mb-3">
-              <FaMapMarkerAlt
-                className={`text-lg transition-colors duration-300 ${
+              <SlLocationPin
+                className={`text-3xl transition-colors duration-300 ${
                   loc.active
                     ? "text-white"
-                    : "text-gray-700 group-hover:text-white"
+                    : "text-primary group-hover:text-white"
                 }`}
               />
-              <h3 className="font-bold text-lg">{loc.city}</h3>
+              <h3 className="font-medium font-primary text-xl sm:text-2xl">
+                {loc.city}
+              </h3>
             </div>
-            <p className="text-sm leading-relaxed">{loc.address}</p>
-          </div>
+
+            {/* Address */}
+            <p className="text-base leading-relaxed font-secondary">
+              {loc.address}
+            </p>
+          </motion.div>
         ))}
       </div>
     </div>

@@ -1,15 +1,15 @@
 import React from "react";
 import HeroSection from "./Home/HeroSection";
 import TeamIntro from "./Teams/TeamIntro";
-import TeamMember from "./Teams/TeamMember";
-import Connection from "./Teams/Connection";
+import Connection from "./Home/Connection";
+import HomeGridSection from "./Home/HomeGrid";
 
 function TeamsPage() {
   return (
     <>
       <HeroSection />
       <TeamIntro />
-      <TeamMember />
+      <HomeGridSection />
       <Connection />
     </>
   );

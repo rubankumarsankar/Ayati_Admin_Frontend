@@ -8,8 +8,8 @@ import AwardsSection from "./Home/AwardsSection";
 import PixelsPerfected from "./Home/PixelsPerfected";
 import DottedWorldMap from "./Home/MapLocation";
 
-import Connection from "./Teams/Connection";
 import HomeGridSection from "./Home/HomeGrid";
+import Connection from "./Home/Connection";
 
 function HomePage() {
   return (
