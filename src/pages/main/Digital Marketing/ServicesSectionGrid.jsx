@@ -93,7 +93,7 @@ export default function ServicesSectionGrid() {
               </motion.div>
 
               {/* Title */}
-              <h3 className="text-3xl font-semibold font-primary mb-3 group-hover:text-white relative">
+              <h3 className="text-3xl font-medium text-primary font-primary mb-3 group-hover:text-white relative">
                 {service.title}
                 <motion.div
                   initial={{ scaleX: 0 }}
