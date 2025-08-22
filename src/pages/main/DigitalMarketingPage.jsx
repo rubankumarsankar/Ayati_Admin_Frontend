@@ -23,7 +23,7 @@ function DigitalMarketingPage() {
       <WhyChooseSection />
       <CaseStudies />
       {/* <GrowthFramework /> */}
-      <WaveTimeline />
+      {/* <WaveTimeline /> */}
       <FAQSection />
       <Connection />
       
