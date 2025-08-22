@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { FaPlus, FaMinus } from "react-icons/fa";
+
+import { Plus, Minus } from "lucide-react";
 
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -85,7 +86,7 @@ export default function FAQSection() {
                     transition={{ duration: 0.3 }}
                     className="text-primary text-xl"
                   >
-                    {openIndex === index ? <FaMinus /> : <FaPlus />}
+                    {openIndex === index ? <Minus /> : <Plus />}
                   </motion.span>
                 </button>
 
