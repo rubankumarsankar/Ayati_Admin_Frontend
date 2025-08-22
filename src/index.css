@@ -75,3 +75,15 @@
 .scrollbar-hide::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
 }
+
+@keyframes shakeY {
+  0%, 100% { transform: translateY(0); }
+  25% { transform: translateY(-4px); }
+  50% { transform: translateY(4px); }
+  75% { transform: translateY(-2px); }
+}
+
+.animate-shakeY {
+  animation: shakeY 1s ease-in-out infinite;
+}
+

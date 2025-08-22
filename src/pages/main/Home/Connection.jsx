@@ -36,7 +36,7 @@ export default function Connection() {
           viewport={{ once: true }}
         >
           Got questions, goals, or big ideas? Let’s talk strategy, scale, and
-          digital moves. Drop us a message and we’ll get back faster than your
+          digital moves. <br />Drop us a message and we’ll get back faster than your
           next scroll.
         </motion.p>
 
