@@ -93,7 +93,7 @@ export default function SolutionsSection() {
             whileInView="visible"
             viewport={{ once: true }}
             whileHover={{ scale: 1.03, y: -5 }}
-            className="relative flex flex-col bg-white p-8 rounded-2xl shadow-lg h-[420px] transition-all duration-300"
+            className="relative flex flex-col bg-white p-8 rounded-2xl shadow-lg h-[450px] transition-all duration-300"
           >
             {/* Vertical Label (optional, currently empty) */}
             {card.cat && (
@@ -105,7 +105,7 @@ export default function SolutionsSection() {
             )}
 
             {/* Title + Icon */}
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center gap-3 mb-4">
               <h3 className="font- font-primary text-secondary text-3xl flex-1">
                 {card.title}
               </h3>

@@ -34,11 +34,11 @@ export default function HomeGridSection() {
             >
               <h2 className="section-title relative inline-block">
                 Byte-Sized AI (Ayati Intelligence)
-                <img
+                {/* <img
                   src="/logo-left.png"
                   alt="climb"
                   className="absolute right-[-45px] bottom-[-30px] w-10 md:w-12 lg:w-14"
-                />
+                /> */}
               </h2>
             </motion.div>
       <div className="section-container mx-auto p-4 grid grid-cols-1 md:grid-cols-2 gap-6">

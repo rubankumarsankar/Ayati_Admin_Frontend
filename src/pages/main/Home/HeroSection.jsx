@@ -1,21 +1,29 @@
 import React from "react";
-import videoSrc from "/assets/video.mp4";
+import { motion } from "framer-motion";
+import videoSrc from "/assets/ayati-banner.mp4";
 
 export default function HeroSection() {
   return (
-    <section className="p-2 sm:p-4 md:p-8 bg-white flex justify-center items-center min-h-[60vh] sm:min-h-[70vh] md:min-h-screen">
+    <section className="p-2 sm:p-4 md:p-4 bg-white flex justify-center items-center min-h-[60vh] sm:min-h-[70vh] md:min-h-screen">
       <div className="bg-white rounded-none sm:rounded-2xl md:rounded-3xl shadow-none sm:shadow-lg md:shadow-xl overflow-hidden max-w-7xl w-full">
-        {/* ✅ Responsive Video */}
-        <div className="relative w-full aspect-[4/3] sm:aspect-video md:aspect-[16/9] lg:aspect-[21/9]">
+        
+        {/* ✅ Animated Video Wrapper */}
+        <motion.div
+          className="relative w-full h-[40vh] sm:h-[60vh] md:h-[80vh] lg:h-[95vh] xl:h-[100vh] 2xl:h-[100vh] overflow-hidden"
+          initial={{ opacity: 0, scale: 1.1 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+        >
+          {/* ✅ Video */}
           <video
-            className="absolute top-0 left-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover"
             autoPlay
             loop
             muted
             playsInline
             src={videoSrc}
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );
