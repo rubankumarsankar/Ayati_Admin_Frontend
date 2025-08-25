@@ -21,6 +21,7 @@ import Teams from "./pages/main/TeamsPage"; // Assuming TeamsPage is the correct
 import Blog from "./pages/main/BlogPage"; // Assuming BlogPage is the correct import for Blog 
 import ContactUs from "./pages/main/ContactUs"; // Assuming ContactUs is the correct import for   Contact
 import DigitalMarketingPage from "./pages/main/DigitalMarketingPage";
+import SEOBlogPage from "./pages/main/BlogPage/SEOBlog";
 
 
 
@@ -43,6 +44,7 @@ function App() {
             <Route path="/blogs" element={<Blog />} />
             <Route path="/contact" element={<ContactUs />} />
             <Route path="/digital-marketing" element={<DigitalMarketingPage />} />
+            <Route path="/seo-simplified" element={<SEOBlogPage />} />
             <Route path="*" element={<NotFound />} />
           </Route>
 

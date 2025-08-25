@@ -99,7 +99,6 @@ export default function DottedWorldMap() {
 
             {/* Animated Number */}
             <p className="text-black font-extrabold font-secondary text-2xl sm:text-3xl md:text-4xl">
-              +
               {inView ? (
                 <CountUp
                   key={i + String(inView)} // 👈 forces re-render when inView changes
@@ -111,6 +110,7 @@ export default function DottedWorldMap() {
               ) : (
                 0
               )}
+              +
             </p>
 
             <p className="text-gray-600 text-sm sm:text-base md:text-lg font-secondary">

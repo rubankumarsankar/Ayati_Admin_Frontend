@@ -7,21 +7,25 @@ export default function DigitalMarketingSection() {
   return (
     <section className="bg-white section ">
       {/* Top Title Section */}
-    <div className="section-container text-left flex items-start gap-6 mb-12">
-  <motion.h2
-    initial={{ opacity: 0, y: -30 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6 }}
-    viewport={{ once: true }}
-    className="section-title text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold"
-  >
-    <span className="mb-2 flex items-start">Award Winning Digital</span>
-    <span className="block mb-4">Marketing Agency in Chennai</span>
-    {/* Decorative line */}
-    <div className="bg-secondary h-1 w-[250px] mt-2"></div>
-  </motion.h2>
-</div>
-
+      <div className="section-container text-left flex items-start gap-6 mb-12">
+        <motion.h2
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="section-title text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold"
+        >
+          <span className="mb-2 flex items-start">Award Winning Digital</span>
+          <span className="block mb-4">Marketing Agency in Chennai</span>
+          {/* Decorative line */}
+          <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
+              className="bg-secondary h-1 w-[280px] mt-3 origin-left rounded-full"
+            />
+        </motion.h2>
+      </div>
 
       {/* Content Grid */}
       <div className="section-container mx-auto items-center">
