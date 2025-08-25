@@ -22,6 +22,8 @@ import Blog from "./pages/main/BlogPage"; // Assuming BlogPage is the correct im
 import ContactUs from "./pages/main/ContactUs"; // Assuming ContactUs is the correct import for   Contact
 import DigitalMarketingPage from "./pages/main/DigitalMarketingPage";
 import SEOBlogPage from "./pages/main/BlogPage/SEOBlog";
+import AwardsPage from "./pages/main/AwardsPage";
+import CaseStudiesPage from "./pages/main/CaseStudiePage";
 
 
 
@@ -43,6 +45,8 @@ function App() {
             <Route path="/teams" element={<Teams />} />
             <Route path="/blogs" element={<Blog />} />
             <Route path="/contact" element={<ContactUs />} />
+            <Route path="/awards" element={<AwardsPage />} />
+            <Route path="/case-studies" element={<CaseStudiesPage />} />
             <Route path="/digital-marketing" element={<DigitalMarketingPage />} />
             <Route path="/seo-simplified" element={<SEOBlogPage />} />
             <Route path="*" element={<NotFound />} />

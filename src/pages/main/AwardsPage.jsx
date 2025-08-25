@@ -1,18 +1,20 @@
 import React from "react";
 import HeroSection from "./Home/HeroSection";
-import TeamIntro from "./Teams/TeamIntro";
-import Connection from "./Home/Connection";
-import TeamMember from "./Teams/TeamMember";
 
-function TeamsPage() {
+import AwardsSection from "./Home/AwardsSection";
+
+import Connection from "./Home/Connection";
+
+function AwardsPage() {
   return (
     <>
       <HeroSection />
-      <TeamIntro />
-      <TeamMember />
+
+      <AwardsSection />
+
       <Connection />
     </>
   );
 }
 
-export default TeamsPage;
+export default AwardsPage;

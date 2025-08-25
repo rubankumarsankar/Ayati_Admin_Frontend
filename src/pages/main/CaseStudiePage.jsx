@@ -1,18 +1,20 @@
 import React from "react";
 import HeroSection from "./Home/HeroSection";
-import TeamIntro from "./Teams/TeamIntro";
-import Connection from "./Home/Connection";
-import TeamMember from "./Teams/TeamMember";
 
-function TeamsPage() {
+import PixelsPerfected from "./Home/PixelsPerfected";
+
+import Connection from "./Home/Connection";
+
+function CaseStudiesPage() {
   return (
     <>
       <HeroSection />
-      <TeamIntro />
-      <TeamMember />
+
+      <PixelsPerfected />
+
       <Connection />
     </>
   );
 }
 
-export default TeamsPage;
+export default CaseStudiesPage;
