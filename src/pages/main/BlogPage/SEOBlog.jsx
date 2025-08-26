@@ -195,7 +195,7 @@ function SEOBlogPage() {
           {/* Left - Image */}
           <div className="w-full">
             <img
-              src="/assets/blogImg/seo-img.png"
+              src="/assets/blogImg/blog-7.png"
               alt="Search Engines Work"
               className="w-full h-auto max-w-6xl mx-auto rounded-lg"
             />
@@ -436,7 +436,7 @@ function SEOBlogPage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/blogImg/seo-img.png"
+                src="/assets/blogImg/blog-8.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />
@@ -471,7 +471,7 @@ function SEOBlogPage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/blogImg/seo-img.png"
+                src="/assets/blogImg/blog-2.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />
@@ -585,7 +585,7 @@ function SEOBlogPage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/blogImg/seo-img.png"
+                src="/assets/blogImg/blog-3.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />
@@ -620,7 +620,7 @@ function SEOBlogPage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/blogImg/seo-img.png"
+                src="/assets/blogImg/blog-4.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />
@@ -827,7 +827,7 @@ function SEOBlogPage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/blogImg/seo-img.png"
+                src="/assets/blogImg/blog-6.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />
@@ -862,7 +862,7 @@ function SEOBlogPage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/blogImg/seo-img.png"
+                src="/assets/blogImg/blog-5.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />
@@ -993,7 +993,7 @@ function SEOBlogPage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/blogImg/seo-img.png"
+                src="/assets/blogImg/blog-1.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />
