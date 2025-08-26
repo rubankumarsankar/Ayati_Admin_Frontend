@@ -2,10 +2,14 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 // If using React Router, uncomment below
 // import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 export default function AwardsSection() {
   const [flipped, setFlipped] = useState(Array(4).fill(false));
   const [modalImage, setModalImage] = useState(null);
+    const navigate = useNavigate();
+
 
   const handleFlip = (index) => {
     const newFlipped = [...flipped];
@@ -71,6 +75,7 @@ export default function AwardsSection() {
             <motion.button
               whileHover={{ scale: 1.08 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => navigate("/contact")}
               className="px-6 py-2 text-sm font-medium font-primary text-primary border border-primary rounded-full hover:bg-blue-900 hover:text-white transition"
             >
               GET IN TOUCH

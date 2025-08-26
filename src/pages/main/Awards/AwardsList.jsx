@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+
 
 export default function AwardsListSection() {
   const [flipped, setFlipped] = useState([]);
   const [modalImage, setModalImage] = useState(null);
+  const navigate = useNavigate();
 
   // ✅ Awards list (just add more objects here)
   const awards = [
@@ -86,6 +89,7 @@ export default function AwardsListSection() {
             <motion.button
               whileHover={{ scale: 1.08 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => navigate("/contact")}
               className="px-6 py-2 text-sm font-medium font-primary text-primary border border-primary rounded-full hover:bg-blue-900 hover:text-white transition"
             >
               GET IN TOUCH
