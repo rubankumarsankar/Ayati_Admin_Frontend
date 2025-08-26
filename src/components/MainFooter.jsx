@@ -14,14 +14,14 @@ export default function MainFooter() {
           <img src="/ayatiworks_logo.svg" alt="Ayatiworks" className="h-6" />
           <div className="flex flex-wrap gap-2 font-secondary justify-center md:gap-4">
             <Link
-              to="/privacy-policy"
+              to="#"
               className="hover:text-primary font-secondary transition"
             >
               Privacy Policy
             </Link>
             <span>|</span>
             <Link
-              to="/terms-conditions"
+              to="#"
               className="hover:text-primary font-secondary transition"
             >
               Terms & Conditions
