@@ -120,7 +120,7 @@ export function CenteredLogoNavbar() {
               items={[
                 { label: "About", path: "/about" },
                 { label: "Teams", path: "/teams" },
-                { label: "Careers", path: "/careers" },
+                // { label: "Careers", path: "/careers" },
               ]}
               onItemClick={handleNavigation}
               activePath={activePath}
@@ -130,9 +130,9 @@ export function CenteredLogoNavbar() {
               title="Services"
               items={[
                 { label: "Digital Marketing Service", path: "/digital-marketing" },
-                { label: "Content as a Service", path: "/comingsoon" },
-                { label: "Digital PR Service", path: "/comingsoon" },
-                { label: "Web & Development Services", path: "/comingsoon" },
+                { label: "Content as a Service", path: "#" },
+                { label: "Digital PR Service", path: "#" },
+                { label: "Web & Development Services", path: "#" },
               ]}
               onItemClick={handleNavigation}
               activePath={activePath}
@@ -141,12 +141,12 @@ export function CenteredLogoNavbar() {
             <DropdownMenu
               title="Industries"
               items={[
-                { label: "Automobile", path: "/comingsoon" },
-                { label: "Retail & E-Commerce", path: "/comingsoon" },
-                { label: "Healthcare", path: "/comingsoon" },
-                { label: "Technology & SaaS", path: "/comingsoon" },
-                { label: "Beauty & Personal Care", path: "/comingsoon" },
-                { label: "Real Estate", path: "/comingsoon" },
+                { label: "Automobile", path: "#" },
+                { label: "Retail & E-Commerce", path: "#" },
+                { label: "Healthcare", path: "#" },
+                { label: "Technology & SaaS", path: "#" },
+                { label: "Beauty & Personal Care", path: "#" },
+                { label: "Real Estate", path: "#" },
               ]}
               onItemClick={handleNavigation}
               activePath={activePath}
@@ -155,7 +155,7 @@ export function CenteredLogoNavbar() {
             <DropdownMenu
               title="Insights"
               items={[
-                { label: "Blogs", path: "/blogs" },
+                { label: "Blogs", path: "#" },
                 { label: "Awards", path: "/awards" },
                 { label: "Case Studies", path: "/case-studies" },
                 // { label: "News", path: "/news" },
