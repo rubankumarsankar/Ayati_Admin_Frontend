@@ -1,7 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 export default function Connection() {
+  const navigate = useNavigate();
   return (
     <section className="section py-20 bg-white overflow-hidden">
       <div className="section-container max-w-3xl mx-auto text-center px-4">
@@ -52,6 +54,7 @@ export default function Connection() {
           whileTap={{ scale: 0.95 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
           viewport={{ once: true }}
+          onClick={() => navigate("/contact")}
         >
           SPARK A CONNECTION
         </motion.button>
