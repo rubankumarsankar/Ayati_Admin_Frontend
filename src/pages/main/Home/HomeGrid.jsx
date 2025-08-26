@@ -9,14 +9,14 @@ const imgs1 = [
     heading: "SEO Simplified for you",
     path: "/seo-simplified",
   },
-  { src: "/assets/blog-2.jpg", heading: "Heading", path: "/" },
-  { src: "/assets/blog-3.jpg", heading: "Heading", path: "/" },
+  // { src: "/assets/blog-2.jpg", heading: "", path: "/" },
+  // { src: "/assets/blog-3.jpg", heading: "", path: "/" },
 ];
 
 const imgs2 = [
-  { src: "/assets/blog-1.jpg", heading: "Heading", path: "/" },
-  { src: "/assets/blog-2.jpg", heading: "Heading", path: "/" },
-  { src: "/assets/blog-3.jpg", heading: "Heading", path: "/" },
+  // { src: "/assets/blog-1.jpg", heading: "", path: "/" },
+  // { src: "/assets/blog-2.jpg", heading: "", path: "/" },
+  // { src: "/assets/blog-3.jpg", heading: "", path: "/" },
 ];
 
 export default function HomeGridSection() {
@@ -136,8 +136,7 @@ export default function HomeGridSection() {
         </div>
 
         {/* Block 2 */}
-        <div className="space-y-4">
-          {/* Top Row */}
+        {/* <div className="space-y-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {imgs2.slice(1).map((img, index) => (
               <motion.div
@@ -179,7 +178,6 @@ export default function HomeGridSection() {
             ))}
           </div>
 
-          {/* Bottom Image */}
           <motion.div
             custom={2}
             variants={fadeUp}
@@ -215,7 +213,7 @@ export default function HomeGridSection() {
               {imgs2[0].heading}
             </span>
           </motion.div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
