@@ -12,41 +12,40 @@ export default function Form() {
   } = useForm();
 
   const [loading, setLoading] = useState(false);
-  
- const onSubmit = async (data) => {
-  try {
-    setLoading(true);
-    const response = await Contactform(data); // ✅ API Call
 
-    if (response?.status === "success") {
+  const onSubmit = async (data) => {
+    try {
+      setLoading(true);
+      const response = await Contactform(data); // ✅ API Call
+
+      if (response?.status === "success") {
+        Swal.fire({
+          icon: "success",
+          title: "Success!",
+          text: response?.message || "Form submitted successfully 🎉",
+          confirmButtonColor: "#16a34a", // green
+        });
+        reset(); // ✅ Clear form after success
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Failed",
+          text: response?.message || "Something went wrong. Please try again.",
+          confirmButtonColor: "#dc2626", // red
+        });
+      }
+    } catch (error) {
+      console.error(error);
       Swal.fire({
-        icon: "success",
-        title: "Success!",
-        text: response?.message || "Form submitted successfully 🎉",
-        confirmButtonColor: "#16a34a", // green
+        icon: "warning",
+        title: "Server Error",
+        text: error?.message || "⚠️ Please try again later.",
+        confirmButtonColor: "#f59e0b", // amber
       });
-      reset(); // ✅ Clear form after success
-    } else {
-      Swal.fire({
-        icon: "error",
-        title: "Failed",
-        text: response?.message || "Something went wrong. Please try again.",
-        confirmButtonColor: "#dc2626", // red
-      });
+    } finally {
+      setLoading(false);
     }
-  } catch (error) {
-    console.error(error);
-    Swal.fire({
-      icon: "warning",
-      title: "Server Error",
-      text: error?.message || "⚠️ Please try again later.",
-      confirmButtonColor: "#f59e0b", // amber
-    });
-  } finally {
-    setLoading(false);
-  }
-};
-
+  };
 
   const services = [
     "Social Media Marketing",
