@@ -12,7 +12,6 @@ export default function Form() {
   } = useForm();
 
   const [loading, setLoading] = useState(false);
-
   const onSubmit = async (data) => {
     try {
       setLoading(true);
@@ -22,16 +21,16 @@ export default function Form() {
         Swal.fire({
           icon: "success",
           title: "Success!",
-          text: "Form submitted successfully 🎉",
-          confirmButtonColor: "#3085d6",
+          text: response?.message || "Form submitted successfully 🎉",
+          confirmButtonColor: "#16a34a", // green
         });
-        reset(); // clear form
+        reset(); // ✅ Clear form after success
       } else {
         Swal.fire({
           icon: "error",
-          title: "Oops...",
-          text: "Something went wrong. Please try again.",
-          confirmButtonColor: "#d33",
+          title: "Submission Failed",
+          text: response?.message || "Something went wrong. Please try again.",
+          confirmButtonColor: "#dc2626", // red
         });
       }
     } catch (error) {
@@ -39,8 +38,8 @@ export default function Form() {
       Swal.fire({
         icon: "warning",
         title: "Server Error",
-        text: "⚠️ Please try again later.",
-        confirmButtonColor: "#f59e0b",
+        text: error?.message || "⚠️ Please try again later.",
+        confirmButtonColor: "#f59e0b", // amber
       });
     } finally {
       setLoading(false);
@@ -149,7 +148,9 @@ export default function Form() {
               Monthly Budget
             </label>
             <select
-              {...register("budget", { required: "Monthly budget is required..." })}
+              {...register("budget", {
+                required: "Monthly budget is required...",
+              })}
               className="w-full border border-gray-300 rounded-lg p-3 text-gray-800 font-secondary
               focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition"
             >
@@ -159,7 +160,9 @@ export default function Form() {
               <option value="$5000+">$5000+</option>
             </select>
             {errors.budget && (
-              <p className="text-red-500 text-sm mt-1">{errors.budget.message}</p>
+              <p className="text-red-500 text-sm mt-1">
+                {errors.budget.message}
+              </p>
             )}
           </div>
 
@@ -182,7 +185,9 @@ export default function Form() {
               focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition"
             />
             {errors.email && (
-              <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
+              <p className="text-red-500 text-sm mt-1">
+                {errors.email.message}
+              </p>
             )}
           </div>
 

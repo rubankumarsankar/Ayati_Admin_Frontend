@@ -14,10 +14,37 @@ export default function CaseStudies() {
       link: "#",
     },
     {
-      title: "Healthcare Growth – Apollo",
+      title: "Retail & E-Commerce Growth ",
       description:
-        "We partnered with Apollo Hospitals to amplify their digital presence, ensuring top visibility and patient trust through data-driven campaigns and SEO excellence.",
-      image: "/assets/apollo.png", // ✅ replace with your image
+        "A D2C brand teamed up with Ayatiworks to scale online visibility. Through SEO, performance ads, and social campaigns, we achieved 130% growth in organic traffic and an 85% rise in sales within 6 months",
+      image: "/assets/Tiger.png", // ✅ replace with your image
+      link: "#",
+    }, {
+      title: "Healthcare – Domestic & International Impact ",
+      description:
+        "We’ve partnered with both domestic and international healthcare providers to enhance visibility and patient acquisition. From clinics in Chennai to global health brands in the USA & UAE, our campaigns improved keyword rankings and patient trust across markets. ",
+      image: "/assets/siva-hospital.png", // ✅ replace with your image
+      link: "#",
+    },
+     {
+      title: "Technology & SaaS Expansion – Domestic & International ",
+      description:
+        "A leading SaaS company Dataquel has collaborated with Ayatiworks from inception, ideation, execution and results. We have co-created a demand generation content framework to penetrate the market to generate 70% qualified traffic from the target audience in California.   ",
+      image: "/assets/Tiger.png", // ✅ replace with your image
+      link: "#",
+    },
+     {
+      title: "Beauty & Personal Care Marketing ",
+      description:
+        "Our influencer-led Instagram campaigns helped a Chennai-based salon chain engage more customers. This strategy delivered a 200% increase in interactions and rapid expansion into new franchise locations across Tamil Nadu. ",
+      image: "/assets/Royal-dutch.png", // ✅ replace with your image
+      link: "#",
+    },
+    {
+      title: "Real Estate Client Testimonial ",
+      description:
+        "For a leading real estate developer, VGN Properties, Ayatiworks manages website development, landing page design, PPC campaigns, social media marketing, and ongoing web maintenance. This integrated approach not only generated quality leads but also built a steady digital presence that continues to attract homebuyers. ",
+      image: "/assets/vgn.png", // ✅ replace with your image
       link: "#",
     },
   ];
