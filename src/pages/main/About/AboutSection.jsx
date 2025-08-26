@@ -8,15 +8,24 @@ export default function AboutSection() {
     <section className="bg-white section py-12 sm:py-16 md:py-20">
       {/* Top Title Section */}
       <div className="section-container text-center flex flex-col sm:flex-row justify-between items-center gap-6 mb-12">
-        <motion.h2
-          initial={{ opacity: 0, y: -30 }}
+        {/* Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="section-title text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold"
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          className="mb-6"
         >
-          ABOUT US
-        </motion.h2>
+          <h2 className="section-title flex items-start text-primary">
+            About Us
+          </h2>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
+            className="bg-secondary h-1 w-[100px] mt-3 origin-left rounded-full"
+          />
+        </motion.div>
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}

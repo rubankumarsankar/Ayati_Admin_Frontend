@@ -42,28 +42,22 @@ export default function HowWeDoIt() {
         variants={fadeUp}
         viewport={{ once: true, amount: 0.2 }}
       >
-        {/* Title */}
+        {/* Heading */}
         <motion.div
-          className="flex items-start space-x-3"
-          variants={fadeUp}
-          custom={1}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          className="mb-6"
         >
-          <div>
-            <h2 className="section-title">How do we do it?</h2>
-            <motion.span
-              initial={{ width: 0 }}
-              whileInView={{ width: 80 }}
-              transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
-              viewport={{ once: true }}
-              className="block h-1 bg-sky-500 mt-2"
-            ></motion.span>
-          </div>
-          <motion.img
-            src={doodleIcon}
-            alt="Doodle"
-            className="w-8 h-8"
-            animate={{ y: [0, -6, 0] }}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+          <h2 className="section-title flex items-start text-primary">
+            How do we do it?
+          </h2>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
+            className="bg-secondary h-1 w-[100px] mt-3 origin-left rounded-full"
           />
         </motion.div>
 
@@ -98,7 +92,8 @@ export default function HowWeDoIt() {
           custom={1}
         >
           <h3 className="text-3xl font-primary font-medium mb-10">
-            Customized Social Media  <br />and Web Interactions
+            Customized Social Media <br />
+            and Web Interactions
           </h3>
           <p className="text-xl/9 font-secondary leading-relaxed flex-1">
             Our squad of social media strategists is here to whip up captivating
@@ -131,7 +126,6 @@ export default function HowWeDoIt() {
           </p>
         </motion.div>
       </div>
-
     </section>
   );
 }

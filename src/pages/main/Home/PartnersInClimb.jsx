@@ -81,10 +81,11 @@ export default function PartnersInClimb() {
       >
         <h2 className="section-title relative inline-block">
           Our Partners in Climb
-          <img
-            src="/logo-left.png"
-            alt="climb"
-            className="absolute right-[-50px] bottom-[-40px] w-8 md:w-12 lg:w-14"
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
+            className="bg-secondary h-1 w-[250px] mt-3 origin-left rounded-full"
           />
         </h2>
       </motion.div>

@@ -48,21 +48,24 @@ export default function WhatWeDo() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <div className="flex items-start space-x-3">
-            <div>
-              <h2 className="section-title ">
-                What we do
-              </h2>
-              <span className="block w-20 h-1 bg-sky-500 mt-2"></span>
-            </div>
-            <motion.img
-              src={doodleIcon}
-              alt="Doodle"
-              className="w-8 h-8"
-              animate={{ y: [0, -6, 0] }}
-              transition={{ duration: 3, repeat: Infinity }}
+          {/* Heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="mb-6"
+          >
+            <h2 className="section-title flex items-start text-primary">
+              What we do
+            </h2>
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
+              className="bg-secondary h-1 w-[100px] mt-3 origin-left rounded-full"
             />
-          </div>
+          </motion.div>
 
           <p className="text-gray-700 font-secondary max-w-2xl text-sm md:text-base leading-relaxed">
             At AyatiWorks, we’re all about unlocking a digital gateway for our
@@ -102,14 +105,14 @@ export default function WhatWeDo() {
           ))}
         </div>
       </div>
-       {/* Divider */}
-            <motion.div
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              transition={{ duration: 0.8, ease: "easeInOut" }}
-              viewport={{ once: true }}
-              className="border-b border-black mt-8 sm:mt-10 section-container"
-            ></motion.div>
+      {/* Divider */}
+      <motion.div
+        initial={{ scaleX: 0 }}
+        whileInView={{ scaleX: 1 }}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
+        viewport={{ once: true }}
+        className="border-b border-black mt-8 sm:mt-10 section-container"
+      ></motion.div>
     </section>
   );
 }

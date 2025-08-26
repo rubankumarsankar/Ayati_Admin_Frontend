@@ -54,8 +54,13 @@ export default function AwardsSection() {
           >
             Steadily Crushing the Digital Charts!
             <br /> One Award at a Time!
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
+              className="bg-secondary h-1 w-[300px] mt-3 origin-left rounded-full"
+            />
           </motion.h2>
-
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -75,76 +80,68 @@ export default function AwardsSection() {
       </div>
 
       {/* Awards Cards */}
-      <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 justify-items-center section-container">
-        {awards.map((award, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.15 }}
-            viewport={{ once: true }}
-            className="relative w-64 h-82 sm:w-72 sm:h-96 [perspective:1500px] cursor-pointer"
-            onClick={() => handleFlip(index)}
+      {/* Awards Cards */}
+<div className="mt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 section-container">
+  {awards.map((award, index) => (
+    <motion.div
+      key={index}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: index * 0.15 }}
+      viewport={{ once: true }}
+      className="relative w-full aspect-[3/4] max-w-xs sm:max-w-sm [perspective:1500px] cursor-pointer"
+      onClick={() => handleFlip(index)}
+    >
+      <div
+        className={`absolute inset-0 rounded-2xl shadow-lg transition-transform duration-700 ease-in-out [transform-style:preserve-3d] ${
+          flipped[index] ? "[transform:rotateY(180deg)]" : ""
+        }`}
+      >
+        {/* Front Side */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center bg-white border border-gray-200 rounded-2xl shadow-md [backface-visibility:hidden] p-6 hover:shadow-2xl">
+          <img
+            src={award.img}
+            alt={award.title}
+            className="w-32 sm:w-40 object-contain mb-4"
+          />
+          <p className="text-gray-900 font-medium font-primary text-lg leading-snug text-center">
+            {award.title}
+          </p>
+          <a
+            href={award.link}
+            onClick={(e) => e.stopPropagation()}
+            className="mt-3 text-secondary px-4 py-1.5 text-sm sm:text-base font-primary border border-secondary rounded-full hover:text-white hover:bg-secondary transition"
           >
-            <div
-              className={`absolute inset-0 rounded-2xl shadow-lg transition-transform duration-700 ease-in-out [transform-style:preserve-3d] ${
-                flipped[index] ? "[transform:rotateY(180deg)]" : ""
-              }`}
-            >
-              {/* Front Side */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center bg-white border border-gray-200 rounded-2xl shadow-md [backface-visibility:hidden] p-6 transition-all hover:shadow-2xl">
-                <img
-                  src={award.img}
-                  alt={award.title}
-                  className="h-50 object-contain mb-4"
-                />
-                <p className="text-gray-900 font-medium font-primary text-lg leading-snug text-center">
-                  {award.title}
-                </p>
+            KNOW MORE
+          </a>
+        </div>
 
-                {/* ✅ "Know More" is now a link */}
-                <a
-                  href={award.link}
-                  onClick={(e) => e.stopPropagation()} // prevent card flip
-                  className="mt-3 text-secondary px-4 text-lg font-primary border border-secondary  rounded-full cursor-pointer hover:text-white hover:bg-secondary transition"
-                >
-                  KNOW MORE
-                </a>
-                {/* Or if using React Router: 
-                <Link
-                  to={award.link}
-                  onClick={(e) => e.stopPropagation()}
-                  className="mt-3 text-primary font-primary underline underline-offset-4 cursor-pointer hover:text-blue-800 transition"
-                >
-                  KNOW MORE →
-                </Link> */}
-              </div>
-
-              {/* Back Side */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-50 rounded-2xl shadow-md [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-hidden p-5">
-                <img
-                  src={award.backImg}
-                  alt="Award Back"
-                  className="w-full h-full object-cover rounded-lg mb-2"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setModalImage(award.backImg);
-                  }}
-                />
-                <button
-                  className="mt-1 font-primary text-secondary border border-secondary hover:bg-secondary hover:text-white px-5 py-2 rounded-full text-base font-medium transition"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    handleFlip(index);
-                  }}
-                >
-                  FLIP FRONT
-                </button>
-              </div>
-            </div>
-          </motion.div>
-        ))}
+        {/* Back Side */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-50 rounded-2xl shadow-md [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-hidden p-5">
+          <img
+            src={award.backImg}
+            alt="Award Back"
+            className="w-full h-full object-cover rounded-lg mb-2"
+            onClick={(e) => {
+              e.stopPropagation();
+              setModalImage(award.backImg);
+            }}
+          />
+          <button
+            className="mt-1 font-primary text-secondary border border-secondary hover:bg-secondary hover:text-white px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-sm sm:text-base font-medium transition"
+            onClick={(e) => {
+              e.stopPropagation();
+              handleFlip(index);
+            }}
+          >
+            FLIP FRONT
+          </button>
+        </div>
       </div>
+    </motion.div>
+  ))}
+</div>
+
 
       {/* Modal Preview */}
       <AnimatePresence>

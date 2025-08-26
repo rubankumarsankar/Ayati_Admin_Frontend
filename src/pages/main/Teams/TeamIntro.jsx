@@ -3,8 +3,7 @@ import { motion } from "framer-motion";
 import doodleIcon from "/assets/doodle.png"; // replace with your doodle path
 
 export default function TeamIntro() {
-     
-// Animation Variants
+  // Animation Variants
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
     visible: (i = 1) => ({
@@ -19,10 +18,8 @@ export default function TeamIntro() {
   };
 
   return (
-    
     <section className="w-full bg-white section ">
-           
- {/* Heading & Intro */}
+      {/* Heading & Intro */}
       <motion.div
         className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-12 section-container"
         initial="hidden"
@@ -36,23 +33,24 @@ export default function TeamIntro() {
           variants={fadeUp}
           custom={1}
         >
-          <div>
-            <h2 className="section-title">Teams</h2>
-            <motion.span
-              initial={{ width: 0 }}
-              whileInView={{ width: 80 }}
+          {/* Heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="mb-6"
+          >
+            <h2 className="section-title flex items-start text-primary">
+              Teams
+            </h2>
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
               transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
-              viewport={{ once: true }}
-              className="block h-1 bg-sky-500 mt-2"
-            ></motion.span>
-          </div>
-          <motion.img
-            src={doodleIcon}
-            alt="Doodle"
-            className="w-8 h-8"
-            animate={{ y: [0, -6, 0] }}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-          />
+              className="bg-secondary h-1 w-[100px] mt-3 origin-left rounded-full"
+            />
+          </motion.div>
         </motion.div>
 
         {/* Intro Text */}
@@ -61,7 +59,13 @@ export default function TeamIntro() {
           variants={fadeUp}
           custom={2}
         >
-          At AyatiWorks, we’re all about unlocking a digital gateway for our clients! Whether it's sparking consumer conversations through brand marketing, launching online shopping sprees, building cool platforms for entertainment and finance, managing enterprise networks, or supercharging performance— we’ve got it covered! Our secret sauce? Practical, trustworthy, and dependable solutions that make your digital dreams a reality!
+          At AyatiWorks, we’re all about unlocking a digital gateway for our
+          clients! Whether it's sparking consumer conversations through brand
+          marketing, launching online shopping sprees, building cool platforms
+          for entertainment and finance, managing enterprise networks, or
+          supercharging performance— we’ve got it covered! Our secret sauce?
+          Practical, trustworthy, and dependable solutions that make your
+          digital dreams a reality!
         </motion.p>
       </motion.div>
     </section>

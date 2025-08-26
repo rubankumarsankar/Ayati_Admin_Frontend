@@ -30,7 +30,7 @@ export default function SolutionsSection() {
     {
       cat: "",
       title: "Content as a Service",
-      icon: "/assets/good-vibe.png",
+      icon: "/icon/01.png",
       list: [
         "Brand Consultant",
         "Video Production",
@@ -45,7 +45,7 @@ export default function SolutionsSection() {
     {
       cat: "",
       title: "Digital PR Service",
-      icon: "/assets/good-vibe.png",
+      icon: "/icon/02.png",
       list: [
         "Digital PR",
         "Influencer Marketing",
@@ -55,7 +55,7 @@ export default function SolutionsSection() {
     {
       cat: "",
       title: "Web & E-commerce",
-      icon: "/assets/good-vibe.png",
+      icon: "/icon/03.png",
       list: [
         "UX/UI Design",
         "Web Development Services",
@@ -76,7 +76,15 @@ export default function SolutionsSection() {
         viewport={{ once: true }}
         className="flex flex-col md:flex-row justify-between items-center section-container mb-10"
       >
-        <h3 className="section-title">What Ayati Brew’s</h3>
+        <h3 className="section-title">
+          What Ayati Brew’s
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
+            className="bg-secondary h-1 w-[250px] mt-3 origin-left rounded-full"
+          />
+        </h3>
         <h3 className="text-secondary font-primary text-2xl sm:text-3xl lg:text-3xl text-center md:text-right">
           360 Integrated Solutions
         </h3>

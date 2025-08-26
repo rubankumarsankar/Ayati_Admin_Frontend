@@ -17,7 +17,7 @@ export default function Brand() {
         </motion.h2>
 
         {/* Underline SVG / Wave Line */}
-        <motion.svg
+        {/* <motion.svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 200 10"
           className="mx-auto mb-6 w-32 sm:w-40"
@@ -30,7 +30,7 @@ export default function Brand() {
           viewport={{ once: true }}
         >
           <path d="M0 5 Q50 0 100 5 T200 5" />
-        </motion.svg>
+        </motion.svg> */}
 
         {/* Paragraph */}
         <motion.p

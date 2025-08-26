@@ -4,7 +4,11 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react"; // ✅ Right arrow icon
 
 const imgs1 = [
-  { src: "/assets/blog-1.jpg", heading: "SEO Simplified for you", path: "/seo-simplified" },
+  {
+    src: "/assets/blog-1.jpg",
+    heading: "SEO Simplified for you",
+    path: "/seo-simplified",
+  },
   { src: "/assets/blog-2.jpg", heading: "Heading", path: "/" },
   { src: "/assets/blog-3.jpg", heading: "Heading", path: "/" },
 ];
@@ -37,6 +41,12 @@ export default function HomeGridSection() {
       >
         <h2 className="section-title relative inline-block">
           Byte-Sized AI (Ayati Intelligence)
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
+            className="bg-secondary h-1 w-[250px] mt-3 origin-left rounded-full"
+          />
         </h2>
       </motion.div>
 
@@ -74,8 +84,10 @@ export default function HomeGridSection() {
             </Link>
 
             {/* ✅ Bottom heading label */}
-            <span className="absolute bottom-2 left-2 font-primary bg-white/90 text-secondary hover:bg-secondary
-             hover:text-white font-medium px-4 py-2 text-xl shadow rounded">
+            <span
+              className="absolute bottom-2 left-2 font-primary bg-white/90 text-secondary hover:bg-secondary
+             hover:text-white font-medium px-4 py-2 text-xl shadow rounded"
+            >
               {imgs1[0].heading}
             </span>
           </motion.div>
@@ -112,8 +124,10 @@ export default function HomeGridSection() {
                   </div>
                 </Link>
 
-                <span className="absolute bottom-2 left-2 font-primary bg-white/90 text-secondary hover:bg-secondary
-             hover:text-white font-medium px-4 py-2 text-xl shadow rounded">
+                <span
+                  className="absolute bottom-2 left-2 font-primary bg-white/90 text-secondary hover:bg-secondary
+             hover:text-white font-medium px-4 py-2 text-xl shadow rounded"
+                >
                   {img.heading}
                 </span>
               </motion.div>
@@ -155,8 +169,10 @@ export default function HomeGridSection() {
                   </div>
                 </Link>
 
-                <span className="absolute bottom-2 left-2 font-primary bg-white/90 text-secondary hover:bg-secondary
-             hover:text-white font-medium px-4 py-2 text-xl shadow rounded">
+                <span
+                  className="absolute bottom-2 left-2 font-primary bg-white/90 text-secondary hover:bg-secondary
+             hover:text-white font-medium px-4 py-2 text-xl shadow rounded"
+                >
                   {img.heading}
                 </span>
               </motion.div>
@@ -192,8 +208,10 @@ export default function HomeGridSection() {
               </div>
             </Link>
 
-            <span className="absolute bottom-2 left-2 font-primary bg-white/90 text-secondary hover:bg-secondary
-             hover:text-white font-medium px-4 py-2 text-xl shadow rounded">
+            <span
+              className="absolute bottom-2 left-2 font-primary bg-white/90 text-secondary hover:bg-secondary
+             hover:text-white font-medium px-4 py-2 text-xl shadow rounded"
+            >
               {imgs2[0].heading}
             </span>
           </motion.div>

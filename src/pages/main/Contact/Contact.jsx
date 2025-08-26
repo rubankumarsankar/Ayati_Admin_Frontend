@@ -30,23 +30,26 @@ export default function Contact() {
             variants={fadeUp}
             viewport={{ once: true, amount: 0.2 }}
           >
-            <div>
-              <h2 className="section-title">Contact Us</h2>
-              <motion.span
-                initial={{ width: 0 }}
-                whileInView={{ width: 80 }}
+            {/* Heading */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              className="mb-6"
+            >
+              <h2 className="section-title flex items-start text-primary">
+                Contact Us
+              </h2>
+              <motion.div
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
                 transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
-                viewport={{ once: true }}
-                className="block h-1 bg-sky-500 mt-2"
-              ></motion.span>
-            </div>
-            <motion.img
-              src={doodleIcon}
-              alt="Doodle"
-              className="w-8 h-8"
-              animate={{ y: [0, -6, 0] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            />
+                className="bg-secondary h-1 w-[150px] mt-3 origin-left rounded-full"
+              />
+            </motion.div>
+
+           
           </motion.div>
 
           {/* Right Text Content */}

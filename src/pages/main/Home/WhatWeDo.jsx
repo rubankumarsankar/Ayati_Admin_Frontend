@@ -14,7 +14,24 @@ export default function WhatWeDo() {
       >
         {/* Left Side - Heading + Icon + Image */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-6 md:w-1/2">
-          <h2 className="section-title flex items-center gap-2">WHAT WE DO</h2>
+          {/* Heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="mb-6"
+          >
+            <h2 className="section-title flex items-start text-primary">
+              WHAT WE DO
+            </h2>
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
+              className="bg-secondary h-1 w-[100px] mt-3 origin-left rounded-full"
+            />
+          </motion.div>
           <div className="flex justify-center md:justify-start">
             <img
               src="/icon/Brain.png"

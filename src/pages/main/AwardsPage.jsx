@@ -1,16 +1,14 @@
 import React from "react";
 import HeroSection from "./Home/HeroSection";
-
-import AwardsSection from "./Home/AwardsSection";
-
 import Connection from "./Home/Connection";
+import AwardsListSection from "./Awards/AwardsList";
 
 function AwardsPage() {
   return (
     <>
       <HeroSection />
 
-      <AwardsSection />
+      <AwardsListSection />
 
       <Connection />
     </>

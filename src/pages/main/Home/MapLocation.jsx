@@ -37,14 +37,14 @@ export default function DottedWorldMap() {
       >
         <h2 className="section-title relative inline-block">
           Globally Planted, Digitally Rooted
-          {/* <img
-            src="/logo-left.png"
-            alt="climb"
-            className="absolute right-[-45px] bottom-[-30px] w-10 md:w-12 lg:w-14"
-          /> */}
+          <motion.div
+                    initial={{ scaleX: 0 }}
+                    whileInView={{ scaleX: 1 }}
+                    transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
+                    className="bg-secondary h-1 w-[250px] mt-3 origin-left rounded-full"
+                  />
         </h2>
       </motion.div>
-
       {/* Map */}
       <div className="relative w-full section-container">
         {/* ✅ Dotted Map Background */}
