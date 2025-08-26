@@ -130,9 +130,9 @@ export function CenteredLogoNavbar() {
               title="Services"
               items={[
                 { label: "Digital Marketing Service", path: "/digital-marketing" },
-                { label: "Content as a Service", path: "/content-service" },
-                { label: "Digital PR Service", path: "/pr-service" },
-                { label: "Web & Development Services", path: "/web-devlopment" },
+                { label: "Content as a Service", path: "/comingsoon" },
+                { label: "Digital PR Service", path: "/comingsoon" },
+                { label: "Web & Development Services", path: "/comingsoon" },
               ]}
               onItemClick={handleNavigation}
               activePath={activePath}
@@ -141,12 +141,12 @@ export function CenteredLogoNavbar() {
             <DropdownMenu
               title="Industries"
               items={[
-                { label: "Automobile", path: "/automobile" },
-                { label: "Retail & E-Commerce", path: "/e-commerce" },
-                { label: "Healthcare", path: "/healthcare" },
-                { label: "Technology & SaaS", path: "/technology-saas" },
-                { label: "Beauty & Personal Care", path: "/personal-care" },
-                { label: "Real Estate", path: "/real-estate" },
+                { label: "Automobile", path: "/comingsoon" },
+                { label: "Retail & E-Commerce", path: "/comingsoon" },
+                { label: "Healthcare", path: "/comingsoon" },
+                { label: "Technology & SaaS", path: "/comingsoon" },
+                { label: "Beauty & Personal Care", path: "/comingsoon" },
+                { label: "Real Estate", path: "/comingsoon" },
               ]}
               onItemClick={handleNavigation}
               activePath={activePath}

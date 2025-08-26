@@ -9,7 +9,7 @@ export default function CaseStudies() {
     {
       title: "Automobile Excellence – Volvo",
       description:
-        "Our collaboration with Volvo began over 3 years ago and continues to thrive. Together, we’ve elevated their brand presence across Chennai and Tamil Nadu, running hyper-local campaigns that strengthened engagement and dealership-level conversions.",
+        "Our collaboration with Volvo began over 3 years ago and continues to thrive. Together, we’ve elevated their brand presence across Chennai and Tamil Nadu, running hyper-local campaigns that strengthened engagement and dealership-level conversions. ",
       image: "/assets/case-car.png", // ✅ replace with your image
       link: "#",
     },

@@ -1,75 +1,94 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { HomeIcon, PhoneIcon, BriefcaseIcon } from "@heroicons/react/24/outline";
+import videoFile from "/assets/404.mp4"; // ✅ replace with your video path
 
 export default function NotFound() {
   const navigate = useNavigate();
+  const [stage, setStage] = useState("logo"); // logo → content
+
+  // Step control
+  useEffect(() => {
+    if (stage === "logo") {
+      const timer = setTimeout(() => setStage("content"), 2000); // logo lasts 2s
+      return () => clearTimeout(timer);
+    }
+  }, [stage]);
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center bg-gray-50 text-center p-6">
-      {/* ✅ Logo */}
-      <motion.img
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        src="/ayatiworks_logo.svg"
-        alt="Logo"
-        className="h-20 w-20 mb-6 cursor-pointer"
-        onClick={() => navigate("/")}
-      />
+    <div className="relative min-h-screen flex justify-center items-center bg-black overflow-hidden">
+      {/* STEP 1: Logo animation */}
+      <AnimatePresence>
+        {stage === "logo" && (
+          <motion.img
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            exit={{ scale: 0 }}
+            transition={{ duration: 1, ease: "easeInOut" }}
+            src="/ayatiworks_logo.svg"
+            alt="Logo"
+            className="h-32 w-32 z-20"
+          />
+        )}
+      </AnimatePresence>
 
-      {/* ✅ 404 Text */}
-      <motion.h1
-        initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="text-7xl font-bold text-primary"
-      >
-        404
-      </motion.h1>
+      {/* STEP 2: Looping video (no opacity animation) */}
+      {stage === "content" && (
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          src={videoFile}
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
+      )}
 
-      <p className="text-gray-600 text-lg mt-2">
-        Oops! The page you’re looking for doesn’t exist.
-      </p>
+      {/* STEP 3: 404 Content on top of video */}
+      {stage === "content" && (
+        <div className="relative z-20 flex flex-col items-center text-center p-6">
+          <br /><br />
 
-      {/* ✅ Navigation Icons */}
-      <div className="flex gap-6 mt-6">
-        <button
-          onClick={() => navigate("/")}
-          className="flex flex-col items-center text-gray-700 hover:text-primary transition"
-        >
-          <HomeIcon className="h-8 w-8" />
-          <span className="text-sm mt-1">Home</span>
-        </button>
+          {/* Navigation icons */}
+          <div className="flex gap-8 mt-6">
+            <button
+              onClick={() => navigate("/")}
+              className="flex flex-col items-center text-primary hover:text-blue-400 transition"
+            >
+              <HomeIcon className="h-8 w-8" />
+              <span className="text-sm mt-1">Home</span>
+            </button>
 
-        <button
-          onClick={() => navigate("/services")}
-          className="flex flex-col items-center text-gray-700 hover:text-primary transition"
-        >
-          <BriefcaseIcon className="h-8 w-8" />
-          <span className="text-sm mt-1">Services</span>
-        </button>
+            <button
+              onClick={() => navigate("/services")}
+              className="flex flex-col items-center text-primary hover:text-blue-400 transition"
+            >
+              <BriefcaseIcon className="h-8 w-8" />
+              <span className="text-sm mt-1">Services</span>
+            </button>
 
-        <button
-          onClick={() => navigate("/contact")}
-          className="flex flex-col items-center text-gray-700 hover:text-primary transition"
-        >
-          <PhoneIcon className="h-8 w-8" />
-          <span className="text-sm mt-1">Contact</span>
-        </button>
-      </div>
+            <button
+              onClick={() => navigate("/contact")}
+              className="flex flex-col items-center text-primary hover:text-blue-400 transition"
+            >
+              <PhoneIcon className="h-8 w-8" />
+              <span className="text-sm mt-1">Contact</span>
+            </button>
+          </div>
 
-      {/* ✅ Back to Home Button */}
-      <motion.button
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3, duration: 0.4 }}
-        onClick={() => navigate("/")}
-        className="mt-8 bg-primary text-white px-6 py-3 rounded-full shadow-md hover:shadow-lg hover:bg-primary/90 transition"
-      >
-        Go Back Home
-      </motion.button>
+          {/* Back to Home button */}
+          <motion.button
+            initial={{ y: 20 }}
+            animate={{ y: 0 }}
+            transition={{ delay: 0.3, duration: 0.4 }}
+            onClick={() => navigate("/")}
+            className="mt-8 bg-blue-500 text-white px-6 py-3 rounded-full shadow-md hover:shadow-lg hover:bg-blue-600 transition"
+          >
+            Go Back Home
+          </motion.button>
+        </div>
+      )}
     </div>
   );
 }

@@ -6,29 +6,39 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
-    question: "1. What is influencer marketing and how does it work?",
+    question: "1. What types of businesses do you work with? ",
     answer:
-      "Influencer marketing is a strategy where brands collaborate with digital creators who have strong online following to promote products or services. It works by leveraging trust and engagement influencers have with their audience.",
+      "We partner with B2B, B2C, and D2C brands across sectors like real estate, 	healthcare, automobile, retail, SaaS, beauty, and more, including long-	term collaborations like our ongoing work with Volvo. ",
   },
   {
-    question: "2. Why should I choose an influencer marketing agency in Chennai?",
+    question: "2. How soon will I see results?",
     answer:
-      "Local agencies understand the market better and can provide targeted strategies that suit regional audience preferences.",
+      "Paid ad campaigns can generate traffic instantly, while SEO and organic 	growth typically show strong, sustainable results within 3–6 months based 	on ongoing optimizations. ",
   },
   {
-    question: "3. How do I select the right influencer for my brand?",
+    question: "3. What reporting do you provide?",
     answer:
-      "You should select influencers whose audience aligns with your target demographic, ensuring authenticity and higher engagement.",
+      "We deliver monthly dashboards that highlight KPIs like traffic, leads, conversions, and ROI, with transparent insight summaries and recommendations for scaling further.",
   },
   {
-    question: "4. What platforms are best for influencer marketing campaigns?",
+    question: "4. How do you tailor strategies to my industry? ",
     answer:
-      "Platforms like Instagram, YouTube, and TikTok are highly effective depending on your brand niche and target audience.",
+      "Every strategy begins with in-depth research into your business context and competitors, and then we create customized campaigns based on your goals, whether you’re in tech, real estate, D2C, or healthcare. ",
   },
   {
-    question: "5. How is ROI measured in influencer marketing?",
+    question: "5. Who will manage my account and how often will we communicate? ",
     answer:
       "ROI is measured by engagement, conversions, brand awareness, and overall campaign performance metrics.",
+  },
+  {
+    question: "6. Do you offer full-stack digital solutions?  ",
+    answer:
+      "Yes! From strategy and content to technology—SEO, social media, performance ads, influencer marketing, web development, and maintenance, all are handled under one roof for seamless execution. ",
+  },
+  {
+    question: "7. Is support ongoing after campaign launch? ",
+    answer:
+      "Absolutely. We believe in long-term partnership, not just project completion. Our framework includes continuous optimization, iterations, and support to keep results moving upward. ",
   },
 ];
 

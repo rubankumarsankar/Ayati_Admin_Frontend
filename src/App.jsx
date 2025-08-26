@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import { Suspense, lazy, useContext } from "react";
 import { AuthProvider } from "./context/AuthContext";
 import { AuthContext } from "./context/AuthContext";
@@ -15,12 +20,15 @@ import ScrollProgressBar from "./components/ScrollProgressBar";
 
 // ✅ Lazy-loaded Public Pages
 const NotFound = lazy(() => import("./components/NotFound"));
+const ComingSoon = lazy(() => import("./components/ComingSoon"));
 const HomePage = lazy(() => import("./pages/main/HomePage"));
 const AboutUs = lazy(() => import("./pages/main/AboutUs"));
 const Teams = lazy(() => import("./pages/main/TeamsPage"));
 const Blog = lazy(() => import("./pages/main/BlogPage"));
 const ContactUs = lazy(() => import("./pages/main/ContactUs"));
-const DigitalMarketingPage = lazy(() => import("./pages/main/DigitalMarketingPage"));
+const DigitalMarketingPage = lazy(() =>
+  import("./pages/main/DigitalMarketingPage")
+);
 const SEOBlogPage = lazy(() => import("./pages/main/BlogPage/SEOBlog"));
 const AwardsPage = lazy(() => import("./pages/main/AwardsPage"));
 const CaseStudiesPage = lazy(() => import("./pages/main/CaseStudiePage"));
@@ -48,7 +56,13 @@ function App() {
         <ScrollButtons />
 
         {/* ✅ Suspense wrapper for lazy loading */}
-        <Suspense fallback={<div className="flex justify-center items-center h-screen">Loading...</div>}>
+        <Suspense
+          fallback={
+            <div className="flex justify-center items-center h-screen">
+              Loading...
+            </div>
+          }
+        >
           <Routes>
             {/* ✅ Public Routes */}
             <Route element={<PublicLayout />}>
@@ -59,8 +73,13 @@ function App() {
               <Route path="/contact" element={<ContactUs />} />
               <Route path="/awards" element={<AwardsPage />} />
               <Route path="/case-studies" element={<CaseStudiesPage />} />
-              <Route path="/digital-marketing" element={<DigitalMarketingPage />} />
+              <Route
+                path="/digital-marketing"
+                element={<DigitalMarketingPage />}
+              />
               <Route path="/seo-simplified" element={<SEOBlogPage />} />
+              <Route path="/comingsoon" element={<ComingSoon />} />
+
               <Route path="*" element={<NotFound />} />
             </Route>
 
