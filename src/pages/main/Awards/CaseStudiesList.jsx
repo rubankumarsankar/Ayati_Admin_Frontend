@@ -51,7 +51,7 @@ export default function CaseStudies() {
       image: "/assets/apl-img.png",
       link: "#",
     },
-     {
+    {
       title: "The Steel Deal – Apex Dura TMT",
       description:
         "As a 360° digital partner, we manage Apex Dura’s website, social media, creatives, and digital PR, building a durable digital foundation that matches the strength of their product.",
@@ -70,15 +70,16 @@ export default function CaseStudies() {
           transition={{ duration: 0.7 }}
           className="mb-12 text-center"
         >
-          <h2 className="section-title">
-            Case Studies & Success Stories
+          <div className="inline-block">
+            <h2 className="section-title">Case Studies & Success Stories</h2>
             <motion.div
-                          initial={{ scaleX: 0 }}
-                          whileInView={{ scaleX: 1 }}
-                          transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
-                          className="bg-secondary h-1 w-[100px] mt-3 origin-left rounded-full"
-                        />
-          </h2>
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
+              className="bg-secondary h-1 w-[200px] mt-3 origin-left rounded-full mx-auto"
+            />
+          </div>
+
           <p className="text-lg font-secondary text-gray-600 mt-2">
             Real results we’ve delivered across industries.
           </p>

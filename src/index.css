@@ -65,6 +65,32 @@
   }
 }
 
+@layer components {
+  /* ✅ Section spacing */
+  .section-1 {
+    @apply py-2 sm:py-4 md:py-4 lg:py-6 xl:py-6 2xl:py-8;
+  }
+
+  /* ✅ Container with adaptive padding */
+  .section-container-1 {
+    @apply max-w-7xl mx-auto px-2 sm:px-2 md:px-4 lg:px-4 xl:px-6;
+  }
+
+  /* ✅ Title with responsive font sizes */
+  .section-title {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-5xl 
+           font-bold text-center font-primary text-primary leading-tight;
+  }
+
+  /* ✅ Subtitle with responsive size + line height */
+  .section-subtitle {
+    @apply mt-2 sm:mt-3 md:mt-4 lg:mt-5 
+           text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 
+           text-gray-600 text-center leading-relaxed;
+  }
+}
+
+
 
 /* ✅ Hide Scrollbar but keep scrolling */
 .scrollbar-hide {

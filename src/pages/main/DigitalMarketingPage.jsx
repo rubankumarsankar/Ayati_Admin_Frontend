@@ -10,7 +10,7 @@ import CaseStudies from "./Digital Marketing/CaseStudies";
 import FAQSection from "./Digital Marketing/FAQSection";
 import GrowthFramework from "./Digital Marketing/GrowthFramework";
 import WaveTimeline from "./Digital Marketing/GrowthFramework";
-
+import MarketingServices from "./Digital Marketing/MarketingServices";
 
 function DigitalMarketingPage() {
   return (
@@ -18,15 +18,16 @@ function DigitalMarketingPage() {
       <HeroSection />
       <DigitalMarketingSection />
       <WhyChennai />
-      <ServicesSection />
+      <MarketingServices />
+      {/* <ServicesSection /> */}
       <ServicesSectionGrid />
       <WhyChooseSection />
       <CaseStudies />
+
       {/* <GrowthFramework /> */}
       {/* <WaveTimeline /> */}
       <FAQSection />
       <Connection />
-      
     </>
   );
 }
