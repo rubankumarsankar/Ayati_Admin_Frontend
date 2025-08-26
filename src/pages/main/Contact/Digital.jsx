@@ -14,7 +14,7 @@ export default function Digital() {
 
   return (
     <section className="py-12 section">
-      <div className="section-container max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between bg-white shadow-md rounded-lg p-6 gap-6">
+      <div className="section-container max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between bg-white shadow-md p-6 gap-6">
         
         {/* Left Text Section */}
         <motion.div
@@ -38,7 +38,7 @@ export default function Digital() {
 
         {/* Right Availability Card */}
         <motion.div
-          className="bg-primary text-white rounded-lg shadow-lg p-6 flex flex-col items-center w-full md:w-64"
+          className="bg-primary text-white shadow-lg p-6 flex flex-col items-center w-full md:w-64"
           variants={fadeRight}
           initial="hidden"
           whileInView="visible"

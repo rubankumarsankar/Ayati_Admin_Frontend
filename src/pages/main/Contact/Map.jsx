@@ -17,7 +17,7 @@ export default function Map() {
 
         {/* Map Container */}
         <motion.div
-          className="max-w-6xl mx-auto rounded-xl overflow-hidden shadow-lg border border-gray-200"
+          className=" mx-auto overflow-hidden shadow-lg border border-gray-200"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, ease: "easeOut" }}

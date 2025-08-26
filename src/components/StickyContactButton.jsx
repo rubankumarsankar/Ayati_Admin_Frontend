@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function StickyContact() {
   return (
-    <div className="fixed bottom-10 right-6 z-50 flex items-center">
+    <div className="fixed bottom-[100px] right-6 z-50 flex items-center">
       {/* Text Card with Smooth Floating Animation */}
       <motion.span
         initial={{ y: 0, opacity: 0 }}

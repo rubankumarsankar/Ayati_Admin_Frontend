@@ -1,33 +1,37 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { Suspense, lazy, useContext } from "react";
 import { AuthProvider } from "./context/AuthContext";
-import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
 
 // Layouts
 import PublicLayout from "./layouts/PublicLayout";
 import AdminLayout from "./layouts/AdminLayout";
 
-// Public Pages
-import NotFound from "./components/NotFound";
-import HomePage from "./pages/main/HomePage";
+// Utils
+import ScrollToTop from "./components/ScrollToTop";
+import Loader from "./components/Loader";
+import ScrollButtons from "./components/ScrollButtons";
+import ScrollProgressBar from "./components/ScrollProgressBar";
 
-// Admin Pages
-import Login from "./pages/admin/Login";
-import Dashboard from "./pages/admin/Dashboard";
-import Employees from "./pages/admin/Employees";
-import Roles from "./pages/admin/Roles";
-import AboutUs from "./pages/main/AboutUs";
-import Teams from "./pages/main/TeamsPage"; // Assuming TeamsPage is the correct import for Teams
-import Blog from "./pages/main/BlogPage"; // Assuming BlogPage is the correct import for Blog 
-import ContactUs from "./pages/main/ContactUs"; // Assuming ContactUs is the correct import for   Contact
-import DigitalMarketingPage from "./pages/main/DigitalMarketingPage";
-import SEOBlogPage from "./pages/main/BlogPage/SEOBlog";
-import AwardsPage from "./pages/main/AwardsPage";
-import CaseStudiesPage from "./pages/main/CaseStudiePage";
+// ✅ Lazy-loaded Public Pages
+const NotFound = lazy(() => import("./components/NotFound"));
+const HomePage = lazy(() => import("./pages/main/HomePage"));
+const AboutUs = lazy(() => import("./pages/main/AboutUs"));
+const Teams = lazy(() => import("./pages/main/TeamsPage"));
+const Blog = lazy(() => import("./pages/main/BlogPage"));
+const ContactUs = lazy(() => import("./pages/main/ContactUs"));
+const DigitalMarketingPage = lazy(() => import("./pages/main/DigitalMarketingPage"));
+const SEOBlogPage = lazy(() => import("./pages/main/BlogPage/SEOBlog"));
+const AwardsPage = lazy(() => import("./pages/main/AwardsPage"));
+const CaseStudiesPage = lazy(() => import("./pages/main/CaseStudiePage"));
 
+// ✅ Lazy-loaded Admin Pages
+const Login = lazy(() => import("./pages/admin/Login"));
+const Dashboard = lazy(() => import("./pages/admin/Dashboard"));
+const Employees = lazy(() => import("./pages/admin/Employees"));
+const Roles = lazy(() => import("./pages/admin/Roles"));
 
-
-// ✅ Protected Route Component
+// ✅ Protected Route
 function PrivateRoute({ children }) {
   const { token } = useContext(AuthContext);
   return token ? children : <Navigate to="/admin" />;
@@ -37,41 +41,46 @@ function App() {
   return (
     <AuthProvider>
       <Router>
-        <Routes>
-          {/* ✅ Public Routes (use PublicLayout) */}
-          <Route element={<PublicLayout />}>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutUs />} />
-            <Route path="/teams" element={<Teams />} />
-            <Route path="/blogs" element={<Blog />} />
-            <Route path="/contact" element={<ContactUs />} />
-            <Route path="/awards" element={<AwardsPage />} />
-            <Route path="/case-studies" element={<CaseStudiesPage />} />
-            <Route path="/digital-marketing" element={<DigitalMarketingPage />} />
-            <Route path="/seo-simplified" element={<SEOBlogPage />} />
-            <Route path="*" element={<NotFound />} />
-          </Route>
+        {/* Global Helpers */}
+        <ScrollProgressBar />
+        <ScrollToTop />
+        <Loader />
+        <ScrollButtons />
 
-          {/* ✅ Admin Login (public, but uses PublicLayout) */}
-          <Route >
+        {/* ✅ Suspense wrapper for lazy loading */}
+        <Suspense fallback={<div className="flex justify-center items-center h-screen">Loading...</div>}>
+          <Routes>
+            {/* ✅ Public Routes */}
+            <Route element={<PublicLayout />}>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutUs />} />
+              <Route path="/teams" element={<Teams />} />
+              <Route path="/blogs" element={<Blog />} />
+              <Route path="/contact" element={<ContactUs />} />
+              <Route path="/awards" element={<AwardsPage />} />
+              <Route path="/case-studies" element={<CaseStudiesPage />} />
+              <Route path="/digital-marketing" element={<DigitalMarketingPage />} />
+              <Route path="/seo-simplified" element={<SEOBlogPage />} />
+              <Route path="*" element={<NotFound />} />
+            </Route>
+
+            {/* ✅ Admin Login */}
             <Route path="/admin" element={<Login />} />
-          </Route>
 
-          {/* ✅ Admin Protected Routes (use AdminLayout) */}
-          <Route
-            element={
-              <PrivateRoute>
-                <AdminLayout />
-              </PrivateRoute>
-            }
-          >
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/employees" element={<Employees />} />
-            <Route path="/roles" element={<Roles />} />
-
-            
-          </Route>
-        </Routes>
+            {/* ✅ Protected Admin Routes */}
+            <Route
+              element={
+                <PrivateRoute>
+                  <AdminLayout />
+                </PrivateRoute>
+              }
+            >
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/employees" element={<Employees />} />
+              <Route path="/roles" element={<Roles />} />
+            </Route>
+          </Routes>
+        </Suspense>
       </Router>
     </AuthProvider>
   );

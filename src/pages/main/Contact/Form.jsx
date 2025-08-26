@@ -1,15 +1,50 @@
 import { useForm } from "react-hook-form";
+import { useState } from "react";
+import Swal from "sweetalert2"; // ✅ Import SweetAlert2
+import { Contactform } from "../../../api/services";
 
 export default function Form() {
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
-    alert("Form submitted successfully!");
+  const [loading, setLoading] = useState(false);
+
+  const onSubmit = async (data) => {
+    try {
+      setLoading(true);
+      const response = await Contactform(data); // ✅ API Call
+
+      if (response?.success) {
+        Swal.fire({
+          icon: "success",
+          title: "Success!",
+          text: "Form submitted successfully 🎉",
+          confirmButtonColor: "#3085d6",
+        });
+        reset(); // clear form
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong. Please try again.",
+          confirmButtonColor: "#d33",
+        });
+      }
+    } catch (error) {
+      console.error(error);
+      Swal.fire({
+        icon: "warning",
+        title: "Server Error",
+        text: "⚠️ Please try again later.",
+        confirmButtonColor: "#f59e0b",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   const services = [
@@ -28,9 +63,7 @@ export default function Form() {
     <section className="bg-white section py-16 px-6">
       <div className="section-container max-w-3xl mx-auto">
         {/* Title */}
-        <h2 className="text-center section-title mb-6">
-          Let’s Connect
-        </h2>
+        <h2 className="text-center section-title mb-6">Let’s Connect</h2>
         <p className="text-center text-gray-800 font-secondary text-base mb-8">
           Your Goal and Our Expertise!
         </p>
@@ -45,7 +78,9 @@ export default function Form() {
         >
           {/* Name */}
           <div>
-            <label className="block font-primary text-xl font-medium text-black mb-1">Name</label>
+            <label className="block font-primary text-xl font-medium text-black mb-1">
+              Name
+            </label>
             <input
               type="text"
               placeholder="Enter Your Name"
@@ -100,7 +135,9 @@ export default function Form() {
                     {...register("services")}
                     className="accent-primary font-secondary"
                   />
-                  <span className="text-gray-700 font-secondary text-base">{service}</span>
+                  <span className="text-gray-700 font-secondary text-base">
+                    {service}
+                  </span>
                 </label>
               ))}
             </div>
@@ -122,9 +159,7 @@ export default function Form() {
               <option value="$5000+">$5000+</option>
             </select>
             {errors.budget && (
-              <p className="text-red-500 text-sm mt-1">
-                {errors.budget.message}
-              </p>
+              <p className="text-red-500 text-sm mt-1">{errors.budget.message}</p>
             )}
           </div>
 
@@ -147,9 +182,7 @@ export default function Form() {
               focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition"
             />
             {errors.email && (
-              <p className="text-red-500 text-sm mt-1">
-                {errors.email.message}
-              </p>
+              <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
             )}
           </div>
 
@@ -176,10 +209,13 @@ export default function Form() {
           <div className="flex justify-center">
             <button
               type="submit"
-              className="bg-primary hover:bg-primary/90 font-primary text-2xl text-white font-medium px-10 py-3 rounded-full 
-              shadow-md hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+              disabled={loading}
+              className={`bg-primary hover:bg-primary/90 font-primary text-2xl text-white font-medium px-10 py-3 rounded-full 
+              shadow-md hover:shadow-xl transform hover:scale-105 transition-all duration-300 ${
+                loading ? "opacity-70 cursor-not-allowed" : ""
+              }`}
             >
-              SUBMIT
+              {loading ? "Submitting..." : "SUBMIT"}
             </button>
           </div>
         </form>

@@ -1,39 +1,47 @@
 import { FaSearch, FaEnvelope, FaInstagram, FaShareAlt } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import Affiliate_Marketing from "/icon/Affiliate_Marketing.png";
+import Digital_Media from "/icon/Digital_Media.png";
+import Instagram from "/icon/Instagram.png";
+import Mail from "/icon/mail.png";
+import Media_Planning from "/icon/Media_Planning.png";
+import Social_Media from "/icon/Social_Media.png";
+import Seo from "/icon/seo.png";
+
 
 const services = [
   {
-    icon: <FaSearch className="text-primary text-5xl" />,
+    icon: Seo,
     title: "SEO Services",
     desc: "Improve your visibility with our SEO services in Chennai. From keyword research and technical audits to link building and on-page optimization, we help your brand rank higher and attract quality leads organically.",
   },
   {
-    icon: <FaShareAlt className="text-primary text-5xl" />,
+    icon: Social_Media,
     title: "Social Media Marketing",
     desc: "Connect with your audience through powerful social media marketing campaigns. Our team creates engaging content, targeted ads, and growth-driven strategies across Facebook, Instagram, and LinkedIn to boost engagement and conversions.",
   },
   {
-    icon: <FaInstagram className="text-primary text-5xl" />,
+    icon: Instagram,
     title: "Instagram Marketing",
     desc: "Leverage Instagram’s power with data-driven strategies. From reels and influencer tie-ups to targeted advertising, our Instagram marketing experts in Chennai help brands gain visibility, engagement, and customer trust on this fast-growing platform.",
   },
   {
-    icon: <FaEnvelope className="text-primary text-5xl" />,
+    icon: Mail,
     title: "Email Marketing",
     desc: "Strengthen customer relationships with email marketing services. We design personalized campaigns, automate customer journeys, and deliver impactful newsletters that drive retention, conversions, and repeat business for B2B, B2C, and D2C brands.",
   },
   {
-    icon: <FaEnvelope className="text-primary text-5xl" />,
+    icon: Affiliate_Marketing,
     title: "Affiliate Marketing",
     desc: "Leverage Instagram’s power with data-driven strategies. From reels and influencer tie-ups to targeted advertising, our Instagram marketing experts in Chennai help brands gain visibility, engagement, and customer trust on this fast-growing platform. ",
   },
   {
-    icon: <FaEnvelope className="text-primary text-5xl" />,
+    icon: Media_Planning,
     title: "Media Planning & Performance Marketing",
     desc: "Strengthen customer relationships with email marketing services. We design personalized campaigns, automate customer journeys, and deliver impactful newsletters that drive retention, conversions, and repeat business for B2B, B2C, and D2C brands.",
   },
   {
-    icon: <FaEnvelope className="text-primary text-5xl" />,
+    icon: Digital_Media,
     title: "Digital Media Planning & Buying",
     desc: "Maximize your ad efficiency with expert digital media planning and buying. We negotiate premium placements, analyze audience behavior, and ensure your brand message reaches the right audience at the right time.",
   },
@@ -87,7 +95,8 @@ export default function ServicesSectionGrid() {
               >
                 <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center group-hover:shadow-xl transition-all duration-500">
                   <div className="text-primary text-5xl group-hover:text-primary">
-                    {service.icon}
+                    {/* {service.icon} */}
+                    <img src={service.icon} alt={service.title} className="shadow-md rounded-full" />
                   </div>
                 </div>
               </motion.div>

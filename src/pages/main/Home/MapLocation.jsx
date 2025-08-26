@@ -12,10 +12,10 @@ export default function DottedWorldMap() {
   });
 
   const locations = [
-    { name: "USA", x: "18%", y: "40%", logo: "/logo-1.png" }, // Pencil/Logo
-    { name: "DUBAI", x: "60%", y: "48%", logo: "/logo-1.png" },
-    { name: "INDIA", x: "69%", y: "52%", logo: "/logo-1.png" },
-    { name: "SINGAPORE", x: "75%", y: "62%", logo: "/logo-1.png" },
+    { name: "USA", x: "17%", y: "42%", logo: "/logo-left.png" }, // Pencil/Logo
+    { name: "DUBAI", x: "60%", y: "48%", logo: "/logo-left.png" },
+    { name: "INDIA", x: "68%", y: "58%", logo: "/logo-left.png" },
+    { name: "SINGAPORE", x: "75%", y: "62%", logo: "/logo-left.png" },
   ];
   const stats = [
     { icon: "/icon/business.png", value: "+30", label: "Awards" },

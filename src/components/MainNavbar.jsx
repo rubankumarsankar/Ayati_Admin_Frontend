@@ -44,7 +44,7 @@ function DropdownMenu({ title, items, onItemClick, activePath }) {
             key={i}
             as="div"
             onClick={() => handleClick(item.path)}
-            className={`block text-base font-secondary px-2 py-1 rounded cursor-pointer
+            className={`block text-lg font-primary px-2 py-1 rounded cursor-pointer
               ${activePath === item.path ? "bg-primary text-white" : "text-black hover:bg-primary hover:text-white"}`}
           >
             {item.label}

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+// If using React Router, uncomment below
+// import { Link } from "react-router-dom";
 
 export default function AwardsSection() {
   const [flipped, setFlipped] = useState(Array(4).fill(false));
@@ -13,24 +15,28 @@ export default function AwardsSection() {
 
   const awards = [
     {
-      title: "Indian Achievers AWARD",
-      img: "/assets/av-1.png",
-      backImg: "/assets/awards-1.webp",
-    },
-    {
-      title: "Digital Agency of the YEAR",
-      img: "/assets/av-2.png",
-      backImg: "/assets/awards-2.webp",
-    },
-    {
-      title: "Trendsetters of TamilNadu by TIMES OF INDIA",
-      img: "/assets/av-3.png",
-      backImg: "/assets/awards-3.webp",
-    },
-    {
-      title: "TamilNadu Brand Leadership AWARDS",
-      img: "/assets/av-4.png",
+      title: "TamilNadu Brand Leadership AWARDS -2020",
+      img: "/assets/aw-4.png",
       backImg: "/assets/awards-4.webp",
+      link: "#",
+    },
+    {
+      title: "Indian Achievers AWARD - 2021-2022",
+      img: "/assets/aw-1.png",
+      backImg: "/assets/awards-1.webp",
+      link: "#",
+    },
+    {
+      title: "Digital Agency of the YEAR -2022",
+      img: "/assets/aw-2.png",
+      backImg: "/assets/awards-2.webp",
+      link: "#",
+    },
+    {
+      title: "Trendsetters of TamilNadu by TIMES OF INDIA -2022",
+      img: "/assets/aw-3.png",
+      backImg: "/assets/awards-3.webp",
+      link: "#",
     },
   ];
 
@@ -78,6 +84,7 @@ export default function AwardsSection() {
             transition={{ duration: 0.6, delay: index * 0.15 }}
             viewport={{ once: true }}
             className="relative w-64 h-82 sm:w-72 sm:h-96 [perspective:1500px] cursor-pointer"
+            onClick={() => handleFlip(index)}
           >
             <div
               className={`absolute inset-0 rounded-2xl shadow-lg transition-transform duration-700 ease-in-out [transform-style:preserve-3d] ${
@@ -94,12 +101,23 @@ export default function AwardsSection() {
                 <p className="text-gray-900 font-medium font-primary text-lg leading-snug text-center">
                   {award.title}
                 </p>
-                <button
-                  className="mt-3 font-primary text-secondary border border-secondary hover:bg-secondary hover:text-white px-5 py-2 rounded-full text-base font-medium  transition"
-                  onClick={() => handleFlip(index)}
+
+                {/* ✅ "Know More" is now a link */}
+                <a
+                  href={award.link}
+                  onClick={(e) => e.stopPropagation()} // prevent card flip
+                  className="mt-3 text-secondary px-4 text-lg font-primary border border-secondary  rounded-full cursor-pointer hover:text-white hover:bg-secondary transition"
                 >
                   KNOW MORE
-                </button>
+                </a>
+                {/* Or if using React Router: 
+                <Link
+                  to={award.link}
+                  onClick={(e) => e.stopPropagation()}
+                  className="mt-3 text-primary font-primary underline underline-offset-4 cursor-pointer hover:text-blue-800 transition"
+                >
+                  KNOW MORE →
+                </Link> */}
               </div>
 
               {/* Back Side */}
@@ -117,7 +135,7 @@ export default function AwardsSection() {
                   className="mt-1 font-primary text-secondary border border-secondary hover:bg-secondary hover:text-white px-5 py-2 rounded-full text-base font-medium transition"
                   onClick={(e) => {
                     e.stopPropagation();
-                    handleFlip(index); // flip back
+                    handleFlip(index);
                   }}
                 >
                   FLIP FRONT

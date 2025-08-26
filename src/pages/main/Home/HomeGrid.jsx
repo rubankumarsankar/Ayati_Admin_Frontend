@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react"; // ✅ Right arrow icon
 
 const imgs1 = [
-  { src: "/assets/boy.png", heading: "SEO Simplified for you", path: "/seo-simplified" },
-  { src: "/assets/dubai.png", heading: "Heading", path: "/" },
-  { src: "/assets/flower.png", heading: "Heading", path: "/" },
+  { src: "/assets/blog-1.jpg", heading: "SEO Simplified for you", path: "/seo-simplified" },
+  { src: "/assets/blog-2.jpg", heading: "Heading", path: "/" },
+  { src: "/assets/blog-3.jpg", heading: "Heading", path: "/" },
 ];
 
 const imgs2 = [
-  { src: "/assets/hand.png", heading: "Heading", path: "/" },
-  { src: "/assets/center.png", heading: "Heading", path: "/" },
-  { src: "/assets/happy.png", heading: "Heading", path: "/" },
+  { src: "/assets/blog-1.jpg", heading: "Heading", path: "/" },
+  { src: "/assets/blog-2.jpg", heading: "Heading", path: "/" },
+  { src: "/assets/blog-3.jpg", heading: "Heading", path: "/" },
 ];
 
 export default function HomeGridSection() {
