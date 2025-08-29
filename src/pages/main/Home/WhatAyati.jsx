@@ -77,7 +77,7 @@ export default function SolutionsSection() {
         className="flex flex-col md:flex-row justify-between items-center section-container mb-10"
       >
         <h3 className="section-title">
-          What Ayati Brew’s
+          What Ayati Brews
           <motion.div
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}

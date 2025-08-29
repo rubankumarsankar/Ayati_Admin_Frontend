@@ -45,11 +45,6 @@ const services = [
     title: "Digital Media Planning & Buying",
     desc: "Maximize your ad efficiency with expert digital media planning and buying. We negotiate premium placements, analyze audience behavior, and ensure your brand message reaches the right audience at the right time.",
   },
-  {
-    icon: Digital_Media,
-    title: "Influencer Marketing",
-    desc: "Build authentic connections with influencer marketing services in Chennai. We partner with trusted creators and thought leaders to amplify your brand story, increase engagement, and drive conversions across social platforms.",
-  },
 ];
 // Animation Variants
 const container = {

@@ -19,12 +19,11 @@ function DigitalMarketingPage() {
       <DigitalMarketingSection />
       <WhyChennai />
       <MarketingServices />
-      {/* <ServicesSection /> */}
       <ServicesSectionGrid />
       <WhyChooseSection />
       <CaseStudies />
 
-      {/* <GrowthFramework /> */}
+      <GrowthFramework />
       {/* <WaveTimeline /> */}
       <FAQSection />
       <Connection />

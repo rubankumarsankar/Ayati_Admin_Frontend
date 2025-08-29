@@ -130,7 +130,7 @@ export function CenteredLogoNavbar() {
               title="Services"
               items={[
                 { label: "Digital Marketing Service", path: "/digital-marketing" },
-                { label: "Content as a Service", path: "#" },
+                { label: "Content as a Service", path: "/content-as-a-service" },
                 { label: "Digital PR Service", path: "#" },
                 { label: "Web & Development Services", path: "#" },
               ]}

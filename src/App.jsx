@@ -29,6 +29,7 @@ const ContactUs = lazy(() => import("./pages/main/ContactUs"));
 const DigitalMarketingPage = lazy(() =>
   import("./pages/main/DigitalMarketingPage")
 );
+const ContentServicePages = lazy(() => import("./pages/main/ContentServicePages"));
 const SEOBlogPage = lazy(() => import("./pages/main/BlogPage/SEOBlog"));
 const AwardsPage = lazy(() => import("./pages/main/AwardsPage"));
 const CaseStudiesPage = lazy(() => import("./pages/main/CaseStudiePage"));
@@ -77,6 +78,7 @@ function App() {
                 path="/digital-marketing"
                 element={<DigitalMarketingPage />}
               />
+              <Route path="/content-as-a-service" element={<ContentServicePages />} />
               <Route path="/seo-simplified" element={<SEOBlogPage />} />
               <Route path="/comingsoon" element={<ComingSoon />} />
 

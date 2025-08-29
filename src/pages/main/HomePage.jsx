@@ -16,7 +16,7 @@ function HomePage() {
     <>
       <HeroSection />
       <PromoHero />
-      <WhatWeDo />
+      {/* <WhatWeDo /> */}
       <WhatAyati />
       <PartnersInClimb />
       <AwardsSection />
