@@ -17,6 +17,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Loader from "./components/Loader";
 import ScrollButtons from "./components/ScrollButtons";
 import ScrollProgressBar from "./components/ScrollProgressBar";
+import DigitalPRPage from "./pages/main/DigitalPRPage";
 
 // ✅ Lazy-loaded Public Pages
 const NotFound = lazy(() => import("./components/NotFound"));
@@ -79,6 +80,7 @@ function App() {
                 element={<DigitalMarketingPage />}
               />
               <Route path="/content-as-a-service" element={<ContentServicePages />} />
+              <Route path="/digital-pr" element={<DigitalPRPage />} />
               <Route path="/seo-simplified" element={<SEOBlogPage />} />
               <Route path="/comingsoon" element={<ComingSoon />} />
 

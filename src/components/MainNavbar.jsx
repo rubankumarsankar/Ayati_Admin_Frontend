@@ -131,7 +131,7 @@ export function CenteredLogoNavbar() {
               items={[
                 { label: "Digital Marketing Service", path: "/digital-marketing" },
                 { label: "Content as a Service", path: "/content-as-a-service" },
-                { label: "Digital PR Service", path: "#" },
+                { label: "Digital PR Service", path: "/digital-pr" },
                 { label: "Web & Development Services", path: "#" },
               ]}
               onItemClick={handleNavigation}
