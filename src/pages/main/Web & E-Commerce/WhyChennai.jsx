@@ -165,12 +165,12 @@ export default function WhyChennai() {
                     </p>
                     {/* Divider */}
                     <motion.div
-                      initial={{ scaleX: 0 }}
-                      whileInView={{ scaleX: 1 }}
-                      transition={{ duration: 0.8, ease: "easeInOut" }}
-                      viewport={{ once: true }}
-                      className="border-b border-black mt-8 sm:mt-10 section-container"
-                    ></motion.div>
+        initial={{ scaleX: 0 }}
+        whileInView={{ scaleX: 1 }}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
+        viewport={{ once: true }}
+        className="border-b border-primary h-1 mt-8 sm:mt-10 section-container"
+      ></motion.div>
                   </motion.div>
                 );
               })}

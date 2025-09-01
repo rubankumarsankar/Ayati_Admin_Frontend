@@ -152,7 +152,7 @@ export default function DigitalMarketingSection() {
         whileInView={{ scaleX: 1 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
         viewport={{ once: true }}
-        className="border-b border-black mt-8 sm:mt-10 section-container"
+        className="border-b border-primary h-1 mt-8 sm:mt-10 section-container"
       ></motion.div>
     </section>
   );

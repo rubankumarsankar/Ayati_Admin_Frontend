@@ -21,29 +21,30 @@ const services = [
     desc: "Connect with your audience through powerful social media marketing campaigns. Our team creates engaging content, targeted ads, and growth-driven strategies across Facebook, Instagram, and LinkedIn to boost engagement and conversions.",
   },
   {
-    icon: Instagram,
-    title: "Instagram Marketing",
-    desc: "Leverage Instagram’s power with data-driven strategies. From reels and influencer tie-ups to targeted advertising, our Instagram marketing experts in Chennai help brands gain visibility, engagement, and customer trust on this fast-growing platform.",
-  },
-  {
     icon: Mail,
     title: "Email Marketing",
     desc: "Strengthen customer relationships with email marketing services. We design personalized campaigns, automate customer journeys, and deliver impactful newsletters that drive retention, conversions, and repeat business for B2B, B2C, and D2C brands.",
   },
   {
+    icon: Instagram,
+    title: "Instagram Marketing",
+    desc: "Leverage Instagram’s power with data-driven strategies. From reels and influencer tie-ups to targeted advertising, our Instagram marketing experts in Chennai help brands gain visibility, engagement, and customer trust on this fast-growing platform.",
+  },
+  
+  {
     icon: Affiliate_Marketing,
     title: "Affiliate Marketing",
-    desc: "Leverage Instagram’s power with data-driven strategies. From reels and influencer tie-ups to targeted advertising, our Instagram marketing experts in Chennai help brands gain visibility, engagement, and customer trust on this fast-growing platform. ",
+    desc: "Expand your reach with strategic affiliate marketing programs. We connect your business with trusted publishers and partners to generate leads, boost conversions, and grow your digital presence across Chennai and Tamil Nadu. ",
   },
   {
     icon: Media_Planning,
-    title: "Media Planning & Performance Marketing",
-    desc: "Strengthen customer relationships with email marketing services. We design personalized campaigns, automate customer journeys, and deliver impactful newsletters that drive retention, conversions, and repeat business for B2B, B2C, and D2C brands.",
+    title: "Programmatic Marketing",
+    desc: "Automate and optimize your ad campaigns with programmatic marketing. Using AI-driven targeting, real-time bidding, and advanced analytics, we ensure your brand reaches the right audience at scale, maximizing ROI with precision and efficiency.",
   },
   {
     icon: Digital_Media,
-    title: "Digital Media Planning & Buying",
-    desc: "Maximize your ad efficiency with expert digital media planning and buying. We negotiate premium placements, analyze audience behavior, and ensure your brand message reaches the right audience at the right time.",
+    title: "Video Marketing",
+    desc: "Engage, inspire, and convert with powerful video marketing campaigns. From brand storytelling to product explainers and social-first creatives, our team crafts videos that capture attention, build trust, and drive measurable impact.",
   },
  
 ];

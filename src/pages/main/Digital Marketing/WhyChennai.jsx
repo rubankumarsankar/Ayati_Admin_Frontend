@@ -67,7 +67,7 @@ export default function WhyChennai() {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-10 lg:gap-14">
-          {/* LEFT COLUMN with animation */}
+          {/* LEFT COLUMN */}
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -113,20 +113,22 @@ export default function WhyChennai() {
             <div className="h-full w-px bg-gray-200 mx-3"></div>
             <div className="absolute left-2 top-1/2 -translate-y-1/2 flex flex-col gap-3">
               {rightBlocks.map((_, i) => (
-                <span
+                <button
                   key={i}
+                  onClick={() => setActiveIndex(i)}
                   className={`block rounded-full transition-all duration-500 ${
                     i === activeIndex ||
                     i === (activeIndex + 1) % rightBlocks.length
-                      ? "w-2.5 h-2.5 bg-secondary"
+                      ? "w-3 h-3 bg-secondary"
                       : "w-2 h-2 border-2 border-secondary"
                   }`}
+                  aria-label={`Show block ${i + 1}`}
                 />
               ))}
             </div>
           </div>
 
-          {/* RIGHT COLUMN with AnimatePresence */}
+          {/* RIGHT COLUMN */}
           <div className="space-y-10 relative">
             <AnimatePresence mode="wait">
               {[0, 1].map((offset) => {
@@ -141,7 +143,7 @@ export default function WhyChennai() {
                     transition={{
                       duration: 0.7,
                       ease: "easeInOut",
-                      delay: offset * 0.2, // slight stagger
+                      delay: offset * 0.2,
                     }}
                     className="bg-white/80 backdrop-blur-sm p-4 "
                   >
@@ -161,13 +163,12 @@ export default function WhyChennai() {
                     <p className="text-black/80 font-secondary text-base leading-7">
                       {rightBlocks[blockIndex].text}
                     </p>
-                    {/* Divider */}
                     <motion.div
                       initial={{ scaleX: 0 }}
                       whileInView={{ scaleX: 1 }}
                       transition={{ duration: 0.8, ease: "easeInOut" }}
                       viewport={{ once: true }}
-                      className="border-b border-black mt-8 sm:mt-10 section-container"
+                      className="border-b border-primary h-1 mt-8 sm:mt-10 section-container"
                     ></motion.div>
                   </motion.div>
                 );
@@ -176,6 +177,7 @@ export default function WhyChennai() {
           </div>
         </div>
       </div>
+
       {/* Divider */}
       <motion.div
         initial={{ scaleX: 0 }}

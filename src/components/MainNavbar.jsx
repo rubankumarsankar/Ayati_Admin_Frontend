@@ -129,7 +129,7 @@ export function CenteredLogoNavbar() {
             <DropdownMenu
               title="Services"
               items={[
-                { label: "Digital Marketing Service", path: "/digital-marketing-service" },
+                { label: "Digital Marketing Service", path: "/digital-marketing-Service" },
                 { label: "Content as a Service", path: "/content-as-a-service" },
                 { label: "Digital PR Service", path: "/digital-pr" },
                 { label: "Web & Development Services", path: "/web-ecommerce" },

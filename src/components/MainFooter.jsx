@@ -38,10 +38,10 @@ export default function MainFooter() {
           className="flex items-center gap-5"
         >
           {[
-            { icon: <FaLinkedinIn />, link: "https://linkedin.com" },
-            { icon: <FaFacebookF />, link: "https://facebook.com" },
-            { icon: <FaInstagram />, link: "https://instagram.com" },
-            { icon: <FaYoutube />, link: "https://youtube.com" },
+            { icon: <FaLinkedinIn />, link: "https://linkedin.com/company/ayatiworks" },
+            { icon: <FaFacebookF />, link: "https://facebook.com/Ayatiworksindia/" },
+            { icon: <FaInstagram />, link: "https://instagram.com/ayatiworks/" },
+            { icon: <FaYoutube />, link: "https://youtube.com/@ayatiworks" },
           ].map((social, i) => (
             <a
               key={i}

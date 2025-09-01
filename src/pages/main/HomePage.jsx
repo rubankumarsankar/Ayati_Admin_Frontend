@@ -16,7 +16,7 @@ function HomePage() {
   return (
     <>
       <HeroSection />
-      <HeroSectionLayout />
+      {/* <HeroSectionLayout /> */}
       <PromoHero />
       {/* <WhatWeDo /> */}
       <WhatAyati />
