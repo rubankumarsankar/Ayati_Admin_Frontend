@@ -11,6 +11,7 @@ import FAQSection from "./Digital Marketing/FAQSection";
 import GrowthFramework from "./Digital Marketing/GrowthFramework";
 import WaveTimeline from "./Digital Marketing/GrowthFramework";
 import MarketingServices from "./Digital Marketing/MarketingServices";
+import BenefitsSlider from "./Digital Marketing/BenefitsSlider";
 
 function DigitalMarketingPage() {
   return (
@@ -18,6 +19,7 @@ function DigitalMarketingPage() {
       <HeroSection />
       <DigitalMarketingSection />
       <WhyChennai />
+      {/* <BenefitsSlider /> */}
       <MarketingServices />
       <ServicesSectionGrid />
       <WhyChooseSection />

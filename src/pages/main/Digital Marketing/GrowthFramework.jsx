@@ -75,12 +75,12 @@ export default function GrowthFramework() {
       </div>
 
       {/* Wave Line */}
-      <div className="absolute top-[300px] left-0 w-full -translate-y-1/2 z-0">
-        <img
+      <div className="absolute top-[200px] left-0 w-full -translate-y-1/2 z-0">
+        {/* <img
           src="/assets/line-1.png"
           alt="wave line"
           className="w-full h-auto object-contain"
-        />
+        /> */}
       </div>
 
       {/* Animate Steps (1-5 or 6-10) */}

@@ -6,21 +6,14 @@ export default function WhyChennai() {
 
   const rightBlocks = [
     {
-      title: "Local Search Dominance",
-      text: "With over 80% of consumers using Google before making a purchase decision, being visible in local search results is crucial. Our local SEO strategies in Chennai ensure your brand is found where it matters most.",
+      title: "This gap leaves businesses struggling to keep up with the speed and scale the digital landscape demands.",
+      text: "Content as a Service (CaaS) solves this challenge by offering a flexible, scalable, and on-demand solution. Instead of being locked into static models, brands can produce exactly what they need, when they need it. ",
     },
     {
-      title: "Targeted Online Advertising in Tamil Nadu",
-      text: "Instead of wasting ad budgets, we design ROI-driven campaigns that reach the right audience—whether it’s B2B decision-makers, millennials in Chennai, or D2C buyers across Tamil Nadu.",
+      title: "Launching a new product?",
+      text: "Scale content output. Running a short campaign? Reduce volume. The model adapts to your business rhythm. For businesses in Chennai and across Tamil Nadu, where competition is fierce and audiences are diverse, CaaS is more than just a convenience, it’s a competitive advantage. It ensures your brand always has the right mix of content, in the right language, across the right platforms, without delay.",
     },
-    {
-      title: "Content That Converts",
-      text: "Our team crafts engaging blogs, social posts, and ad creatives tailored to the Chennai audience—ensuring maximum reach and conversion.",
-    },
-    {
-      title: "Social Media Influence",
-      text: "From Instagram to LinkedIn, we build a consistent brand voice that connects with your Chennai audience, driving both engagement and loyalty.",
-    },
+    
   ];
 
   // Auto cycle every 5s
@@ -56,7 +49,7 @@ export default function WhyChennai() {
           className="flex items-start"
         >
           <h2 className="section-title mb-6">
-            Why Businesses in Chennai Need Digital Marketing
+            Why Businesses Need CaaS Today
             <motion.div
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
@@ -81,30 +74,29 @@ export default function WhyChennai() {
               variants={fadeUp}
               className="text-secondary font-primary font-medium text-3xl mb-4"
             >
-              Here’s why partnering with an award-winning digital marketing
-              agency in Chennai makes a difference:
+              This gap leaves businesses struggling to keep up with the speed
+              and scale the digital landscape demands.
             </motion.p>
 
             <motion.p
               variants={fadeUp}
               className="text-black/80 font-secondary leading-7 mb-4"
             >
-              Chennai is not just a hub for culture and commerce; it’s one of
-              India’s fastest-growing digital markets. From startups in T-Nagar
-              and SaaS companies in OMR to established retail chains across
-              Tamil Nadu, businesses today cannot rely solely on traditional
-              advertising. The shift in consumer behavior is clear: audiences
-              are searching, shopping, and engaging online first.
+              The way brands create content has changed dramatically. What
+              worked five years ago, a monthly campaign and a few social posts,
+              is no longer enough. Today, content is the backbone of marketing,
+              driving everything from brand awareness to lead generation and
+              customer retention.
             </motion.p>
 
             <motion.p
               variants={fadeUp}
-              className="text-black font-semibold font-secondary leading-7"
+              className="text-black font-medium font-secondary leading-7"
             >
-              By investing in strategic digital marketing, businesses in Chennai
-              are not just keeping up; they’re leading the change. And with
-              Ayatiworks as your growth partner, you get measurable results
-              tailored to your goals.
+              <span className="font-bold">But here’s the problem:</span>
+              <li>In-house teams are often limited by bandwidth.</li>
+              <li>Agencies can be too rigid or slow to respond.</li>
+              <li>Freelancers may lack consistency and strategic alignment.</li>
             </motion.p>
           </motion.div>
 

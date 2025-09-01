@@ -7,7 +7,7 @@ export default function DigitalMarketingSection() {
   return (
     <section className="bg-white section ">
       {/* Top Title Section */}
-      <div className="section-container text-left flex items-start gap-6 mb-12">
+      <div className="section-container text-left flex items-start gap-6 mb-4">
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -15,16 +15,26 @@ export default function DigitalMarketingSection() {
           viewport={{ once: true }}
           className="section-title text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold"
         >
-          <span className="mb-2 flex items-start">Award Winning Digital</span>
-          <span className="block mb-4">Marketing Agency in Chennai</span>
+          <span className="mb-2 flex items-start">
+            Content as a Service (CaaS),{" "}
+          </span>
+          <span className="block mb-4">
+            On-Demand Content Creation & Marketing Solutions
+          </span>
           {/* Decorative line */}
           <motion.div
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
-              className="bg-secondary h-1 w-[280px] mt-3 origin-left rounded-full"
-            />
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
+            className="bg-secondary h-1 w-[280px] mt-3 origin-left rounded-full"
+          />
         </motion.h2>
+      </div>
+      <div className="section-container text-left flex items-start gap-6 mb-12">
+        <p className="text-black/80 font-secondary font-medium mb-2 text-base/8 sm:text-base/8 md:text-lg/8">
+          Let’s take a quick look at businesses around us, our competitors, and
+          our support businesses.
+        </p>
       </div>
 
       {/* Content Grid */}
@@ -51,33 +61,64 @@ export default function DigitalMarketingSection() {
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
+          <motion.h2
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="section-title text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold"
+          >
+            <span className="mb-2 flex items-start">
+              Can you point a finger at any business sans challenge?{" "}
+            </span>
+
+            {/* Decorative line */}
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
+              className="bg-secondary h-1 w-[280px] mt-3 origin-left rounded-full mb-10"
+            />
+          </motion.h2>
           <p className="text-black/80 font-secondary font-medium mb-2 text-base/8 sm:text-base/8 md:text-lg/8">
-            Ayatiworks extends its heartfelt thanks to all our valuable clients
-            for trusting us and giving us the opportunity to elevate your
-            brands. Your confidence in our work has not only driven measurable
-            business growth but also strengthened our reputation as an
-            award-winning digital marketing agency in Chennai. 
+            <span className="font-bold">
+              When it comes to content in any form, it is not as easy as it used
+              to be. 
+            </span>{" "} <br />
+            Every business today faces the same challenge: the demand for
+            content keeps growing, but the resources to create it rarely keep
+            pace. Social media requires daily updates, websites need regular
+            optimization, campaigns call for videos, and new markets demand
+            multilingual communication. Traditional setups, whether in-house
+            teams or fixed agency retainers, often struggle to deliver speed,
+            scale, and consistency.
           </p>
           <p className="text-black/80 font-secondary font-medium mb-2 text-base/8 sm:text-base/8 md:text-lg/8">
-            At Ayatiworks, we believe digital marketing is more than just
-            campaigns, it’s about creating experiences that connect, engage, and
-            convert. Backed by a team of digital marketing experts in Chennai,
-            we craft strategies that combine creativity with performance. From
-            SEO and social media marketing to influencer campaigns and
-            multilingual solutions, every service is designed to maximize ROI
-            for your business. 
+            <span className="font-bold">
+              {" "}
+              This is where Content as a Service (CaaS) comes in.
+            </span>{" "} <br />
+            CaaS is a subscription-style, on-demand content creation model that
+            gives businesses instant access to strategy, design, copywriting,
+            and video production when they need it. Instead of being tied down
+            to rigid retainers or the limitations of a single team, you can
+            scale content production up or down based on campaign goals, product
+            launches, or seasonal demand.
           </p>
           <p className="text-black/80 font-secondary font-medium mb-2 text-base/8 sm:text-base/8 md:text-lg/8">
-            Our client-first philosophy means we don’t offer cookie-cutter
-            solutions. Instead, we dive deep into your brand, industry, and
-            audience before designing tailored strategies that deliver results.
-            Whether you’re a B2B, B2C, or D2C brand in Tamil Nadu, Ayatiworks
-            ensures your digital presence doesn’t just exist, it thrives. 
+            For businesses, this approach is very powerful. With diverse,
+            multilingual audiences and intense market competition, brands need
+            content that is fast, flexible, and always relevant. Whether it’s a
+            Tamil-first ad campaign, a high-conversion landing page, or a brand
+            film, Ayatiworks delivers{" "}
+            <span className="font-bold">
+              on-demand content creation and marketing solutions
+            </span>{" "}
+            designed to meet your objectives.
           </p>
           <p className="text-black/80 font-secondary font-medium mb-2 text-base/8 sm:text-base/8 md:text-lg/8">
-            {" "}
-            Ready to scale your brand with Chennai’s most trusted digital
-            marketing agency?  
+            With CaaS, content becomes more than output, it becomes a strategic
+            growth engine.
           </p>
         </motion.div>
         {/* Button */}
@@ -100,7 +141,7 @@ export default function DigitalMarketingSection() {
             transition={{ duration: 0.3, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            Let’s build your growth story together.
+            Get Started with CaaS
           </motion.button>
         </motion.div>
       </div>

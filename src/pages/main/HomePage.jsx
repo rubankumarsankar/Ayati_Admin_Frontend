@@ -10,11 +10,13 @@ import DottedWorldMap from "./Home/MapLocation";
 
 import HomeGridSection from "./Home/HomeGrid";
 import Connection from "./Home/Connection";
+import HeroSectionLayout from "./Home/HeroSectionLayout";
 
 function HomePage() {
   return (
     <>
       <HeroSection />
+      {/* <HeroSectionLayout /> */}
       <PromoHero />
       {/* <WhatWeDo /> */}
       <WhatAyati />

@@ -33,12 +33,7 @@ export default function SolutionsSection() {
       icon: "/icon/01.png",
       list: [
         "Brand Consultant",
-        "Video Production",
         "Video Creation",
-        "Creative Marketing",
-        "Brand Strategy & Positioning",
-        "Media Planning & Performance Marketing",
-        "Interactive Social Media",
         "Multi-lingual Marketing",
       ],
     },
