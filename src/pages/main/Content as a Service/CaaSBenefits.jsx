@@ -39,12 +39,15 @@ export default function CaaSBenefits() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="mb-6"
+          className="mb-6 text-center"
         >
-          <h2 className="section-title flex items-center text-primary">
+          {/* ✅ Title */}
+          <h2 className="section-title flex items-center justify-center text-primary">
             Benefits of Choosing CaaS with{" "}
             <span className="text-secondary ml-2">Ayatiworks</span>
           </h2>
+
+          {/* ✅ Decorative Line */}
           <motion.div
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
