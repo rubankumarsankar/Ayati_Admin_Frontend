@@ -84,6 +84,7 @@ export default function CaseStudies() {
         >
           <h2 className="section-title flex items-start text-primary">
             Case Studies & Client Success Stories
+            
           </h2>
           <motion.div
             initial={{ scaleX: 0 }}

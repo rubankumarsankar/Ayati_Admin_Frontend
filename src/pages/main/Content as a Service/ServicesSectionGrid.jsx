@@ -8,42 +8,21 @@ import Media_Planning from "/icon/Media_Planning.png";
 import Social_Media from "/icon/Social_Media.png";
 import Seo from "/icon/seo.png";
 
-
 const services = [
   {
     icon: Seo,
-    title: "SEO Services",
-    desc: "Improve your visibility with our SEO services in Chennai. From keyword research and technical audits to link building and on-page optimization, we help your brand rank higher and attract quality leads organically.",
+    title: "Branding  Services",
+    desc: "At Ayatiworks, Content as a Service is built to be modular, allowing you to choose exactly what your brand needs. From shaping your identity to producing high-impact assets, our services are designed to deliver performance-driven creative at scale.",
   },
   {
     icon: Social_Media,
-    title: "Social Media Marketing",
-    desc: "Connect with your audience through powerful social media marketing campaigns. Our team creates engaging content, targeted ads, and growth-driven strategies across Facebook, Instagram, and LinkedIn to boost engagement and conversions.",
+    title: "Video Creation",
+    desc: "From quick social reels to full-scale brand films, our on-demand video creation delivers impactful storytelling tailored to your campaigns. Scripted, shot, and edited with precision, our videos engage audiences, boost conversions, and bring your brand’s vision to life.",
   },
   {
-    icon: Instagram,
-    title: "Instagram Marketing",
-    desc: "Leverage Instagram’s power with data-driven strategies. From reels and influencer tie-ups to targeted advertising, our Instagram marketing experts in Chennai help brands gain visibility, engagement, and customer trust on this fast-growing platform.",
-  },
-  {
-    icon: Mail,
-    title: "Email Marketing",
-    desc: "Strengthen customer relationships with email marketing services. We design personalized campaigns, automate customer journeys, and deliver impactful newsletters that drive retention, conversions, and repeat business for B2B, B2C, and D2C brands.",
-  },
-  {
-    icon: Affiliate_Marketing,
-    title: "Affiliate Marketing",
-    desc: "Leverage Instagram’s power with data-driven strategies. From reels and influencer tie-ups to targeted advertising, our Instagram marketing experts in Chennai help brands gain visibility, engagement, and customer trust on this fast-growing platform. ",
-  },
-  {
-    icon: Media_Planning,
-    title: "Media Planning & Performance Marketing",
-    desc: "Strengthen customer relationships with email marketing services. We design personalized campaigns, automate customer journeys, and deliver impactful newsletters that drive retention, conversions, and repeat business for B2B, B2C, and D2C brands.",
-  },
-  {
-    icon: Digital_Media,
-    title: "Digital Media Planning & Buying",
-    desc: "Maximize your ad efficiency with expert digital media planning and buying. We negotiate premium placements, analyze audience behavior, and ensure your brand message reaches the right audience at the right time.",
+    icon: Social_Media,
+    title: "Multilingual Marketing",
+    desc: "Reach beyond language barriers with our multilingual content solutions. Whether Tamil, Hindi, or global languages, we craft culturally relevant campaigns, adapt messaging seamlessly, and ensure your brand connects authentically with local and international audiences across every touchpoint.",
   },
 ];
 // Animation Variants
@@ -90,13 +69,21 @@ export default function ServicesSectionGrid() {
               {/* Icon with floating animation */}
               <motion.div
                 animate={{ y: [0, -8, 0] }}
-                transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 3,
+                  ease: "easeInOut",
+                }}
                 className="mb-6"
               >
                 <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center group-hover:shadow-xl transition-all duration-500">
                   <div className="text-primary text-5xl group-hover:text-primary">
                     {/* {service.icon} */}
-                    <img src={service.icon} alt={service.title} className="shadow-md rounded-full" />
+                    <img
+                      src={service.icon}
+                      alt={service.title}
+                      className="shadow-md rounded-full"
+                    />
                   </div>
                 </div>
               </motion.div>

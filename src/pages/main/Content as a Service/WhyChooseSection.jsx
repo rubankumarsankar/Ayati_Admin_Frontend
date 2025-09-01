@@ -18,46 +18,50 @@ const cardVariants = {
 export default function WhyChooseSection() {
   const features = [
     {
-      title: "Award-Winning Expertise",
-      desc: "Our recognition as an award-winning digital marketing agency in Chennai is proof of the impact we create for clients across industries.",
+      title: "Copywriting & Blogs ",
+      desc: "SEO-optimized, audience-first content that ranks and converts.",
       img: "/icon/01.png",
     },
     {
-      title: "ROI-Driven Campaigns",
-      desc: "Every strategy, whether SEO, performance marketing, or influencer campaigns, is designed to maximize ROI, ensuring measurable growth and quality results.",
+      title: "Social Media Creatives ",
+      desc: "Fast-turnaround visuals and campaigns built for engagement.",
       img: "/icon/02.png",
     },
     {
-      title: "End-to-End Solutions",
-      desc: "From content and SEO to paid ads, our end-to-end solutions ensure success without juggling multiple vendors.",
+      title: "Campaign Collateral ",
+      desc: "Flyers, landing pages, and digital ads designed to drive clicks.",
       img: "/icon/03.png",
     },
     {
-      title: "Trusted Partner",
-      desc: "We go beyond services—we become your digital growth partner with transparency and measurable results.",
+      title: "Content Strategy ",
+      desc: "Insights-driven roadmaps that align with KPIs and brand vision.",
       img: "/icon/04.png",
     },
   ];
 
   return (
+    <>
     <section className="section bg-white relative">
       <div className="section-container mx-auto">
         {/* Heading */}
         <motion.div
-          initial="hidden"
-          whileInView="visible"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          variants={fadeUp}
           transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-center"
         >
           <h2 className="section-title mb-6 text-3xl md:text-4xl font-bold text-primary">
-            Why Choose Ayatiworks as Your Digital Marketing Partner
+            Extended Capabilities
           </h2>
+
+          {/* Underline animation */}
           <motion.div
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
-            className="bg-secondary h-1 w-[280px] mt-3 origin-left rounded-full"
+            className="bg-secondary h-1 w-[240px] mx-auto mt-3 origin-center rounded-full"
           />
         </motion.div>
 
@@ -70,8 +74,7 @@ export default function WhyChooseSection() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="font-primary text-xl md:text-2xl font-medium text-secondary mt-6"
         >
-          Here’s why leading B2B, B2C, and D2C <br /> brands across Tamil Nadu
-          trust us:
+          Along with these core offerings, Ayatiworks’ CaaS <br /> framework supports a wide range of creative and strategic needs:
         </motion.p>
 
         {/* Content Grid */}
@@ -84,13 +87,7 @@ export default function WhyChooseSection() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             className="text-gray-700 text-lg leading-8 font-secondary mt-5"
           >
-            With dozens of digital marketing agencies in Chennai, what makes
-            <span className="text-primary font-semibold"> Ayatiworks </span>
-            different?
-            <br />
-            <br />
-            It’s our commitment to measurable results, creativity backed by
-            data, and relentless focus on client growth.
+            Every piece of content is crafted to be modular, scalable, and performance-ready, ensuring consistency across campaigns while keeping turnaround times short.
           </motion.div>
 
           {/* Animated Scrolling Cards */}
@@ -161,5 +158,54 @@ export default function WhyChooseSection() {
         className="border-b border-primary h-1 mt-12 section-container"
       />
     </section>
+    <section className="section bg-white relative">
+      <div className="section-container mx-auto">
+        {/* Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-center"
+        >
+          <h2 className="section-title mb-6 text-3xl md:text-4xl font-bold text-primary">
+            Why Choose Ayatiworks as Your Content-as-a-Strategy Partner
+          </h2>
+
+          {/* Underline animation */}
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
+            className="bg-secondary h-1 w-[240px] mx-auto mt-3 origin-center rounded-full"
+          />
+        </motion.div>
+
+        {/* Subtitle */}
+        <motion.p
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeUp}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="font-secondary text-lg md:text-xl font-medium text-black/80 mt-6"
+        >
+          With over a decade of expertise in blending storytelling with data-driven SEO, Ayatiworks ensures your brand doesn’t just publish content, it dominates conversations. Our tailored approach aligns every blog, whitepaper, video, or campaign with measurable business outcomes. For businesses in Chennai and across India, partnering with Ayatiworks means clarity, consistency, and authority in your digital voice.
+        </motion.p>
+
+        
+      </div>
+
+      {/* Divider */}
+      <motion.div
+        initial={{ scaleX: 0 }}
+        whileInView={{ scaleX: 1 }}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
+        viewport={{ once: true }}
+        className="border-b border-primary h-1 mt-12 section-container"
+      />
+    </section></>
+    
   );
 }

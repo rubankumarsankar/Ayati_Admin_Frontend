@@ -27,15 +27,12 @@ export default function MarketingServices() {
           transition={{ duration: 0.7 }}
           className="mb-12"
         >
-          <h2 className="section-title">
-            Our Digital Marketing Services <br />
-            <span className="text-primary">at a Glance</span>
-          </h2>
+          <h2 className="section-title">Our CaaS Services at a Glance</h2>
           <motion.div
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
-            className="bg-primary h-1 w-32 mt-3 mx-auto origin-left rounded-full"
+            className="bg-secondary h-1 w-32 mt-3 mx-auto origin-left rounded-full"
           />
         </motion.div>
 
@@ -60,11 +57,10 @@ export default function MarketingServices() {
 
         {/* Description */}
         <p className="text-secondary font-secondary  max-w-3xl mx-auto text-lg leading-relaxed">
-          At Ayatiworks, we deliver end-to-end digital marketing solutions
-          designed to help your business grow faster, smarter, and stronger.
-          As an award-winning digital marketing agency in Chennai, we bring
-          together creativity, technology, and data to craft strategies that
-          deliver results.
+          At Ayatiworks, Content as a Service is built to be modular, allowing
+          you to choose exactly what your brand needs. From shaping your
+          identity to producing high-impact assets, our services are designed to
+          deliver performance-driven creative at scale.
         </p>
 
         {/* Subheading */}

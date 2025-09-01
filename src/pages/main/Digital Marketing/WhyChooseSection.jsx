@@ -43,21 +43,25 @@ export default function WhyChooseSection() {
     <section className="section bg-white relative">
       <div className="section-container mx-auto">
         {/* Heading */}
+
         <motion.div
-          initial="hidden"
-          whileInView="visible"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          variants={fadeUp}
           transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-center"
         >
           <h2 className="section-title mb-6 text-3xl md:text-4xl font-bold text-primary">
             Why Choose Ayatiworks as Your Digital Marketing Partner
           </h2>
+
+          {/* Underline animation */}
           <motion.div
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
-            className="bg-secondary h-1 w-[280px] mt-3 origin-left rounded-full"
+            className="bg-secondary h-1 w-[240px] mx-auto mt-3 origin-center rounded-full"
           />
         </motion.div>
 

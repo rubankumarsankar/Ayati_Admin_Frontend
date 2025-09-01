@@ -6,40 +6,41 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
-    question: "1. What types of businesses do you work with? ",
+    question: "1. What exactly is Content-as-a-Strategy (CAAS)? ",
     answer:
-      "We partner with B2B, B2C, and D2C brands across sectors like real estate, 	healthcare, automobile, retail, SaaS, beauty, and more, including long-	term collaborations like our ongoing work with Volvo. ",
+      "CAAS is a holistic approach where content isn’t just created for visibility but strategically aligned with your brand voice, audience needs, and long-term business goals. ",
   },
   {
-    question: "2. How soon will I see results?",
+    question: "2. How is CAAS different from traditional content marketing?",
     answer:
-      "Paid ad campaigns can generate traffic instantly, while SEO and organic 	growth typically show strong, sustainable results within 3–6 months based 	on ongoing optimizations. ",
+      "Traditional content marketing focuses on volume and promotion. CAAS, on the other hand, focuses on storytelling, organic SEO, and thought leadership to build sustained authority.",
   },
   {
-    question: "3. What reporting do you provide?",
+    question: "3. Which industries benefit most from CAAS?",
     answer:
-      "We deliver monthly dashboards that highlight KPIs like traffic, leads, conversions, and ROI, with transparent insight summaries and recommendations for scaling further.",
+      "Any industry that relies on digital presence, like SaaS, healthcare, edtech, fintech, e-commerce, and professional services, can benefit from CAAS.",
   },
   {
-    question: "4. How do you tailor strategies to my industry? ",
+    question: "4. How long does it take to see results with CAAS? ",
     answer:
-      "Every strategy begins with in-depth research into your business context and competitors, and then we create customized campaigns based on your goals, whether you’re in tech, real estate, D2C, or healthcare. ",
+      " CAAS is a long-term investment. While SEO traction may take 3–6 months, the compounded value of brand trust, authority, and inbound leads grows steadily over time.",
   },
   {
-    question: "5. Who will manage my account and how often will we communicate? ",
+    question: "5. Can CAAS work alongside paid marketing campaigns? ",
     answer:
-      "ROI is measured by engagement, conversions, brand awareness, and overall campaign performance metrics.",
+      "Yes. CAAS creates organic authority, while paid campaigns drive instant visibility. When combined, they reduce ad dependency and maximize ROI. ",
   },
   {
-    question: "6. Do you offer full-stack digital solutions?  ",
+    question: "6. How do you measure the success of CAAS? ",
     answer:
-      "Yes! From strategy and content to technology—SEO, social media, performance ads, influencer marketing, web development, and maintenance, all are handled under one roof for seamless execution. ",
+      " We track organic traffic growth, keyword rankings, engagement metrics, lead conversions, and thought leadership recognition across platforms.",
   },
   {
-    question: "7. Is support ongoing after campaign launch? ",
+    question: "7. Is CAAS suitable for startups or only established businesses? ",
     answer:
-      "Absolutely. We believe in long-term partnership, not just project completion. Our framework includes continuous optimization, iterations, and support to keep results moving upward. ",
+      " Both, Startups use CAAS to build visibility faster with focused narratives, while established businesses leverage it to maintain dominance and scale thought leadership.",
   },
+
 ];
 
 export default function FAQSection() {

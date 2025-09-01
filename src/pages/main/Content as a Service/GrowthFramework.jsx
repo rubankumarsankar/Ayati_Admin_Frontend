@@ -1,142 +1,146 @@
-import { motion } from "framer-motion";
-import {
-  Rocket,
-  Search,
-  Target,
-  ShieldCheck,
-  BarChart,
-  Trophy,
-} from "lucide-react";
+import React, { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const steps = [
-  {
-    id: 1,
-    title: "Discovery Call",
-    desc: "Understand business goals, audience, and vision.",
-    icon: Rocket,
-  },
-  {
-    id: 2,
-    title: "Comprehensive Audit",
-    desc: "Evaluate digital presence, gaps, and opportunities.",
-    icon: Search,
-  },
-  {
-    id: 3,
-    title: "KPI Strategy",
-    desc: "Set clear objectives with measurable outcomes.",
-    icon: Target,
-  },
-  {
-    id: 4,
-    title: "Implementation",
-    desc: "Execute tailored growth frameworks across channels.",
-    icon: ShieldCheck,
-  },
-  {
-    id: 5,
-    title: "Performance Tracking",
-    desc: "Leverage analytics to refine and optimize campaigns.",
-    icon: BarChart,
-  },
-  {
-    id: 6,
-    title: "Sustainable Growth",
-    desc: "Deliver consistent, long-term business expansion.",
-    icon: Trophy,
-  },
+  { id: "/icon/1.png", title: "Initial Consultation", desc: "We start with a one-on-one consultation to understand your goals, target audience, and content needs." },
+  { id: "/icon/2.png", title: "Needs Assessment", desc: "Our team evaluates your current content assets, gaps, and growth opportunities." },
+  { id: "/icon/3.png", title: "Content Strategy Blueprint", desc: "We design a roadmap aligned with campaigns, KPIs, and marketing channels." },
+  { id: "/icon/4.png", title: "Editorial Calendar Setup", desc: "A flexible content calendar ensures timely delivery for launches and campaigns." },
+  { id: "/icon/5.png", title: "Creative Asset Development", desc: "Copy, visuals, and videos are created with a focus on brand voice and impact." },
+  { id: "/icon/6.png", title: "Localization & Multilingual", desc: "We adapt messaging into Tamil, Hindi, or other languages for wider reach." },
+  { id: "/icon/7.png", title: "Quality Review & Editing", desc: "Every asset undergoes editing, proofreading, and brand consistency checks." },
+  { id: "/icon/8.png", title: "Delivery & Deployment", desc: "We integrate assets seamlessly into your digital campaigns and platforms." },
+  { id: "/icon/9.png", title: "Performance Tracking", desc: "Analytics and engagement metrics are monitored to measure success." },
+  { id: "/icon/10.png", title: "Continuous Optimization", desc: "Insights from performance refine and improve future content cycles." },
 ];
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (i) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, delay: i * 0.2 },
-  }),
-};
+export default function CaaSFramework() {
+  const [showSecond, setShowSecond] = useState(false);
 
-export default function WaveTimeline() {
+  useEffect(() => {
+    let isThrottled = false;
+    const handleWheel = (e) => {
+      if (isThrottled) return;
+      if (e.deltaY > 0) setShowSecond(true);
+      else if (e.deltaY < 0) setShowSecond(false);
+      isThrottled = true;
+      setTimeout(() => (isThrottled = false), 800);
+    };
+    window.addEventListener("wheel", handleWheel, { passive: true });
+    return () => window.removeEventListener("wheel", handleWheel);
+  }, []);
+
+  const variants = {
+    hiddenDown: { opacity: 0, y: 100 },
+    hiddenUp: { opacity: 0, y: -100 },
+    visible: { opacity: 1, y: 0 },
+    exitDown: { opacity: 0, y: -100 },
+    exitUp: { opacity: 0, y: 100 },
+  };
+
   return (
-    <section className="relative w-full overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 py-24">
-      <div className="relative mx-auto max-w-7xl px-6">
-        {/* SVG Wave line */}
-        <svg
-          viewBox="0 0 1200 200"
-          xmlns="http://www.w3.org/2000/svg"
-          className="absolute left-0 top-1/2 -translate-y-1/2 w-full h-40"
-          preserveAspectRatio="none"
+    <div className="relative bg-white section overflow-hidden h-screen flex flex-col justify-center">
+      {/* Title */}
+      <div className="section-container mx-auto text-center px-4">
+        <motion.h2
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="section-title text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold"
         >
-          <path
-            d="M0,100 C150,50 350,150 600,100 C850,50 1050,150 1200,100"
-            stroke="url(#grad)"
-            strokeWidth="4"
-            fill="transparent"
+          <span className="mb-2 flex items-start">
+            Our 10-Step CaaS Framework
+          </span>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
+            className="bg-secondary h-1 w-[320px] mt-3 origin-left rounded-full"
           />
-          <defs>
-            <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#06b6d4" />
-              <stop offset="100%" stopColor="#a21caf" />
-            </linearGradient>
-          </defs>
-        </svg>
-
-        {/* Timeline nodes and cards */}
-        <ul className="relative grid grid-cols-6 gap-10">
-          {steps.map((step, index) => (
-            <TimelineCard key={step.id} step={step} index={index} />
-          ))}
-        </ul>
-      </div>
-    </section>
-  );
-}
-
-function TimelineCard({ step, index }) {
-  const Icon = step.icon;
-  const isTop = index % 2 === 0; // 1,3,5 top | 2,4,6 bottom
-  const connectorDir = isTop ? "top-full" : "bottom-full";
-
-  return (
-    <motion.li
-      className={`relative flex flex-col items-center ${
-        isTop ? "-mb-28" : "-mt-28"
-      }`}
-      variants={cardVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
-      custom={index}
-    >
-      {/* Node on wave */}
-      <div className="relative z-10 h-6 w-6 rounded-full bg-gradient-to-br from-cyan-400 to-fuchsia-500 shadow-lg shadow-cyan-400/50">
-        <span className="absolute inset-0 animate-ping rounded-full bg-cyan-400/40"></span>
-      </div>
-
-      {/* Connector line */}
-      <div
-        className={`absolute ${connectorDir} left-1/2 h-20 w-0.5 -translate-x-1/2 
-        bg-gradient-to-b from-cyan-400/80 to-fuchsia-400/80`}
-      />
-
-      {/* Card */}
-      <div
-        className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur 
-        p-6 shadow-[0_10px_30px_rgba(0,0,0,0.25)] w-52 text-center"
-      >
-        <div className="relative mb-4 grid h-14 w-14 place-items-center rounded-2xl 
-        border border-white/10 bg-white/10 text-white mx-auto">
-          <Icon className="h-7 w-7" />
-          <span className="pointer-events-none absolute inset-0 -z-10 rounded-2xl 
-          bg-gradient-to-br from-cyan-400/30 to-fuchsia-400/30 blur-xl" />
-        </div>
-        <h3 className="text-lg font-semibold text-white sm:text-xl">
-          {String(step.id).padStart(2, "0")} — {step.title}
-        </h3>
-        <p className="mt-1 text-sm leading-6 text-slate-300 sm:text-base">
-          {step.desc}
+        </motion.h2>
+        <p className="mt-5 text-black/80 font-secondary font-medium mb-2 text-base sm:text-lg">
+          Delivering content at scale requires a structured approach. Our Content as a Service (CaaS) model <br /> follows a proven 10-step framework to ensure efficiency, creativity, and measurable business impact.
         </p>
       </div>
-    </motion.li>
+
+      {/* Wave Line Placeholder (optional graphic) */}
+      {/* <div className="absolute top-[200px] left-0 w-full -translate-y-1/2 z-0">
+        <img src="/assets/line-1.png" alt="wave line" className="w-full h-auto object-contain" />
+      </div> */}
+
+      {/* Steps (1–5 or 6–10) */}
+      <div className="relative z-10 max-w-6xl mx-auto px-6">
+        <AnimatePresence mode="wait">
+          {!showSecond ? (
+            <motion.div
+              key="first"
+              initial="hiddenDown"
+              animate="visible"
+              exit="exitDown"
+              variants={variants}
+              transition={{ duration: 0.7 }}
+              className="flex justify-between gap-8"
+            >
+              {steps.slice(0, 5).map((step, index) => (
+                <div
+                  key={step.id}
+                  className={`w-1/5 flex flex-col items-center px-4 ${
+                    index % 2 === 0 ? "mb-36" : "mt-36"
+                  }`}
+                >
+                  <div className="w-16 h-16 mb-6">
+                    <img src={step.id} alt={step.title} />
+                  </div>
+                  <h3 className="font-primary text-lg sm:text-xl text-center mb-2">
+                    {step.title}
+                  </h3>
+                  <p className="text-gray-800 font-secondary text-sm sm:text-base text-center leading-relaxed">
+                    {step.desc}
+                  </p>
+                </div>
+              ))}
+            </motion.div>
+          ) : (
+            <motion.div
+              key="second"
+              initial="hiddenUp"
+              animate="visible"
+              exit="exitUp"
+              variants={variants}
+              transition={{ duration: 0.7 }}
+              className="flex justify-between gap-8"
+            >
+              {steps.slice(5, 10).map((step, index) => (
+                <div
+                  key={step.id}
+                  className={`w-1/5 flex flex-col items-center px-4 ${
+                    index % 2 === 0 ? "mb-36" : "mt-36"
+                  }`}
+                >
+                  <div className="w-16 h-16 mb-6">
+                    <img src={step.id} alt={step.title} />
+                  </div>
+                  <h3 className="font-primary text-lg sm:text-xl text-center mb-2">
+                    {step.title}
+                  </h3>
+                  <p className="text-gray-800 font-secondary text-sm sm:text-base text-center leading-relaxed">
+                    {step.desc}
+                  </p>
+                </div>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+
+      {/* Bottom Text */}
+      <div className="max-w-4xl mx-auto text-center mt-20 px-6">
+        <p className="text-black/80 font-secondary font-medium mb-2 text-base sm:text-lg">
+          This structured 10-step framework ensures that every piece of content we create is strategic, timely, and performance-ready. With Ayatiworks’ CaaS model, you don’t just get content delivery, you get a repeatable system that scales with your business and drives measurable growth.
+        </p>
+       
+      </div>
+    </div>
   );
 }
