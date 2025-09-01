@@ -18,6 +18,7 @@ import Loader from "./components/Loader";
 import ScrollButtons from "./components/ScrollButtons";
 import ScrollProgressBar from "./components/ScrollProgressBar";
 import DigitalPRPage from "./pages/main/DigitalPRPage";
+import WebAndECommerce from "./pages/main/Web&E-Commerce";
 
 // ✅ Lazy-loaded Public Pages
 const NotFound = lazy(() => import("./components/NotFound"));
@@ -76,11 +77,12 @@ function App() {
               <Route path="/awards" element={<AwardsPage />} />
               <Route path="/case-studies" element={<CaseStudiesPage />} />
               <Route
-                path="/digital-marketing"
+                path="/digital-marketing-service"
                 element={<DigitalMarketingPage />}
               />
               <Route path="/content-as-a-service" element={<ContentServicePages />} />
               <Route path="/digital-pr" element={<DigitalPRPage />} />
+              <Route path="/web-ecommerce" element={<WebAndECommerce />} />
               <Route path="/seo-simplified" element={<SEOBlogPage />} />
               <Route path="/comingsoon" element={<ComingSoon />} />
 
