@@ -3,15 +3,14 @@ import HeroSection from "./Home/HeroSection";
 import DigitalMarketingSection from "./Digital Marketing/DigitalMarketingSection";
 import Connection from "./Home/Connection";
 import WhyChennai from "./Digital Marketing/WhyChennai";
-import ServicesSection from "./Digital Marketing/ServicesSection";
 import ServicesSectionGrid from "./Digital Marketing/ServicesSectionGrid";
 import WhyChooseSection from "./Digital Marketing/WhyChooseSection";
 import CaseStudies from "./Digital Marketing/CaseStudies";
 import FAQSection from "./Digital Marketing/FAQSection";
 import GrowthFramework from "./Digital Marketing/GrowthFramework";
-import WaveTimeline from "./Digital Marketing/GrowthFramework";
 import MarketingServices from "./Digital Marketing/MarketingServices";
 import BenefitsSlider from "./Digital Marketing/BenefitsSlider";
+import WhyPartner from "./Digital Marketing/WhyPartner";
 
 function DigitalMarketingPage() {
   return (
@@ -19,14 +18,13 @@ function DigitalMarketingPage() {
       <HeroSection />
       <DigitalMarketingSection />
       <WhyChennai />
-      {/* <BenefitsSlider /> */}
+      <BenefitsSlider />
       <MarketingServices />
       <ServicesSectionGrid />
       <WhyChooseSection />
       <CaseStudies />
-
       <GrowthFramework />
-      {/* <WaveTimeline /> */}
+      <WhyPartner />
       <FAQSection />
       <Connection />
     </>

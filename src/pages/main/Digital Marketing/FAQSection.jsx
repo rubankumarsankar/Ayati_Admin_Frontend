@@ -28,15 +28,15 @@ const faqs = [
   {
     question: "5. Who will manage my account and how often will we communicate? ",
     answer:
-      "ROI is measured by engagement, conversions, brand awareness, and overall campaign performance metrics.",
+      "You’ll have a dedicated account manager backed by an expert team. We schedule regular updates (weekly or bi-weekly) and adjust communication frequency based on your preference.",
   },
   {
     question: "6. Do you offer full-stack digital solutions?  ",
     answer:
-      "Yes! From strategy and content to technology—SEO, social media, performance ads, influencer marketing, web development, and maintenance, all are handled under one roof for seamless execution. ",
+      "Yes! From strategy and content to technology—SEO, social media, performance ads, influencer marketing, web development, and maintenance, all are handled under one roof for seamless execution.",
   },
   {
-    question: "7. Is support ongoing after campaign launch? ",
+    question: "7.	Do you offer ongoing after launching a campaign? ",
     answer:
       "Absolutely. We believe in long-term partnership, not just project completion. Our framework includes continuous optimization, iterations, and support to keep results moving upward. ",
   },
