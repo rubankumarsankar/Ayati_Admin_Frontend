@@ -7,22 +7,26 @@ import Mail from "/icon/mail.png";
 import Media_Planning from "/icon/Media_Planning.png";
 import Social_Media from "/icon/Social_Media.png";
 import Seo from "/icon/seo.png";
+import { Link } from "react-router-dom";
 
 const services = [
   {
     icon: Seo,
     title: "Branding  Services",
     desc: "At Ayatiworks, Content as a Service is built to be modular, allowing you to choose exactly what your brand needs. From shaping your identity to producing high-impact assets, our services are designed to deliver performance-driven creative at scale.",
+    path: "/content-as-a-service/branding-service",
   },
   {
     icon: Social_Media,
     title: "Video Creation",
     desc: "From quick social reels to full-scale brand films, our on-demand video creation delivers impactful storytelling tailored to your campaigns. Scripted, shot, and edited with precision, our videos engage audiences, boost conversions, and bring your brand’s vision to life.",
+    path: "/content-as-a-service/video-creation-service",
   },
   {
     icon: Social_Media,
     title: "Multilingual Marketing",
     desc: "Reach beyond language barriers with our multilingual content solutions. Whether Tamil, Hindi, or global languages, we craft culturally relevant campaigns, adapt messaging seamlessly, and ensure your brand connects authentically with local and international audiences across every touchpoint.",
+    path: "/content-as-a-service/multilingual-arketing-service",
   },
 ];
 // Animation Variants
@@ -111,7 +115,9 @@ export default function ServicesSectionGrid() {
                 whileTap={{ scale: 0.95 }}
                 className="mt-6 font-primary bg-primary text-white group-hover:bg-secondary group-hover:text-white text-lg font-medium py-2 px-7 rounded-full shadow-md transition-all duration-500"
               >
-                LEARN MORE
+                <Link to={service.path} className="block w-full h-full">
+                  LEARN MORE
+                </Link>
               </motion.button>
             </motion.div>
           ))}

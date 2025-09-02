@@ -7,6 +7,7 @@ import Mail from "/icon/mail.png";
 import Media_Planning from "/icon/Media_Planning.png";
 import Social_Media from "/icon/Social_Media.png";
 import Seo from "/icon/seo.png";
+import { Link } from "react-router-dom";
 
 
 const services = [
@@ -14,16 +15,19 @@ const services = [
     icon: Seo,
     title: "Digital PR Services",
     desc: "From online publications to digital media coverage, we help your brand earn high-value placements that build credibility. Our PR strategies secure interviews, feature articles, and press mention that not only enhance visibility but also generate valuable backlinks that strengthen your online authority. Learn more about our Digital PR services in Chennai. ",
+    path: "/digital-pr/digital-pr-service",
   },
   {
     icon: Social_Media,
     title: "Influencer Marketing",
     desc: "We connect your brand with the right voices that inspire trust. From micro-influencers in niche markets to large-scale social collaborations, our influencer marketing strategies drive engagement, build social proof, and create authentic conversations that resonate with your target audience. Discover how our influencer marketing agency in Chennai can grow your reach",
+    path: "/digital-pr/influencer-marketing",
   },
   {
     icon: Instagram,
     title: "Online Reputation & Media Outreach",
     desc: "Leverage Instagram’s power with data-driven strategies. From reels and influencer tie-ups to targeted advertising, our Instagram marketing experts in Chennai help brands gain visibility, engagement, and customer trust on this fast-growing platform.",
+    path: "/digital-pr/online-reputation-service",
   },
 ];
 // Animation Variants
@@ -104,7 +108,9 @@ export default function ServicesSectionGrid() {
                 whileTap={{ scale: 0.95 }}
                 className="mt-6 font-primary bg-primary text-white group-hover:bg-secondary group-hover:text-white text-lg font-medium py-2 px-7 rounded-full shadow-md transition-all duration-500"
               >
-                LEARN MORE
+                <Link to={service.path} className="block w-full h-full">
+                  LEARN MORE
+                </Link>
               </motion.button>
             </motion.div>
           ))}

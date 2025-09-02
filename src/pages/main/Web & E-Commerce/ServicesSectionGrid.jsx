@@ -7,6 +7,7 @@ import Mail from "/icon/mail.png";
 import Media_Planning from "/icon/Media_Planning.png";
 import Social_Media from "/icon/Social_Media.png";
 import Seo from "/icon/seo.png";
+import { Link } from "react-router-dom";
 
 
 const services = [
@@ -14,31 +15,38 @@ const services = [
     icon: Seo,
     title: "Custom Website Design & Development ",
     desc: "Mobile-first, responsive, SEO-optimized websites.",
+    path: "/web-ecommerce/website-service",
+
   },
   {
     icon: Social_Media,
     title: "E-Commerce Development ",
     desc: "Scalable online stores built on Shopify, WooCommerce, Magento, and custom platforms.",
+    path: "/web-ecommerce/e-commerce-service",
   },
   {
     icon: Mail,
     title: "UI/UX Design ",
     desc: "Intuitive interfaces that maximize engagement and conversions.",
+    path: "/web-ecommerce/ui-and-ux-service",
   },
   {
     icon: Instagram,
     title: "SEO-Integrated Development ",
     desc: "Technical SEO, schema, and site speed baked into every build.",
+    path: "/web-ecommerce/seo-integrated-service",
   },
   {
     icon: Digital_Media,
     title: "Web Applications ",
     desc: "SaaS platforms and custom business solutions designed to scale.",
+    path: "/web-ecommerce/web-application-service",
   },
   {
     icon: Media_Planning,
     title: "Maintenance & Support ",
     desc: "Continuous upgrades, security patches, and performance monitoring.",
+    path: "/web-ecommerce/maintenance-service",
   },
 ];
 // Animation Variants
@@ -119,7 +127,9 @@ export default function ServicesSectionGrid() {
                 whileTap={{ scale: 0.95 }}
                 className="mt-6 font-primary bg-primary text-white group-hover:bg-secondary group-hover:text-white text-lg font-medium py-2 px-7 rounded-full shadow-md transition-all duration-500"
               >
-                LEARN MORE
+                <Link to={service.path} className="block w-full h-full">
+                  LEARN MORE
+                </Link>
               </motion.button>
             </motion.div>
           ))}

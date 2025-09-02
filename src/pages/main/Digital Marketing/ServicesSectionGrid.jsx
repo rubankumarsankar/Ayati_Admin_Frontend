@@ -1,5 +1,7 @@
 import { FaSearch, FaEnvelope, FaInstagram, FaShareAlt } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
+
 import Affiliate_Marketing from "/icon/Affiliate_Marketing.png";
 import Digital_Media from "/icon/Digital_Media.png";
 import Instagram from "/icon/Instagram.png";
@@ -8,46 +10,51 @@ import Media_Planning from "/icon/Media_Planning.png";
 import Social_Media from "/icon/Social_Media.png";
 import Seo from "/icon/seo.png";
 
-
 const services = [
   {
     icon: Seo,
     title: "SEO Services",
     desc: "Improve your visibility with our SEO services in Chennai. From keyword research and technical audits to link building and on-page optimization, we help your brand rank higher and attract quality leads organically.",
+    path: "/digital-marketing-service/seo-service",
   },
   {
     icon: Social_Media,
     title: "Social Media Marketing",
     desc: "Connect with your audience through powerful social media marketing campaigns. Our team creates engaging content, targeted ads, and growth-driven strategies across Facebook, Instagram, and LinkedIn to boost engagement and conversions.",
+    path: "/digital-marketing-service/social-media-service",
   },
   {
     icon: Mail,
     title: "Email Marketing",
     desc: "Strengthen customer relationships with email marketing services. We design personalized campaigns, automate customer journeys, and deliver impactful newsletters that drive retention, conversions, and repeat business for B2B, B2C, and D2C brands.",
+    path: "/digital-marketing-service/email-marketing-service",
   },
   {
     icon: Instagram,
     title: "Instagram Marketing",
     desc: "Leverage Instagram’s power with data-driven strategies. From reels and influencer tie-ups to targeted advertising, our Instagram marketing experts in Chennai help brands gain visibility, engagement, and customer trust on this fast-growing platform.",
+    path: "/digital-marketing-service/instagram-service",
   },
-  
   {
     icon: Affiliate_Marketing,
     title: "Affiliate Marketing",
-    desc: "Expand your reach with strategic affiliate marketing programs. We connect your business with trusted publishers and partners to generate leads, boost conversions, and grow your digital presence across Chennai and Tamil Nadu. ",
+    desc: "Expand your reach with strategic affiliate marketing programs. We connect your business with trusted publishers and partners to generate leads, boost conversions, and grow your digital presence across Chennai and Tamil Nadu.",
+    path: "/digital-marketing-service/affiliate-marketing-service",
   },
   {
     icon: Media_Planning,
     title: "Programmatic Marketing",
     desc: "Automate and optimize your ad campaigns with programmatic marketing. Using AI-driven targeting, real-time bidding, and advanced analytics, we ensure your brand reaches the right audience at scale, maximizing ROI with precision and efficiency.",
+    path: "/digital-marketing-service/programmatic-service",
   },
   {
     icon: Digital_Media,
     title: "Video Marketing",
     desc: "Engage, inspire, and convert with powerful video marketing campaigns. From brand storytelling to product explainers and social-first creatives, our team crafts videos that capture attention, build trust, and drive measurable impact.",
+    path: "/digital-marketing-service/video-marketing-service",
   },
- 
 ];
+
 // Animation Variants
 const container = {
   hidden: { opacity: 0 },
@@ -92,13 +99,21 @@ export default function ServicesSectionGrid() {
               {/* Icon with floating animation */}
               <motion.div
                 animate={{ y: [0, -8, 0] }}
-                transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 3,
+                  ease: "easeInOut",
+                }}
                 className="mb-6"
               >
                 <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center group-hover:shadow-xl transition-all duration-500">
                   <div className="text-primary text-5xl group-hover:text-primary">
                     {/* {service.icon} */}
-                    <img src={service.icon} alt={service.title} className="shadow-md rounded-full" />
+                    <img
+                      src={service.icon}
+                      alt={service.title}
+                      className="shadow-md rounded-full"
+                    />
                   </div>
                 </div>
               </motion.div>
@@ -126,7 +141,9 @@ export default function ServicesSectionGrid() {
                 whileTap={{ scale: 0.95 }}
                 className="mt-6 font-primary bg-primary text-white group-hover:bg-secondary group-hover:text-white text-lg font-medium py-2 px-7 rounded-full shadow-md transition-all duration-500"
               >
-                LEARN MORE
+                <Link to={service.path} className="block w-full h-full">
+                  LEARN MORE
+                </Link>
               </motion.button>
             </motion.div>
           ))}
