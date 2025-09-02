@@ -37,6 +37,7 @@ const ContentServicePages = lazy(() =>
 const SEOBlogPage = lazy(() => import("./pages/main/BlogPage/SEOBlog"));
 const AwardsPage = lazy(() => import("./pages/main/AwardsPage"));
 const CaseStudiesPage = lazy(() => import("./pages/main/CaseStudiePage"));
+const SeoServicesPage = lazy(() => import("./pages/main/SeoServicesPage"));
 
 // ✅ Lazy-loaded Admin Pages
 const Login = lazy(() => import("./pages/admin/Login"));
@@ -89,6 +90,11 @@ function App() {
               <Route path="/digital-pr" element={<DigitalPRPage />} />
               <Route path="/web-ecommerce" element={<WebAndECommerce />} />
               <Route path="/seo-simplified" element={<SEOBlogPage />} />
+
+              <Route
+                path="/digital-marketing-service/seo-service"
+                element={<SeoServicesPage />}
+              />
               <Route path="/comingsoon" element={<ComingSoon />} />
 
               <Route path="*" element={<NotFound />} />
