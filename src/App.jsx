@@ -34,11 +34,20 @@ const DigitalMarketingPage = lazy(() =>
 const ContentServicePages = lazy(() =>
   import("./pages/main/ContentServicePages")
 );
-const SocialMediaServicesPage = lazy(() => import("./pages/main/SocialMediaServicePage"));
+const SeoServicesPage = lazy(() => import("./pages/main/Services-SeoPage"));
+const SocialMediaServicesPage = lazy(() =>
+  import("./pages/main/Services-SocialMediaPage")
+);
+const EmailServicesPage = lazy(() =>
+  import("./pages/main/Services-EmailMarketingPage")
+);
+const InstagramServicesPage = lazy(() =>
+  import("./pages/main/Services-InstagramMarketingPage")
+);
+
 const SEOBlogPage = lazy(() => import("./pages/main/BlogPage/SEOBlog"));
 const AwardsPage = lazy(() => import("./pages/main/AwardsPage"));
 const CaseStudiesPage = lazy(() => import("./pages/main/CaseStudiePage"));
-const SeoServicesPage = lazy(() => import("./pages/main/SeoServicesPage"));
 
 // ✅ Lazy-loaded Admin Pages
 const Login = lazy(() => import("./pages/admin/Login"));
@@ -63,13 +72,7 @@ function App() {
         <ScrollButtons />
 
         {/* ✅ Suspense wrapper for lazy loading */}
-        <Suspense
-          fallback={
-            <div className="flex justify-center items-center h-screen">
-              Loading...
-            </div>
-          }
-        >
+        <Suspense fallback={<Loader />}>
           <Routes>
             {/* ✅ Public Routes */}
             <Route element={<PublicLayout />}>
@@ -97,8 +100,16 @@ function App() {
                 element={<SeoServicesPage />}
               />
               <Route
-                path="/digital-marketing-service/social-media-service"
+                path="/digital-marketing-service/social-media-marketing"
                 element={<SocialMediaServicesPage />}
+              />
+              <Route
+                path="/digital-marketing-service/email-marketing"
+                element={<EmailServicesPage />}
+              />
+              <Route
+                path="/digital-marketing-service/instagram-marketing"
+                element={<InstagramServicesPage />}
               />
               <Route path="/comingsoon" element={<ComingSoon />} />
 

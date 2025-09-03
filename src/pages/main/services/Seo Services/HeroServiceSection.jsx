@@ -202,7 +202,7 @@ function HeroServicePage() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="text-gray-700 space-y-6"
+            className="text-black/80 space-y-6"
           >
             <p className="text-base sm:text-lg md:text-xl text-black/80 font-secondary font-medium leading-relaxed">
               What Next??? <br />
@@ -287,7 +287,7 @@ function HeroServicePage() {
           </div>
 
           {/* Right - Sticky Image */}
-          <div className="text-gray-700 space-y-6">
+          <div className="text-black/80 space-y-6">
             {/* Points */}
             <div className="space-y-6">
               <div>
@@ -353,7 +353,7 @@ function HeroServicePage() {
         {/* ✅ Make grid parent tall enough */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-8">
           {/* Left Content */}
-          <div className="text-gray-700 space-y-6">
+          <div className="text-black/80 space-y-6">
             {/* Points */}
             <div className="space-y-6">
               <div>
@@ -554,7 +554,7 @@ function HeroServicePage() {
           </div>
           {/* Right - Sticky Image */}
 
-          <div className="text-gray-700 space-y-6">
+          <div className="text-black/80 space-y-6">
             {/* Intro Paragraph */}
             <p className="text-base sm:text-lg md:text-xl text-secondary font-secondary font-medium leading-relaxed">
               You definitely need a strong reason to team up with a digital
@@ -636,7 +636,7 @@ function HeroServicePage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-8">
           {/* Left Content */}
 
-          <div className="text-gray-700 space-y-6">
+          <div className="text-black/80 space-y-6">
             {/* Intro Paragraph */}
             <h3 className="text-2xl sm:text-3xl md:text-4xl text-secondary font-primary font-medium leading-relaxed">
               What if your website is a ghost town?
@@ -721,7 +721,7 @@ function HeroServicePage() {
           </div>
           {/* Right - Sticky Image */}
 
-          <div className="text-gray-700 space-y-6">
+          <div className="text-black/80 space-y-6">
             {/* Intro Paragraphs */}
             <div className="flex items-start gap-3">
               <FaRegDotCircle className="text-secondary text-2xl flex-shrink-0 mt-1" />
@@ -800,7 +800,7 @@ function HeroServicePage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-8">
           {/* Left Content */}
 
-          <div className="text-gray-700 space-y-6">
+          <div className="text-black/80 space-y-6">
             {/* Intro Paragraph */}
 
             <p className="text-base/7 sm:text-lg/9 md:text-xl/9 text-black/80 font-secondary font-medium">
@@ -889,7 +889,7 @@ function HeroServicePage() {
                 </h3>
               </div>
               {/* Text */}
-              <p className="text-gray-700 text-sm sm:text-base font-secondary md:text-lg leading-relaxed ml-7">
+              <p className="text-black/80 text-sm sm:text-base font-secondary md:text-lg leading-relaxed ml-7">
                 {point.text}
               </p>
             </div>
