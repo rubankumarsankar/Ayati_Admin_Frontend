@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const images = [
   "/assets/service/slider-img-1.png",
@@ -20,19 +20,22 @@ export default function AutoImageSlider() {
 
   return (
     <section className="section-container">
-      <div className="relative w-full max-w-6xl mx-auto h-72 sm:h-96 overflow-hidden shadow-lg">
-        <AnimatePresence mode="wait">
-          <motion.img
-            key={index}
-            src={images[index]}
-            alt={`slide-${index}`}
-            className="absolute top-0 left-0 w-full h-full object-cover"
-            initial={{ x: "100%" }} // enter from right
-            animate={{ x: "0%" }} // move to center
-            exit={{ x: "-100%" }} // exit to left
-            transition={{ duration: 0.8, ease: "easeInOut" }}
-          />
-        </AnimatePresence>
+      <div className="relative w-full max-w-6xl mx-auto h-full sm:h-full overflow-hidden shadow-lg">
+        <div className="flex w-full h-full">
+          {images.map((img, i) => (
+            <motion.img
+              key={i}
+              src={img}
+              alt={`slide-${i}`}
+              className="w-full h-full object-cover flex-shrink-0"
+              initial={false}
+              animate={{
+                x: `-${index * 100}%`, // shift images
+              }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
