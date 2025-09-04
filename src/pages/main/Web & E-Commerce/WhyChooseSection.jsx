@@ -90,7 +90,7 @@ export default function WhyChooseSection() {
             whileInView="visible"
             variants={fadeUp}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="text-gray-700 text-lg leading-8 font-secondary mt-5"
+            className="text-black/80 text-lg leading-8 font-secondary mt-5"
           >
             Choosing Ayatiworks means you’re not just getting a developer,
             you’re getting a digital growth partner.

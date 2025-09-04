@@ -84,7 +84,7 @@ export default function WhyPartner() {
                 <h3 className="text-primary font-primary font-medium text-xl">
                   {item.title}
                 </h3>
-                <p className="text-gray-700 font-secondary text-sm sm:text-base">
+                <p className="text-black/80 font-secondary text-sm sm:text-base">
                   {item.desc}
                 </p>
               </div>

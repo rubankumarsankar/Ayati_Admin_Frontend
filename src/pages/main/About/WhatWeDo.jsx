@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import doodleIcon from "/assets/doodle.png"; // replace with your doodle path
 
 export default function WhatWeDo() {
   const services = [
@@ -67,14 +66,16 @@ export default function WhatWeDo() {
             />
           </motion.div>
 
-          <p className="text-gray-700 font-secondary max-w-2xl text-sm md:text-base leading-relaxed">
-            At AyatiWorks, we’re all about unlocking a digital gateway for our
-            clients! Whether it’s sparking consumer conversations through brand
-            marketing, launching online shopping sprees, building cool platforms
-            for entertainment and finance, managing enterprise networks, or
-            supercharging performance—we’ve got it covered! Our secret sauce?
-            Practical, trustworthy, and dependable solutions that make your
-            digital dreams a reality!
+          <p className="text-black/80 font-secondary max-w-2xl mb-6 text-base/8 sm:text-lg/8 md:text-xl/8">
+            At Ayatiworks, we open the doors to your digital future. From
+            sparking meaningful conversations through brand marketing to
+            creating seamless e-commerce experiences, building powerful
+            platforms for entertainment and finance, managing enterprise
+            networks, or driving measurable performance growth, we cover it all.
+            Our strength lies in delivering practical, reliable, and
+            result-driven solutions that businesses trust. With Ayatiworks by
+            your side, your digital vision isn’t just an idea; it’s a reality in
+            motion.
           </p>
         </motion.div>
 

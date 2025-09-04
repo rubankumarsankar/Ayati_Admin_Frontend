@@ -12,7 +12,7 @@ export default function WhyCaasSection() {
         </div>
 
         {/* Section Content */}
-        <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
+        <div className="space-y-6 text-black/80 text-lg leading-relaxed">
           <p className="text-secondary">
             The way brands create content has changed dramatically. What worked
             five years ago—a monthly campaign and a few social posts—is no
@@ -24,7 +24,7 @@ export default function WhyCaasSection() {
           <p className="font-semibold text-gray-900">But here’s the problem:</p>
 
           {/* Problems List */}
-          <ul className="list-disc list-inside space-y-2 text-gray-700">
+          <ul className="list-disc list-inside space-y-2 text-black/80">
             <li>In-house teams are often limited by bandwidth.</li>
             <li>Agencies can be too rigid or slow to respond.</li>
             <li>Freelancers may lack consistency and strategic alignment.</li>

@@ -66,7 +66,7 @@ export default function Contact() {
             </motion.h3>
 
             <motion.p
-              className="text-gray-700 font-secondary text-base md:text-lg leading-relaxed"
+              className="text-black/80 font-secondary text-base md:text-lg leading-relaxed"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"

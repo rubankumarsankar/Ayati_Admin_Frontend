@@ -52,8 +52,8 @@ export default function Navbar() {
           onClick={() => setIsDropdownOpen(!isDropdownOpen)}
           className="flex items-center gap-2 bg-gray-50 px-4 py-2 rounded-lg hover:bg-gray-100 transition border border-gray-200"
         >
-          <UserCircleIcon className="h-6 w-6 text-gray-700" />
-          <span className="hidden sm:block text-gray-700 font-medium">
+          <UserCircleIcon className="h-6 w-6 text-black/80" />
+          <span className="hidden sm:block text-black/80 font-medium">
             {user?.email || "User"}
           </span>
           <ChevronDownIcon
@@ -66,7 +66,7 @@ export default function Navbar() {
         {/* Dropdown */}
         {isDropdownOpen && (
           <div className="absolute right-0 mt-2 w-52 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden animate-fadeIn">
-            <ul className="py-2 text-sm text-gray-700">
+            <ul className="py-2 text-sm text-black/80">
               <li>
                 <button
                   onClick={() => {

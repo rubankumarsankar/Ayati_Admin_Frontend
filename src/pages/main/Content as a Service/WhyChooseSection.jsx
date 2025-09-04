@@ -85,7 +85,7 @@ export default function WhyChooseSection() {
             whileInView="visible"
             variants={fadeUp}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="text-gray-700 text-lg leading-8 font-secondary mt-5"
+            className="text-black/80 text-lg leading-8 font-secondary mt-5"
           >
             Every piece of content is crafted to be modular, scalable, and performance-ready, ensuring consistency across campaigns while keeping turnaround times short.
           </motion.div>

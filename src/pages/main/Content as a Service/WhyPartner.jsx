@@ -48,7 +48,7 @@ export default function WhyPartner() {
       </div>
 
       {/* ✅ Intro */}
-      <div className="max-w-4xl mx-auto px-6 mb-10 text-gray-700 text-base sm:text-lg font-secondary">
+      <div className="max-w-4xl mx-auto px-6 mb-10 text-black/80 text-base sm:text-lg font-secondary">
         <p>
           Choosing the right Content as a Service (CaaS) partner makes all the
           difference. At Ayatiworks, we go beyond content delivery, integrating
@@ -77,7 +77,7 @@ export default function WhyPartner() {
                 <h3 className="text-primary font-primary font-medium text-xl">
                   {item.title}
                 </h3>
-                <p className="text-gray-700 font-secondary text-sm sm:text-base">
+                <p className="text-black/80 font-secondary text-sm sm:text-base">
                   {item.desc}
                 </p>
               </div>
@@ -87,7 +87,7 @@ export default function WhyPartner() {
       </div>
 
       {/* ✅ Closing Statement */}
-      <div className="max-w-4xl mx-auto px-6 mt-10 text-gray-700 text-base sm:text-lg font-secondary">
+      <div className="max-w-4xl mx-auto px-6 mt-10 text-black/80 text-base sm:text-lg font-secondary">
         <p>
           With Ayatiworks as your CaaS partner, you’re not just outsourcing
           content — you’re investing in a scalable system that powers

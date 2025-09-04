@@ -63,7 +63,7 @@ export default function HowWeDoIt() {
 
         {/* Intro Text */}
         <motion.p
-          className="text-gray-700 font-secondary max-w-2xl text-base/8 md:text-base/8 leading-relaxed"
+          className="text-black/80 font-secondary max-w-2xl text-base/8 md:text-base/8 leading-relaxed"
           variants={fadeUp}
           custom={2}
         >

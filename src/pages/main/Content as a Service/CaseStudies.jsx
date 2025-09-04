@@ -167,7 +167,7 @@ export default function CaseStudies() {
                       className="bg-secondary h-1 w-[200px] mt-2 origin-left rounded-full"
                     />
                   </h3>
-                  <p className="text-gray-700 font-secondary text-base leading-7">
+                  <p className="text-black/80 font-secondary text-base leading-7">
                     {caseStudies[current].description}
                   </p>
                 </div>

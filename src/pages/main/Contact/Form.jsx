@@ -135,7 +135,7 @@ export default function Form() {
                     {...register("services")}
                     className="accent-primary font-secondary"
                   />
-                  <span className="text-gray-700 font-secondary text-base">
+                  <span className="text-black/80 font-secondary text-base">
                     {service}
                   </span>
                 </label>

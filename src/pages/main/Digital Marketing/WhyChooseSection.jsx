@@ -86,7 +86,7 @@ export default function WhyChooseSection() {
             whileInView="visible"
             variants={fadeUp}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="text-gray-700 text-lg leading-8 font-secondary mt-5"
+            className="text-black/80 text-lg leading-8 font-secondary mt-5"
           >
             With dozens of digital marketing agencies in Chennai, what makes
             <span className="text-primary font-semibold"> Ayatiworks </span>

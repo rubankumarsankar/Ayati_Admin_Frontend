@@ -95,7 +95,7 @@ const ServicesMegaMenu = () => {
                 <h3 className="font-bold text-blue-800 mb-2 text-sm uppercase">
                   {cat.title}
                 </h3>
-                <ul className="space-y-1 text-xs text-gray-700">
+                <ul className="space-y-1 text-xs text-black/80">
                   {cat.items.map((item, i) => (
                     <li
                       key={i}

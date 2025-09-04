@@ -66,7 +66,7 @@ export default function Login() {
         <form onSubmit={handleSubmit} className="space-y-4">
           {/* Email */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-black/80 mb-1">
               Email Address
             </label>
             <input
@@ -82,7 +82,7 @@ export default function Login() {
 
           {/* Password with Eye Toggle */}
           <div className="relative">
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-black/80 mb-1">
               Password
             </label>
             <input
@@ -97,7 +97,7 @@ export default function Login() {
             <button
               type="button"
               aria-label={showPassword ? "Hide password" : "Show password"}
-              className="absolute right-3 top-9 text-gray-500 hover:text-gray-700"
+              className="absolute right-3 top-9 text-gray-500 hover:text-black/80"
               onClick={() => setShowPassword(!showPassword)}
             >
               {showPassword ? (

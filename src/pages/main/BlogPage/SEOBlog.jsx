@@ -202,7 +202,7 @@ function SEOBlogPage() {
           </div>
 
           {/* Right - Text */}
-          <div className="text-gray-700 space-y-6">
+          <div className="text-black/80 space-y-6">
             {/* Intro Paragraph */}
             <p className="text-base sm:text-lg md:text-xl text-secondary font-primary font-medium leading-relaxed">
               The internet is the world of online information from various
@@ -310,7 +310,7 @@ function SEOBlogPage() {
         {/* ✅ Make grid parent tall enough */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-8">
           {/* Left Content */}
-          <div className="text-gray-700 space-y-6">
+          <div className="text-black/80 space-y-6">
             {/* Intro Paragraph */}
             <p className="text-base sm:text-lg md:text-xl text-black/80 font-secondary font-medium leading-relaxed">
               Search Engine Optimization is a mechanism used by businesses on
@@ -479,7 +479,7 @@ function SEOBlogPage() {
           </div>
 
           {/* Right - Sticky Image */}
-          <div className="text-gray-700 space-y-6">
+          <div className="text-black/80 space-y-6">
             {/* Points */}
             <div className="space-y-6">
               {/* Crawling */}
@@ -540,7 +540,7 @@ function SEOBlogPage() {
         {/* ✅ Make grid parent tall enough */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-8">
           {/* Left Content */}
-          <div className="text-gray-700 space-y-6">
+          <div className="text-black/80 space-y-6">
             {/* Points */}
             <div className="space-y-6">
               {/* Crawling */}
@@ -628,7 +628,7 @@ function SEOBlogPage() {
           </div>
 
           {/* Right - Sticky Image */}
-          <div className="text-gray-700 space-y-6">
+          <div className="text-black/80 space-y-6">
             {/* Points */}
             <div className="space-y-6">
               {/* Crawling */}
@@ -743,7 +743,7 @@ function SEOBlogPage() {
         {/* ✅ Make grid parent tall enough */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-8">
           {/* Left Content */}
-          <div className="text-gray-700 space-y-6">
+          <div className="text-black/80 space-y-6">
             {/* Points */}
             <div className="space-y-6">
               {/* Crawling */}
@@ -870,7 +870,7 @@ function SEOBlogPage() {
           </div>
 
           {/* Right - Sticky Image */}
-          <div className="text-gray-700 space-y-6">
+          <div className="text-black/80 space-y-6">
             {/* Points */}
             <div className="space-y-6">
               {/* Crawling */}
@@ -1001,7 +1001,7 @@ function SEOBlogPage() {
           </div>
 
           {/* Right - Sticky Image */}
-          <div className="text-gray-700 space-y-6">
+          <div className="text-black/80 space-y-6">
             {/* Points */}
             <div className="space-y-6">
               {/* Crawling */}

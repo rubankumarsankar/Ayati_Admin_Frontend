@@ -127,7 +127,7 @@ function ServicesMegaMenu({ onItemClick }) {
                 <li
                   key={i}
                   onClick={() => handleClick(item.path)}
-                  className="text-xs text-gray-700 font-secondary hover:bg-gray-200 rounded-md hover:text-primary cursor-pointer transition"
+                  className="text-xs text-black/80 font-secondary hover:bg-gray-200 rounded-md hover:text-primary cursor-pointer transition"
                 >
                   {item.label}
                 </li>

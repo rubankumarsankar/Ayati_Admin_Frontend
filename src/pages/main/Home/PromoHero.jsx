@@ -64,7 +64,7 @@ export default function PromoHero() {
       {/* ✅ Description */}
       <FadeInWhenVisible delay={0.6}>
         <div className="w-full max-w-5xl mt-8 sm:mt-10 mx-auto flex justify-center sm:text-left px-4">
-          <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed font-secondary text-center sm:text-left">
+          <p className="text-black/80 text-sm sm:text-base md:text-lg leading-relaxed font-secondary text-center sm:text-left">
             This year at Ayatiworks, we’re embracing Utsah—the enthusiasm and
             energy that fuel everything we do. For us, Utsah means approaching
             every challenge with positivity, bringing fresh ideas to the table,

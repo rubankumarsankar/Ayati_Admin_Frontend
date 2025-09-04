@@ -77,8 +77,6 @@ const steps = [
   },
 ];
 
-
-
 const motives = [
   {
     id: 1,
@@ -150,7 +148,6 @@ const motives1 = [
     ],
   },
 ];
-
 
 function HeroServicePage() {
   return (

@@ -62,21 +62,25 @@ export default function AboutSection() {
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <p className="text-gray-700 font-secondary leading-relaxed mb-6 text-base sm:text-lg md:text-xl">
-            This year at <span className="font-semibold">Ayatworks</span>, we’re embracing
-            <span className="text-sky-600 font-semibold"> Utsah</span>—the enthusiasm and
+          <p className="text-black/80 font-secondary  mb-6 text-base/8 sm:text-lg/8 md:text-xl/8">
+            This year at Ayatiworks, we’re embracing Utsah, the enthusiasm and
             energy that fuel everything we do. For us, Utsah means approaching
             every challenge with positivity, bringing fresh ideas to the table,
             and creating meaningful work that makes a difference. It’s about
             going the extra mile for our clients, supporting each other as a
             team, and finding joy in every milestone, big or small. As we step
-            into 2025, Utsah reminds us to stay passionate, stay inspired, and
-            stay connected.
+            into{" "}
+            <span className="font-primary text-secondary text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
+              2025
+            </span>
+            , Utsah reminds us to stay passionate, stay inspired, and stay
+            connected.
           </p>
 
-          <p className="text-sky-600 font-secondary text-primary font-meduim text-lg md:text-xl">
-            Here’s to a year of growth, creativity, and purpose—powered by
-            Utsah! Let’s make it unforgettable!
+          <p className="text-sky-600 font-secondary text-secondary font-meduim text-lg md:text-xl">
+            Here’s to a year of growth, creativity, and purpose, powered by
+            Utsah! <br />
+            Let’s make it unforgettable!
           </p>
         </motion.div>
       </div>

@@ -9,7 +9,7 @@ export default function Connection() {
       <div className="section-container max-w-3xl mx-auto text-center px-4">
         {/* Subtitle */}
         <motion.p
-          className="text-xs tracking-[0.3em] text-gray-700 font-secondary mb-4 uppercase"
+          className="text-xs tracking-[0.3em] text-black/80 font-secondary mb-4 uppercase"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
@@ -31,7 +31,7 @@ export default function Connection() {
 
         {/* Description */}
         <motion.p
-          className="text-gray-700 font-secondary max-w-2xl mx-auto mb-14 text-sm sm:text-base leading-relaxed"
+          className="text-black/80 font-secondary max-w-2xl mx-auto mb-14 text-sm sm:text-base leading-relaxed"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
