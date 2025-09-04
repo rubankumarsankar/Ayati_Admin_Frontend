@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+// CenteredLogoNavbar.jsx
+import React, { useState, useEffect, useRef } from "react";
 import {
   Navbar,
   Menu,
@@ -10,69 +11,201 @@ import {
 import { ChevronDownIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import { useNavigate, useLocation } from "react-router-dom";
 
-// ✅ Reusable Dropdown Menu Component
-function DropdownMenu({ title, items, onItemClick, activePath }) {
+/* Helpers */
+const pathStartsWith = (base, current) =>
+  !!base && !!current && (current === base || current.startsWith(base + "/"));
+
+/* ============================
+   HoverDropdownMenu (used for ALL navs)
+   - Opens on hover (top chip)
+   - If an item has `children`, show right-side submenu on hover
+   - Clicking parent or child navigates
+   ============================ */
+function HoverDropdownMenu({
+  title,
+  items,
+  onItemClick,
+  activePath,
+  hoverOpenDelay = 120,
+  hoverCloseDelay = 160,
+}) {
   const [open, setOpen] = useState(false);
+  const [openSubIdx, setOpenSubIdx] = useState(null);
+  const hoverTimer = useRef(null);
+  const subHoverTimer = useRef(null);
   const navigate = useNavigate();
 
-  const handleClick = (path) => {
-    navigate(path);
-    if (onItemClick) onItemClick(path); // ✅ Auto close navbar
+  const clearTimer = (ref) => {
+    if (ref.current) {
+      clearTimeout(ref.current);
+      ref.current = null;
+    }
   };
 
-  // ✅ Check if current path is active
-  const isActive = items.some((item) => item.path === activePath);
+  // Top-level open/close on hover
+  const handleEnter = () => {
+    clearTimer(hoverTimer);
+    hoverTimer.current = setTimeout(() => setOpen(true), hoverOpenDelay);
+  };
+  const handleLeave = () => {
+    clearTimer(hoverTimer);
+    hoverTimer.current = setTimeout(() => {
+      setOpen(false);
+      setOpenSubIdx(null);
+    }, hoverCloseDelay);
+  };
+
+  // Auto-open matching parent submenu if the current route is inside it
+  useEffect(() => {
+    if (!open) return;
+    const idx = items.findIndex(
+      (it) => Array.isArray(it.children) && pathStartsWith(it.path, activePath)
+    );
+    if (idx >= 0) setOpenSubIdx(idx);
+  }, [open, activePath, items]);
+
+  // Highlight chip if parent or any child matches
+  const isActiveTop = items.some(
+    (it) =>
+      activePath === it.path ||
+      pathStartsWith(it.path, activePath) ||
+      (Array.isArray(it.children) &&
+        it.children.some((c) => activePath === c.path || pathStartsWith(c.path, activePath)))
+  );
+
+  const go = (path) => {
+    navigate(path);
+    onItemClick?.(path);
+    setOpen(false);
+    setOpenSubIdx(null);
+  };
 
   return (
-    <Menu open={open} handler={setOpen}>
-      <MenuHandler>
-        <Button
-          variant="text"
-          className={`flex items-center gap-2 text-sm font-secondary px-4 py-2 rounded-full transition-all duration-300 
-            ${
-              isActive
-                ? "bg-primary text-white shadow-md"
-                : "text-black hover:bg-primary hover:text-white hover:shadow-md"
-            }`}
-        >
-          {title}
-          <ChevronDownIcon
-            strokeWidth={2}
-            className={`h-3 w-3 transition-transform ${
-              open ? "rotate-180" : ""
-            }`}
-          />
-        </Button>
-      </MenuHandler>
-      <MenuList className="p-4 mt-5 rounded-xl shadow-lg">
-        {items.map((item, i) => (
-          <Typography
-            key={i}
-            as="div"
-            onClick={() => handleClick(item.path)}
-            className={`block text-lg font-primary px-2 py-1 rounded cursor-pointer
+    <div className="relative" onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
+      <Menu open={open} handler={setOpen} allowHover>
+        <MenuHandler>
+          {/* Hover-only to open; keep click as toggle for touch devices */}
+          <Button
+            variant="text"
+            aria-haspopup="menu"
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+            className={`flex items-center gap-2 text-sm font-secondary px-4 py-2 rounded-full transition-all duration-300
               ${
-                activePath === item.path
-                  ? "bg-primary text-white"
-                  : "text-black hover:bg-primary hover:text-white"
+                isActiveTop
+                  ? "bg-primary text-white shadow-md"
+                  : "text-black hover:bg-primary hover:text-white hover:shadow-md"
               }`}
           >
-            {item.label}
-          </Typography>
-        ))}
-      </MenuList>
-    </Menu>
+            {title}
+            <ChevronDownIcon
+              strokeWidth={2}
+              className={`h-3 w-3 transition-transform ${open ? "rotate-180" : ""}`}
+            />
+          </Button>
+        </MenuHandler>
+
+        <MenuList className="p-2 mt-5 rounded-xl shadow-lg overflow-visible">
+          {items.map((item, i) => {
+            const hasChildren = Array.isArray(item.children) && item.children.length > 0;
+            const activeParent =
+              activePath === item.path || pathStartsWith(item.path, activePath);
+
+            const onItemEnter = () => {
+              if (!hasChildren) return;
+              clearTimer(subHoverTimer);
+              subHoverTimer.current = setTimeout(() => setOpenSubIdx(i), hoverOpenDelay);
+            };
+            const onItemLeave = () => {
+              if (!hasChildren) return;
+              clearTimer(subHoverTimer);
+              subHoverTimer.current = setTimeout(() => {
+                setOpenSubIdx((idx) => (idx === i ? null : idx));
+              }, hoverCloseDelay);
+            };
+
+            return (
+              <div
+                key={i}
+                className="relative"
+                onMouseEnter={onItemEnter}
+                onMouseLeave={onItemLeave}
+              >
+                <Typography
+                  as="div"
+                  tabIndex={0}
+                  role="menuitem"
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") go(item.path);           // Enter navigates
+                    if (e.key === "ArrowRight" && hasChildren) setOpenSubIdx(i);
+                    if (e.key === "ArrowLeft") setOpenSubIdx(null);
+                  }}
+                  onClick={() => go(item.path)}                      // Click parent navigates
+                  className={`flex items-center justify-between gap-3 text-base font-primary px-3 py-2 rounded cursor-pointer
+                    ${
+                      activeParent
+                        ? "bg-primary text-white"
+                        : "text-black hover:bg-primary hover:text-white"
+                    }`}
+                  title={hasChildren ? "Hover to see sub items" : undefined}
+                >
+                  <span>{item.label}</span>
+                  {hasChildren && <span className="ml-2 select-none">&rsaquo;</span>}
+                </Typography>
+
+                {/* RIGHT-SIDE SUBMENU (hover) */}
+                {hasChildren && openSubIdx === i && (
+                  <div
+                    className="absolute top-0 left-full ml-2 w-64 bg-white rounded-xl shadow-lg p-2 z-[60]"
+                    onMouseEnter={() => {
+                      clearTimer(subHoverTimer);
+                      setOpenSubIdx(i);
+                    }}
+                    onMouseLeave={onItemLeave}
+                  >
+                    {item.children.map((child, ci) => {
+                      const childActive =
+                        activePath === child.path || pathStartsWith(child.path, activePath);
+                      return (
+                        <div
+                          key={ci}
+                          onClick={() => go(child.path)}
+                          className={`text-base font-primary px-3 py-2 rounded cursor-pointer
+                            ${
+                              childActive
+                                ? "bg-primary text-white"
+                                : "text-black hover:bg-primary hover:text-white"
+                            }`}
+                        >
+                          {child.label}
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </MenuList>
+      </Menu>
+    </div>
   );
 }
 
-// ✅ Main Navbar with Responsive Behavior
+/* ============================
+   Main Navbar — auto-expands 5s after every refresh
+   ============================ */
 export function CenteredLogoNavbar() {
   const [expanded, setExpanded] = useState(false);
   const navigate = useNavigate();
-  const location = useLocation(); // ✅ Detect active route
+  const location = useLocation();
   const activePath = location.pathname;
 
-  // ✅ Function to handle navigation & close navbar
+  useEffect(() => {
+    const t = setTimeout(() => setExpanded(true), 2000); // 2 seconds every load
+    return () => clearTimeout(t);
+  }, []);
+
   const handleNavigation = (path) => {
     navigate(path);
     setExpanded(false);
@@ -80,10 +213,11 @@ export function CenteredLogoNavbar() {
 
   return (
     <div className="fixed top-8 left-1/2 -translate-x-1/2 z-50 flex justify-center items-center">
-      {/* ✅ Logo Button (Initial State) */}
+      {/* Splash logo until expanded */}
       {!expanded && (
         <button
           onClick={() => setExpanded(true)}
+          aria-expanded={expanded}
           className="bg-white shadow-glow w-[100px] sm:w-[120px] rounded-full p-3 
                      hover:scale-105 hover:shadow-3xl transition-transform duration-300 
                      flex items-center justify-center"
@@ -92,12 +226,9 @@ export function CenteredLogoNavbar() {
         </button>
       )}
 
-      {/* ✅ Expanded Navbar */}
+      {/* Expanded navbar */}
       {expanded && (
-        <div
-          className="animate-fadeIn"
-          style={{ animation: "fadeInScale 0.4s ease-out" }}
-        >
+        <div className="animate-fadeIn" style={{ animation: "fadeInScale 0.4s ease-out" }}>
           <Navbar
             className="relative md:w-[740px] lg:w-[740px] 
             bg-white font-primary shadow-glow hover:shadow-3xl
@@ -106,16 +237,17 @@ export function CenteredLogoNavbar() {
             gap-2 sm:gap-2 transition-all duration-500
             rounded-xl sm:rounded-xl md:rounded-full lg:rounded-full xl:rounded-full 2xl:rounded-full"
           >
-            {/* ✅ Close Button (Top Right Corner on Mobile) */}
+            {/* Mobile close */}
             <button
               onClick={() => setExpanded(false)}
+              aria-label="Close navigation"
               className="absolute top-2 right-2 p-2 rounded-full text-primary 
                          hover:bg-primary/80 transition duration-300 sm:hidden"
             >
               <XMarkIcon className="h-5 w-5" />
             </button>
 
-            {/* ✅ Navbar Items */}
+            {/* Brand */}
             <Button
               variant="text"
               onClick={() => handleNavigation("/")}
@@ -124,68 +256,61 @@ export function CenteredLogoNavbar() {
               <img src="/ayatiworks_logo.svg" alt="Logo" className="h-8" />
             </Button>
 
-            <DropdownMenu
+            {/* About (hover) */}
+            <HoverDropdownMenu
               title="About"
               items={[
-                { label: "About", path: "/about" },
-                { label: "Teams", path: "/teams" },
-                // { label: "Careers", path: "/careers" },
+                { label: "About", path: "/about-us" },
+                { label: "Teams", path: "/about-us/team" },
               ]}
               onItemClick={handleNavigation}
               activePath={activePath}
             />
 
-            <DropdownMenu
+            {/* Services (hover) with right-side submenu on Digital Marketing Service */}
+            <HoverDropdownMenu
               title="Services"
               items={[
                 {
                   label: "Digital Marketing Service",
                   path: "/digital-marketing-service",
+                  children: [
+                    { label: "SEO Services", path: "/digital-marketing-service/seo" },
+                    { label: "Social Media Marketing", path: "/digital-marketing-service/social-media-marketing" },
+                    { label: "Email Marketing", path: "/digital-marketing-service/email-marketing" },
+                    { label: "Instagram Marketing", path: "/digital-marketing-service/instagram-marketing" },
+                    { label: "Affiliate Marketing", path: "/digital-marketing-service/affiliate-marketing" },
+                    { label: "Programmatic Marketing", path: "/digital-marketing-service/programmatic-marketing" },
+                    { label: "Video Marketing", path: "/digital-marketing-service/video-marketing" },
+                  ],
                 },
-                {
-                  label: "Content as a Service",
-                  path: "/content-as-a-service",
-                },
+                { label: "Content as a Service", path: "/content-as-a-service" },
                 { label: "Digital PR Service", path: "/digital-pr" },
                 { label: "Web & Development Services", path: "/web-ecommerce" },
               ]}
               onItemClick={handleNavigation}
               activePath={activePath}
             />
-{/* 
-            <DropdownMenu
-              title="Industries"
-              items={[
-                { label: "Automobile", path: "#" },
-                { label: "Retail & E-Commerce", path: "#" },
-                { label: "Healthcare", path: "#" },
-                { label: "Technology & SaaS", path: "#" },
-                { label: "Beauty & Personal Care", path: "#" },
-                { label: "Real Estate", path: "#" },
-              ]}
-              onItemClick={handleNavigation}
-              activePath={activePath}
-            /> */}
 
-            <DropdownMenu
+            {/* Insights (hover) */}
+            <HoverDropdownMenu
               title="Insights"
               items={[
                 { label: "Blogs", path: "#" },
                 { label: "Awards", path: "/awards" },
                 { label: "Case Studies", path: "/case-studies" },
-                // { label: "News", path: "/news" },
-                // { label: "Guides", path: "/guides" },
               ]}
               onItemClick={handleNavigation}
               activePath={activePath}
             />
 
+            {/* Contact */}
             <Button
               variant="text"
-              onClick={() => handleNavigation("/contact")}
+              onClick={() => handleNavigation("/contact-us")}
               className={`font-bold text-sm font-secondary rounded-full px-4 py-2 transition-all duration-300
                 ${
-                  activePath === "/contact"
+                  activePath === "/contact-us"
                     ? "bg-primary text-white shadow-md"
                     : "text-black hover:bg-primary hover:text-white hover:shadow-md"
                 }`}

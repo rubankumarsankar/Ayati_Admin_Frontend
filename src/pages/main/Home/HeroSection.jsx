@@ -93,7 +93,7 @@ export default function HeroSectionLayout() {
           className="col-span-4 row-span-1 rounded-3xl overflow-hidden shadow relative"
         >
           <video
-            src="/assets/banner-07.mp4"
+            src="/assets/banner-08.mp4"
             autoPlay
             muted
             loop

@@ -86,10 +86,10 @@ function App() {
             {/* ✅ Public Routes */}
             <Route element={<PublicLayout />}>
               <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutUs />} />
-              <Route path="/teams" element={<Teams />} />
+              <Route path="/about-us" element={<AboutUs />} />
+              <Route path="/about-us/team" element={<Teams />} />
               <Route path="/blogs" element={<Blog />} />
-              <Route path="/contact" element={<ContactUs />} />
+              <Route path="/contact-us" element={<ContactUs />} />
               <Route path="/awards" element={<AwardsPage />} />
               <Route path="/case-studies" element={<CaseStudiesPage />} />
               <Route
@@ -105,7 +105,7 @@ function App() {
               <Route path="/seo-simplified" element={<SEOBlogPage />} />
 
               <Route
-                path="/digital-marketing-service/seo-service"
+                path="/digital-marketing-service/seo"
                 element={<SeoServicesPage />}
               />
               <Route

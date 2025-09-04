@@ -140,6 +140,10 @@ function ServicesMegaMenu({ onItemClick }) {
   );
 }
 
+
+
+// Old Menu 
+
 import React, { useState } from "react";
 import {
   Navbar,
@@ -171,12 +175,18 @@ function DropdownMenu({ title, items, onItemClick, activePath }) {
         <Button
           variant="text"
           className={`flex items-center gap-2 text-sm font-secondary px-4 py-2 rounded-full transition-all duration-300 
-            ${isActive ? "bg-primary text-white shadow-md" : "text-black hover:bg-primary hover:text-white hover:shadow-md"}`}
+            ${
+              isActive
+                ? "bg-primary text-white shadow-md"
+                : "text-black hover:bg-primary hover:text-white hover:shadow-md"
+            }`}
         >
           {title}
           <ChevronDownIcon
             strokeWidth={2}
-            className={`h-3 w-3 transition-transform ${open ? "rotate-180" : ""}`}
+            className={`h-3 w-3 transition-transform ${
+              open ? "rotate-180" : ""
+            }`}
           />
         </Button>
       </MenuHandler>
@@ -187,7 +197,11 @@ function DropdownMenu({ title, items, onItemClick, activePath }) {
             as="div"
             onClick={() => handleClick(item.path)}
             className={`block text-lg font-primary px-2 py-1 rounded cursor-pointer
-              ${activePath === item.path ? "bg-primary text-white" : "text-black hover:bg-primary hover:text-white"}`}
+              ${
+                activePath === item.path
+                  ? "bg-primary text-white"
+                  : "text-black hover:bg-primary hover:text-white"
+              }`}
           >
             {item.label}
           </Typography>
@@ -251,10 +265,9 @@ export function CenteredLogoNavbar() {
             <Button
               variant="text"
               onClick={() => handleNavigation("/")}
-              className={`font-bold text-sm font-secondary rounded-full px-4 py-2 transition-all duration-300
-                ${activePath === "/" ? "bg-primary text-white shadow-md" : "text-black hover:bg-primary hover:text-white hover:shadow-md"}`}
+              className="p-0 bg-transparent hover:bg-transparent shadow-none"
             >
-              Home
+              <img src="/ayatiworks_logo.svg" alt="Logo" className="h-8" />
             </Button>
 
             <DropdownMenu
@@ -271,16 +284,22 @@ export function CenteredLogoNavbar() {
             <DropdownMenu
               title="Services"
               items={[
-                { label: "Digital Marketing Service", path: "/digital-marketing-service" },
-                { label: "Content as a Service", path: "/content-as-a-service" },
+                {
+                  label: "Digital Marketing Service",
+                  path: "/digital-marketing-service",
+                },
+                {
+                  label: "Content as a Service",
+                  path: "/content-as-a-service",
+                },
                 { label: "Digital PR Service", path: "/digital-pr" },
                 { label: "Web & Development Services", path: "/web-ecommerce" },
               ]}
               onItemClick={handleNavigation}
               activePath={activePath}
             />
-
-            {/* <DropdownMenu
+{/* 
+            <DropdownMenu
               title="Industries"
               items={[
                 { label: "Automobile", path: "#" },
@@ -306,12 +325,16 @@ export function CenteredLogoNavbar() {
               onItemClick={handleNavigation}
               activePath={activePath}
             />
-            
+
             <Button
               variant="text"
               onClick={() => handleNavigation("/contact")}
               className={`font-bold text-sm font-secondary rounded-full px-4 py-2 transition-all duration-300
-                ${activePath === "/contact" ? "bg-primary text-white shadow-md" : "text-black hover:bg-primary hover:text-white hover:shadow-md"}`}
+                ${
+                  activePath === "/contact"
+                    ? "bg-primary text-white shadow-md"
+                    : "text-black hover:bg-primary hover:text-white hover:shadow-md"
+                }`}
             >
               Contact
             </Button>
