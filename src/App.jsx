@@ -44,6 +44,9 @@ const EmailServicesPage = lazy(() =>
 const InstagramServicesPage = lazy(() =>
   import("./pages/main/Services-InstagramMarketingPage")
 );
+const AffiliateMarketingServicesPage = lazy(() =>
+  import("./pages/main/Services-AffiliateMarketingPage")
+);
 
 const SEOBlogPage = lazy(() => import("./pages/main/BlogPage/SEOBlog"));
 const AwardsPage = lazy(() => import("./pages/main/AwardsPage"));
@@ -110,6 +113,10 @@ function App() {
               <Route
                 path="/digital-marketing-service/instagram-marketing"
                 element={<InstagramServicesPage />}
+              />
+              <Route
+                path="/digital-marketing-service/affiliate-marketing"
+                element={<AffiliateMarketingServicesPage />}
               />
               <Route path="/comingsoon" element={<ComingSoon />} />
 
