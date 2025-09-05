@@ -173,10 +173,10 @@ export function CenteredLogoNavbar() {
 
             <Button
               variant="text"
-              onClick={() => handleNavigation("/contact")}
-              className={`font-bold text-sm font-secondary rounded-full px-4 py-2 transition-all duration-300
+              onClick={() => handleNavigation("/contact-us")}
+              className={`font-medium text-sm font-secondary rounded-full px-4 py-2 transition-all duration-300
                 ${
-                  activePath === "/contact"
+                  activePath === "/contact-us"
                     ? "bg-primary text-white shadow-md"
                     : "text-black hover:bg-primary hover:text-white hover:shadow-md"
                 }`}

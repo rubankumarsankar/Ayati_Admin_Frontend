@@ -30,7 +30,7 @@ export default function Loader() {
     <div className="fixed inset-0 flex items-center justify-center bg-white z-50">
       <div className="flex items-center space-x-1">
         <motion.h1
-          className="text-5xl font-bold text-primary font-primary"
+          className="text-5xl font-medium text-primary font-primary"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -43,7 +43,7 @@ export default function Loader() {
           {[0, 1, 2].map((i) => (
             <motion.span
               key={i}
-              className="text-6xl font-bold text-primary"
+              className="text-6xl font-medium text-primary"
               custom={i}
               variants={dotVariants}
               initial="hidden"

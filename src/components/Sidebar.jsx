@@ -38,7 +38,7 @@ export default function Sidebar() {
             className="h-10 w-10 rounded-full transition-transform duration-300 hover:scale-105"
           />
           {!isCollapsed && (
-            <h1 className="font-bold text-xl text-gray-800">Admin Panel</h1>
+            <h1 className="font-medium text-xl text-gray-800">Admin Panel</h1>
           )}
         </div>
 

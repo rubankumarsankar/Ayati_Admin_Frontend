@@ -71,7 +71,7 @@ export default function WhyPartner() {
         <div className="space-y-5">
           {benefits.map((item, i) => (
             <div key={i} className="flex items-start space-x-3">
-              <span className="text-primary text-xl font-bold">•</span>
+              <span className="text-primary text-xl font-medium">•</span>
               <div>
                 <h3 className="text-primary font-primary font-medium text-xl">
                   {item.title}
@@ -123,7 +123,7 @@ export default function WhyPartner() {
     whileTap={{ scale: 0.95 }}
     transition={{ duration: 0.3, ease: "easeOut" }}
     viewport={{ once: true }}
-    onClick={() => navigate("/contact")}
+    onClick={() => navigate("/contact-us")}
   >
     Digital PR agency in Chennai
   </motion.button>

@@ -93,7 +93,7 @@ export default function WhyChennai() {
               variants={fadeUp}
               className="text-black font-medium font-secondary leading-7"
             >
-              <span className="font-bold">But here’s the problem:</span>
+              <span className="font-medium">But here’s the problem:</span>
               <li>In-house teams are often limited by bandwidth.</li>
               <li>Agencies can be too rigid or slow to respond.</li>
               <li>Freelancers may lack consistency and strategic alignment.</li>

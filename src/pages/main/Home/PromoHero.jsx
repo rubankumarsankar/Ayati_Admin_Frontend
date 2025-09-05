@@ -22,7 +22,7 @@ export default function PromoHero() {
           <a
             href="#"
             className="inline-block bg-secondary hover:bg-secondary/90 
-             font-secondary font-bold text-white 
+             font-secondary font-medium text-white 
              px-4 sm:px-6 py-2.5 sm:py-3 rounded-full 
              text-sm sm:text-base lg:text-lg
              transition duration-300 ease-in-out shadow-md hover:shadow-lg"

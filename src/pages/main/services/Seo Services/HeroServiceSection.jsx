@@ -211,7 +211,7 @@ function HeroServicePage() {
               <br /> What Next? <br />
               Speak Ayati’s Language – The Next is Now! <br />
               Let’s show you what we have shown our existing clients –{" "}
-              <span className="text-secondary font-bold">
+              <span className="text-secondary font-medium">
                 GROWTH! REVENUE! BUSINESS!
               </span>
               <br />

@@ -18,7 +18,7 @@ export default function Connection(){
   </p>
 
   {/* Button */}
-  <button className="bg-[#17A3DC] hover:bg-sky-600 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+  <button className="bg-[#17A3DC] hover:bg-sky-600 text-white font-medium py-3 px-8 rounded-full transition duration-300">
     SPARK A CONNECTION
   </button>
 </div>

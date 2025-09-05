@@ -30,7 +30,7 @@ export default function GridSection() {
               alt={`Image ${idx + 1}`}
               className="w-full h-full object-cover"
             />
-            <div className="absolute bottom-3 left-3 bg-white text-blue-800 font-bold text-sm px-3 py-1">
+            <div className="absolute bottom-3 left-3 bg-white text-blue-800 font-medium text-sm px-3 py-1">
               {item.heading}
             </div>
           </div>
@@ -49,7 +49,7 @@ export default function GridSection() {
               alt={imgs1[0].heading}
               className="w-full h-64 md:h-96 object-cover"
             />
-            <span className="absolute bottom-2 left-2 bg-white text-blue-600 font-bold px-3 py-1 text-sm shadow">
+            <span className="absolute bottom-2 left-2 bg-white text-blue-600 font-medium px-3 py-1 text-sm shadow">
               {imgs1[0].heading}
             </span>
           </div>
@@ -63,7 +63,7 @@ export default function GridSection() {
                   alt={img.heading}
                   className="w-full h-100 object-cover"
                 />
-                <span className="absolute bottom-2 left-2 bg-white text-blue-600 font-bold px-3 py-1 text-sm shadow">
+                <span className="absolute bottom-2 left-2 bg-white text-blue-600 font-medium px-3 py-1 text-sm shadow">
                   {img.heading}
                 </span>
               </div>
@@ -82,7 +82,7 @@ export default function GridSection() {
                   alt={img.heading}
                   className="w-full h-100 object-cover"
                 />
-                <span className="absolute bottom-2 left-2 bg-white text-blue-600 font-bold px-3 py-1 text-sm shadow">
+                <span className="absolute bottom-2 left-2 bg-white text-blue-600 font-medium px-3 py-1 text-sm shadow">
                   {img.heading}
                 </span>
               </div>
@@ -96,7 +96,7 @@ export default function GridSection() {
               alt={imgs2[0].heading}
               className="w-full h-64 md:h-96 object-cover"
             />
-            <span className="absolute bottom-2 left-2 bg-white text-blue-600 font-bold px-3 py-1 text-sm shadow">
+            <span className="absolute bottom-2 left-2 bg-white text-blue-600 font-medium px-3 py-1 text-sm shadow">
               {imgs2[0].heading}
             </span>
           </div>

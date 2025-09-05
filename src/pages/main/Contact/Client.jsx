@@ -27,7 +27,7 @@ export default function Client() {
         viewport={{ once: true }}
         className="text-left mb-10"
       >
-       <h2 className="text-2xl md:text-3xl  text-center font-bold text-[#17A3DC] mb-8">
+       <h2 className="text-2xl md:text-3xl  text-center font-medium text-[#17A3DC] mb-8">
         Clients who believed in NEXT IS NOW! 
       </h2>
       </motion.div>

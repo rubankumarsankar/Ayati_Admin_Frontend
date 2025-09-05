@@ -79,7 +79,7 @@ export default function WhyPartner() {
         <div className="space-y-5">
           {benefits.map((item, i) => (
             <div key={i} className="flex items-start space-x-3">
-              <span className="text-primary text-xl font-bold">•</span>
+              <span className="text-primary text-xl font-medium">•</span>
               <div>
                 <h3 className="text-primary font-primary font-medium text-xl">
                   {item.title}

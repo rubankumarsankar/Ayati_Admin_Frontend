@@ -56,7 +56,7 @@ export default function WhyChooseSection() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center"
         >
-          <h2 className="section-title mb-6 text-3xl md:text-4xl font-bold text-primary">
+          <h2 className="section-title mb-6 text-3xl md:text-4xl font-medium text-primary">
             Benefits of Partnering with Ayatiworks for Web & E-Commerce
           </h2>
 

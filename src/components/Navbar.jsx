@@ -42,7 +42,7 @@ export default function Navbar() {
   return (
     <header className="flex justify-between items-center bg-white shadow-md px-6 py-4 sticky top-0 z-50">
       {/* Brand */}
-      <h1 className="font-bold text-xl text-blue-600 tracking-wide">
+      <h1 className="font-medium text-xl text-blue-600 tracking-wide">
         Admin Dashboard
       </h1>
 

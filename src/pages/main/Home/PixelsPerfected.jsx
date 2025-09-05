@@ -71,7 +71,7 @@ export default function PixelsPerfected() {
 
             {/* Content */}
             <div className="w-full">
-              <h3 className="font-primary text-2xl md:text-3xl font-bold text-black/80 mb-3">
+              <h3 className="font-primary text-2xl md:text-3xl font-medium text-black/80 mb-3">
                 {item.title}
               </h3>
               {item.sub && (

@@ -1,17 +1,17 @@
 import React from "react";
 import HeroSection from "./Home/HeroSection";
-import Contact from "./Contact/Contact";
-import Location from "./Contact/Location";
-import Form from "./Contact/Form";
-import Address from "./Contact/Address";
-import Brand from "./Contact/Brand";
-import Digital from "./Contact/Digital";
-import Map from "./Contact/Map";
-import Client from "./Contact/Client";
+import Contact from "./contact/contact";
+import Location from "./contact/Location";
+import Form from "./contact/Form";
+import Address from "./contact/Address";
+import Brand from "./contact/Brand";
+import Digital from "./contact/Digital";
+import Map from "./contact/Map";
+import Client from "./contact/Client";
 import Connection from "./Home/Connection";
 import PartnersInClimb from "./Home/PartnersInClimb";
 
-function HomePage() {
+function ContactUs() {
   return (
     <>
       <HeroSection />
@@ -28,4 +28,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default ContactUs;

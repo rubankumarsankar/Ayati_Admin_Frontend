@@ -33,7 +33,7 @@ export default function GrowthFramework() {
     <div className="bg-white py-12 px-4 md:px-12 lg:px-20">
       {/* Header */}
       <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+        <h2 className="text-3xl md:text-4xl font-medium text-gray-800">
           Our 10-Step Growth Framework
         </h2>
         <p className="text-blue-600 font-medium mt-2">
@@ -60,7 +60,7 @@ export default function GrowthFramework() {
             viewport={{ once: true }}
           >
             {/* Number Circle */}
-            <div className="w-12 h-12 mx-auto rounded-full bg-blue-600 text-white flex items-center justify-center text-lg font-bold shadow-lg">
+            <div className="w-12 h-12 mx-auto rounded-full bg-blue-600 text-white flex items-center justify-center text-lg font-medium shadow-lg">
               {step.id}
             </div>
 

@@ -6,42 +6,36 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
-    question: "1. What is programmatic marketing?",
+    question: "1. What makes Ayatiworks the best branding agency in Chennai?",
     answer:
-      "It’s an automated process of buying and optimizing ads using data and AI for more efficient, targeted campaigns.",
+      "Our blend of local market knowledge, award-winning design, and strategic branding makes us the top choice for businesses across Tamil Nadu.",
   },
   {
-    question: "2. How does programmatic benefit B2B businesses?",
+    question: "2. How long does the branding process take?",
     answer:
-      "It helps reach decision-makers and niche industries with high precision, improving lead quality and conversion rates.",
+      "Depending on the scope, branding can take between 3 to 12 weeks, covering research, design, messaging, and deployment.",
   },
   {
-    question: "3. Can Programmatic Marketing help small businesses?",
+    question: "3. Can small businesses afford professional branding?",
     answer:
-      "Yes, it allows even smaller businesses to optimize budgets with cost-efficient targeting and measurable results.",
+      "Yes. We offer scalable packages designed for startups and SMEs. Strategic branding is an investment in growth, not an expense.",
   },
   {
-    question: "4. What platforms are used in programmatic advertising?",
+    question: "4. How much does it cost to hire an agency for branding?",
     answer:
-      "Platforms include demand-side platforms (DSPs), ad exchanges, and data management platforms for precise targeting.",
+      "Branding services can range from $100–$300/hour or monthly retainers, depending on deliverables. One-time branding packages start from INR 50,000 onwards. Different agencies operate in different ways, however these are ballpark figures.",
   },
   {
-    question: "5. Is programmatic more effective than traditional ads?",
+    question: "5. How does Ayatiworks ensure my brand stands out in India?",
     answer:
-      "Yes, it offers better targeting, reduced waste, and measurable ROI compared to traditional ad buying.",
+      "We use research-driven strategy, trend insights, and custom design frameworks to ensure every brand we build is unique, relevant, and competitive.",
   },
   {
-    question: "6. Can programmatic marketing reduce ad fraud?",
+    question: "6. What industries do you serve?",
     answer:
-      "Yes, advanced fraud prevention and verification tools help ensure budget safety.",
-  },
-  {
-    question: "7. How do you measure the success of a programmatic campaign?",
-    answer:
-      "Success is measured by CTRs, conversions, impressions, cost-efficiency, and overall ROI.",
+      "We work across tech, healthcare, retail, education, automotive, finance, and more. Our process is adaptable to any sector; we are industry agnostic.",
   },
 ];
-
 
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(null);

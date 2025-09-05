@@ -5,7 +5,7 @@ export const urls = [
   { url: "/about", changefreq: "weekly", priority: 0.8 },
   { url: "/teams", changefreq: "weekly", priority: 0.7 },
   { url: "/blogs", changefreq: "weekly", priority: 0.7 },
-  { url: "/contact", changefreq: "monthly", priority: 0.6 },
+  { url: "/contact-us", changefreq: "monthly", priority: 0.6 },
   { url: "/awards", changefreq: "monthly", priority: 0.6 },
   { url: "/case-studies", changefreq: "monthly", priority: 0.6 },
   { url: "/digital-marketing-service", changefreq: "weekly", priority: 0.8 },

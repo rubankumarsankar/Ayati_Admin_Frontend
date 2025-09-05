@@ -24,7 +24,7 @@ export default function Digital() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <h2 className="text-3xl/9 font-bold text-secondary font-primary mb-6">
+          <h2 className="text-3xl/9 font-medium text-secondary font-primary mb-6">
             Step Into Our Digital Studio
           </h2>
           <p className="text-gray-600 text-lg/8 font-secondary leading-relaxed">

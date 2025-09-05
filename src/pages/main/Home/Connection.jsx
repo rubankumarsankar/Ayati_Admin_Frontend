@@ -54,7 +54,7 @@ export default function Connection() {
           whileTap={{ scale: 0.95 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
           viewport={{ once: true }}
-          onClick={() => navigate("/contact")}
+          onClick={() => navigate("/contact-us")}
         >
           SPARK A CONNECTION
         </motion.button>

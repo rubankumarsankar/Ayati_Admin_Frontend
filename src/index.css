@@ -51,7 +51,7 @@
   /* ✅ Title with responsive font sizes */
   .section-title {
     @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-5xl 
-           font-bold text-center font-primary text-primary leading-tight;
+           font-medium text-center font-primary text-primary leading-tight;
   }
 
   /* ✅ Subtitle with responsive size + line height */
@@ -76,7 +76,7 @@
   /* ✅ Title with responsive font sizes */
   .section-title {
     @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-5xl 
-           font-bold text-center font-primary text-primary leading-tight;
+           font-medium text-center font-primary text-primary leading-tight;
   }
 
   /* ✅ Subtitle with responsive size + line height */

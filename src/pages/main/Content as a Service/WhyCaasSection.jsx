@@ -6,7 +6,7 @@ export default function WhyCaasSection() {
       <div className="max-w-6xl mx-auto px-4 section-container">
         {/* Section Title */}
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 section-title">
+          <h2 className="text-3xl md:text-4xl font-medium text-gray-900 section-title">
             Why Businesses Need <span className="text-primary">CaaS</span> Today
           </h2>
         </div>
@@ -80,7 +80,7 @@ export default function WhyCaasSection() {
 
           <p className="text-secondary">
             With CaaS, businesses no longer chase deadlines.{" "}
-            <span className="font-bold text-gray-900">They set the pace.</span>
+            <span className="font-medium text-gray-900">They set the pace.</span>
           </p>
         </div>
       </div>

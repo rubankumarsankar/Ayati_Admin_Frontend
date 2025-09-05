@@ -486,7 +486,7 @@ function HeroServicePage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="relative text-2xl sm:text-3xl md:text-4xl font-primary font-bold mb-6"
+            className="relative text-2xl sm:text-3xl md:text-4xl font-primary font-medium mb-6"
           >
             Industries We Serve
             <motion.div
@@ -521,7 +521,7 @@ function HeroServicePage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="relative text-2xl sm:text-3xl md:text-4xl font-primary font-bold mb-6"
+            className="relative text-2xl sm:text-3xl md:text-4xl font-primary font-medium mb-6"
           >
             Our Process
             <motion.div
@@ -641,7 +641,7 @@ function HeroServicePage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="relative text-2xl sm:text-3xl md:text-4xl font-primary font-bold mb-6"
+            className="relative text-2xl sm:text-3xl md:text-4xl font-primary font-medium mb-6"
           >
             Why Affiliate Marketing Matters
             <motion.div

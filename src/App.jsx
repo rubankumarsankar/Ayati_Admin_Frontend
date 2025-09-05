@@ -19,6 +19,7 @@ import ScrollButtons from "./components/ScrollButtons";
 import ScrollProgressBar from "./components/ScrollProgressBar";
 import DigitalPRPage from "./pages/main/DigitalPRPage";
 import WebAndECommerce from "./pages/main/Web&E-Commerce";
+import ContactUs from "./pages/main/ContactUs";
 
 // ✅ Lazy-loaded Public Pages
 const NotFound = lazy(() => import("./components/NotFound"));
@@ -27,7 +28,6 @@ const HomePage = lazy(() => import("./pages/main/HomePage"));
 const AboutUs = lazy(() => import("./pages/main/AboutUs"));
 const Teams = lazy(() => import("./pages/main/TeamsPage"));
 const Blog = lazy(() => import("./pages/main/BlogPage"));
-const ContactUs = lazy(() => import("./pages/main/ContactUs"));
 const DigitalMarketingPage = lazy(() =>
   import("./pages/main/DigitalMarketingPage")
 );
@@ -52,6 +52,9 @@ const ProgrammaticServicesPage = lazy(() =>
 );
 const VideoMarketingServicesPage = lazy(() =>
   import("./pages/main/Services-VideoMarketingPage")
+);
+const BrandingServicesPage = lazy(() =>
+  import("./pages/main/Services-BrandingPage")
 );
 
 const SEOBlogPage = lazy(() => import("./pages/main/BlogPage/SEOBlog"));
@@ -131,6 +134,10 @@ function App() {
               <Route
                 path="/digital-marketing-service/video-marketing"
                 element={<VideoMarketingServicesPage />}
+              />
+              <Route
+                path="/content-as-a-service/branding-service"
+                element={<BrandingServicesPage />}
               />
               <Route path="/comingsoon" element={<ComingSoon />} />
 

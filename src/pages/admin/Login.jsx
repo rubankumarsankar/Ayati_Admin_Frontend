@@ -56,7 +56,7 @@ export default function Login() {
       <div className="bg-white shadow-lg rounded-xl p-8 w-full max-w-sm">
         {/* Title */}
         <div className="text-center mb-6">
-          <h1 className="text-2xl font-bold text-gray-800">Admin Panel</h1>
+          <h1 className="text-2xl font-medium text-gray-800">Admin Panel</h1>
           <p className="text-sm text-gray-500">
             Sign in to manage employees & admins
           </p>

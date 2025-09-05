@@ -243,7 +243,7 @@ function HeroServicePage() {
               <div className="space-y-2">
                 {/* ✅ Title */}
                 <p className="flex items-start gap-2 text-lg sm:text-xl md:text-3xl text-secondary font-primary">
-                  <span className="text-primary font-bold text-xl sm:text-2xl flex-shrink-0">
+                  <span className="text-primary font-medium text-xl sm:text-2xl flex-shrink-0">
                     1.
                   </span>
                   Personalized Email Marketing & Branding Campaigns for Diverse
@@ -305,7 +305,7 @@ function HeroServicePage() {
               <div className="space-y-2">
                 {/* ✅ Title */}
                 <p className="flex items-start gap-2 text-lg sm:text-xl md:text-3xl text-secondary font-primary">
-                  <span className="text-primary font-bold text-xl sm:text-2xl flex-shrink-0">
+                  <span className="text-primary font-medium text-xl sm:text-2xl flex-shrink-0">
                     2.
                   </span>
                   Data-Driven Strategies to apply targeted Emails
@@ -322,7 +322,7 @@ function HeroServicePage() {
               <div className="space-y-2">
                 {/* ✅ Title */}
                 <p className="flex items-start gap-2 text-lg sm:text-xl md:text-3xl text-secondary font-primary">
-                  <span className="text-primary font-bold text-xl sm:text-2xl flex-shrink-0">
+                  <span className="text-primary font-medium text-xl sm:text-2xl flex-shrink-0">
                     3.
                   </span>
                   Compliance and Deliverability
@@ -350,7 +350,7 @@ function HeroServicePage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="relative text-2xl sm:text-3xl md:text-4xl font-primary font-bold mb-6"
+            className="relative text-2xl sm:text-3xl md:text-4xl font-primary font-medium mb-6"
           >
             What is Your Email Marketing Objective?
             <motion.div

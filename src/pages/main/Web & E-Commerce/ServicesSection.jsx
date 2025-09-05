@@ -64,7 +64,7 @@ export default function ServicesSection() {
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="text-4xl md:text-5xl font-bold font-primary text-gray-900 mb-6"
+          className="text-4xl md:text-5xl font-medium font-primary text-gray-900 mb-6"
         >
           Our Digital Marketing Services <br />
           <span className="text-blue-600">at a Glance</span>

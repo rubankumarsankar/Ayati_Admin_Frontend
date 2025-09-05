@@ -16,7 +16,7 @@ export default function StickyContact() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        onClick={() => navigate("/contact")}
+        onClick={() => navigate("/contact-us")}
         className="px-4 py-2 mr-2 font-semibold text-black text-sm bg-white rounded-full shadow-md border border-gray-300"
       >
         Get in touch with us
@@ -31,7 +31,7 @@ export default function StickyContact() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        onClick={() => navigate("/contact")}
+        onClick={() => navigate("/contact-us")}
         className="bg-secondary flex items-center justify-center w-12 h-12 rounded-full shadow-lg"
       >
         <FaQuoteRight className="text-white text-xl" />

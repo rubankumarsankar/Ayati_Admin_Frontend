@@ -92,7 +92,7 @@ const ServicesMegaMenu = () => {
           >
             {serviceCategories.map((cat, idx) => (
               <div key={idx}>
-                <h3 className="font-bold text-blue-800 mb-2 text-sm uppercase">
+                <h3 className="font-medium text-blue-800 mb-2 text-sm uppercase">
                   {cat.title}
                 </h3>
                 <ul className="space-y-1 text-xs text-black/80">

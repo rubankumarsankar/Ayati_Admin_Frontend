@@ -81,7 +81,7 @@ export default function DigitalMarketingSection() {
             />
           </motion.h2>
           <p className="text-black/80 font-secondary font-medium mb-2 text-base/8 sm:text-base/8 md:text-lg/8">
-            <span className="font-bold">
+            <span className="font-medium">
               When it comes to content in any form, it is not as easy as it used
               to be. 
             </span>{" "} <br />
@@ -94,7 +94,7 @@ export default function DigitalMarketingSection() {
             scale, and consistency.
           </p>
           <p className="text-black/80 font-secondary font-medium mb-2 text-base/8 sm:text-base/8 md:text-lg/8">
-            <span className="font-bold">
+            <span className="font-medium">
               {" "}
               This is where Content as a Service (CaaS) comes in.
             </span>{" "} <br />
@@ -111,7 +111,7 @@ export default function DigitalMarketingSection() {
             content that is fast, flexible, and always relevant. Whether it’s a
             Tamil-first ad campaign, a high-conversion landing page, or a brand
             film, Ayatiworks delivers{" "}
-            <span className="font-bold">
+            <span className="font-medium">
               on-demand content creation and marketing solutions
             </span>{" "}
             designed to meet your objectives.

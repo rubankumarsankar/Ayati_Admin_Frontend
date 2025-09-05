@@ -96,7 +96,7 @@ export default function Employees() {
   return (
     <div className="p-6">
       <div className="flex justify-between items-center mb-4">
-        <h1 className="text-2xl font-bold">Employees</h1>
+        <h1 className="text-2xl font-medium">Employees</h1>
         <button
           onClick={() => handleOpenModal()}
           className="flex items-center gap-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
@@ -167,7 +167,7 @@ export default function Employees() {
         <div className="fixed inset-0 bg-black/30" aria-hidden="true" />
         <div className="fixed inset-0 flex items-center justify-center p-4">
           <div className="bg-white rounded-lg p-6 w-full max-w-md shadow-lg">
-            <h2 className="text-xl font-bold mb-4">
+            <h2 className="text-xl font-medium mb-4">
               {editingEmployee ? "Edit Employee" : "Add Employee"}
             </h2>
             <div className="space-y-3">

@@ -74,7 +74,7 @@ export default function YearSlider() {
     >
       <div className="section-container mx-auto">
         {/* Timeline Nav */}
-        <div className="flex items-center justify-center text-sky-600 font-bold mb-12 overflow-x-auto relative">
+        <div className="flex items-center justify-center text-sky-600 font-medium mb-12 overflow-x-auto relative">
           <button
             className="text-blue-600 px-2"
             onClick={() =>

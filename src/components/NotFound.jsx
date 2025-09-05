@@ -69,7 +69,7 @@ export default function NotFound() {
             </button>
 
             <button
-              onClick={() => navigate("/contact")}
+              onClick={() => navigate("/contact-us")}
               className="flex flex-col items-center text-primary hover:text-blue-400 transition"
             >
               <PhoneIcon className="h-8 w-8" />

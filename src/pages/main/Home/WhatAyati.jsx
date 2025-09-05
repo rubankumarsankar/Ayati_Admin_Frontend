@@ -99,7 +99,7 @@ export default function SolutionsSection() {
             {/* Vertical Label (optional, currently empty) */}
             {card.cat && (
               <div className="absolute inset-y-0 right-0 flex items-center justify-center">
-                <span className="rotate-90 font-primary font-bold text-3xl text-secondary tracking-widest whitespace-nowrap">
+                <span className="rotate-90 font-primary font-medium text-3xl text-secondary tracking-widest whitespace-nowrap">
                   {card.cat}
                 </span>
               </div>

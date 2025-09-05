@@ -176,7 +176,7 @@ function SEOBlogPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="section-title text-left text-2xl md:text-3xl lg:text-4xl font-bold"
+            className="section-title text-left text-2xl md:text-3xl lg:text-4xl font-medium"
           >
             <span className="mb-2 block">How do Search Engines Work?</span>
 
@@ -213,7 +213,7 @@ function SEOBlogPage() {
             </p>
 
             {/* Sub Title */}
-            <h3 className="section-title text-left text-2xl sm:text-3xl lg:text-4xl font-bold">
+            <h3 className="section-title text-left text-2xl sm:text-3xl lg:text-4xl font-medium">
               Have a look at their individual role
             </h3>
 
@@ -294,7 +294,7 @@ function SEOBlogPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="section-title text-left text-2xl md:text-3xl lg:text-4xl font-bold"
+            className="section-title text-left text-2xl md:text-3xl lg:text-4xl font-medium"
           >
             <span className="mb-2 block">On-Page SEO</span>
 
@@ -323,7 +323,7 @@ function SEOBlogPage() {
             </p>
 
             {/* Sub Title */}
-            <h3 className="section-title text-left text-2xl sm:text-3xl lg:text-4xl font-bold">
+            <h3 className="section-title text-left text-2xl sm:text-3xl lg:text-4xl font-medium">
               The key elements include:
             </h3>
 
@@ -451,7 +451,7 @@ function SEOBlogPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="section-title text-left text-2xl md:text-3xl lg:text-4xl font-bold"
+            className="section-title text-left text-2xl md:text-3xl lg:text-4xl font-medium"
           >
             <span className="mb-2 block">Off-Page SEO</span>
 
@@ -524,7 +524,7 @@ function SEOBlogPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="section-title text-left text-2xl md:text-3xl lg:text-4xl font-bold"
+            className="section-title text-left text-2xl md:text-3xl lg:text-4xl font-medium"
           >
             <span className="mb-2 block">Technical SEO</span>
 
@@ -600,7 +600,7 @@ function SEOBlogPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="section-title text-left text-2xl md:text-3xl lg:text-4xl font-bold"
+            className="section-title text-left text-2xl md:text-3xl lg:text-4xl font-medium"
           >
             <span className="mb-2 block">What is Keyword Research in SEO?</span>
 
@@ -725,7 +725,7 @@ function SEOBlogPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="section-title text-left text-2xl md:text-3xl lg:text-4xl font-bold"
+            className="section-title text-left text-2xl md:text-3xl lg:text-4xl font-medium"
           >
             <span className="mb-2 block">
               Why is User Experience in SEO very important?
@@ -842,7 +842,7 @@ function SEOBlogPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="section-title text-left text-2xl md:text-3xl lg:text-4xl font-bold"
+            className="section-title text-left text-2xl md:text-3xl lg:text-4xl font-medium"
           >
             <span className="mb-2 block">Technical SEO</span>
 
@@ -973,7 +973,7 @@ function SEOBlogPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="section-title text-left text-2xl md:text-3xl lg:text-4xl font-bold"
+            className="section-title text-left text-2xl md:text-3xl lg:text-4xl font-medium"
           >
             <span className="mb-2 block">Conclusion</span>
 
