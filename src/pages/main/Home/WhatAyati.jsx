@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function SolutionsSection() {
+  const navigate = useNavigate();
+
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
     visible: (i) => ({
@@ -10,52 +13,61 @@ export default function SolutionsSection() {
     }),
   };
 
+  // ✅ Each card now has a basePath and list of {label, href}
   const cards = [
     {
       cat: "",
       title: "Digital Marketing Services",
       icon: "/assets/good-vibe.png",
+      basePath: "/digital-marketing-service",
       list: [
-        "SEO Services",
-        "Social Media Marketing",
-        "Email Marketing",
-        "Instagram Marketing",
-        "Affiliate Marketing",
-        "Programmatic Marketing",
-        "Video Marketing",
+        { label: "SEO Services", href: "/digital-marketing-service/seo-services" },
+        { label: "Social Media Marketing", href: "/digital-marketing-service/social-media-marketing" },
+        { label: "Email Marketing", href: "/digital-marketing-service/email-marketing" },
+        { label: "Instagram Marketing", href: "/digital-marketing-service/instagram-marketing" },
+        { label: "Affiliate Marketing", href: "/digital-marketing-service/affiliate-marketing" },
+        { label: "Programmatic Marketing", href: "/digital-marketing-service/programmatic-marketing" },
+        { label: "Video Marketing", href: "/digital-marketing-service/video-marketing" },
       ],
+      cta: { label: "Explore Digital Marketing →", href: "/digital-marketing-service" },
     },
     {
       cat: "",
       title: "Content as a Service",
       icon: "/icon/01.png",
+      basePath: "/content-as-a-service",
       list: [
-        "Brand Consultant",
-        "Video Creation",
-        "Multi-lingual Marketing",
+        { label: "Brand Consultant", href: "/content-as-a-service/brand-consultant" },
+        { label: "Video Creation", href: "/content-as-a-service/video-creation" },
+        { label: "Multi-lingual Marketing", href: "/content-as-a-service/multilingual-marketing" },
       ],
+      cta: { label: "Explore Content Services →", href: "/content-as-a-service" },
     },
     {
       cat: "",
       title: "Digital PR Service",
       icon: "/icon/02.png",
+      basePath: "/digital-pr",
       list: [
-        "Digital PR",
-        "Influencer Marketing",
-        "Online Reputation & Media Outreach",
+        { label: "Digital PR", href: "//digital-pr/digital-pr" },
+        { label: "Influencer Marketing", href: "/digital-pr/digital-pr/influencer-marketing" },
+        { label: "Online Reputation & Media Outreach", href: "/digital-pr/online-reputation-media-outreach" },
       ],
+      cta: { label: "Explore Digital PR →", href: "/digital-pr" },
     },
     {
       cat: "",
       title: "Web & E-commerce",
       icon: "/icon/03.png",
+      basePath: "/services/web-ecommerce",
       list: [
-        "UX/UI Design",
-        "Web Development Services",
-        "Web Maintenance Services",
-        "Shopify Development Services",
-        "E-commerce",
+        { label: "UX/UI Design", href: "/web-ecommerce/ux-ui-design" },
+        { label: "Web Development Services", href: "/web-ecommerce/web-development" },
+        { label: "Web Maintenance Services", href: "/web-ecommerce/web-maintenance" },
+        { label: "Shopify Development Services", href: "/web-ecommerce/shopify-development" },
+        { label: "E-commerce", href: "/web-ecommerce" },
       ],
+      cta: { label: "Explore Web & E-commerce →", href: "/web-ecommerce" },
     },
   ];
 
@@ -87,16 +99,20 @@ export default function SolutionsSection() {
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10">
         {cards.map((card, i) => (
           <motion.div
-            key={i}
+            key={card.title}
             custom={i}
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             whileHover={{ scale: 1.03, y: -5 }}
-            className="relative flex flex-col bg-white p-8 rounded-2xl shadow-lg h-[450px] transition-all duration-300"
+            onClick={() => navigate(card.basePath)}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && navigate(card.basePath)}
+            className="relative flex flex-col bg-white p-8 rounded-2xl shadow-lg h-[480px] transition-all duration-300 cursor-pointer"
           >
-            {/* Vertical Label (optional, currently empty) */}
+            {/* Vertical Label (optional) */}
             {card.cat && (
               <div className="absolute inset-y-0 right-0 flex items-center justify-center">
                 <span className="rotate-90 font-primary font-medium text-3xl text-secondary tracking-widest whitespace-nowrap">
@@ -107,22 +123,50 @@ export default function SolutionsSection() {
 
             {/* Title + Icon */}
             <div className="flex items-center gap-3 mb-4">
-              <h3 className="font- font-primary text-secondary text-3xl flex-1">
-                {card.title}
-              </h3>
+              <h3 className="font-primary text-secondary text-3xl flex-1">{card.title}</h3>
               <img
                 src={card.icon}
-                alt={`${card.title} Icon`}
-                className="w-18 h-18 object-contain"
+                alt={`${card.title} icon`}
+                className="w-16 h-16 object-contain"
+                loading="lazy"
               />
             </div>
 
             {/* Services List */}
-            <ul className="space-y-2 text-black/80 uppercase font-secondary font-semibold text-base flex-1 leading-relaxed text-left">
-              {card.list.map((service, j) => (
-                <li key={j}>{service}</li>
-              ))}
+            <ul
+              className="space-y-2 text-black/80 uppercase font-secondary font-semibold text-base flex-1 leading-relaxed text-left"
+              onClick={(e) => e.stopPropagation()} // ✅ prevent card navigation when clicking inner links
+            >
+              {card.list.map((item) => {
+                // item can be a string (backwards compat) or {label, href}
+                const label = typeof item === "string" ? item : item.label;
+                const href =
+                  typeof item === "string"
+                    ? `${card.basePath}/${label.toLowerCase().replace(/[^a-z0-9]+/g, "-")}` // slugify fallback
+                    : item.href;
+
+                return (
+                  <li key={label}>
+                    <Link
+                      to={href}
+                      className="hover:text-secondary transition-colors inline-block"
+                    >
+                      {label}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
+
+            {/* CTA Button */}
+            <div className="pt-4" onClick={(e) => e.stopPropagation()}>
+              <Link
+                to={card.cta?.href || card.basePath}
+                className="inline-flex items-center justify-center rounded-full px-5 py-2.5 bg-secondary text-white font-primary text-sm md:text-base shadow hover:opacity-90 transition"
+              >
+                {card.cta?.label || `Explore ${card.title} →`}
+              </Link>
+            </div>
           </motion.div>
         ))}
       </div>
@@ -134,7 +178,7 @@ export default function SolutionsSection() {
         transition={{ duration: 0.8, ease: "easeInOut" }}
         viewport={{ once: true }}
         className="border-b border-primary h-1 mt-8 sm:mt-10 section-container"
-      ></motion.div>
+      />
     </section>
   );
 }
