@@ -56,6 +56,9 @@ const VideoMarketingServicesPage = lazy(() =>
 const BrandingServicesPage = lazy(() =>
   import("./pages/main/Services-BrandingPage")
 );
+const VideoCreationServicesPage = lazy(() =>
+  import("./pages/main/Services-VideoCreationPage")
+);
 
 const SEOBlogPage = lazy(() => import("./pages/main/BlogPage/SEOBlog"));
 const AwardsPage = lazy(() => import("./pages/main/AwardsPage"));
@@ -138,6 +141,14 @@ function App() {
               <Route
                 path="/content-as-a-service/branding-service"
                 element={<BrandingServicesPage />}
+              />
+              <Route
+                path="/content-as-a-service/video-creation"
+                element={<VideoCreationServicesPage />}
+              />
+              <Route
+                path="/content-as-a-service/multilingual-arketing"
+                element={<VideoCreationServicesPage />}
               />
               <Route path="/comingsoon" element={<ComingSoon />} />
 

@@ -20,13 +20,13 @@ const services = [
     icon: Social_Media,
     title: "Video Creation",
     desc: "From quick social reels to full-scale brand films, our on-demand video creation delivers impactful storytelling tailored to your campaigns. Scripted, shot, and edited with precision, our videos engage audiences, boost conversions, and bring your brand’s vision to life.",
-    path: "/content-as-a-service/video-creation-service",
+    path: "/content-as-a-service/video-creation",
   },
   {
     icon: Social_Media,
     title: "Multilingual Marketing",
     desc: "Reach beyond language barriers with our multilingual content solutions. Whether Tamil, Hindi, or global languages, we craft culturally relevant campaigns, adapt messaging seamlessly, and ensure your brand connects authentically with local and international audiences across every touchpoint.",
-    path: "/content-as-a-service/multilingual-arketing-service",
+    path: "/content-as-a-service/multilingual-arketing",
   },
 ];
 // Animation Variants
