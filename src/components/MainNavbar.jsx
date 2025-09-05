@@ -141,8 +141,8 @@ export function CenteredLogoNavbar() {
             <DropdownMenu
               title="About"
               items={[
-                { label: "About", path: "/about" },
-                { label: "Teams", path: "/teams" },
+                { label: "About", path: "/about-us" },
+                { label: "Teams", path: "/about-us/team" },
               ]}
               onItemClick={handleNavigation}
               activePath={activePath}
