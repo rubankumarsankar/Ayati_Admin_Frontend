@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename);
 
 async function generateSitemap() {
   const sitemapStream = new SitemapStream({
-    hostname: "https://ayatiworks.com", // ✅ change to your domain
+    hostname: "https://www.ayatiworks.com", // ✅ ensure your final domain (with www if needed)
   });
 
   const writeStream = createWriteStream(
@@ -19,7 +19,16 @@ async function generateSitemap() {
 
   sitemapStream.pipe(writeStream);
 
-  urls.forEach((link) => sitemapStream.write(link));
+  // ✅ write only your defined URLs
+  urls.forEach((link) => {
+    sitemapStream.write({
+      url: link.url,
+      changefreq: link.changefreq,
+      priority: link.priority,
+      lastmod: new Date().toISOString(), // optional but recommended
+    });
+  });
+
   sitemapStream.end();
 
   await streamToPromise(sitemapStream);
