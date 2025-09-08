@@ -1,27 +1,23 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { ChevronDownIcon, XMarkIcon } from "@heroicons/react/24/solid";
-
-import { Drawer } from "@material-tailwind/react";
-import { Bars3Icon } from "@heroicons/react/24/solid";
 
 const cx = (...a) => a.filter(Boolean).join(" ");
 const anyMatch = (paths, pathname) =>
   paths.some((p) => pathname === p || pathname.startsWith(p + "/"));
+const idify = (s) =>
+  String(s).toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9\-]/g, "");
 
 export function MobileMenu({ nav, open, setOpen, pathname, onSelect }) {
   const [topOpenKey, setTopOpenKey] = useState(null); // only one top section
   const [svcOpenIdx, setSvcOpenIdx] = useState(-1);   // only one services group (all closed)
 
-  // Lock background scroll + reset accordions each time Drawer opens
+  // Reset accordions each time drawer opens
   useEffect(() => {
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = open ? "hidden" : prev || "";
     if (open) {
       setTopOpenKey(null);
       setSvcOpenIdx(-1);
     }
-    return () => { document.body.style.overflow = prev || ""; };
   }, [open]);
 
   // Close drawer with Esc
@@ -31,23 +27,16 @@ export function MobileMenu({ nav, open, setOpen, pathname, onSelect }) {
     return () => document.removeEventListener("keydown", onKey);
   }, [setOpen]);
 
-  const idify = (s) =>
-    String(s).toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9\-]/g, "");
-
-  // Top-level accordion (About / Services / Insights)
   const openTop = (key, type) => {
     setTopOpenKey((prev) => {
       const next = prev === key ? null : key;
-      // When entering or leaving Services, keep all groups closed by default
       if (type === "mega") setSvcOpenIdx(-1);
       return next;
     });
   };
 
-  // Services: single open group
   const toggleSvc = (idx) => setSvcOpenIdx((prev) => (prev === idx ? -1 : idx));
 
-  // Close & reset on navigation
   const handleNav = (to) => {
     onSelect?.(to);
     setOpen(false);
@@ -85,22 +74,16 @@ export function MobileMenu({ nav, open, setOpen, pathname, onSelect }) {
   );
 
   return (
-  <Drawer
-    open={open}
-    onClose={() => setOpen(false)}
-    placement="top"
-    // stronger dim + blur behind
-    overlayProps={{ className: "fixed inset-0 bg-black/45 backdrop-blur-md" }}
-    // let inner container draw the glass; remove Drawer bg/padding
-    className="sm:hidden p-0 bg-transparent shadow-none"
-  >
-    {/* Full-height glass surface */}
-    <div className="h-[100dvh] max-h-[100dvh] overflow-hidden">
+    // Full-screen glass panel (parent <Drawer> renders this)
+    <div className="h-[100dvh] max-h-[100dvh] w-full overflow-hidden">
       <div className="relative h-full bg-white/45 backdrop-blur-2xl border-b border-white/25 shadow-[0_20px_60px_rgba(0,0,0,0.25)]">
-        {/* Sticky glass header */}
-        <div className="sticky top-0 z-10 flex items-center justify-between px-4 py-3
-                        bg-white/55 backdrop-blur-2xl border-b border-white/25">
-          <Link to="/" onClick={() => handleNav("/")} className="shrink-0">
+        {/* Sticky header */}
+        <div className="sticky top-0 z-10 flex items-center justify-between px-4 py-3 bg-white/55 backdrop-blur-2xl border-b border-white/25">
+          <Link
+            to="/"
+            onClick={(e) => { e.preventDefault(); handleNav("/"); }}
+            className="shrink-0"
+          >
             <img src="/ayatiworks_logo.svg" alt="Logo" className="h-8 w-auto" />
           </Link>
           <button
@@ -112,9 +95,8 @@ export function MobileMenu({ nav, open, setOpen, pathname, onSelect }) {
           </button>
         </div>
 
-        {/* Scrollable content area (glass stays) */}
-        <div className="h-[calc(100dvh-56px)] overflow-y-auto overscroll-contain scroll-smooth
-                        px-3 pb-[env(safe-area-inset-bottom)] pt-2 space-y-3">
+        {/* Scrollable content */}
+        <div className="h-[calc(100dvh-56px)] overflow-y-auto overscroll-contain scroll-smooth px-3 pb-[env(safe-area-inset-bottom)] pt-2 space-y-3">
           {nav.map((entry) => {
             // Simple link
             if (entry.kind === "link") {
@@ -123,12 +105,10 @@ export function MobileMenu({ nav, open, setOpen, pathname, onSelect }) {
                 <Link
                   key={entry.path}
                   to={entry.path}
-                  onClick={() => handleNav(entry.path)}
+                  onClick={(e) => { e.preventDefault(); handleNav(entry.path); }}
                   className={cx(
                     "block px-4 py-3 rounded-xl text-base font-semibold transition",
-                    active
-                      ? "bg-primary text-white"
-                      : "bg-white/70 backdrop-blur-xl hover:bg-primary hover:text-white"
+                    active ? "bg-primary text-white" : "bg-white/70 backdrop-blur-xl hover:bg-primary hover:text-white"
                   )}
                 >
                   {entry.label}
@@ -155,7 +135,7 @@ export function MobileMenu({ nav, open, setOpen, pathname, onSelect }) {
                           <Link
                             key={it.path}
                             to={it.path}
-                            onClick={() => handleNav(it.path)}
+                            onClick={(e) => { e.preventDefault(); handleNav(it.path); }}
                             className={cx(
                               "block rounded-lg px-4 py-2 text-sm transition",
                               active
@@ -207,13 +187,19 @@ export function MobileMenu({ nav, open, setOpen, pathname, onSelect }) {
                             <ChevronDownIcon className={cx("h-4 w-4 transition-transform", gOpen && "rotate-180")} />
                           </button>
 
-                          {/* Items for the open group only */}
-                          <Collapse id={`${idify(g.heading)}-items`} show={gOpen}>
+                          {/* Items */}
+                          <div
+                            id={`${idify(g.heading)}-items`}
+                            className={cx(
+                              "overflow-hidden transition-all duration-300 will-change-[max-height,opacity]",
+                              gOpen ? "max-h-[700px] opacity-100 mt-2" : "max-h-0 opacity-0"
+                            )}
+                          >
                             <div className="px-2 pb-3 pt-2 space-y-1">
                               {g.basePath && (
                                 <Link
                                   to={g.basePath}
-                                  onClick={() => handleNav(g.basePath)}
+                                  onClick={(e) => { e.preventDefault(); handleNav(g.basePath); }}
                                   className="mb-1 inline-block rounded-full border border-white/30 bg-white/50 backdrop-blur-xl
                                              px-3 py-1 text-xs font-medium hover:bg-primary hover:text-white transition"
                                 >
@@ -227,7 +213,7 @@ export function MobileMenu({ nav, open, setOpen, pathname, onSelect }) {
                                   <Link
                                     key={it.path}
                                     to={it.path}
-                                    onClick={() => handleNav(it.path)}
+                                    onClick={(e) => { e.preventDefault(); handleNav(it.path); }}
                                     className={cx(
                                       "block rounded-lg px-3 py-2 text-sm transition",
                                       active
@@ -240,7 +226,7 @@ export function MobileMenu({ nav, open, setOpen, pathname, onSelect }) {
                                 );
                               })}
                             </div>
-                          </Collapse>
+                          </div>
                         </div>
                       );
                     })}
@@ -254,7 +240,7 @@ export function MobileMenu({ nav, open, setOpen, pathname, onSelect }) {
         </div>
       </div>
     </div>
-  </Drawer>
-);
-
+  );
 }
+
+export default MobileMenu;
