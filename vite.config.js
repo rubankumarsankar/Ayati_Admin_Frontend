@@ -9,7 +9,7 @@ export default defineConfig({
   plugins: [react(),
     Sitemap({
           hostname: 'https://ayatiworks.com', 
-
+          generateRobotsTxt: true,
         }),
   ],
    resolve: {
