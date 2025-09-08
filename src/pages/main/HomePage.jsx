@@ -21,10 +21,11 @@ function HomePage() {
       {/* <WhatWeDo /> */}
       <WhatAyati />
       <PartnersInClimb />
-      <AwardsSection />
+      
       <PixelsPerfected />
       <DottedWorldMap />
       <HomeGridSection />
+      <AwardsSection />
       <Connection />
     </>
   );

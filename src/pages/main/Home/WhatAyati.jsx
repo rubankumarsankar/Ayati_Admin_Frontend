@@ -37,7 +37,7 @@ export default function SolutionsSection() {
       icon: "/icon/01.png",
       basePath: "/content-as-a-service",
       list: [
-        { label: "Brand Consultant", href: "/content-as-a-service/brand-consultant" },
+        { label: "Brand Consultant", href: "/content-as-a-service/brand-service" },
         { label: "Video Creation", href: "/content-as-a-service/video-creation" },
         { label: "Multi-lingual Marketing", href: "/content-as-a-service/multilingual-marketing" },
       ],
@@ -49,7 +49,7 @@ export default function SolutionsSection() {
       icon: "/icon/02.png",
       basePath: "/digital-pr",
       list: [
-        { label: "Digital PR", href: "//digital-pr/digital-pr" },
+        { label: "Digital PR", href: "/digital-pr/digital-pr-service" },
         { label: "Influencer Marketing", href: "/digital-pr/digital-pr/influencer-marketing" },
         { label: "Online Reputation & Media Outreach", href: "/digital-pr/online-reputation-media-outreach" },
       ],
