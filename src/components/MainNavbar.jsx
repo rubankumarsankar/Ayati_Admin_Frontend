@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, useCallback  } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   Navbar,
@@ -6,12 +6,11 @@ import {
   MenuHandler,
   MenuList,
   Button,
-  Drawer 
+  Drawer,
 } from "@material-tailwind/react";
 import { ChevronDownIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import { MobileMenu } from "./MobileMenu";
 import { Bars3Icon } from "@heroicons/react/24/solid";
-
 
 /* ============== NAV JSON (same as yours) ============== */
 export const NAV = [
@@ -34,21 +33,48 @@ export const NAV = [
         basePath: "/digital-marketing-service",
         items: [
           { label: "SEO Services", path: "/digital-marketing-service/seo" },
-          { label: "Social Media Marketing", path: "/digital-marketing-service/social-media-marketing" },
-          { label: "Email Marketing", path: "/digital-marketing-service/email-marketing" },
-          { label: "Instagram Marketing", path: "/digital-marketing-service/instagram-marketing" },
-          { label: "Affiliate Marketing", path: "/digital-marketing-service/affiliate-marketing" },
-          { label: "Programmatic Marketing", path: "/digital-marketing-service/programmatic-marketing" },
-          { label: "Video Marketing", path: "/digital-marketing-service/video-marketing" },
+          {
+            label: "Social Media Marketing",
+            path: "/digital-marketing-service/social-media-marketing",
+          },
+          {
+            label: "Email Marketing",
+            path: "/digital-marketing-service/email-marketing",
+          },
+          {
+            label: "Instagram Marketing",
+            path: "/digital-marketing-service/instagram-marketing",
+          },
+          {
+            label: "Affiliate Marketing",
+            path: "/digital-marketing-service/affiliate-marketing",
+          },
+          {
+            label: "Programmatic Marketing",
+            path: "/digital-marketing-service/programmatic-marketing",
+          },
+          {
+            label: "Video Marketing",
+            path: "/digital-marketing-service/video-marketing",
+          },
         ],
       },
       {
         heading: "Content as a Service",
         basePath: "/content-as-a-service",
         items: [
-          { label: "Brand Consultant", path: "/content-as-a-service/branding-service" },
-          { label: "Video Creation", path: "/content-as-a-service/video-creation" },
-          { label: "Multi-lingual Marketing", path: "/content-as-a-service/multilingual-marketing" },
+          {
+            label: "Brand Consultant",
+            path: "/content-as-a-service/branding-service",
+          },
+          {
+            label: "Video Creation",
+            path: "/content-as-a-service/video-creation",
+          },
+          {
+            label: "Multi-lingual Marketing",
+            path: "/content-as-a-service/multilingual-marketing",
+          },
         ],
       },
       {
@@ -56,8 +82,14 @@ export const NAV = [
         basePath: "/digital-pr",
         items: [
           { label: "Digital PR", path: "/digital-pr/digital-pr" },
-          { label: "Influencer Marketing", path: "/digital-pr/influencer-marketing" },
-          { label: "Online Reputation & Media Outreach", path: "/digital-pr/online-reputation-media-outreach" },
+          {
+            label: "Influencer Marketing",
+            path: "/digital-pr/influencer-marketing",
+          },
+          {
+            label: "Online Reputation & Media Outreach",
+            path: "/digital-pr/online-reputation-media-outreach",
+          },
         ],
       },
       {
@@ -65,9 +97,18 @@ export const NAV = [
         basePath: "/web-ecommerce",
         items: [
           { label: "UX/UI Design", path: "/web-ecommerce/ux-ui-design" },
-          { label: "Web Development Services", path: "/web-ecommerce/web-development" },
-          { label: "Web Maintenance Services", path: "/web-ecommerce/web-maintenance" },
-          { label: "Shopify Development Services", path: "/web-ecommerce/shopify-development" },
+          {
+            label: "Web Development Services",
+            path: "/web-ecommerce/web-development",
+          },
+          {
+            label: "Web Maintenance Services",
+            path: "/web-ecommerce/web-maintenance",
+          },
+          {
+            label: "Shopify Development Services",
+            path: "/web-ecommerce/shopify-development",
+          },
           { label: "E-commerce", path: "/web-ecommerce" },
         ],
       },
@@ -114,7 +155,13 @@ function SimpleDropdown({ title, items, active, pathname, onSelect }) {
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={close}
     >
-      <Menu open={open} handler={setOpen} allowHover placement="bottom-start" offset={12}>
+      <Menu
+        open={open}
+        handler={setOpen}
+        allowHover
+        placement="bottom-start"
+        offset={12}
+      >
         <MenuHandler>
           <Button
             ref={btn}
@@ -129,7 +176,12 @@ function SimpleDropdown({ title, items, active, pathname, onSelect }) {
             aria-expanded={open}
           >
             {title}
-            <ChevronDownIcon className={cx("h-3 w-3 transition-transform", open && "-rotate-180")} />
+            <ChevronDownIcon
+              className={cx(
+                "h-3 w-3 transition-transform",
+                open && "-rotate-180"
+              )}
+            />
           </Button>
         </MenuHandler>
 
@@ -170,7 +222,8 @@ function MegaMenu({ title, groups, active, pathname, onSelect }) {
 
   useEffect(() => {
     const onDoc = (e) => {
-      if (wrapRef.current && !wrapRef.current.contains(e.target)) setOpen(false);
+      if (wrapRef.current && !wrapRef.current.contains(e.target))
+        setOpen(false);
     };
     const onKey = (e) => {
       if (!open) return;
@@ -178,7 +231,8 @@ function MegaMenu({ title, groups, active, pathname, onSelect }) {
         setOpen(false);
         btnRef.current?.focus();
       }
-      if (e.key === "ArrowDown") setActiveIdx((i) => Math.min(i + 1, groups.length - 1));
+      if (e.key === "ArrowDown")
+        setActiveIdx((i) => Math.min(i + 1, groups.length - 1));
       if (e.key === "ArrowUp") setActiveIdx((i) => Math.max(i - 1, 0));
     };
     document.addEventListener("mousedown", onDoc);
@@ -198,7 +252,13 @@ function MegaMenu({ title, groups, active, pathname, onSelect }) {
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={close}
     >
-      <Menu open={open} handler={setOpen} allowHover placement="bottom-start" offset={12}>
+      <Menu
+        open={open}
+        handler={setOpen}
+        allowHover
+        placement="bottom-start"
+        offset={12}
+      >
         <MenuHandler>
           <Button
             ref={btnRef}
@@ -213,14 +273,19 @@ function MegaMenu({ title, groups, active, pathname, onSelect }) {
             aria-expanded={open}
           >
             {title}
-            <ChevronDownIcon className={cx("h-3 w-3 transition-transform", open && "-rotate-180")} />
+            <ChevronDownIcon
+              className={cx(
+                "h-3 w-3 transition-transform",
+                open && "-rotate-180"
+              )}
+            />
           </Button>
         </MenuHandler>
 
         <MenuList className="mt-3 p-0 bg-transparent shadow-none">
-          <div className="flex gap-4 rounded-2xl bg-white/95 backdrop-blur p-3 shadow-[0_20px_40px_rgba(0,0,0,0.15)] ring-1 ring-black/5">
+          <div className="flex gap-4 rounded-2xl bg-white/95 backdrop-blur p-3 shadow-xl ring-1 ring-black/5">
             {/* LEFT: group headings (now clickable) */}
-            <div className="w-64 rounded-xl bg-white  shadow-[0_8px_30px_rgba(0,0,0,0.08)] ring-1 ring-black/5 overflow-hidden">
+            <div className="w-64 rounded-xl bg-white  shadow-xl ring-1 ring-black/5 overflow-hidden">
               {groups.map((g, idx) => {
                 const isActive = idx === activeIdx;
                 const to = g.basePath || "#";
@@ -235,7 +300,9 @@ function MegaMenu({ title, groups, active, pathname, onSelect }) {
                     }}
                     className={cx(
                       "block w-full rounded-xl text-left px-4 py-3 text-xl font-primary text-[15px] transition",
-                      isActive ? "bg-primary rounded-xl shadow-xl font-primary text-white" : "text-black/80 hover:bg-white hover:text-secondary",
+                      isActive
+                        ? "bg-primary rounded-xl shadow-xl font-primary text-white"
+                        : "text-black/80 hover:bg-white hover:text-secondary",
                       !g.basePath && "cursor-default"
                     )}
                   >
@@ -246,12 +313,15 @@ function MegaMenu({ title, groups, active, pathname, onSelect }) {
             </div>
 
             {/* RIGHT: links of active group */}
-            <div className="w-80 rounded-xl bg-white shadow-[0_8px_30px_rgba(0,0,0,0.08)] ring-1 ring-black/5 p-3">
+            <div className="w-80 rounded-xl bg-white shadow-xl ring-1 ring-black/5 p-3">
               {/* Optional 'View all' for the active group */}
               {groups[activeIdx]?.basePath && (
                 <Link
                   to={groups[activeIdx].basePath}
-                  onClick={() => { onSelect?.(groups[activeIdx].basePath); close(); }}
+                  onClick={() => {
+                    onSelect?.(groups[activeIdx].basePath);
+                    close();
+                  }}
                   className="mb-2 inline-block rounded-full border border-white px-3 py-1 text-xs font-medium text-slate-600 hover:bg-secondary font-secondary hover:border-secondary hover:text-white"
                 >
                   View all {groups[activeIdx].heading}
@@ -264,7 +334,10 @@ function MegaMenu({ title, groups, active, pathname, onSelect }) {
                   <Link
                     key={it.path}
                     to={it.path}
-                    onClick={() => { onSelect?.(it.path); close(); }}
+                    onClick={() => {
+                      onSelect?.(it.path);
+                      close();
+                    }}
                     className={cx(
                       "block rounded-lg px-3 py-2 text-[15px] transition",
                       isItemActive
@@ -284,11 +357,14 @@ function MegaMenu({ title, groups, active, pathname, onSelect }) {
   );
 }
 
-
 /* ============== MAIN: Centered + Expand (auto-expand every page) ============== */
 
-export function CenteredLogoNavbar({ nav = NAV, onSelect, autoExpandMs = 2000 }) {
-  const [expanded, setExpanded] = useState(false);     // desktop animation state
+export function CenteredLogoNavbar({
+  nav = NAV,
+  onSelect,
+  autoExpandMs = 2000,
+}) {
+  const [expanded, setExpanded] = useState(false); // desktop animation state
   const [mobileOpen, setMobileOpen] = useState(false); // mobile drawer
   const navigate = useNavigate();
   const { pathname } = useLocation();
@@ -296,7 +372,11 @@ export function CenteredLogoNavbar({ nav = NAV, onSelect, autoExpandMs = 2000 })
 
   const isTopActive = (entry) => {
     if (entry.kind === "link") return anyMatch([entry.path], pathname);
-    if (entry.kind === "dropdown") return anyMatch(entry.items.map((i) => i.path), pathname);
+    if (entry.kind === "dropdown")
+      return anyMatch(
+        entry.items.map((i) => i.path),
+        pathname
+      );
     if (entry.kind === "mega") {
       const starts = [
         ...entry.groups.map((g) => g.basePath),
@@ -312,7 +392,9 @@ export function CenteredLogoNavbar({ nav = NAV, onSelect, autoExpandMs = 2000 })
     setExpanded(false);
     if (expandTimer.current) clearTimeout(expandTimer.current);
     expandTimer.current = setTimeout(() => setExpanded(true), autoExpandMs);
-    return () => { if (expandTimer.current) clearTimeout(expandTimer.current); };
+    return () => {
+      if (expandTimer.current) clearTimeout(expandTimer.current);
+    };
   }, [pathname, autoExpandMs]);
 
   const openNow = () => {
@@ -356,7 +438,7 @@ export function CenteredLogoNavbar({ nav = NAV, onSelect, autoExpandMs = 2000 })
     <>
       {/* MOBILE: top bar + drawer */}
       <div className="sm:hidden fixed top-4 left-0 right-0 z-50 px-4">
-        <div className="flex items-center justify-between rounded-full bg-white/90 backdrop-blur px-3 py-2 shadow-[0_10px_30px_rgba(0,0,0,0.15)]">
+        <div className="flex items-center justify-between rounded-full bg-white/90 backdrop-blur px-3 py-2 shadow-xl">
           <Link to="/" onClick={closeMenu} className="shrink-0">
             <img src="/ayatiworks_logo.svg" alt="Logo" className="h-8 w-auto" />
           </Link>
@@ -379,21 +461,28 @@ export function CenteredLogoNavbar({ nav = NAV, onSelect, autoExpandMs = 2000 })
       </div>
 
       {/* Drawer */}
+      {/* Drawer */}
       <Drawer
         id="mobile-nav-drawer"
         open={mobileOpen}
         onClose={closeMenu}
         placement="top"
-        overlayProps={{ className: "bg-black/30 backdrop-blur-sm" }}
-        className="bg-white/95 backdrop-blur p-4 sm:hidden"
+        overlayProps={{
+          className: "fixed inset-0 bg-black/45 backdrop-blur-md",
+        }}
+        className="sm:hidden p-0 bg-transparent shadow-none !overflow-hidden"
       >
-        <MobileMenu
-          nav={nav}
-          open={mobileOpen}
-          setOpen={setMobileOpen}
-          pathname={pathname}
-          onSelect={navigateOrSelect}   
-        />
+        {/* Full-screen height container */}
+        <div className="h-[100dvh] max-h-[100dvh] w-full overflow-hidden">
+          {/* ⬇️ content-only mobile panel (no Drawer inside) */}
+          <MobileMenu
+            nav={nav}
+            open={mobileOpen}
+            setOpen={setMobileOpen}
+            pathname={pathname}
+            onSelect={navigateOrSelect}
+          />
+        </div>
       </Drawer>
 
       {/* DESKTOP: centered auto-expanding pill */}
@@ -418,7 +507,11 @@ export function CenteredLogoNavbar({ nav = NAV, onSelect, autoExpandMs = 2000 })
               {/* Logo */}
               <Button variant="text" className="p-0 bg-transparent shadow-none">
                 <Link to="/" onClick={() => setExpanded(false)}>
-                  <img src="/ayatiworks_logo.svg" alt="Logo" className="h-10 w-auto" />
+                  <img
+                    src="/ayatiworks_logo.svg"
+                    alt="Logo"
+                    className="h-10 w-auto"
+                  />
                 </Link>
               </Button>
 
@@ -456,7 +549,9 @@ export function CenteredLogoNavbar({ nav = NAV, onSelect, autoExpandMs = 2000 })
                       onClick={() => handleSelect(entry.path)}
                       className={cx(
                         "text-sm rounded-full font-secondary font-semibold px-4 py-2 transition",
-                        active ? "bg-primary text-white shadow-xl" : "text-black/80 hover:bg-primary hover:text-white"
+                        active
+                          ? "bg-primary text-white shadow-xl"
+                          : "text-black/80 hover:bg-primary hover:text-white"
                       )}
                     >
                       {entry.label}
@@ -472,7 +567,6 @@ export function CenteredLogoNavbar({ nav = NAV, onSelect, autoExpandMs = 2000 })
     </>
   );
 }
-
 
 /* Tailwind keyframes (once in your globals)
 @layer utilities {

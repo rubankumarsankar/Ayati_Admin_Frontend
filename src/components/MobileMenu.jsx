@@ -85,157 +85,176 @@ export function MobileMenu({ nav, open, setOpen, pathname, onSelect }) {
   );
 
   return (
-    <Drawer
-      open={open}
-      onClose={() => setOpen(false)}
-      placement="top"
-      overlayProps={{ className: "bg-black/30 backdrop-blur-sm" }}
-      className="bg-white/95 backdrop-blur p-4 sm:hidden"
-    >
-      {/* Header */}
-      <div className="flex items-center justify-between mb-2">
-        <Link to="/" onClick={() => handleNav("/") } className="shrink-0">
-          <img src="/ayatiworks_logo.svg" alt="Logo" className="h-8 w-auto" />
-        </Link>
-        <button
-          className="p-2 rounded-full text-secondary hover:bg-black/5"
-          onClick={() => setOpen(false)}
-          aria-label="Close menu"
-        >
-          <XMarkIcon className="h-6 w-6" />
-        </button>
-      </div>
+  <Drawer
+    open={open}
+    onClose={() => setOpen(false)}
+    placement="top"
+    // stronger dim + blur behind
+    overlayProps={{ className: "fixed inset-0 bg-black/45 backdrop-blur-md" }}
+    // let inner container draw the glass; remove Drawer bg/padding
+    className="sm:hidden p-0 bg-transparent shadow-none"
+  >
+    {/* Full-height glass surface */}
+    <div className="h-[100dvh] max-h-[100dvh] overflow-hidden">
+      <div className="relative h-full bg-white/45 backdrop-blur-2xl border-b border-white/25 shadow-[0_20px_60px_rgba(0,0,0,0.25)]">
+        {/* Sticky glass header */}
+        <div className="sticky top-0 z-10 flex items-center justify-between px-4 py-3
+                        bg-white/55 backdrop-blur-2xl border-b border-white/25">
+          <Link to="/" onClick={() => handleNav("/")} className="shrink-0">
+            <img src="/ayatiworks_logo.svg" alt="Logo" className="h-8 w-auto" />
+          </Link>
+          <button
+            className="p-2 rounded-full text-secondary hover:bg-black/5"
+            onClick={() => setOpen(false)}
+            aria-label="Close menu"
+          >
+            <XMarkIcon className="h-6 w-6" />
+          </button>
+        </div>
 
-      {/* Items */}
-      <div className="space-y-3">
-        {nav.map((entry) => {
-          // Simple link
-          if (entry.kind === "link") {
-            const active = anyMatch([entry.path], pathname);
-            return (
-              <Link
-                key={entry.path}
-                to={entry.path}
-                onClick={() => handleNav(entry.path)}
-                className={cx(
-                  "block px-4 py-3 rounded-xl text-base font-semibold transition",
-                  active ? "bg-primary text-white" : "bg-white text-black hover:bg-primary hover:text-white"
-                )}
-              >
-                {entry.label}
-              </Link>
-            );
-          }
+        {/* Scrollable content area (glass stays) */}
+        <div className="h-[calc(100dvh-56px)] overflow-y-auto overscroll-contain scroll-smooth
+                        px-3 pb-[env(safe-area-inset-bottom)] pt-2 space-y-3">
+          {nav.map((entry) => {
+            // Simple link
+            if (entry.kind === "link") {
+              const active = anyMatch([entry.path], pathname);
+              return (
+                <Link
+                  key={entry.path}
+                  to={entry.path}
+                  onClick={() => handleNav(entry.path)}
+                  className={cx(
+                    "block px-4 py-3 rounded-xl text-base font-semibold transition",
+                    active
+                      ? "bg-primary text-white"
+                      : "bg-white/70 backdrop-blur-xl hover:bg-primary hover:text-white"
+                  )}
+                >
+                  {entry.label}
+                </Link>
+              );
+            }
 
-          // Dropdown (About / Insights) — single open
-          if (entry.kind === "dropdown") {
-            const key = `dd-${entry.title}`;
-            const isOpen = topOpenKey === key;
-            return (
-              <div key={key} className="rounded-xl">
-                <SectionHeader
-                  title={entry.title}
-                  isOpen={isOpen}
-                  onClick={() => openTop(key, "dropdown")}
-                />
-                <Collapse id={`${idify(entry.title)}-panel`} show={isOpen}>
-                  <div className="mt-2 space-y-1">
-                    {entry.items.map((it) => {
-                      const active = anyMatch([it.path], pathname);
+            // Dropdown (About / Insights)
+            if (entry.kind === "dropdown") {
+              const key = `dd-${entry.title}`;
+              const isOpen = topOpenKey === key;
+              return (
+                <div key={key} className="rounded-xl">
+                  <SectionHeader
+                    title={entry.title}
+                    isOpen={isOpen}
+                    onClick={() => openTop(key, "dropdown")}
+                  />
+                  <Collapse id={`${idify(entry.title)}-panel`} show={isOpen}>
+                    <div className="mt-2 space-y-1">
+                      {entry.items.map((it) => {
+                        const active = anyMatch([it.path], pathname);
+                        return (
+                          <Link
+                            key={it.path}
+                            to={it.path}
+                            onClick={() => handleNav(it.path)}
+                            className={cx(
+                              "block rounded-lg px-4 py-2 text-sm transition",
+                              active
+                                ? "bg-primary text-white"
+                                : "bg-white/60 backdrop-blur-xl hover:bg-primary hover:text-white"
+                            )}
+                          >
+                            {it.label}
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  </Collapse>
+                </div>
+              );
+            }
+
+            // Mega (Services)
+            if (entry.kind === "mega") {
+              const key = `mega-${entry.title}`;
+              const isOpen = topOpenKey === key;
+              return (
+                <div key={key} className="rounded-xl">
+                  <SectionHeader
+                    title={entry.title}
+                    isOpen={isOpen}
+                    onClick={() => openTop(key, "mega")}
+                  />
+
+                  <Collapse id={`${idify(entry.title)}-panel`} show={isOpen} className="mt-2 space-y-2">
+                    {entry.groups.map((g, idx) => {
+                      const gOpen = svcOpenIdx === idx;
                       return (
-                        <Link
-                          key={it.path}
-                          to={it.path}
-                          onClick={() => handleNav(it.path)}
-                          className={cx(
-                            "block rounded-lg px-4 py-2 text-sm transition",
-                            active ? "bg-primary text-white" : "text-black hover:bg-primary hover:text-white"
-                          )}
-                        >
-                          {it.label}
-                        </Link>
+                        <div key={g.heading} className="rounded-lg border border-white/20 bg-white/50 backdrop-blur-xl">
+                          {/* Group row */}
+                          <button
+                            onClick={() => toggleSvc(idx)}
+                            className={cx(
+                              "w-full flex items-center justify-between px-4 py-3",
+                              "text-sm font-semibold transition rounded-lg",
+                              gOpen
+                                ? "bg-primary/90 text-white"
+                                : "bg-white/50 backdrop-blur-xl hover:bg-primary hover:text-white"
+                            )}
+                            aria-expanded={gOpen}
+                            aria-controls={`${idify(g.heading)}-items`}
+                          >
+                            <span>{g.heading}</span>
+                            <ChevronDownIcon className={cx("h-4 w-4 transition-transform", gOpen && "rotate-180")} />
+                          </button>
+
+                          {/* Items for the open group only */}
+                          <Collapse id={`${idify(g.heading)}-items`} show={gOpen}>
+                            <div className="px-2 pb-3 pt-2 space-y-1">
+                              {g.basePath && (
+                                <Link
+                                  to={g.basePath}
+                                  onClick={() => handleNav(g.basePath)}
+                                  className="mb-1 inline-block rounded-full border border-white/30 bg-white/50 backdrop-blur-xl
+                                             px-3 py-1 text-xs font-medium hover:bg-primary hover:text-white transition"
+                                >
+                                  View all {g.heading}
+                                </Link>
+                              )}
+
+                              {g.items.map((it) => {
+                                const active = anyMatch([it.path], pathname);
+                                return (
+                                  <Link
+                                    key={it.path}
+                                    to={it.path}
+                                    onClick={() => handleNav(it.path)}
+                                    className={cx(
+                                      "block rounded-lg px-3 py-2 text-sm transition",
+                                      active
+                                        ? "bg-primary text-white"
+                                        : "bg-white/60 backdrop-blur-xl hover:bg-primary hover:text-white"
+                                    )}
+                                  >
+                                    {it.label}
+                                  </Link>
+                                );
+                              })}
+                            </div>
+                          </Collapse>
+                        </div>
                       );
                     })}
-                  </div>
-                </Collapse>
-              </div>
-            );
-          }
+                  </Collapse>
+                </div>
+              );
+            }
 
-          // Mega (Services) — top accordion + inner single-open groups
-          if (entry.kind === "mega") {
-            const key = `mega-${entry.title}`;
-            const isOpen = topOpenKey === key;
-            return (
-              <div key={key} className="rounded-xl">
-                <SectionHeader
-                  title={entry.title}
-                  isOpen={isOpen}
-                  onClick={() => openTop(key, "mega")}
-                />
-
-                <Collapse id={`${idify(entry.title)}-panel`} show={isOpen} className="mt-2 space-y-2">
-                  {entry.groups.map((g, idx) => {
-                    const gOpen = svcOpenIdx === idx;
-                    return (
-                      <div key={g.heading} className="rounded-lg border border-black/5">
-                        {/* Group row */}
-                        <button
-                          onClick={() => toggleSvc(idx)}
-                          className={cx(
-                            "w-full flex items-center justify-between px-4 py-3",
-                            "text-sm font-semibold transition rounded-lg",
-                            gOpen ? "bg-primary text-white" : "bg-white text-black hover:bg-primary hover:text-white"
-                          )}
-                          aria-expanded={gOpen}
-                          aria-controls={`${idify(g.heading)}-items`}
-                        >
-                          <span>{g.heading}</span>
-                          <ChevronDownIcon className={cx("h-4 w-4 transition-transform", gOpen && "rotate-180")} />
-                        </button>
-
-                        {/* Items for the open group only */}
-                        <Collapse id={`${idify(g.heading)}-items`} show={gOpen}>
-                          <div className="px-2 pb-3 pt-2 space-y-1">
-                            {g.basePath && (
-                              <Link
-                                to={g.basePath}
-                                onClick={() => handleNav(g.basePath)}
-                                className="mb-1 inline-block rounded-full border border-black/10 px-3 py-1 text-xs font-medium hover:bg-primary hover:text-white transition"
-                              >
-                                View all {g.heading}
-                              </Link>
-                            )}
-
-                            {g.items.map((it) => {
-                              const active = anyMatch([it.path], pathname);
-                              return (
-                                <Link
-                                  key={it.path}
-                                  to={it.path}
-                                  onClick={() => handleNav(it.path)}
-                                  className={cx(
-                                    "block rounded-lg px-3 py-2 text-sm transition",
-                                    active ? "bg-primary text-white" : "text-black hover:bg-primary hover:text-white"
-                                  )}
-                                >
-                                  {it.label}
-                                </Link>
-                              );
-                            })}
-                          </div>
-                        </Collapse>
-                      </div>
-                    );
-                  })}
-                </Collapse>
-              </div>
-            );
-          }
-
-          return null;
-        })}
+            return null;
+          })}
+        </div>
       </div>
-    </Drawer>
-  );
+    </div>
+  </Drawer>
+);
+
 }
