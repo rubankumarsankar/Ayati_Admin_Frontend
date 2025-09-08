@@ -1,21 +1,21 @@
 import React from "react";
 import HeroSection from "./Home/HeroSection";
-import Contact from "./contact/contact";
-import Location from "./contact/Location";
-import Form from "./contact/Form";
-import Address from "./contact/Address";
-import Brand from "./contact/Brand";
-import Digital from "./contact/Digital";
-import Map from "./contact/Map";
-import Client from "./contact/Client";
+import Location from "./ContactPage/Location";
+import Form from "./ContactPage/Form";
+import Address from "./ContactPage/Address";
+import Brand from "./ContactPage/Brand";
+import Digital from "./ContactPage/Digital";
+import Map from "./ContactPage/Map";
+import Client from "./ContactPage/Client";
 import Connection from "./Home/Connection";
 import PartnersInClimb from "./Home/PartnersInClimb";
+import ContactInnerPage from "./ContactPage/ContactInnerPage";
 
 function ContactUs() {
   return (
     <>
       <HeroSection />
-      <Contact />
+      < ContactInnerPage/>
       <Location />
       <Form />
       <Address />

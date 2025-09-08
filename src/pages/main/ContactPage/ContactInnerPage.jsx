@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import doodleIcon from "/assets/doodle.png"; // ✅ replace with your doodle path
 
-export default function Contact() {
+export default function ContactInnerPage() {
   // Animation Variants
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
