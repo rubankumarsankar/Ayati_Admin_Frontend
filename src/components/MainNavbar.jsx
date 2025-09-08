@@ -84,7 +84,7 @@ export const NAV = [
         heading: "Digital PR Service",
         basePath: "/digital-pr",
         items: [
-          { label: "Digital PR", path: "/digital-pr/digital-pr" },
+          { label: "Digital PR", path: "/digital-pr/digital-pr-services" },
           {
             label: "Influencer Marketing",
             path: "/digital-pr/influencer-marketing",
