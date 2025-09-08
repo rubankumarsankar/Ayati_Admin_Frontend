@@ -19,7 +19,7 @@ export default defineConfig({
       outDir: 'dist',
 
       // Generate robots.txt alongside sitemap.xml
-      generateRobotsTxt: true,
+      generateRobotsTxt: false,
       robots: [{ userAgent: '*', allow: '/' }],
 
       // Optional niceties
