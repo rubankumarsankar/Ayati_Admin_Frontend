@@ -5,49 +5,6 @@ import { Goal } from "lucide-react";
 import { GoDotFill } from "react-icons/go";
 import AutoImageSlider from "./AutoImageSlider";
 
-const steps = [
-  {
-    id: 1,
-    title: "1. Brand Discovery",
-    points: ["Understanding your story, values, and goals."],
-  },
-  {
-    id: 2,
-    title: "2. Audience Profiling",
-    points: ["Mapping stakeholders, customer personas, and media contacts."],
-  },
-  {
-    id: 3,
-    title: "3. Message Crafting",
-    points: ["Designing narratives that connect with audience needs."],
-  },
-  {
-    id: 4,
-    title: "4. Channel Strategy",
-    points: ["Selecting the right platforms (media, influencers, social)."],
-  },
-  {
-    id: 5,
-    title: "5. Campaign Execution",
-    points: ["Launching outreach with targeted precision."],
-  },
-  {
-    id: 6,
-    title: "6. Monitoring & Listening",
-    points: ["Tracking mentions, sentiment, and media coverage."],
-  },
-  {
-    id: 7,
-    title: "7. Crisis Readiness",
-    points: ["Preparing frameworks for rapid response."],
-  },
-  {
-    id: 8,
-    title: "8. Measurement & Reporting",
-    points: ["Delivering data-backed insights on performance."],
-  },
-];
-
 const motives = [
   {
     id: 1,
@@ -99,54 +56,6 @@ const motives1 = [
     title: "Scalable Campaigns",
     cases: [
       "Whether it’s a city-wide launch or a national awareness campaign, our strategies scale to suit your needs. We work with nano-influencers and celebrities alike to meet your brand goals and budget.",
-    ],
-  },
-];
-
-const motives3 = [
-  {
-    id: 1,
-    title: "B2B",
-    cases: [
-      "Positioning firms as industry leaders through thought leadership and media credibility.",
-    ],
-  },
-  {
-    id: 2,
-    title: "B2C",
-    cases: [
-      "Amplifying visibility with influencer-driven campaigns and media outreach.",
-    ],
-  },
-  {
-    id: 3,
-    title: "D2C & E-Commerce",
-    cases: [
-      "Driving product awareness and customer trust through online reviews and targeted placements.",
-    ],
-  },
-];
-const motives4 = [
-  {
-    id: 1,
-    title: "Data-Backed Campaigns",
-    cases: ["Every action is guided by analytics and performance metrics."],
-  },
-  {
-    id: 2,
-    title: "Agile Execution",
-    cases: ["From crisis communication to viral campaigns, we adapt quickly."],
-  },
-  {
-    id: 3,
-    title: "Creative Storytelling",
-    cases: ["We craft narratives that stick in the minds of your audience."],
-  },
-  {
-    id: 4,
-    title: "ROI-Driven Approach",
-    cases: [
-      "Our ultimate goal is to ensure visibility translates into trust, and trust into growth.",
     ],
   },
 ];
@@ -277,7 +186,7 @@ function HeroServicePage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/service/pr-1.png"
+                src="/assets/service/inf-1.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />
@@ -401,7 +310,7 @@ function HeroServicePage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/service/pr-2.png"
+                src="/assets/service/inf-2.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />
@@ -438,7 +347,7 @@ function HeroServicePage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/service/pr-3.png"
+                src="/assets/service/inf-3.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />
@@ -556,7 +465,7 @@ function HeroServicePage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/service/pr-2.png"
+                src="/assets/service/inf-2.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />
@@ -592,7 +501,7 @@ function HeroServicePage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/service/pr-4.png"
+                src="/assets/service/inf-4.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />
