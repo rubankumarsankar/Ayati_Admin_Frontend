@@ -74,6 +74,9 @@ const OnlineMarketingServicesPage = lazy(() =>
 const UXUIDesignServicesPage = lazy(() =>
   import("./pages/main/Services-UXUIDesignPage")
 );
+const WebDevelopmentServicesPage = lazy(() =>
+  import("./pages/main/Services-WebDevelopmentPage")
+);
 
 
 
@@ -182,6 +185,10 @@ function App() {
               <Route
                 path="/web-ecommerce/ux-ui-design"
                 element={<UXUIDesignServicesPage />}
+              />
+              <Route
+                path="/web-ecommerce/web-development"
+                element={<WebDevelopmentServicesPage />}
               />
               <Route path="/comingsoon" element={<ComingSoon />} />
 

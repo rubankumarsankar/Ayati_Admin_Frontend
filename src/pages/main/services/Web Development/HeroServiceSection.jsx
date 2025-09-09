@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { GoDotFill } from "react-icons/go";
 import AutoImageSlider from "./AutoImageSlider";
+import { PhoneCall, ShoppingBag, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const steps = [
   {
@@ -97,28 +99,48 @@ const motives2 = [
 const motives1 = [
   {
     id: 1,
-    title: "For B2B",
+    title: "Customized Solutions",
     cases: [
-      "Complex platforms like ERP dashboards or SaaS products need clean, structured interfaces that simplify workflows and save time.",
+      "We craft websites tailored to your brand’s goals, from ecommerce to corporate sites.",
     ],
   },
   {
     id: 2,
-    title: "For B2C",
+    title: "Advanced Technologies",
     cases: [
-      "Consumers expect ease, speed, and beauty in apps, websites, and e-commerce experiences.",
+      "Using React, Node.js, and Shopify, we build scalable, high-performance websites.",
     ],
   },
   {
     id: 3,
-    title: "For D2C",
+    title: "User-Focused Design",
     cases: [
-      "Direct-to-consumer brands thrive on first impressions, and an intuitive UX/UI helps build trust and loyalty instantly.",
+      "Our designs prioritize seamless navigation and engaging user experiences.",
+    ],
+  },
+  {
+    id: 4,
+    title: "SEO Optimization",
+    cases: [
+      "We integrate SEO best practices to enhance visibility and drive traffic.",
+    ],
+  },
+  {
+    id: 5,
+    title: "Continuous Support",
+    cases: [
+      "Post-launch maintenance ensures your site remains secure and optimized.",
     ],
   },
 ];
 
 function HeroServicePage() {
+   const fadeUp = (d = 0) => ({
+    initial: { opacity: 0, y: 20 },
+    whileInView: { opacity: 1, y: 0 },
+    transition: { duration: 0.6, ease: "easeOut", delay: d },
+    viewport: { once: true },
+  });
   return (
     <>
       <section className="section-container py-12">
@@ -130,7 +152,9 @@ function HeroServicePage() {
             viewport={{ once: true }}
             className="section-title text-left "
           >
-            <span className="mb-2 block">UX UI Design Services in Chennai</span>
+            <span className="mb-2 block">
+              Top Web Development Services in Chennai
+            </span>
 
             <motion.div
               initial={{ scaleX: 0 }}
@@ -153,23 +177,36 @@ function HeroServicePage() {
               viewport={{ once: true }}
               className="text-black/80 space-y-6"
             >
+              <motion.h2
+                initial={{ opacity: 0, y: -30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="section-title text-left "
+              >
+                <span className="mb-2 block">
+                  Craft Your Digital Success with Ayatiworks
+                </span>
+              </motion.h2>
               <p className="text-base/7 sm:text-lg/8 md:text-lg/9 text-black/80 font-secondary font-medium">
-                First impressions happen in seconds, and in the digital space,
-                design makes all the difference. Whether it’s a website, mobile
-                app, or digital platform, UI (User Interface) and UX (User
-                Experience) design define how users interact with your brand. At
-                Ayatiworks, we go beyond visuals, we build functional,
-                intuitive, and engaging designs that drive results.
+                Your brand deserves a website that’s more than just pixels; it
+                should be a digital game-changer!
               </p>
               <p className="text-base/7 sm:text-lg/8 md:text-lg/9 text-black/80 font-secondary font-medium">
-                From B2B dashboards to B2C mobile apps and D2C e-commerce
-                stores, our design approach blends creativity, usability, and
-                business strategy. We don’t just design screens; we design
-                journeys that guide users smoothly from curiosity to conversion.
+                A powerful magnet that draws the attention of your target
+                audience!
               </p>
               <p className="text-base/7 sm:text-lg/8 md:text-lg/9 text-black/80 font-secondary font-medium">
-                If you’re looking for the best UX UI design services in Chennai,
-                Ayatiworks ensures every click, swipe, and scroll is meaningful.
+                As a top web development company in Chennai, Ayatiworks,
+                delivers sleek, high-performing websites for businesses in India
+                and globally. Specializing in ecommerce website development in
+                Chennai, we blend wit, innovation, and strategy to create sites
+                that captivate and convert.
+              </p>
+              <p className="text-base/7 sm:text-lg/8 md:text-lg/9 text-black/80 font-secondary font-medium">
+                From startups to international brands, our Web Development
+                Services and Web Design Services in Chennai turn your vision
+                into a digital masterpiece that drives results.
               </p>
               {/* Button */}
               <motion.div
@@ -221,7 +258,7 @@ function HeroServicePage() {
             className="section-title text-left "
           >
             <span className="mb-2 block">
-              Why UX UI Design Matters for Your Business
+              Why Ayatiwork is a Leading Web Development Company in Chennai
             </span>
 
             <motion.div
@@ -250,9 +287,14 @@ function HeroServicePage() {
           {/* Right - Sticky Image */}
           <div className="text-black/80 space-y-6">
             <p className="text-base/7 sm:text-lg/8 md:text-lg/9 text-black/80 font-secondary font-medium">
-              A good product or service can lose its shine if customers struggle
-              with its interface. UX UI design bridges this gap by creating a
-              seamless experience that reflects user intent and brand identity.
+              Ayatiworks stands out as a premier web development company in
+              Chennai, delivering transformative websites that drive business
+              growth. Our expertise in ecommerce website development in Chennai
+              ensures tailored solutions for online stores, alongside robust
+              websites for all industries.
+            </p>
+            <p className="text-base/7 sm:text-lg/8 md:text-lg/9 text-black/80 font-secondary font-medium">
+              Here’s why we’re the preferred choice:
             </p>
             <ul className="space-y-4 text-black/80">
               {motives1.map((motive) => (
@@ -284,9 +326,141 @@ function HeroServicePage() {
                 </li>
               ))}
             </ul>
+            <p className="text-base/7 sm:text-lg/8 md:text-lg/9 text-black/80 font-secondary font-medium">
+              Our approach, inspired by industry leaders, leverages data-driven
+              insights to create websites that boost engagement and conversions.{" "}
+            </p>
+            <p className="text-base/7 sm:text-lg/8 md:text-lg/9 text-black/80 font-secondary font-medium">
+              Whether you need ecommerce website development in Chennai or a
+              corporate platform, we ensure your site is a powerful asset. Our
+              proven track record with diverse clients highlights our ability to
+              deliver measurable results, making Ayatiworks a trusted partner
+              for businesses seeking digital excellence.
+            </p>
           </div>
         </div>
       </section>
+
+        <section className="section-container py-14 md:py-20">
+      {/* === CTA HERO === */}
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="relative overflow-hidden rounded-3xl bg-primary text-white"
+      >
+        {/* soft moving glow */}
+        <motion.div
+          aria-hidden="true"
+          animate={{ x: ["-15%", "115%"] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+          className="pointer-events-none absolute -top-16 h-40 w-40 rounded-full bg-white/10 blur-3xl"
+        />
+        <div className="relative z-10 px-6 py-12 md:px-12 md:py-16 lg:px-16 lg:py-20">
+          <div className="max-w-3xl">
+            <motion.h2
+              {...fadeUp(0)}
+              className="text-3xl md:text-4xl lg:text-5xl font-primary font-bold leading-tight"
+            >
+              Ready to Transform Your Online Presence?
+            </motion.h2>
+
+            <motion.p
+              {...fadeUp(0.1)}
+              className="mt-4 md:mt-5 text-base md:text-lg lg:text-xl font-secondary text-white/90"
+            >
+              Contact <span className="font-semibold font-secondary">Ayatiworks</span> to build a
+              website that drives success!
+            </motion.p>
+
+            <motion.div
+              {...fadeUp(0.2)}
+              className="mt-8 flex flex-wrap items-center gap-3"
+            >
+              {/* Internal navigation -> Link */}
+              <Link
+                to="/contact-us"
+                aria-label="Contact Ayatiworks"
+                className="inline-flex font-primary items-center gap-2 rounded-full bg-white text-secondary px-5 py-3 text-lg md:text-2xl font-medium shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl"
+              >
+                <PhoneCall className="h-5 w-5" />
+                Contact Us
+              </Link>
+
+              {/* External link -> keep <a> */}
+              <a
+                href="https://ayatiworks.com/web-ecommerce/ecommerce-solutions"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ecommerce Digital Marketing Service"
+                className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur px-5 py-3 text-lg md:text-2xl font-primary font-medium text-white ring-1 ring-white/30 transition hover:bg-white/15 hover:-translate-y-0.5"
+              >
+                <ShoppingBag className="h-6 w-6" />
+                Ecommerce Marketing Service
+              </a>
+            </motion.div>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* === OBJECTIVE BLOCK === */}
+      <div className="mt-14 md:mt-20">
+        <motion.h3
+          {...fadeUp(0)}
+          className="section-title font-primary font-medium text-left"
+        >
+          What is the Objective of a Website for Your Business?
+        </motion.h3>
+
+        <motion.div
+          {...fadeUp(0.1)}
+          className="mt-4 inline-flex items-center font-primary gap-2 rounded-xl border border-secondary/20 bg-secondary/5 px-4 py-2 text-secondary"
+        >
+          <ArrowRight className="h-4 w-4" />
+          <span className="text-lg md:text-xl">Define your goal and let’s execute it.</span>
+        </motion.div>
+      </div>
+
+      {/* === MINI CTA (ECOMMERCE) === */}
+      <motion.div
+        {...fadeUp(0.15)}
+        className="mt-10 rounded-2xl border border-secondary/20 bg-white p-6 md:p-8 shadow-sm"
+      >
+        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-4 justify-between">
+          <div>
+            <h4 className="text-xl md:text-3xl font-primary font-medium text-secondary">
+              Launch Your Ecommerce Website Today!
+            </h4>
+            <p className="mt-1 font-secondary text-black/80">
+              Partner with Ayatiworks for a site that delivers results.
+            </p>
+          </div>
+
+          <div className="flex gap-3">
+            <a
+              href="https://ayatiworks.com/web-ecommerce/ecommerce-solutions"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-lg md:text-2xl font-primary rounded-full bg-secondary px-5 py-3 text-white font-medium shadow-md hover:shadow-lg transition hover:-translate-y-0.5"
+            >
+              <ShoppingBag className="h-5 w-5" />
+              Explore Ecommerce Service
+            </a>
+
+            {/* Internal navigation -> Link */}
+            <Link
+              to="/contact-us"
+              className="inline-flex items-center gap-2 text-lg md:text-2xl font-primary rounded-full px-5 py-3 font-medium text-secondary ring-1 ring-secondary/40 bg-white hover:bg-secondary/5 transition hover:-translate-y-0.5"
+            >
+              <PhoneCall className="h-5 w-5" />
+              Talk to Us
+            </Link>
+          </div>
+        </div>
+      </motion.div>
+    </section>
+
       <section className="section-container py-12">
         <div className="mb-12">
           <motion.h2
@@ -312,6 +486,7 @@ function HeroServicePage() {
         {/* ✅ Make grid parent tall enough */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-8">
           {/* Left Content */}
+
           <div className="text-black/80 space-y-6">
             {[
               "Higher customer engagement and retention",
