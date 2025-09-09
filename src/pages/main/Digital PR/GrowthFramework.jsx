@@ -195,7 +195,7 @@ export default function GrowthFramework() {
           This structured process ensures Digital PR campaigns are not just about visibility, but about creating sustained authority, trust, and measurable impact for your brand.
         </p>
         {/* <a
-          href="#contact"
+          href="/contact-us"
           className="text-blue-700 font-semibold mt-4 inline-block"
         >
           Ready to start your growth journey?

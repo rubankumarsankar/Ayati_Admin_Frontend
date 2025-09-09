@@ -154,7 +154,7 @@ export default function GrowthFramework() {
           At Ayatiwork, our 10-step framework isn’t just about execution, it’s about building a reliable growth engine for your brand. With clarity, creativity, and consistency, we help you scale smarter, faster, and stronger.
         </p>
         <a
-          href="#contact"
+          href="/contact-us"
           className="text-blue-700 font-semibold mt-4 inline-block"
         >
           Ready to start your growth journey?
