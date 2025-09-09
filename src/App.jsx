@@ -68,6 +68,10 @@ const DigitalPRServicesPage = lazy(() =>
 const InfluencerServicesPage = lazy(() =>
   import("./pages/main/Services-InfluencerPage")
 );
+const OnlineMarketingServicesPage = lazy(() =>
+  import("./pages/main/Services-OnlineMarketingPage")
+);
+
 
 
 const SEOBlogPage = lazy(() => import("./pages/main/BlogPage/SEOBlog"));
@@ -167,6 +171,10 @@ function App() {
               <Route
                 path="/digital-pr/influencer-marketing"
                 element={<InfluencerServicesPage />}
+              />
+              <Route
+                path="/digital-pr/online-reputation-media-outreach"
+                element={<OnlineMarketingServicesPage />}
               />
               <Route path="/comingsoon" element={<ComingSoon />} />
 
