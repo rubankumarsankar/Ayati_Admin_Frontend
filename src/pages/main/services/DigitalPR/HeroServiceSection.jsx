@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Goal } from "lucide-react";
 
 import { GoDotFill } from "react-icons/go";
 import AutoImageSlider from "./AutoImageSlider";
@@ -7,88 +8,75 @@ import AutoImageSlider from "./AutoImageSlider";
 const steps = [
   {
     id: 1,
-    title: "1. Market Analysis",
-    points: ["Identify target regions and languages."],
+    title: "1. Brand Discovery",
+    points: ["Understanding your story, values, and goals."],
   },
   {
     id: 2,
     title: "2. Audience Profiling",
-    points: ["Understand cultural and linguistic preferences."],
+    points: ["Mapping stakeholders, customer personas, and media contacts."],
   },
   {
     id: 3,
-    title: "3. Strategy Development",
-    points: ["Craft tailored DigitalPR marketing strategies."],
+    title: "3. Message Crafting",
+    points: ["Designing narratives that connect with audience needs."],
   },
   {
     id: 4,
-    title: "4. Content Localization",
-    points: ["Create culturally relevant DigitalPR content marketing."],
+    title: "4. Channel Strategy",
+    points: ["Selecting the right platforms (media, influencers, social)."],
   },
   {
     id: 5,
-    title: "5. SEO Optimization",
-    points: ["Implement DigitalPR search marketing for visibility."],
+    title: "5. Campaign Execution",
+    points: ["Launching outreach with targeted precision."],
   },
   {
     id: 6,
-    title: "6. Social Media Planning",
-    points: ["Design DigitalPR social media marketing campaigns."],
+    title: "6. Monitoring & Listening",
+    points: ["Tracking mentions, sentiment, and media coverage."],
   },
   {
     id: 7,
-    title: "7. Campaign Execution",
-    points: ["Launch integrated DigitalPR campaigns."],
+    title: "7. Crisis Readiness",
+    points: ["Preparing frameworks for rapid response."],
   },
   {
     id: 8,
-    title: "8. Performance Tracking",
-    points: ["Monitor KPIs for effectiveness."],
-  },
-  {
-    id: 9,
-    title: "9. Optimization",
-    points: ["Refine campaigns based on data insights."],
-  },
-  {
-    id: 10,
-    title: "10. Reporting",
-    points: ["Provide detailed performance insights."],
+    title: "8. Measurement & Reporting",
+    points: ["Delivering data-backed insights on performance."],
   },
 ];
 
 const motives = [
   {
     id: 1,
-    title: "Tailored Strategies",
     cases: [
-      "We design DigitalPR marketing strategies customized to your brand’s goals and target regions.",
+      "Traditional PR is slow, Digital PR is instant. A single tweet, article, or influencer video can spread your story to thousands within minutes.",
     ],
   },
   {
     id: 2,
-    title: "Cultural Expertise",
     cases: [
-      "Our team ensures localized content that resonates with diverse audiences, overcoming DigitalPR marketing challenges.",
+      "Visibility drives credibility. The more often your audience sees your brand in trusted media outlets, the more likely they are to believe in your authority.",
     ],
   },
   {
     id: 3,
-    title: "Advanced Tools",
     cases: [
-      "We leverage AI-driven translation and analytics for seamless DigitalPR content marketing and DigitalPR search marketing.",
+      "SEO meets PR. Modern PR campaigns are designed not just to get media mentions but also to secure backlinks that improve search rankings.",
     ],
   },
   {
     id: 4,
-    title: "Data-Driven Insights",
-    cases: ["We analyze market trends to optimize campaigns for maximum ROI."],
+    cases: [
+      "Crisis travels faster online. A small issue can become viral within hours. Digital PR helps you monitor conversations and respond quickly to safeguard your reputation.",
+    ],
   },
   {
     id: 5,
-    title: "End-to-End Support",
     cases: [
-      "From ideation to execution, we manage every aspect of your DigitalPR marketing services.",
+      "Audiences are fragmented. Some prefer video on YouTube, others trust LinkedIn articles, and many rely on Google search. Digital PR ensures your presence across multiple channels.",
     ],
   },
 ];
@@ -96,30 +84,143 @@ const motives = [
 const motives1 = [
   {
     id: 1,
-    title: "DigitalPR Search Marketing",
+    title: "Enhanced Brand Visibility",
     cases: [
-      "Optimize SEO and PPC campaigns across diverse languages and regions to maximize visibility and reach.",
+      "Your brand appears where your audience spends time: online media outlets, digital publications, and social platforms. This increased visibility boosts recognition.",
     ],
   },
   {
     id: 2,
-    title: "DigitalPR Content Marketing",
+    title: "Improved Search Engine Rankings",
     cases: [
-      "Create localized blogs, videos, and marketing assets that resonate culturally with each audience segment.",
+      "PR-generated backlinks from authority sites signal credibility to search engines. The result? Higher rankings and better organic traffic.",
     ],
   },
   {
     id: 3,
-    title: "DigitalPR Digital Marketing",
+    title: "Stronger Online Reputation",
     cases: [
-      "Design integrated, cross-channel campaigns in multiple languages for consistent brand impact worldwide.",
+      "Digital PR crafts a positive brand image by ensuring accurate, consistent, and engaging narratives across media.",
     ],
   },
   {
     id: 4,
-    title: "DigitalPR Social Media Marketing",
+    title: "Targeted Audience Reach",
     cases: [
-      "Engage audiences on platforms like Instagram, LinkedIn, and more with native-language content tailored to their culture.",
+      "Unlike traditional PR, digital campaigns can be tailored for specific demographics, industries, or geographies. This ensures higher relevance and ROI.",
+    ],
+  },
+  {
+    id: 5,
+    title: "Crisis Control & Trust Management",
+    cases: [
+      "Quick monitoring and response mechanisms prevent small issues from escalating into full-blown reputational crises.",
+    ],
+  },
+  {
+    id: 6,
+    title: "Thought Leadership Development",
+    cases: [
+      "Publishing expert commentary, guest articles, and opinion pieces positions your brand leaders as authorities in their industry.",
+    ],
+  },
+  {
+    id: 7,
+    title: "Measurable ROI",
+    cases: [
+      "Through analytics, impressions, engagement rates, and backlinks, you can track how your PR efforts contribute to business goals.",
+    ],
+  },
+];
+
+const motives2 = [
+  {
+    id: 1,
+    title: "Media Outreach & Online Coverage",
+    cases: [
+      "We connect your brand with top journalists, digital editors, and bloggers to secure high-quality placements in industry-relevant publications.",
+    ],
+  },
+  {
+    id: 2,
+    title: "Influencer & Thought Leader Partnerships",
+    cases: [
+      "Our campaigns leverage influencers and niche thought leaders who resonate with your audience, ensuring authentic visibility and engagement.",
+    ],
+  },
+  {
+    id: 3,
+    title: "Digital Storytelling & Content PR",
+    cases: [
+      "Every brand has a story worth telling. We craft engaging digital-first narratives—articles, press releases, videos—that resonate across platforms.",
+    ],
+  },
+  {
+    id: 4,
+    title: "Crisis Communication Management",
+    cases: [
+      "When challenges arise, we act fast to contain misinformation, rebuild trust, and safeguard brand credibility.",
+    ],
+  },
+  {
+    id: 5,
+    title: "Link Building through PR",
+    cases: [
+      "Our PR-driven SEO approach earns natural, high-authority backlinks from credible online sources to support long-term ranking success.",
+    ],
+  },
+  {
+    id: 6,
+    title: "Corporate Reputation Management",
+    cases: [
+      "We help brands maintain consistent messaging, manage stakeholder communication, and build trust across digital touchpoints.",
+    ],
+  },
+];
+const motives3 = [
+  {
+    id: 1,
+    title: "B2B",
+    cases: [
+      "Positioning firms as industry leaders through thought leadership and media credibility.",
+    ],
+  },
+  {
+    id: 2,
+    title: "B2C",
+    cases: [
+      "Amplifying visibility with influencer-driven campaigns and media outreach.",
+    ],
+  },
+  {
+    id: 3,
+    title: "D2C & E-Commerce",
+    cases: [
+      "Driving product awareness and customer trust through online reviews and targeted placements.",
+    ],
+  },
+];
+const motives4 = [
+  {
+    id: 1,
+    title: "Data-Backed Campaigns",
+    cases: ["Every action is guided by analytics and performance metrics."],
+  },
+  {
+    id: 2,
+    title: "Agile Execution",
+    cases: ["From crisis communication to viral campaigns, we adapt quickly."],
+  },
+  {
+    id: 3,
+    title: "Creative Storytelling",
+    cases: ["We craft narratives that stick in the minds of your audience."],
+  },
+  {
+    id: 4,
+    title: "ROI-Driven Approach",
+    cases: [
+      "Our ultimate goal is to ensure visibility translates into trust, and trust into growth.",
     ],
   },
 ];
@@ -128,33 +229,29 @@ function HeroServicePage() {
   return (
     <>
       <section className="section-container py-12">
-        {/* Title */}
         <div className="mb-12">
           <motion.h2
             initial={{ opacity: 0, y: -30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="section-title text-left"
+            className="section-title text-left "
           >
-            <span className="mb-2 block">
-              Best DigitalPR Digital Marketing Services in India
-            </span>
+            <span className="mb-2 block">Digital PR Services in Chennai</span>
 
-            {/* Animated underline */}
             <motion.div
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
               transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
-              viewport={{ once: true }}
               className="bg-secondary h-1 w-40 sm:w-56 md:w-72 lg:w-[350px] mt-3 origin-left rounded-full"
             />
           </motion.h2>
         </div>
 
-        {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-8 items-center">
+        {/* ✅ Make grid parent tall enough */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-8">
           {/* Left Content */}
+
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -163,58 +260,74 @@ function HeroServicePage() {
             className="text-black/80 space-y-4 md:space-y-6"
           >
             <p className="text-lg sm:text-xl md:text-3xl text-secondary font-primary">
-              Connect Globally with Ayatiworks’ Expertise
+              Ever felt like your brand is talking, but nobody’s really
+              listening?
             </p>
 
             <p className="text-sm sm:text-base md:text-lg font-secondary leading-relaxed">
-              Want your brand to reach the masses in India? Remember, India’s
-              strength is its
-              <span className="whitespace-nowrap"> “Unity in Diversity.”</span>
+              You post on social media, run ads, maybe even get mentioned once
+              in a while, but the spotlight fades quickly.
             </p>
 
             <p className="text-sm sm:text-base md:text-lg font-secondary leading-relaxed">
-              One country, 143 crore people, 121 languages, and over 19,500
-              mother tongues—a nation rich in linguistic diversity.
+              In today’s hyper-connected world, attention is fleeting, trust is
+              fragile, and one negative comment can echo louder than months of
+              effort.
             </p>
 
             <p className="text-sm sm:text-base md:text-lg font-secondary leading-relaxed">
-              <a
-                href="https://ayatiworks.com/"
-                className="text-primary underline font-primary hover:text-secondary transition-colors"
-              >
-                Ayatiworks
-              </a>{" "}
-              brings deep experience and expertise. Your brand’s voice can be
-              one, but it must reach audiences in their own dialects—we make
-              that happen with flair.
+              That’s where Digital PR comes in. Think of it as the bridge
+              between how you want to be seen and how people actually perceive
+              you. It’s not about throwing press releases into the void or
+              chasing vanity mentions, it’s about crafting stories that people
+              want to share, securing visibility where it matters, and building
+              credibility that lasts.
+            </p>
+
+            {/* Replaced bullet paragraph with icon points */}
+            <ul className="space-y-3">
+              {[
+                "Imagine a startup with a brilliant idea struggling to be noticed.",
+                "An established brand facing whispers of bad press.",
+                "An e-commerce business buried under competitors on Google.",
+              ].map((text, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <Goal
+                    aria-hidden="true"
+                    className="mt-1 shrink-0"
+                    size={18}
+                  />
+                  <span className="text-sm sm:text-base md:text-lg font-secondary leading-relaxed">
+                    {text}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <p className="text-sm sm:text-base md:text-lg font-secondary leading-relaxed">
+              These aren’t isolated struggles; they’re everyday realities in the
+              digital landscape. And the brands that rise above? They’re the
+              ones using Digital PR strategically.
             </p>
 
             <p className="text-sm sm:text-base md:text-lg font-secondary leading-relaxed">
-              As the Best DigitalPR Digital Marketing Agency, we craft
-              campaigns that resonate in every language from Chennai to global
-              markets. Partnering closely with our in-house{" "}
-              <a
-                href="https://ayatiworks.com/services/digital-marketing-services"
-                className="text-primary underline hover:text-secondary font-primary transition-colors"
-              >
-                Digital Marketing Services
-              </a>{" "}
-              team and{" "}
-              <a
-                href="https://ayatiworks.com/services/digital-marketing-consultancy"
-                className="text-primary underline hover:text-secondary font-primary transition-colors"
-              >
-                Digital Marketing Consultants
-              </a>{" "}
-              across India and internationally, we deliver DigitalPR
-              strategies that are culturally relevant and impactful—driving
-              engagement and trust worldwide.
+              Digital PR weaves together storytelling, SEO, and reputation
+              management so your brand isn’t just another name online—it becomes
+              a trusted voice, a familiar presence, and a thought leader.
+              Instead of just chasing clicks, Digital PR builds relationships,
+              authority, and loyalty.
+            </p>
+
+            <p className="text-sm sm:text-base md:text-lg font-secondary leading-relaxed">
+              If you’re tired of shouting into the void and ready to become a
+              name people notice, respect, and remember, Digital PR Services are
+              your answer.
             </p>
 
             {/* CTA */}
             <motion.a
-              href=""
-              aria-label="Book a free DigitalPR marketing consultation"
+              href="#contact"
+              aria-label="Book a free Digital PR marketing consultation"
               initial={{ opacity: 0, y: 30, scale: 0.98 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               whileHover={{
@@ -233,27 +346,17 @@ function HeroServicePage() {
           </motion.div>
 
           {/* Right - Sticky Image */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            viewport={{ once: true }}
-            className="hidden md:block"
-          >
+
+          <div className="hidden md:block">
+            {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
-              <motion.img
+              <img
                 src="/assets/office-member.png"
-                alt="Ayatiworks DigitalPR digital marketing team at work"
-                className="w-full h-auto mx-auto rounded-xl shadow-lg"
-                animate={{ y: [0, -10, 0] }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
+                alt="Search Engines Work"
+                className="w-full h-auto  mx-auto "
               />
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
       <section className="section-container py-12">
@@ -265,9 +368,7 @@ function HeroServicePage() {
             viewport={{ once: true }}
             className="section-title text-left "
           >
-            <span className="mb-2 block">
-              Why Ayatiworks is the Best DigitalPR Digital Marketing Agency
-            </span>
+            <span className="mb-2 block">Why Digital PR Matters Today</span>
 
             <motion.div
               initial={{ scaleX: 0 }}
@@ -285,7 +386,7 @@ function HeroServicePage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/service/seo-4.png"
+                src="/assets/service/pr-1.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />
@@ -295,16 +396,10 @@ function HeroServicePage() {
 
           <div className="text-black/80 space-y-6">
             <p className="text-sm sm:text-base md:text-lg font-secondary leading-relaxed">
-              <a
-                href="https://ayatiworks.com/"
-                className="text-primary underline font-primary hover:text-secondary transition-colors"
-              >
-                Ayatiworks
-              </a>{" "}
-              stands out as the Best DigitalPR Digital Marketing Agency,
-              delivering campaigns that bridge linguistic and cultural divides.
-              Our expertise in DigitalPR marketing consultancy empowers
-              brands to conquer global markets with precision.
+              The digital-first world has reshaped how brands communicate and
+              connect with stakeholders. Customers no longer wait for newspaper
+              articles or TV coverage; they expect real-time updates, authentic
+              stories, and meaningful interactions.
             </p>
             <motion.h2
               initial={{ opacity: 0, y: -30 }}
@@ -314,7 +409,7 @@ function HeroServicePage() {
               className="section-title text-2xl sm:text-3xl text-left "
             >
               <span className="mb-2 block">
-                Here’s why businesses choose us:
+                This shift makes Digital PR essential, not optional. Here’s why:
               </span>
             </motion.h2>
 
@@ -327,11 +422,6 @@ function HeroServicePage() {
                   {/* Content */}
                   <div className="space-y-3">
                     {/* Title + Subtitle */}
-                    <div className="space-y-1">
-                      <span className="text-2xl sm:text-3xl font-primary text-secondary block">
-                        {motive.title}
-                      </span>
-                    </div>
 
                     {/* Case Studies */}
                     <div className="space-y-2 pl-1">
@@ -349,33 +439,10 @@ function HeroServicePage() {
               ))}
             </ul>
             <p className="text-sm sm:text-base md:text-lg font-secondary leading-relaxed">
-              Our approach tackles DigitalPR marketing challenges like
-              cultural nuances and language barriers, ensuring your brand
-              connects authentically. With a proven track record, we’ve helped
-              businesses expand their reach across India’s 19,500+ languages and
-              dialects, as well as global markets.
-            </p>
-
-            <p className="text-sm sm:text-base md:text-lg font-secondary leading-relaxed">
-              Our DigitalPR content marketing fosters trust, with 70% of
-              consumers preferring brands that communicate in their native
-              language (CSA Research, 2025). From startups to enterprises,
-              Ayatiworks delivers measurable results, making us the go-to agency
-              for DigitalPR marketing services. Our commitment to precision
-              and cultural relevance sets us apart, ensuring your campaigns
-              drive engagement and conversions worldwide.
-            </p>
-            <p className="text-sm sm:text-base md:text-lg font-secondary leading-relaxed">
-              Ready to go Vernacular? Or looking to go Global?
-            </p>
-            <p className="text-sm sm:text-base md:text-lg font-secondary leading-relaxed">
-              <a
-                href="https://ayatiworks.com/contact-us"
-                className="text-primary underline font-primary hover:text-secondary transition-colors"
-              >
-                Contact Ayatiworks to launch impactful DigitalPR campaigns
-                today!
-              </a>{" "}
+              In short, Digital PR aligns brand storytelling with consumer
+              behavior in today’s connected landscape. It’s not just about
+              getting coverage; it’s about being part of the right conversations
+              at the right time.
             </p>
           </div>
         </div>
@@ -389,10 +456,7 @@ function HeroServicePage() {
             viewport={{ once: true }}
             className="section-title text-left "
           >
-            <span className="mb-2 block">
-              Types of Multi-Lingual Marketing Services <br /> Offered by
-              Ayatiworks:
-            </span>
+            <span className="mb-2 block">Benefits of Digital PR</span>
 
             <motion.div
               initial={{ scaleX: 0 }}
@@ -415,8 +479,9 @@ function HeroServicePage() {
               className="section-title text-2xl sm:text-3xl text-left "
             >
               <span className="mb-2 block">
-                Ayatiworks offers a comprehensive suite of DigitalPR
-                marketing services to amplify your brand’s global presence:
+                A well-structured Digital PR campaign does more than secure a
+                headline, it creates long-term brand equity. Here are the top
+                benefits:
               </span>
             </motion.h2>
 
@@ -450,6 +515,11 @@ function HeroServicePage() {
                 </li>
               ))}
             </ul>
+            <p className="text-sm sm:text-base md:text-lg font-secondary leading-relaxed flex items-start gap-3">
+              Digital PR is more than a marketing function; it’s a strategic
+              growth driver. It strengthens not just what people see, but also
+              what they believe about your brand.
+            </p>
           </div>
 
           {/* Right - Sticky Image */}
@@ -457,7 +527,7 @@ function HeroServicePage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/service/seo-4.png"
+                src="/assets/service/pr-2.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />
@@ -474,9 +544,7 @@ function HeroServicePage() {
             viewport={{ once: true }}
             className="section-title text-left "
           >
-            <span className="mb-2 block">
-              Why Multi-Lingual Marketing is a Game Changer?
-            </span>
+            <span className="mb-2 block">Our Digital PR Service Offerings</span>
 
             <motion.div
               initial={{ scaleX: 0 }}
@@ -494,7 +562,7 @@ function HeroServicePage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/service/brand-1.png"
+                src="/assets/service/pr-3.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />
@@ -503,44 +571,54 @@ function HeroServicePage() {
 
           {/* Right - Sticky Image */}
           <div className="text-black/80 space-y-6">
-            {/* Points */}
-            <div className="space-y-6">
-              <p className="text-sm sm:text-base md:text-lg font-secondary leading-relaxed flex items-start gap-3">
-                DigitalPR marketing services are a game-changer for
-                businesses aiming to expand their reach. With over 19,500
-                languages and dialects in India alone, speaking your audience’s
-                language unlocks massive opportunities.
-              </p>
-              <p className="text-sm sm:text-base md:text-lg font-secondary leading-relaxed flex items-start gap-3">
-                Ayatiworks’ DigitalPR marketing strategy goes beyond
-                translation; it creates cultural connections that make your
-                brand relatable. For instance, 75% of global consumers are more
-                likely to purchase from brands using their native language (CSA
-                Research, 2025).{" "}
-              </p>
-              <p className="text-sm sm:text-base md:text-lg font-secondary leading-relaxed flex items-start gap-3">
-                Our DigitalPR content marketing builds trust, fostering
-                stronger audience bonds. By addressing DigitalPR marketing
-                challenges like localization and cultural nuances, we ensure
-                your campaigns resonate. Whether targeting India’s diverse
-                regions or international markets, our DigitalPR search
-                marketing and social media efforts drive engagement and
-                conversions. Ayatiworks helps businesses stand out in crowded
-                markets, delivering measurable growth through authentic,
-                language-specific campaigns.{" "}
-              </p>
-              <p className="text-sm sm:text-base md:text-lg font-secondary">
-                Connect with every audience! Partner with Ayatiworks for{" "}
-                <a
-                  href="https://ayatiworks.com/contact-us"
-                  className="text-primary underline hover:text-secondary transition-colors"
-                >
-                  {" "}
-                  DigitalPR marketing
-                </a>{" "}
-                success.
-              </p>
-            </div>
+            <motion.h2
+              initial={{ opacity: 0, y: -30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="section-title text-2xl sm:text-3xl text-left "
+            >
+              <span className="mb-2 block">
+                We design our services to fit brands of all sizes and
+                industries. Here’s what we offer:
+              </span>
+            </motion.h2>
+
+            <ul className="space-y-4 text-black/80">
+              {motives2.map((motive) => (
+                <li key={motive.id} className="flex gap-4">
+                  {/* Icon */}
+                  <GoDotFill className="text-secondary text-2xl flex-shrink-0 mt-1" />
+
+                  {/* Content */}
+                  <div className="space-y-3">
+                    {/* Title + Subtitle */}
+                    <div className="space-y-1">
+                      <span className="text-2xl sm:text-3xl font-primary text-secondary block">
+                        {motive.title}
+                      </span>
+                    </div>
+
+                    {/* Case Studies */}
+                    <div className="space-y-2 pl-1">
+                      {motive.cases.map((caseText, i) => (
+                        <div
+                          key={i}
+                          className="flex items-start text-base sm:text-lg text-black/80 font-secondary font-medium leading-relaxed"
+                        >
+                          <span>{caseText}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            <p className="text-sm sm:text-base md:text-lg font-secondary leading-relaxed flex items-start gap-3">
+              From building awareness for a new product launch to repositioning
+              an established business, our tailored Digital PR Services ensure
+              your brand’s voice is heard and respected.
+            </p>
           </div>
         </div>
       </section>
@@ -554,9 +632,7 @@ function HeroServicePage() {
             viewport={{ once: true }}
             className="section-title text-left"
           >
-            <span className="mb-2 block">
-              Ayatiworks’ Multi-Lingual Marketing Approach
-            </span>
+            <span className="mb-2 block">Our 8-Step Digital PR Process</span>
 
             <motion.div
               initial={{ scaleX: 0 }}
@@ -569,15 +645,15 @@ function HeroServicePage() {
 
         {/* Subtitle */}
         <h3 className="font-primary text-secondary font-medium text-2xl mb-4">
-          Ayatiworks delivers strategic DigitalPR marketing services,
-          connecting brands with global audiences.
+          Our structured yet flexible process ensures PR strategies are not just
+          creative but also effective:
         </h3>
 
         {/* Intro Paragraph */}
-        <p className="text-base sm:text-lg md:text-xl text-black/80 mt-4 font-secondary font-medium leading-relaxed">
+        {/* <p className="text-base sm:text-lg md:text-xl text-black/80 mt-4 font-secondary font-medium leading-relaxed">
           Our 10-phase process ensures culturally relevant, high-impact
           campaigns that drive engagement and growth.
-        </p>
+        </p> */}
 
         {/* Steps Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
@@ -604,50 +680,24 @@ function HeroServicePage() {
         {/* Closing Paragraph */}
         <div className="text-left mt-12">
           <p className="text-base sm:text-lg md:text-xl text-black/80 font-secondary font-medium leading-relaxed">
-            Ayatiworks’ 10-phase approach ensures seamless DigitalPR marketing services. We analyze markets, profile audiences, and develop tailored strategies. Localized content and DigitalPR search marketing enhance visibility, while social media campaigns engage diverse audiences. After execution, we track performance, optimize based on insights, and deliver detailed reports, ensuring your campaigns achieve global impact.
+            Each step is designed to balance creativity with accountability,
+            ensuring your PR campaigns are impactful and measurable.
           </p>
         </div>
       </section>
-      <section className="section-container py-16">
-        <div className="bg-primary rounded-2xl shadow-lg hover:shadow-2xl p-8 sm:p-12 text-center text-white relative overflow-hidden">
-          {/* Decorative background element */}
-          <div className="absolute inset-0  rounded-2xl"></div>
 
-          {/* Title */}
-          <motion.h2
-            initial={{ opacity: 0, y: -30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="relative text-2xl sm:text-3xl md:text-4xl font-primary font-medium mb-6"
-          >
-            Facts and Figures: Benefits of Multi-Lingual Marketing
-          </motion.h2>
-
-          {/* Paragraph */}
-          <p className="relative text-base/8 sm:text-lg/8 md:text-lg/8 font-secondary max-w-4xl mx-auto">
-            Businesses using DigitalPR marketing services see 25% higher
-            engagement rates. Localized content boosts conversions by 70%.
-            Ayatiworks’ DigitalPR search marketing drives 30% more traffic,
-            while DigitalPR social media marketing increases brand trust by
-            40%, helping brands dominate diverse markets.
-          </p>
-        </div>
-      </section>
       <AutoImageSlider />
       <section className="section-container py-12">
-        {/* Title */}
         <div className="mb-12">
           <motion.h2
             initial={{ opacity: 0, y: -30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="section-title text-left"
+            className="section-title text-left "
           >
-            <span className="mb-2 block">Why Work with Ayatiworks?</span>
+            <span className="mb-2 block">Industries We Serve </span>
 
-            {/* Animated underline */}
             <motion.div
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
@@ -657,64 +707,197 @@ function HeroServicePage() {
           </motion.h2>
         </div>
 
-        {/* Content Grid */}
+        {/* ✅ Make grid parent tall enough */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-8">
           {/* Left Content */}
-          <div className="text-black/80">
-            <div className="space-y-3">
-              <div className="flex items-start gap-2 text-sm sm:text-base md:text-lg font-secondary leading-relaxed">
-                <GoDotFill className="text-primary text-xl shrink-0 mt-1" />
-                <span>
-                  As the Best DigitalPR Digital Marketing Agency, Ayatiworks
-                  creates campaigns that connect and convert. Our past clients
-                  praise our structured process, cultural expertise, and timely
-                  delivery.
-                </span>
-              </div>
+          <div className="text-black/80 space-y-6">
+            <motion.h2
+              initial={{ opacity: 0, y: -30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="section-title text-2xl sm:text-3xl text-left "
+            >
+              <span className="mb-2 block">
+                Our Digital PR expertise spans across:
+              </span>
+            </motion.h2>
 
-              <div className="flex items-start gap-2 text-sm sm:text-base md:text-lg font-secondary leading-relaxed">
-                <GoDotFill className="text-primary text-xl shrink-0 mt-1" />
-                <span>
-                  We don’t just translate; we craft DigitalPR marketing
-                  strategies that amplify your brand’s voice, ensuring global
-                  impact and audience trust.
-                </span>
-              </div>
-              {/* Button */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="text-left mt-8"
-              >
-                <motion.button
-                  className="relative bg-secondary/90 hover:bg-secondary text-white font-primary text-lg md:text-xl font-medium py-3 px-10 rounded-full shadow-md hover:shadow-xl transition-all duration-300"
-                  initial={{ scale: 0.9, opacity: 0 }}
-                  whileInView={{ scale: 1, opacity: 1 }}
-                  whileHover={{
-                    scale: 1.08,
-                    boxShadow: "0px 12px 25px rgba(0,0,0,0.15)",
-                  }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ duration: 0.3, ease: "easeOut" }}
-                  viewport={{ once: true }}
-                >
-                  BOOK FREE CONSULTATION TODAY
-                </motion.button>
-              </motion.div>
-            </div>
+            <ul className="space-y-4 text-black/80">
+              {motives3.map((motive) => (
+                <li key={motive.id} className="flex gap-4">
+                  {/* Icon */}
+                  <GoDotFill className="text-secondary text-2xl flex-shrink-0 mt-1" />
+
+                  {/* Content */}
+                  <div className="space-y-3">
+                    {/* Title + Subtitle */}
+                    <div className="space-y-1">
+                      <span className="text-2xl sm:text-3xl font-primary text-secondary block">
+                        {motive.title}
+                      </span>
+                    </div>
+
+                    {/* Case Studies */}
+                    <div className="space-y-2 pl-1">
+                      {motive.cases.map((caseText, i) => (
+                        <div
+                          key={i}
+                          className="flex items-start text-base sm:text-lg text-black/80 font-secondary font-medium leading-relaxed"
+                        >
+                          <span>{caseText}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            <p className="text-sm sm:text-base md:text-lg font-secondary leading-relaxed flex items-start gap-3">
+              We tailor every campaign to industry nuances, ensuring maximum
+              relevance and results.
+            </p>
           </div>
 
           {/* Right - Sticky Image */}
           <div className="hidden md:block">
+            {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/service/brand-5.png"
-                alt="Branding at Ayatiworks"
-                className="w-full h-auto mx-auto rounded-lg shadow-lg"
+                src="/assets/service/pr-2.png"
+                alt="Search Engines Work"
+                className="w-full h-auto  mx-auto "
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-container py-12">
+        <div className="mb-12">
+          <motion.h2
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="section-title text-left "
+          >
+            <span className="mb-2 block">Why Choose Us </span>
+
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
+              className="bg-secondary h-1 w-40 sm:w-56 md:w-72 lg:w-[350px] mt-3 origin-left rounded-full"
+            />
+          </motion.h2>
+        </div>
+
+        {/* ✅ Make grid parent tall enough */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-8">
+          {/* Left Content */}
+          <div className="hidden md:block">
+            {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
+            <div className="sticky top-20">
+              <img
+                src="/assets/service/pr-4.png"
+                alt="Search Engines Work"
+                className="w-full h-auto  mx-auto "
+              />
+            </div>
+          </div>
+
+          {/* Right - Sticky Image */}
+
+          <div className="text-black/80 space-y-6">
+            <motion.h2
+              initial={{ opacity: 0, y: -30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="section-title text-2xl sm:text-3xl text-left "
+            >
+              <span className="mb-2 block">
+                Digital PR is crowded, but our difference lies in strategy,
+                personalization, and measurable outcomes. We don’t just secure
+                media mentions, we ensure each campaign connects back to your
+                core business objectives.
+              </span>
+            </motion.h2>
+            <p className="text-sm sm:text-base md:text-lg font-secondary leading-relaxed flex items-start gap-3">
+              Integrated Expertise: We blend PR, SEO, and digital marketing for
+              holistic results.
+            </p>
+            <p className="text-sm sm:text-base md:text-lg font-secondary leading-relaxed flex items-start gap-3">
+              Your brand deserves more than mentions, it deserves meaningful
+              conversations, lasting authority, and trusted visibility. With our
+              Digital PR Services, we help you create a reputation that not only
+              grows your audience but also strengthens your position in the
+              market.
+            </p>
+            <ul className="space-y-4 text-black/80">
+              {motives4.map((motive) => (
+                <li key={motive.id} className="flex gap-4">
+                  {/* Icon */}
+                  <GoDotFill className="text-secondary text-2xl flex-shrink-0 mt-1" />
+
+                  {/* Content */}
+                  <div className="space-y-3">
+                    {/* Title + Subtitle */}
+                    <div className="space-y-1">
+                      <span className="text-2xl sm:text-3xl font-primary text-secondary block">
+                        {motive.title}
+                      </span>
+                    </div>
+
+                    {/* Case Studies */}
+                    <div className="space-y-2 pl-1">
+                      {motive.cases.map((caseText, i) => (
+                        <div
+                          key={i}
+                          className="flex items-start text-base sm:text-lg text-black/80 font-secondary font-medium leading-relaxed"
+                        >
+                          <span>{caseText}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            <p className="text-sm sm:text-base md:text-lg font-secondary leading-relaxed flex items-start gap-3">
+              When you choose us, you gain a partner who treats your brand
+              reputation as our most important campaign.
+            </p>
+            <p className="text-sm sm:text-base md:text-lg font-secondary leading-relaxed flex items-start gap-3">
+              Ready to amplify your brand story?
+            </p>
+            <p className="text-sm sm:text-base md:text-lg font-secondary leading-relaxed flex items-start gap-3">
+              Let’s start building your digital reputation today.
+            </p>
+            {/* Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-left mt-8"
+            >
+              <motion.button
+                className="relative bg-secondary/90 hover:bg-secondary text-white font-primary text-lg md:text-xl font-medium py-3 px-10 rounded-full shadow-md hover:shadow-xl transition-all duration-300"
+                initial={{ scale: 0.9, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                whileHover={{
+                  scale: 1.08,
+                  boxShadow: "0px 12px 25px rgba(0,0,0,0.15)",
+                }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
+                viewport={{ once: true }}
+              >
+                Claim Your Digital PR Strategy Session Now
+              </motion.button>
+            </motion.div>
           </div>
         </div>
       </section>
