@@ -71,6 +71,9 @@ const InfluencerServicesPage = lazy(() =>
 const OnlineMarketingServicesPage = lazy(() =>
   import("./pages/main/Services-OnlineMarketingPage")
 );
+const UXUIDesignServicesPage = lazy(() =>
+  import("./pages/main/Services-UXUIDesignPage")
+);
 
 
 
@@ -175,6 +178,10 @@ function App() {
               <Route
                 path="/digital-pr/online-reputation-media-outreach"
                 element={<OnlineMarketingServicesPage />}
+              />
+              <Route
+                path="/web-ecommerce/ux-ui-design"
+                element={<UXUIDesignServicesPage />}
               />
               <Route path="/comingsoon" element={<ComingSoon />} />
 
