@@ -64,41 +64,6 @@ const steps = [
   },
 ];
 
-const motives2 = [
-  {
-    id: 1,
-    title: "User-Centered Approach",
-    cases: [
-      "We design around user behavior, ensuring every interaction feels natural.",
-    ],
-  },
-  {
-    id: 2,
-    title: "Business-Aligned Design",
-    cases: ["Our UX/UI aligns with your brand’s goals, not just aesthetics."],
-  },
-  {
-    id: 3,
-    title: "Cross-Industry Expertise",
-    cases: [
-      "From fintech and healthcare to retail and SaaS, we design for multiple business models.",
-    ],
-  },
-  {
-    id: 4,
-    title: "Agile Design Process",
-    cases: [
-      "Iterative design sprints ensure faster delivery without compromising quality.",
-    ],
-  },
-  {
-    id: 5,
-    title: "Scalable Solutions",
-    cases: [
-      "Whether you’re a startup or enterprise, our designs grow with your business.",
-    ],
-  },
-];
 
 const motives1 = [
   {
@@ -286,7 +251,7 @@ function HeroServicePage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/service/dev-1.png"
+                src="/assets/service/sho-1.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />
@@ -435,7 +400,7 @@ function HeroServicePage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/service/dev-2.png"
+                src="/assets/service/sho-2.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />
@@ -555,7 +520,7 @@ function HeroServicePage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/service/dev-2.png"
+                src="/assets/service/mai-3.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />
@@ -595,7 +560,7 @@ function HeroServicePage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/service/dev-3.png"
+                src="/assets/service/mai-4.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />

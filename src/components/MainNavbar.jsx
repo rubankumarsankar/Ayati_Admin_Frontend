@@ -112,7 +112,7 @@ export const NAV = [
             label: "Shopify Development Services",
             path: "/web-ecommerce/shopify-development",
           },
-          { label: "E-commerce", path: "/e-commerce" },
+          { label: "E-commerce", path: "/web-ecommerce/ecommerce-solutions" },
         ],
       },
     ],
