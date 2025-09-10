@@ -5,42 +5,56 @@ import { Plus, Minus } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 const faqs = [
   {
-    question: "1. What is the difference between UI and UX design?",
+    question: "1. How long does web development take?",
     answer:
-      "UI focuses on the visual interface, while UX ensures overall usability and experience. Together, they create engaging, functional, and seamless digital products.",
+      "Most projects, including ecommerce sites, take 6-12 weeks, ensuring quality and performance. The timeline can be over 6 weeks and under 6 weeks depending on the scope of work arrived by the client and our experts.",
   },
   {
-    question: "2. Why is UX UI design important for businesses?",
+    question: "2. Do you offer post-launch support?",
     answer:
-      "Good design enhances user satisfaction, boosts engagement, increases conversions, and builds brand trust, directly impacting customer loyalty and long-term business growth.",
+      "Yes, we provide ongoing website maintenance for security, updates, and optimization.",
   },
   {
-    question: "3. How long does it take to complete a UX UI project?",
+    question: "3. Will my website be mobile-friendly?",
     answer:
-      "Timelines vary by complexity, typically ranging from 4–12 weeks. Smaller projects may be completed sooner, while larger enterprise solutions may take longer.",
+      "Absolutely. Every website we build is fully responsive and optimized for mobile, tablet, and desktop devices.",
   },
   {
-    question: "4. What tools are commonly used in UX UI design?",
+    question: "4. Can you integrate SEO best practices?",
     answer:
-      "Designers often use tools like Figma, Sketch, Adobe XD, InVision, and usability testing software to create prototypes, wireframes, and design systems.",
+      "Yes. We follow SEO-friendly coding standards, integrate meta tags, schema, and optimize content to improve search engine rankings.",
   },
   {
-    question: "5. How does UX UI design improve website or app conversions?",
+    question: "5. Do you work with ecommerce platforms?",
     answer:
-      "By removing friction, simplifying navigation, and enhancing usability, UX UI design encourages users to complete actions like purchases, sign-ups, or inquiries, improving overall conversion rates.",
+      "Yes, we specialize in ecommerce development using platforms like Shopify, WooCommerce, and custom solutions tailored to your needs.",
   },
   {
-    question: "6. Can UX UI design be applied to both websites and mobile apps?",
+    question: "6. What technologies do you use?",
     answer:
-      "Yes, UX UI principles apply to all digital platforms, ensuring websites, mobile apps, and enterprise systems deliver consistent, intuitive, and user-friendly experiences.",
+      "Our team works with modern stacks including React, Node.js, Next.js, WordPress, and Shopify to deliver high-performance, scalable websites.",
   },
   {
-    question: "7. How do you ensure accessibility in UX UI design?",
+    question: "7. Can you redesign my existing website?",
     answer:
-      "Accessibility is achieved through clear navigation, readable fonts, color contrast, keyboard compatibility, and compliance with WCAG guidelines, ensuring inclusivity for all users.",
+      "Yes, we can refresh and modernize your current site to improve design, user experience, and performance while retaining your brand identity.",
+  },
+  {
+    question: "8. How do you ensure website security?",
+    answer:
+      "We implement SSL, firewalls, regular updates, and follow industry best practices to ensure your site remains secure.",
+  },
+  {
+    question: "9. Will I be able to manage my website after launch?",
+    answer:
+      "Yes, we provide CMS-based solutions and training so your team can easily update content, products, and pages without coding knowledge.",
+  },
+  {
+    question: "10. How much does web development cost?",
+    answer:
+      "Costs vary based on complexity, features, and integrations. After understanding your requirements, we provide a tailored quote that aligns with your budget and goals.",
   },
 ];
-
 
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(null);

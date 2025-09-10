@@ -8,55 +8,53 @@ import { Link } from "react-router-dom";
 const steps = [
   {
     id: 1,
-    title: "1. Research & Discovery",
-    points: ["Understand user needs, pain points, and business goals."],
+    title: "1. Discovery",
+    points: ["Analyze your brand’s goals and audience."],
   },
   {
     id: 2,
-    title: "2. User Persona Development",
-    points: ["Build target profiles to guide design decisions."],
+    title: "2. Planning",
+    points: ["Define site structure and features."],
   },
   {
     id: 3,
-    title: "3. Information Architecture",
-    points: ["Structure content and navigation for easy access."],
+    title: "3. Design",
+    points: ["Create modern, user-friendly mockups."],
   },
   {
     id: 4,
-    title: "4. Wireframing",
-    points: ["Create low-fidelity blueprints of screens and flows."],
+    title: "4. Development",
+    points: ["Build responsive, scalable websites."],
   },
   {
     id: 5,
-    title: "5. Prototyping",
-    points: ["Develop interactive models to visualize user journeys."],
+    title: "5. Content Integration",
+    points: ["Add SEO-optimized content."],
   },
   {
     id: 6,
-    title: "6. UI Design",
-    points: [
-      "Add visual elements, color, and typography for aesthetic appeal.",
-    ],
+    title: "6. Testing",
+    points: ["Ensure compatibility across devices."],
   },
   {
     id: 7,
-    title: "7. Usability Testing",
-    points: ["Validate with real users and refine based on feedback."],
+    title: "7. Optimization",
+    points: ["Enhance speed and performance."],
   },
   {
     id: 8,
-    title: "8. Responsive Design",
-    points: ["Optimize experiences across devices and screen sizes."],
+    title: "8. Launch",
+    points: ["Deploy the site seamlessly."],
   },
   {
     id: 9,
-    title: "9. Iteration & Feedback Loops",
-    points: ["Continuously refine based on analytics."],
+    title: "9. Training",
+    points: ["Equip your team for site management."],
   },
   {
     id: 10,
-    title: "10. Launch & Support",
-    points: ["Deploy final designs and provide post-launch support."],
+    title: "10. Maintenance",
+    points: ["Provide ongoing updates and support."],
   },
 ];
 
@@ -135,7 +133,7 @@ const motives1 = [
 ];
 
 function HeroServicePage() {
-   const fadeUp = (d = 0) => ({
+  const fadeUp = (d = 0) => ({
     initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
     transition: { duration: 0.6, ease: "easeOut", delay: d },
@@ -340,127 +338,186 @@ function HeroServicePage() {
           </div>
         </div>
       </section>
-
-        <section className="section-container py-14 md:py-20">
-      {/* === CTA HERO === */}
-      <motion.div
-        initial={{ opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        className="relative overflow-hidden rounded-3xl bg-primary text-white"
-      >
-        {/* soft moving glow */}
+      <section className="section-container py-14 md:py-20">
+        {/* === CTA HERO === */}
         <motion.div
-          aria-hidden="true"
-          animate={{ x: ["-15%", "115%"] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-          className="pointer-events-none absolute -top-16 h-40 w-40 rounded-full bg-white/10 blur-3xl"
-        />
-        <div className="relative z-10 px-6 py-12 md:px-12 md:py-16 lg:px-16 lg:py-20">
-          <div className="max-w-3xl">
-            <motion.h2
-              {...fadeUp(0)}
-              className="text-3xl md:text-4xl lg:text-5xl font-primary font-bold leading-tight"
-            >
-              Ready to Transform Your Online Presence?
-            </motion.h2>
-
-            <motion.p
-              {...fadeUp(0.1)}
-              className="mt-4 md:mt-5 text-base md:text-lg lg:text-xl font-secondary text-white/90"
-            >
-              Contact <span className="font-semibold font-secondary">Ayatiworks</span> to build a
-              website that drives success!
-            </motion.p>
-
-            <motion.div
-              {...fadeUp(0.2)}
-              className="mt-8 flex flex-wrap items-center gap-3"
-            >
-              {/* Internal navigation -> Link */}
-              <Link
-                to="/contact-us"
-                aria-label="Contact Ayatiworks"
-                className="inline-flex font-primary items-center gap-2 rounded-full bg-white text-secondary px-5 py-3 text-lg md:text-2xl font-medium shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="relative overflow-hidden rounded-3xl bg-primary text-white"
+        >
+          {/* soft moving glow */}
+          <motion.div
+            aria-hidden="true"
+            animate={{ x: ["-15%", "115%"] }}
+            transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+            className="pointer-events-none absolute -top-16 h-40 w-40 rounded-full bg-white/10 blur-3xl"
+          />
+          <div className="relative z-10 px-6 py-12 md:px-12 md:py-16 lg:px-16 lg:py-20">
+            <div className="max-w-3xl">
+              <motion.h2
+                {...fadeUp(0)}
+                className="text-3xl md:text-4xl lg:text-5xl font-primary font-bold leading-tight"
               >
-                <PhoneCall className="h-5 w-5" />
-                Contact Us
-              </Link>
+                Ready to Transform Your Online Presence?
+              </motion.h2>
 
-              {/* External link -> keep <a> */}
+              <motion.p
+                {...fadeUp(0.1)}
+                className="mt-4 md:mt-5 text-base md:text-lg lg:text-xl font-secondary text-white/90"
+              >
+                Contact{" "}
+                <span className="font-semibold font-secondary">Ayatiworks</span>{" "}
+                to build a website that drives success!
+              </motion.p>
+
+              <motion.div
+                {...fadeUp(0.2)}
+                className="mt-8 flex flex-wrap items-center gap-3"
+              >
+                {/* Internal navigation -> Link */}
+                <Link
+                  to="/contact-us"
+                  aria-label="Contact Ayatiworks"
+                  className="inline-flex font-primary items-center gap-2 rounded-full bg-white text-secondary px-5 py-3 text-lg md:text-2xl font-medium shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl"
+                >
+                  <PhoneCall className="h-5 w-5" />
+                  Contact Us
+                </Link>
+
+                {/* External link -> keep <a> */}
+                <a
+                  href="https://ayatiworks.com/web-ecommerce/ecommerce-solutions"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Ecommerce Digital Marketing Service"
+                  className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur px-5 py-3 text-lg md:text-2xl font-primary font-medium text-white ring-1 ring-white/30 transition hover:bg-white/15 hover:-translate-y-0.5"
+                >
+                  <ShoppingBag className="h-6 w-6" />
+                  Ecommerce Marketing Service
+                </a>
+              </motion.div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* === OBJECTIVE BLOCK === */}
+        <div className="mt-14 md:mt-20">
+          <motion.h3
+            {...fadeUp(0)}
+            className="section-title font-primary font-medium text-left"
+          >
+            What is the Objective of a Website for Your Business?
+          </motion.h3>
+
+          <motion.div
+            {...fadeUp(0.1)}
+            className="mt-4 inline-flex items-center font-primary gap-2 rounded-xl border border-secondary/20 bg-secondary/5 px-4 py-2 text-secondary"
+          >
+            <ArrowRight className="h-4 w-4" />
+            <span className="text-lg md:text-xl">
+              Define your goal and let’s execute it.
+            </span>
+          </motion.div>
+        </div>
+
+        {/* === MINI CTA (ECOMMERCE) === */}
+        <motion.div
+          {...fadeUp(0.15)}
+          className="mt-10 rounded-2xl border border-secondary/20 bg-white p-6 md:p-8 shadow-sm"
+        >
+          <div className="flex flex-col lg:flex-row items-start lg:items-center gap-4 justify-between">
+            <div>
+              <h4 className="text-xl md:text-3xl font-primary font-medium text-secondary">
+                Launch Your Ecommerce Website Today!
+              </h4>
+              <p className="mt-1 font-secondary text-black/80">
+                Partner with Ayatiworks for a site that delivers results.
+              </p>
+            </div>
+
+            <div className="flex gap-3">
               <a
                 href="https://ayatiworks.com/web-ecommerce/ecommerce-solutions"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Ecommerce Digital Marketing Service"
-                className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur px-5 py-3 text-lg md:text-2xl font-primary font-medium text-white ring-1 ring-white/30 transition hover:bg-white/15 hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 text-lg md:text-2xl font-primary rounded-full bg-secondary px-5 py-3 text-white font-medium shadow-md hover:shadow-lg transition hover:-translate-y-0.5"
               >
-                <ShoppingBag className="h-6 w-6" />
-                Ecommerce Marketing Service
+                <ShoppingBag className="h-5 w-5" />
+                Explore Ecommerce Service
               </a>
-            </motion.div>
+
+              {/* Internal navigation -> Link */}
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-2 text-lg md:text-2xl font-primary rounded-full px-5 py-3 font-medium text-secondary ring-1 ring-secondary/40 bg-white hover:bg-secondary/5 transition hover:-translate-y-0.5"
+              >
+                <PhoneCall className="h-5 w-5" />
+                Talk to Us
+              </Link>
+            </div>
           </div>
-        </div>
-      </motion.div>
-
-      {/* === OBJECTIVE BLOCK === */}
-      <div className="mt-14 md:mt-20">
-        <motion.h3
-          {...fadeUp(0)}
-          className="section-title font-primary font-medium text-left"
-        >
-          What is the Objective of a Website for Your Business?
-        </motion.h3>
-
-        <motion.div
-          {...fadeUp(0.1)}
-          className="mt-4 inline-flex items-center font-primary gap-2 rounded-xl border border-secondary/20 bg-secondary/5 px-4 py-2 text-secondary"
-        >
-          <ArrowRight className="h-4 w-4" />
-          <span className="text-lg md:text-xl">Define your goal and let’s execute it.</span>
         </motion.div>
-      </div>
+      </section>
+      <section className="section-container py-12">
+        {/* Title */}
+        <div className="mb-12">
+          <motion.h2
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="section-title text-left "
+          >
+            <span className="mb-2 block">
+              Ayatiworks’ 10-Phase Digital Web Development Approach
+            </span>
 
-      {/* === MINI CTA (ECOMMERCE) === */}
-      <motion.div
-        {...fadeUp(0.15)}
-        className="mt-10 rounded-2xl border border-secondary/20 bg-white p-6 md:p-8 shadow-sm"
-      >
-        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-4 justify-between">
-          <div>
-            <h4 className="text-xl md:text-3xl font-primary font-medium text-secondary">
-              Launch Your Ecommerce Website Today!
-            </h4>
-            <p className="mt-1 font-secondary text-black/80">
-              Partner with Ayatiworks for a site that delivers results.
-            </p>
-          </div>
-
-          <div className="flex gap-3">
-            <a
-              href="https://ayatiworks.com/web-ecommerce/ecommerce-solutions"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-lg md:text-2xl font-primary rounded-full bg-secondary px-5 py-3 text-white font-medium shadow-md hover:shadow-lg transition hover:-translate-y-0.5"
-            >
-              <ShoppingBag className="h-5 w-5" />
-              Explore Ecommerce Service
-            </a>
-
-            {/* Internal navigation -> Link */}
-            <Link
-              to="/contact-us"
-              className="inline-flex items-center gap-2 text-lg md:text-2xl font-primary rounded-full px-5 py-3 font-medium text-secondary ring-1 ring-secondary/40 bg-white hover:bg-secondary/5 transition hover:-translate-y-0.5"
-            >
-              <PhoneCall className="h-5 w-5" />
-              Talk to Us
-            </Link>
-          </div>
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
+              className="bg-secondary h-1 w-40 sm:w-56 md:w-72 lg:w-[350px] mt-3 origin-left rounded-full"
+            />
+          </motion.h2>
         </div>
-      </motion.div>
-    </section>
+        <p className="text-base/7 sm:text-lg/8 md:text-lg/9 text-black/80 font-secondary font-medium mb-5">
+          Ayatiworks delivers strategic, user-centric web development, including
+          ecommerce website development in Chennai. Our 10-phase process ensures
+          tailored, high-impact websites that drive engagement and growth.
+        </p>
 
+        {/* Steps Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {steps.map((step) => (
+            <div
+              key={step.id}
+              className={`bg-white shadow-md border border-gray-200 p-6 rounded-md`}
+            >
+              {/* Step Title */}
+              <h3 className=" font-primary text-secondary font-medium text-2xl mb-4">
+                {step.title}
+              </h3>
+
+              {/* Step Points */}
+              <ul className="font-primary text-lg space-y-2 text-black/80">
+                {step.points.map((point, i) => (
+                  <li key={i}>{point}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+        <p className="text-base/7 sm:text-lg/8 md:text-lg/9 text-black/80 font-secondary font-medium mt-5">
+          Ayatiworks’ 10-phase process ensures seamless web development. We
+          analyze your needs, plan a strategic structure, and design engaging
+          mockups. Development uses modern tech, followed by SEO-optimized
+          content integration and rigorous testing. Optimization ensures fast
+          load times, and after a smooth launch, we provide training and ongoing
+          support to keep your site performing at its best.
+        </p>
+      </section>
       <section className="section-container py-12">
         <div className="mb-12">
           <motion.h2
@@ -471,7 +528,7 @@ function HeroServicePage() {
             className="section-title text-left "
           >
             <span className="mb-2 block">
-              Key Benefits of Good UX UI Design:
+              Facts and Figures: Benefits of Web Development
             </span>
 
             <motion.div
@@ -489,11 +546,9 @@ function HeroServicePage() {
 
           <div className="text-black/80 space-y-6">
             {[
-              "Higher customer engagement and retention",
-              "Reduced bounce rates and increased conversions",
-              "Clearer navigation and better user satisfaction",
-              "Improved accessibility across devices and platforms",
-              "Stronger brand positioning with consistent design language",
+              "Professional websites increase conversions by 50% (Forrester, 2025). ",
+              "A well-designed site boosts credibility, with 75% of users judging brands by their website (Stanford Web Credibility Research). ",
+              "Ayatiworks, a top web development company in Chennai, drives 20% more traffic through SEO and improves retention by 40% with intuitive designs, especially for ecommerce website development in Chennai.",
             ].map((text, i) => (
               <div key={i} className="space-y-2">
                 <div className="flex items-start gap-2">
@@ -504,11 +559,6 @@ function HeroServicePage() {
                 </div>
               </div>
             ))}
-            <p className="text-base/7 sm:text-lg/8 md:text-lg/9 text-black/80 font-secondary font-medium">
-              Investing in UX UI is not just about aesthetics; it’s about
-              creating digital experiences that convert casual users into loyal
-              customers.
-            </p>
           </div>
 
           {/* Right - Sticky Image */}
@@ -534,7 +584,7 @@ function HeroServicePage() {
             className="section-title text-left "
           >
             <span className="mb-2 block">
-              Why Choose Ayatiworks as Your UX UI Design Partner{" "}
+              What Does Web Development Involve?
             </span>
 
             <motion.div
@@ -553,7 +603,7 @@ function HeroServicePage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/service/inf-2.png"
+                src="/assets/service/aff-3.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />
@@ -561,204 +611,25 @@ function HeroServicePage() {
           </div>
 
           {/* Right - Sticky Image */}
-
           <div className="text-black/80 space-y-6">
-            <p className="text-base/7 sm:text-lg/8 md:text-lg/9 text-black/80 font-secondary font-medium">
-              At Ayatiworks, design is both art and science.{" "}
-            </p>
-            <motion.h2
-              initial={{ opacity: 0, y: -30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="font-primary text-2xl sm:text-3xl text-primary text-left "
-            >
-              Here’s why businesses trust us for UX UI design:
-            </motion.h2>
-            <ul className="space-y-4 text-black/80">
-              {motives2.map((motive) => (
-                <li key={motive.id} className="flex gap-4">
-                  {/* Icon */}
-                  <GoDotFill className="text-secondary text-2xl flex-shrink-0 mt-1" />
-
-                  {/* Content */}
-                  <div className="space-y-3">
-                    {/* Title + Subtitle */}
-                    <div className="space-y-1">
-                      <span className="text-2xl sm:text-3xl font-primary text-secondary block">
-                        {motive.title}
-                      </span>
-                    </div>
-
-                    {/* Case Studies */}
-                    <div className="space-y-2 pl-1">
-                      {motive.cases.map((caseText, i) => (
-                        <div
-                          key={i}
-                          className="flex items-start text-base sm:text-lg text-black/80 font-secondary font-medium leading-relaxed"
-                        >
-                          <span>{caseText}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </li>
-              ))}
-            </ul>
-            <p className="text-base/7 sm:text-lg/8 md:text-lg/9 text-black/80 font-secondary font-medium">
-              When you choose Ayatiworks, you’re not just hiring
-              designers—you’re partnering with strategic thinkers who combine
-              creativity with measurable business outcomes.
-            </p>
+            {[
+              "Web development includes front-end (user interface), back-end (server-side logic), and full-stack development. ",
+              "Ayatiworks excels in ecommerce website development in Chennai, using React, Node.js, Shopify, and WordPress for responsive, scalable sites. ",
+              "We integrate AI chatbots, PWAs, and headless CMS for seamless, modern experiences, ensuring brands engage audiences effectively.",
+            ].map((text, i) => (
+              <div key={i} className="space-y-2">
+                <div className="flex items-start gap-2">
+                  <GoDotFill className="text-primary text-lg mt-1 flex-shrink-0" />
+                  <p className="text-black/80 text-sm sm:text-base font-secondary md:text-lg leading-relaxed">
+                    {text}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
-      <section className="section-container py-12">
-        {/* Title */}
-        <div className="mb-12">
-          <motion.h2
-            initial={{ opacity: 0, y: -30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="section-title text-left "
-          >
-            <span className="mb-2 block">Our 10-Step UX UI Design Process</span>
 
-            <motion.div
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
-              className="bg-secondary h-1 w-40 sm:w-56 md:w-72 lg:w-[350px] mt-3 origin-left rounded-full"
-            />
-          </motion.h2>
-        </div>
-        <p className="text-base/7 sm:text-lg/8 md:text-lg/9 text-black/80 font-secondary font-medium mb-5">
-          Our structured 10-step process ensures every design decision is
-          purposeful. From discovery to launch, we create digital products that
-          blend creativity with usability, transforming user interactions into
-          seamless, enjoyable, and result-driven experiences.
-        </p>
-
-        {/* Steps Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {steps.map((step) => (
-            <div
-              key={step.id}
-              className={`bg-white shadow-md border border-gray-200 p-6 rounded-md`}
-            >
-              {/* Step Title */}
-              <h3 className=" font-primary text-secondary font-medium text-2xl mb-4">
-                {step.title}
-              </h3>
-
-              {/* Step Points */}
-              <ul className="font-primary text-lg space-y-2 text-black/80">
-                {step.points.map((point, i) => (
-                  <li key={i}>{point}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-        <p className="text-base/7 sm:text-lg/8 md:text-lg/9 text-black/80 font-secondary font-medium mt-5">
-          Design is never “done.” With Ayatiworks, you get a design partner who
-          constantly adapts, refines, and enhances your digital experiences to
-          keep you ahead in a competitive landscape.{" "}
-        </p>
-      </section>
-      <section className="section-container py-12">
-        <div className="mb-12">
-          <motion.h2
-            initial={{ opacity: 0, y: -30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="section-title text-left"
-          >
-            <span className="mb-2 block">
-              Benefits of UX UI Design for B2B, B2C & D2C Businesses
-            </span>
-
-            <motion.div
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
-              className="bg-secondary h-1 w-40 sm:w-56 md:w-72 lg:w-[350px] mt-3 origin-left rounded-full"
-            />
-          </motion.h2>
-        </div>
-
-        {/* ✅ Card Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* B2B */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="bg-white shadow-md hover:shadow-xl rounded-lg p-6 transition"
-          >
-            <h3 className="text-xl font-medium font-primary text-secondary mb-4">
-              B2B Brands
-            </h3>
-            <ul className="list-disc list-inside space-y-2 text-sm sm:text-base md:text-lg font-secondary leading-relaxed text-black/80">
-              <li>Simplified dashboards for SaaS & enterprise solutions</li>
-              <li>Increased adoption through intuitive design</li>
-              <li>Better data visualization for decision-making</li>
-            </ul>
-          </motion.div>
-
-          {/* B2C */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            viewport={{ once: true }}
-            className="bg-white shadow-md hover:shadow-xl rounded-lg p-6 transition"
-          >
-            <h3 className="text-xl font-medium font-primary text-secondary mb-4">
-              B2C Brands
-            </h3>
-            <ul className="list-disc list-inside space-y-2 text-sm sm:text-base md:text-lg font-secondary leading-relaxed text-black/80">
-              <li>Attractive designs that boost engagement</li>
-              <li>Frictionless checkout and onboarding flows</li>
-              <li>Higher retention through consistent user experience</li>
-            </ul>
-          </motion.div>
-
-          {/* D2C */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="bg-white shadow-md hover:shadow-xl rounded-lg p-6 transition"
-          >
-            <h3 className="text-xl font-medium font-primary text-secondary mb-4">
-              D2C Brands
-            </h3>
-            <ul className="list-disc list-inside space-y-2 text-sm sm:text-base md:text-lg font-secondary leading-relaxed text-black/80">
-              <li>E-commerce interfaces that drive impulse buying</li>
-              <li>Mobile-first design for seamless shopping</li>
-              <li>Customer trust through polished design consistency</li>
-            </ul>
-          </motion.div>
-        </div>
-
-        {/* ✅ Bottom Line */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="mt-10 text-center text-base sm:text-lg md:text-xl font-secondary leading-relaxed text-black/80 max-w-4xl mx-auto"
-        >
-          Whether it’s a corporate dashboard, an e-commerce app, or a
-          subscription-based service, UX UI design helps your business connect
-          with users, increase conversions, and stay ahead of competitors.
-        </motion.p>
-      </section>
       <AutoImageSlider />
       <section className="section-container py-12">
         <div className="mb-12">
@@ -770,7 +641,7 @@ function HeroServicePage() {
             className="section-title text-left"
           >
             <span className="mb-2 block">
-              Benefits of Partnering with Ayatiworks for UX UI Design
+              Why Work with Ayatiworks?
             </span>
 
             <motion.div
@@ -799,11 +670,10 @@ function HeroServicePage() {
           <div className="text-black/80 space-y-8">
             <ul className="space-y-6">
               {[
-                "Expert Design Team with cross-industry experience",
-                "Collaboration-Driven Process with real-time feedback loops",
-                "Scalable Design Systems that adapt as your business grows",
-                "Faster Time-to-Market with agile delivery cycles",
-                "Post-Launch Support to refine and optimize continuously",
+                "As a leading web development company in Chennai, Ayatiworks delivers websites that blend stunning design with robust functionality. ",
+                "Our past clients vouch for our ability to create platforms that make bold brand statements. ",
+                "We prioritize user immersion, seamless tech interfaces, and modern aesthetics to ensure your website is a powerful business tool.",
+                "We strongly believe development must be imbibed with long-term planning so that it will support the brand in the long run.",
               ].map((text, i) => (
                 <motion.li
                   key={i}
