@@ -24,7 +24,7 @@ export const NAV = [
     title: "About",
     items: [
       { label: "About", path: "/about-us" },
-      { label: "Teams", path: "/about-us/team" },
+      { label: "Teams", path: "/team" },
     ],
   },
   {
@@ -112,7 +112,7 @@ export const NAV = [
             label: "Shopify Development Services",
             path: "/web-ecommerce/shopify-development",
           },
-          { label: "E-commerce", path: "/web-ecommerce" },
+          { label: "E-commerce", path: "/e-commerce" },
         ],
       },
     ],

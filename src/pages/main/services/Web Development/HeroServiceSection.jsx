@@ -275,7 +275,7 @@ function HeroServicePage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/service/inf-2.png"
+                src="/assets/service/dev-1.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />
@@ -528,7 +528,7 @@ function HeroServicePage() {
             className="section-title text-left "
           >
             <span className="mb-2 block">
-              Facts and Figures: Benefits of Web Development
+              Facts and Figures: <br />Benefits of Web Development
             </span>
 
             <motion.div
@@ -566,7 +566,7 @@ function HeroServicePage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/service/aff-3.png"
+                src="/assets/service/dev-2.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />
@@ -603,7 +603,7 @@ function HeroServicePage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/service/aff-3.png"
+                src="/assets/service/dev-3.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />
@@ -659,7 +659,7 @@ function HeroServicePage() {
           <div className="hidden md:block">
             <div className="sticky top-20">
               <img
-                src="/assets/service/seo-3.png"
+                src="/assets/service/dev-4.png"
                 alt="Ayatiworks UX UI Design Benefits"
                 className="w-full h-auto mx-auto rounded-lg shadow-lg"
               />

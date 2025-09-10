@@ -77,6 +77,10 @@ const UXUIDesignServicesPage = lazy(() =>
 const WebDevelopmentServicesPage = lazy(() =>
   import("./pages/main/Services-WebDevelopmentPage")
 );
+const WebMaintenanceServicesPage = lazy(() =>
+  import("./pages/main/Services-WebMaintenancePage")
+);
+
 
 
 
@@ -113,7 +117,7 @@ function App() {
             <Route element={<PublicLayout />}>
               <Route path="/" element={<HomePage />} />
               <Route path="/about-us" element={<AboutUs />} />
-              <Route path="/about-us/team" element={<Teams />} />
+              <Route path="/team" element={<Teams />} />
               <Route path="/blogs" element={<Blog />} />
               <Route path="/contact-us" element={<ContactUs />} />
               <Route path="/awards" element={<AwardsPage />} />
@@ -189,6 +193,10 @@ function App() {
               <Route
                 path="/web-ecommerce/web-development"
                 element={<WebDevelopmentServicesPage />}
+              />
+              <Route
+                path="/web-ecommerce/web-maintenance"
+                element={<WebMaintenanceServicesPage />}
               />
               <Route path="/comingsoon" element={<ComingSoon />} />
 
