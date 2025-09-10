@@ -45,7 +45,7 @@ export default function HeroSectionLayout() {
           className="col-span-8 row-span-1 rounded-3xl overflow-hidden shadow"
         >
           <video
-            src="/assets/banner-02.mp4"
+            src="/assets/banner-01.mp4"
             autoPlay
             muted
             loop
@@ -93,7 +93,7 @@ export default function HeroSectionLayout() {
           className="col-span-4 row-span-1 rounded-3xl overflow-hidden shadow relative"
         >
           <video
-            src="/assets/banner-08.mp4"
+            src="/assets/banner-09.mp4"
             autoPlay
             muted
             loop
@@ -142,7 +142,7 @@ export default function HeroSectionLayout() {
           className="col-span-8 row-span-1 rounded-3xl overflow-hidden shadow relative"
         >
           <video
-            src="/assets/banner-01.mp4"
+            src="/assets/banner-02.mp4"
             autoPlay
             muted
             loop

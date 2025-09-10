@@ -80,7 +80,9 @@ const WebDevelopmentServicesPage = lazy(() =>
 const WebMaintenanceServicesPage = lazy(() =>
   import("./pages/main/Services-WebMaintenancePage")
 );
-
+const ShopifyServicesPage = lazy(() =>
+  import("./pages/main/Services-ShopifyPage")
+);
 
 
 
@@ -197,6 +199,10 @@ function App() {
               <Route
                 path="/web-ecommerce/web-maintenance"
                 element={<WebMaintenanceServicesPage />}
+              />
+              <Route
+                path="/web-ecommerce/shopify-development"
+                element={<ShopifyServicesPage />}
               />
               <Route path="/comingsoon" element={<ComingSoon />} />
 
