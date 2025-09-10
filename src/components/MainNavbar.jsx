@@ -174,7 +174,7 @@ function SimpleDropdown({ title, items, active, pathname, onSelect }) {
               "flex items-center gap-2 text-sm font-medium px-4 py-2 rounded-full transition",
               active || open
                 ? "bg-primary font-secondary text-white font-semibold hover:text-white hover:bg-primary shadow-lg"
-                : "text-black font-secondary bg-white font-semibold hover:bg-primary hover:text-white"
+                : "text-black font-secondary  font-semibold hover:bg-primary hover:text-white"
             )}
             aria-haspopup="menu"
             aria-expanded={open}
