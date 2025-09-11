@@ -9,170 +9,124 @@ const fadeInUp = {
 export default function HeroSectionLayoutExact() {
   return (
     <section className="bg-white py-10 pt-24">
-      {/* Outer container: fluid by default; locks to exact spec at 2xl */}
+      {/* Outer: 1440w x 600h, padding 15, gap 10 */}
       <div
         className="
           mx-auto
-          w-full
-          px-4
-          grid gap-3
-          /* Breakpoints */
-          md:grid-cols-2
-          xl:grid-cols-3
-          2xl:max-w-[1440px] 2xl:h-[600px]
-          2xl:grid-cols-[449px_492px_449px] 2xl:gap-[10px] 2xl:p-[15px]
+          max-w-[1440px] h-[600px]
+          grid grid-cols-[449px_492px_449px]
+          gap-[10px] p-[15px]
           rounded-3xl bg-white
         "
       >
-        {/* ===== TOP LEFT WIDE (spans 2 cols on md/xl, fixed on 2xl) ===== */}
+        {/* ========== TOP ROW ========== */}
+
+        {/* Top Left Wide: 951 x 185 (spans col 1-2) */}
         <motion.div
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.6 }}
-          className="
-            overflow-hidden rounded-3xl
-            aspect-[16/9]
-            md:col-span-2
-            xl:col-[1/3] 
-            2xl:aspect-auto 2xl:h-[185px] 2xl:col-[1/3]
-          "
+          className="col-[1/3] h-[185px] rounded-3xl overflow-hidden"
         >
           <video
             src="/assets/banner-01.mp4"
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="h-full w-full object-cover"
+            autoPlay muted loop playsInline
+            className="w-full h-full object-cover"
           />
         </motion.div>
 
-        {/* ===== TOP RIGHT ===== */}
+        {/* Top Right: 449 x 179 (col 3) */}
         <motion.div
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.6, delay: 0.05 }}
-          className="
-            overflow-hidden rounded-3xl
-            aspect-[16/10]
-            border border-gray-200
-            xl:col-[3/4]
-            2xl:aspect-auto 2xl:h-[179px]
-          "
+          className="col-[3/4] h-[179px] rounded-3xl overflow-hidden"
         >
           <img
             src="/assets/banner-14.jpg"
             alt="Top Right"
-            className="h-full w-full object-cover"
+            className="w-full h-full object-cover"
           />
         </motion.div>
 
-        {/* ===== MIDDLE LEFT ===== */}
+        {/* ========== MIDDLE ROW ========== */}
+
+        {/* Middle Left: 449 x 186 (col 1) */}
         <motion.div
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="
-            overflow-hidden rounded-3xl
-            aspect-[16/10]
-            xl:col-[1/2]
-            2xl:aspect-auto 2xl:h-[200px]
-          "
+          className="col-[1/2] h-[186px] rounded-3xl overflow-hidden"
         >
           <img
-            src="/assets/banner-17.jpg"
+            src="/assets/banner-18.jpg"
             alt="Middle Left"
-            className="h-full w-full object-cover"
+            className="w-full h-full object-cover"
           />
         </motion.div>
 
-        {/* ===== MIDDLE CENTER ===== */}
+        {/* Middle Center: 492 x 180 (col 2) */}
         <motion.div
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="
-            overflow-hidden rounded-3xl
-            aspect-[16/10]
-            xl:col-[2/3]
-            2xl:aspect-auto 2xl:h-[200px]
-          "
+          className="col-[2/3] h-[180px] rounded-3xl overflow-hidden"
         >
           <video
             src="/assets/banner-12.mp4"
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="h-full w-full object-cover"
+            autoPlay muted loop playsInline
+            className="w-full h-full object-cover"
           />
         </motion.div>
 
-        {/* ===== MIDDLE RIGHT ===== */}
+        {/* Middle Right: 449 x 186 (col 3) */}
         <motion.div
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="
-            overflow-hidden rounded-3xl
-            aspect-[16/10]
-            xl:col-[3/4]
-            2xl:aspect-auto 2xl:h-[200px]
-          "
+          className="col-[3/4] h-[186px] rounded-3xl overflow-hidden"
         >
           <img
-            src="/assets/banner-19.jpg"
+            src="/assets/banner-06.png"
             alt="Middle Right"
-            className="h-full w-full object-cover"
+            className="w-full h-full object-cover"
           />
         </motion.div>
 
-        {/* ===== BOTTOM LEFT ===== */}
+        {/* ========== BOTTOM ROW ========== */}
+
+        {/* Bottom Left: 449 x 179 (col 1) */}
         <motion.div
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.6, delay: 0.25 }}
-          className="
-            overflow-hidden rounded-3xl
-            aspect-[16/10]
-            xl:col-[1/2] border border-gray-200
-            2xl:aspect-auto 2xl:h-[184px]
-          "
+          className="col-[1/2] h-[179px] rounded-3xl overflow-hidden"
         >
           <img
             src="/assets/banner-16.jpg"
             alt="Bottom Left"
-            className="h-full w-full object-cover"
+            className="w-full h-full object-cover"
           />
         </motion.div>
 
-        {/* ===== BOTTOM RIGHT WIDE (spans 2 cols at md+, exact at 2xl) ===== */}
+        {/* Bottom Right Wide: 951 x 185 (spans col 2-3) */}
         <motion.div
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.6, delay: 0.35 }}
-          className="
-            overflow-hidden rounded-3xl
-            aspect-[16/9]
-            md:col-span-2
-            xl:col-[2/4]
-            2xl:aspect-auto 2xl:h-[185px] 
-          "
+          className="col-[2/4] h-[185px] rounded-3xl overflow-hidden"
         >
           <video
             src="/assets/banner-bottem-1.mp4"
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="h-full w-full object-cover"
+            autoPlay muted loop playsInline
+            className="w-full h-full object-cover"
           />
         </motion.div>
       </div>

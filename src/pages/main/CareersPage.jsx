@@ -4,6 +4,9 @@ import Connection from "./Home/Connection";
 import CareerSectionPage from "./Careers/CareerSectionPage";
 import JoinUsTimeline from "./Careers/JoinUsTimeline";
 import LetsConnectForm from "./Careers/LetsConnectForm";
+import LifeAtAyatiworks from "./Careers/LifeAtAyatiworks";
+import RolesMarquee from "./Careers/RolesMarquee";
+import CareersLastSection from "./Careers/CareersLastSection";
 
 const steps = [
     { title: "Impact Every Day", subtitle: "" },
@@ -19,6 +22,9 @@ function CareersPage() {
       <CareerSectionPage />
       <JoinUsTimeline steps={steps} />
       <LetsConnectForm />
+      <LifeAtAyatiworks />
+      <RolesMarquee />
+      <CareersLastSection />
       <Connection />
     </>
   );
