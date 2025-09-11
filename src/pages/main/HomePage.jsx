@@ -11,6 +11,11 @@ import DottedWorldMap from "./Home/MapLocation";
 import HomeGridSection from "./Home/HomeGrid";
 import Connection from "./Home/Connection";
 import HeroSectionLayout from "./Home/HeroSectionLayout";
+import AyatiAboutSection from "./Home/AyatiAboutSection";
+import CaasEdgeSection from "./Home/CaasEdgeSection";
+import BrandsMarquee from "./Home/BrandsMarquee";
+import FocusSection from "./Home/FocusSection";
+import BenefitsTimeline from "./Home/BenefitsTimeline";
 
 function HomePage() {
   return (
@@ -18,6 +23,11 @@ function HomePage() {
       <HeroSection />
       {/* <HeroSectionLayout /> */}
       <PromoHero />
+      <AyatiAboutSection />
+      <CaasEdgeSection />
+      <BrandsMarquee />
+      <FocusSection />
+      <BenefitsTimeline />
       {/* <WhatWeDo /> */}
       <WhatAyati />
       <PartnersInClimb />

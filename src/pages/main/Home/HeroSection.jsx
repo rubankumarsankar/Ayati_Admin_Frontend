@@ -63,7 +63,7 @@ export default function HeroSectionLayout() {
           className="col-span-4 row-span-1 rounded-3xl overflow-hidden shadow"
         >
           <img
-            src="/assets/banner-03.png"
+            src="/assets/banner-14.jpg"
             alt="Steel Rods"
             className="w-full h-full object-cover"
           />
@@ -78,7 +78,7 @@ export default function HeroSectionLayout() {
           className="col-span-4 row-span-1 rounded-3xl overflow-hidden shadow"
         >
           <img
-            src="/assets/banner-04.png"
+            src="/assets/banner-13.jpg"
             alt="Kid with helmet"
             className="w-full h-full object-cover"
           />
@@ -93,7 +93,7 @@ export default function HeroSectionLayout() {
           className="col-span-4 row-span-1 rounded-3xl overflow-hidden shadow relative"
         >
           <video
-            src="/assets/banner-09.mp4"
+            src="/assets/banner-12.mp4"
             autoPlay
             muted
             loop
