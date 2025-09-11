@@ -73,7 +73,7 @@ function HeroServicePage() {
             className="section-title text-left "
           >
             <span className="mb-2 block">
-              Ayatiworks – Best Influencer Marketing <br />
+              Ayatiworks - Best Influencer Marketing <br />
               Company in Chennai
             </span>
 

@@ -16,7 +16,7 @@ export default function AyatiAboutSection() {
         <div className="relative">
           <motion.h2 className="section-title text-left" {...fadeUp(0)}>
             <span className="mb-2 block">
-              Ayatiworks – Award-Winning Growth <br />
+              Ayatiworks - Award-Winning Growth <br />
               Architects Since 2017
             </span>
 

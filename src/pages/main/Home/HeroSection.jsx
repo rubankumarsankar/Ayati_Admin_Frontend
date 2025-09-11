@@ -1,48 +1,42 @@
-// import React from "react";
-// import videoSrc from "/assets/Ayati.mp4";
-
-// export default function HeroSection() {
-//   return (
-//     <section className="bg-white flex justify-center items-center min-h-[60vh] sm:min-h-[70vh] md:min-h-auto px-2 sm:px-2 md:px-4">
-//       <div className="w-full max-w-7xl mx-auto">
-//         <div className="rounded-2xl sm:rounded-3xl md:rounded-[40px] overflow-hidden shadow-lg">
-//           {/* ✅ Fully Responsive Rounded Video */}
-//           <video
-//             className="w-full h-auto object-cover"
-//             autoPlay
-//             loop
-//             muted
-//             playsInline
-//           >
-//             <source src={videoSrc} type="video/mp4" />
-//           </video>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
 import React from "react";
 import { motion } from "framer-motion";
 
 const fadeInUp = {
-  hidden: { opacity: 0, y: 40 },
+  hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0 },
 };
 
-export default function HeroSectionLayout() {
+export default function HeroSectionLayoutExact() {
   return (
-    <section className="bg-white py-8">
-      {/* 🔹 Outer container (max width 1440, height 600) */}
-      <div className="mx-auto max-w-[1440px] h-[600px] grid grid-cols-12 grid-rows-3 gap-5 px-5">
-        
-        {/* ✅ Top Wide Video (946x180) */}
+    <section className="bg-white py-10 pt-24">
+      {/* Outer container: fluid by default; locks to exact spec at 2xl */}
+      <div
+        className="
+          mx-auto
+          w-full
+          px-4
+          grid gap-3
+          /* Breakpoints */
+          md:grid-cols-2
+          xl:grid-cols-3
+          2xl:max-w-[1440px] 2xl:h-[600px]
+          2xl:grid-cols-[449px_492px_449px] 2xl:gap-[10px] 2xl:p-[15px]
+          rounded-3xl bg-white
+        "
+      >
+        {/* ===== TOP LEFT WIDE (spans 2 cols on md/xl, fixed on 2xl) ===== */}
         <motion.div
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          transition={{ duration: 0.8 }}
-          className="col-span-8 row-span-1 rounded-3xl overflow-hidden shadow"
+          transition={{ duration: 0.6 }}
+          className="
+            overflow-hidden rounded-3xl
+            aspect-[16/9]
+            md:col-span-2
+            xl:col-[1/3] 
+            2xl:aspect-auto 2xl:h-[185px] 2xl:col-[1/3]
+          "
         >
           <video
             src="/assets/banner-01.mp4"
@@ -50,47 +44,63 @@ export default function HeroSectionLayout() {
             muted
             loop
             playsInline
-            className="w-full h-full object-cover"
+            className="h-full w-full object-cover"
           />
         </motion.div>
 
-        {/* ✅ Right Top Small (434x168) */}
+        {/* ===== TOP RIGHT ===== */}
         <motion.div
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          transition={{ duration: 0.8 }}
-          className="col-span-4 row-span-1 rounded-3xl overflow-hidden shadow"
+          transition={{ duration: 0.6, delay: 0.05 }}
+          className="
+            overflow-hidden rounded-3xl
+            aspect-[16/10]
+            border border-gray-200
+            xl:col-[3/4]
+            2xl:aspect-auto 2xl:h-[179px]
+          "
         >
           <img
             src="/assets/banner-14.jpg"
-            alt="Steel Rods"
-            className="w-full h-full object-cover"
+            alt="Top Right"
+            className="h-full w-full object-cover"
           />
         </motion.div>
 
-        {/* ✅ Left Middle Small (434x172) */}
+        {/* ===== MIDDLE LEFT ===== */}
         <motion.div
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          transition={{ duration: 0.8 }}
-          className="col-span-4 row-span-1 rounded-3xl overflow-hidden shadow"
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="
+            overflow-hidden rounded-3xl
+            aspect-[16/10]
+            xl:col-[1/2]
+            2xl:aspect-auto 2xl:h-[200px]
+          "
         >
           <img
-            src="/assets/banner-13.jpg"
-            alt="Kid with helmet"
-            className="w-full h-full object-cover"
+            src="/assets/banner-17.jpg"
+            alt="Middle Left"
+            className="h-full w-full object-cover"
           />
         </motion.div>
 
-        {/* ✅ Center Middle (492x168) */}
+        {/* ===== MIDDLE CENTER ===== */}
         <motion.div
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="col-span-4 row-span-1 rounded-3xl overflow-hidden shadow relative"
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="
+            overflow-hidden rounded-3xl
+            aspect-[16/10]
+            xl:col-[2/3]
+            2xl:aspect-auto 2xl:h-[200px]
+          "
         >
           <video
             src="/assets/banner-12.mp4"
@@ -98,56 +108,71 @@ export default function HeroSectionLayout() {
             muted
             loop
             playsInline
-            className="w-full h-full object-cover"
+            className="h-full w-full object-cover"
           />
-          
         </motion.div>
 
-        {/* ✅ Right Middle (434x172) */}
+        {/* ===== MIDDLE RIGHT ===== */}
         <motion.div
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="col-span-4 row-span-1 rounded-3xl overflow-hidden shadow"
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="
+            overflow-hidden rounded-3xl
+            aspect-[16/10]
+            xl:col-[3/4]
+            2xl:aspect-auto 2xl:h-[200px]
+          "
         >
           <img
-            src="/assets/banner-06.png"
-            alt="Pens"
-            className="w-full h-full object-cover"
+            src="/assets/banner-19.jpg"
+            alt="Middle Right"
+            className="h-full w-full object-cover"
           />
         </motion.div>
 
-        {/* ✅ Left Bottom (434x168) */}
+        {/* ===== BOTTOM LEFT ===== */}
         <motion.div
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="col-span-4 row-span-1 rounded-3xl overflow-hidden shadow"
+          transition={{ duration: 0.6, delay: 0.25 }}
+          className="
+            overflow-hidden rounded-3xl
+            aspect-[16/10]
+            xl:col-[1/2] border border-gray-200
+            2xl:aspect-auto 2xl:h-[184px]
+          "
         >
           <img
-            src="/assets/banner-05.png"
-            alt="Gadget"
-            className="w-full h-full object-cover"
+            src="/assets/banner-16.jpg"
+            alt="Bottom Left"
+            className="h-full w-full object-cover"
           />
         </motion.div>
 
-        {/* ✅ Right Bottom Wide (946x180) */}
+        {/* ===== BOTTOM RIGHT WIDE (spans 2 cols at md+, exact at 2xl) ===== */}
         <motion.div
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="col-span-8 row-span-1 rounded-3xl overflow-hidden shadow relative"
+          transition={{ duration: 0.6, delay: 0.35 }}
+          className="
+            overflow-hidden rounded-3xl
+            aspect-[16/9]
+            md:col-span-2
+            xl:col-[2/4]
+            2xl:aspect-auto 2xl:h-[185px] 
+          "
         >
           <video
-            src="/assets/banner-02.mp4"
+            src="/assets/banner-bottem-1.mp4"
             autoPlay
             muted
             loop
             playsInline
-            className="w-full h-full object-cover"
+            className="h-full w-full object-cover"
           />
         </motion.div>
       </div>

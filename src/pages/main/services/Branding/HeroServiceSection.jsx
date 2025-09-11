@@ -804,7 +804,7 @@ function HeroServicePage() {
           {/* Right: Image (sticky on md+) */}
           <div className="text-left">
             <h3 className="font-primary text-secondary font-semibold text-2xl md:text-3xl leading-snug">
-              Volvo Case Study – Driving Legacy into the Digital Age
+              Volvo Case Study - Driving Legacy into the Digital Age
             </h3>
 
             <p className="text-base sm:text-lg/8 md:text-lg/8 text-black/80 mt-4 font-secondary leading-relaxed">

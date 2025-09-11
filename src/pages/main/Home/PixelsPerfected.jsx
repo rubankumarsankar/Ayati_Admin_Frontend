@@ -14,7 +14,7 @@ export default function PixelsPerfected() {
     },
     {
       img: "/assets/volvo-car.png",
-      title: "The Wheels That Rolled In – Volvo",
+      title: "The Wheels That Rolled In - Volvo",
       sub: "Driven by legacy, powered by performance. Just like our campaigns.",
       desc: "Ayatiworks crafted high-impact digital campaigns for Volvo, blending sleek creatives with sharp performance strategies, resulting in maximum visibility, engagement, and brand recall across premium audience segments.",
       tags: ["Performance Campaign", "Social Media"],
@@ -22,7 +22,7 @@ export default function PixelsPerfected() {
     },
     {
       img: "/assets/apex-hands.png",
-      title: "The Steel Deal – Apex Dura TMT",
+      title: "The Steel Deal - Apex Dura TMT",
       sub: "Built for strength, branded for recall. A solid partnership in every sense.",
       desc: "As a 360° digital partner, we manage Apex Dura’s website, social media, creatives, and digital PR, building a durable digital foundation that matches the strength of their product.",
       tags: [],

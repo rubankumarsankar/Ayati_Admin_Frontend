@@ -27,7 +27,7 @@ export default function MainFooter() {
               Terms & Conditions
             </Link>
           </div>
-          <p className="text-gray-500 text-center font-secondary">Copyright © 2025 – All rights reserved</p>
+          <p className="text-gray-500 text-center font-secondary">Copyright © 2025 - All rights reserved</p>
         </div>
 
         {/* Right - Social Icons */}

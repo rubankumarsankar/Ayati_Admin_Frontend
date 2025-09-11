@@ -38,7 +38,7 @@ const faqs = [
   {
     question: "7. How quickly can a business see results?",
     answer:
-      "Timelines vary, but with optimized websites and marketing, businesses often see measurable traffic, leads, and sales within 3–6 months.",
+      "Timelines vary, but with optimized websites and marketing, businesses often see measurable traffic, leads, and sales within 3-6 months.",
   },
 ];
 

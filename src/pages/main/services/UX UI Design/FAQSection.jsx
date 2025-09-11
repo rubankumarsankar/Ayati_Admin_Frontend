@@ -17,7 +17,7 @@ const faqs = [
   {
     question: "3. How long does it take to complete a UX UI project?",
     answer:
-      "Timelines vary by complexity, typically ranging from 4–12 weeks. Smaller projects may be completed sooner, while larger enterprise solutions may take longer.",
+      "Timelines vary by complexity, typically ranging from 4-12 weeks. Smaller projects may be completed sooner, while larger enterprise solutions may take longer.",
   },
   {
     question: "4. What tools are commonly used in UX UI design?",

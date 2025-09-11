@@ -27,7 +27,7 @@ function SEOBlogPage() {
           {/* Paragraph */}
           <p className="text-black/80 font-secondary font-medium  text-center text-base sm:text-lg leading-relaxed">
             When you use a search engine like Google to search for something
-            that you need; for example, you want a picture book of the classic –
+            that you need; for example, you want a picture book of the classic -
             “My Fair Lady” - Google displays many e-commerce websites who sell
             this picture book for you to make a choice.
           </p>
@@ -43,7 +43,7 @@ function SEOBlogPage() {
             className="section-title text-left"
           >
             <span className="mb-2 block">
-              SEARCH Query – Cheap My Fair Lady Picture Book
+              SEARCH Query - Cheap My Fair Lady Picture Book
             </span>
             {/* Decorative line */}
             <motion.div
@@ -94,7 +94,7 @@ function SEOBlogPage() {
             The process of bringing these e-commerce book companies in front you
             to match your search intention is called Search Engine Optimization.{" "}
             <br />
-            These companies don’t come up just because they have a website –
+            These companies don’t come up just because they have a website -
             they show up to you because they are Search Engine Optimized.
           </p>
 

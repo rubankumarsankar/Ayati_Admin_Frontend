@@ -63,8 +63,8 @@ const steps = [
 const motives = [
   {
     id: 1,
-    title: "Motive – 1",
-    subtitle: "We Speak “ROI” – Not Just SEO Jargon",
+    title: "Motive - 1",
+    subtitle: "We Speak “ROI” - Not Just SEO Jargon",
     cases: [
       "Case Study: A Chennai-based hospital saw 214% more appointment bookings in 6 months.",
       "Case Study: An e-commerce brand scaled organic revenue by ₹2.8 crore/year.",
@@ -72,7 +72,7 @@ const motives = [
   },
   {
     id: 2,
-    title: "Motive – 2",
+    title: "Motive - 2",
     subtitle: "We’re Chennai’s SEO Pioneers",
     cases: [
       "10+ years perfecting SEO in Chennai’s unique market.",
@@ -81,8 +81,8 @@ const motives = [
   },
   {
     id: 3,
-    title: "Motive – 3",
-    subtitle: "Adapt or Die – We Master Trends",
+    title: "Motive - 3",
+    subtitle: "Adapt or Die - We Master Trends",
     cases: [
       "2025 Focus: AI-driven content optimization, Core Web Vitals, E-E-A-T (Expertise, Experience, Authoritativeness, Trust).",
       "Voice Search Ready: “Alexa, find the best SEO agency near me.”",
@@ -209,8 +209,8 @@ function HeroServicePage() {
               Now that you have landed on our highly optimized SEO Services
               Page,
               <br /> What Next? <br />
-              Speak Ayati’s Language – The Next is Now! <br />
-              Let’s show you what we have shown our existing clients –{" "}
+              Speak Ayati’s Language - The Next is Now! <br />
+              Let’s show you what we have shown our existing clients -{" "}
               <span className="text-secondary font-medium">
                 GROWTH! REVENUE! BUSINESS!
               </span>
@@ -220,7 +220,7 @@ function HeroServicePage() {
               found us, next is to discuss further your business objectives,
               before that you need to know why you must work with{" "}
               <span className="text-secondary font-semibold">
-                AI – Ayati Innovators
+                AI - Ayati Innovators
               </span>
               .
             </p>
@@ -295,7 +295,7 @@ function HeroServicePage() {
                   <span className="text-primary text-xl sm:text-2xl flex-shrink-0">
                     <FaRegDotCircle />
                   </span>
-                  Let’s get comfortable – Rapport isn’t built overnight; we earn
+                  Let’s get comfortable - Rapport isn’t built overnight; we earn
                   our clients because we learn them inside out to ensure we
                   think like them to serve their target audience.
                 </p>
@@ -560,7 +560,7 @@ function HeroServicePage() {
               You definitely need a strong reason to team up with a digital
               marketing agency offering you SEO Services and the reason should
               be more than “the best SEO company in Chenni”. <br />
-              We are aware of what speaks! – Ayati's actions will!
+              We are aware of what speaks! - Ayati's actions will!
             </p>
             <p className="text-base sm:text-lg md:text-xl text-secondary font-secondary font-medium leading-relaxed">
               You should be motivated to do business with Ayatiworks because our
@@ -805,7 +805,7 @@ function HeroServicePage() {
 
             <p className="text-base/7 sm:text-lg/9 md:text-xl/9 text-black/80 font-secondary font-medium">
               A common question we get from almost all the clients who come to
-              us for SEO, “How long will it take to get ranked on Page – 1?”
+              us for SEO, “How long will it take to get ranked on Page - 1?”
             </p>
 
             <p className="text-base/8 sm:text-lg/8 md:text-xl/8 text-black/80 font-secondary font-medium">

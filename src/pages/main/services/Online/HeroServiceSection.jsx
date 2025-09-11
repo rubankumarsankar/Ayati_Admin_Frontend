@@ -513,7 +513,7 @@ function HeroServicePage() {
             className="section-title text-left "
           >
             <span className="mb-2 block">
-              Program & Process – Our 10-Step Card Model
+              Program & Process - Our 10-Step Card Model
             </span>
 
             <motion.div

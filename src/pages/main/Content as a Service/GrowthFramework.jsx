@@ -69,7 +69,7 @@ export default function CaaSFramework() {
         <img src="/assets/line-1.png" alt="wave line" className="w-full h-auto object-contain" />
       </div> */}
 
-      {/* Steps (1–5 or 6–10) */}
+      {/* Steps (1-5 or 6-10) */}
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         <AnimatePresence mode="wait">
           {!showSecond ? (

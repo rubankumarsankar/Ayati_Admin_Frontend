@@ -103,7 +103,7 @@ const steps = [
 const motives = [
   {
     id: 1,
-    title: "Motive – 1",
+    title: "Motive - 1",
     subtitle:
       "We Drive Sales—Not Just Likes. We create campaigns that turn engagement into real revenue :",
     cases: [
@@ -116,7 +116,7 @@ const motives = [
   },
   {
     id: 2,
-    title: "Motive – 2",
+    title: "Motive - 2",
     subtitle:
       "100% ROI-Driven Strategies. We don’t waste budget on random posts; we execute precision-targeted campaigns :",
     cases: [
@@ -129,7 +129,7 @@ const motives = [
   },
   {
     id: 3,
-    title: "Motive – 3",
+    title: "Motive - 3",
     subtitle:
       "Social Media Innovators. We understand the pulse of your brand’s digital audience :",
     cases: [
@@ -143,7 +143,7 @@ const motives = [
   },
   {
     id: 4,
-    title: "Motive – 4",
+    title: "Motive - 4",
     subtitle: "Mastering the Latest Social Media Trends",
     cases: [
       "YoY Focus: AI-Driven Social Marketing, Interactive Content, and Hyper-Personalization",
@@ -157,7 +157,7 @@ const motives = [
   },
   {
     id: 5,
-    title: "Motive – 5",
+    title: "Motive - 5",
     subtitle:
       "Engagement That Builds Brand Loyalty. We don’t just post, we create meaningful interactions.",
     cases: [

@@ -23,7 +23,7 @@ const faqs = [
   {
     question: "4. How much does it cost to hire an agency for branding?",
     answer:
-      "Branding services can range from $100–$300/hour or monthly retainers, depending on deliverables. One-time branding packages start from INR 50,000 onwards. Different agencies operate in different ways, however these are ballpark figures.",
+      "Branding services can range from $100-$300/hour or monthly retainers, depending on deliverables. One-time branding packages start from INR 50,000 onwards. Different agencies operate in different ways, however these are ballpark figures.",
   },
   {
     question: "5. How does Ayatiworks ensure my brand stands out in India?",

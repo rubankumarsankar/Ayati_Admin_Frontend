@@ -39,7 +39,7 @@ const faqs = [
   {
     question: "7. How soon can we expect results with Digital PR?",
     answer:
-      "While some placements are immediate, building consistent authority and recognition usually takes 3–6 months of strategic efforts.",
+      "While some placements are immediate, building consistent authority and recognition usually takes 3-6 months of strategic efforts.",
   },
 ];
 

@@ -13,7 +13,7 @@ const faqs = [
   {
     question: "2) How long until results are visible?",
     answer:
-      "Review health and response quality improve within weeks; SERP shaping and authority growth typically show in 8–12 weeks. Crisis control has immediate impact, followed by structured recovery.",
+      "Review health and response quality improve within weeks; SERP shaping and authority growth typically show in 8-12 weeks. Crisis control has immediate impact, followed by structured recovery.",
   },
   {
     question: "3) Can small teams run this effectively?",

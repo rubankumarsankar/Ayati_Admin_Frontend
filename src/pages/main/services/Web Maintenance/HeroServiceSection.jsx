@@ -110,7 +110,7 @@ const motives1 = [
   {
     id: 3,
     title: "Platform Agnostic",
-    cases: ["WordPress, Shopify, Magento, HTML/CSS – we handle them all."],
+    cases: ["WordPress, Shopify, Magento, HTML/CSS - we handle them all."],
   },
   {
     id: 4,
@@ -123,7 +123,7 @@ const motives1 = [
     id: 5,
     title: "Tailored Packages",
     cases: [
-      "On-demand, monthly, or yearly – our plans fit your budget and needs.",
+      "On-demand, monthly, or yearly - our plans fit your budget and needs.",
     ],
   },
   {
@@ -210,7 +210,7 @@ function HeroServicePage() {
                 your website?.
               </p>
               <p className="text-base/7 sm:text-lg/8 md:text-lg/9 text-black/80 font-secondary font-medium">
-                If the answer is No – then think about the steps that you have
+                If the answer is No - then think about the steps that you have
                 taken to safeguard your website and keep it up to date for your
                 customers to enjoy seamless navigation.
               </p>

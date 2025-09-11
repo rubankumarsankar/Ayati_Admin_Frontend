@@ -23,7 +23,7 @@ const faqs = [
   {
     question: "4. How long does it take to see results with CAAS? ",
     answer:
-      " CAAS is a long-term investment. While SEO traction may take 3–6 months, the compounded value of brand trust, authority, and inbound leads grows steadily over time.",
+      " CAAS is a long-term investment. While SEO traction may take 3-6 months, the compounded value of brand trust, authority, and inbound leads grows steadily over time.",
   },
   {
     question: "5. Can CAAS work alongside paid marketing campaigns? ",

@@ -45,16 +45,16 @@ const steps1 = [
   },
 ];
 const Phase = [
-  "Phase 1 – Discovery Call & Brand Persona Study",
-  "Phase 2 – Audience Mapping & Competitor Analysis",
-  "Phase 3 – Content Pillars and Grid Planning",
-  "Phase 4 – Creative Design & Caption Crafting",
-  "Phase 5 – Influencer and Collaboration Strategy",
-  "Phase 6 – Reels, Storyboards & Video Content Creation",
-  "Phase 7 – Ad Setup: Targeting & Budget Allocation",
-  "Phase 8 – Calendar Publishing & Peak Hour Scheduling",
-  "Phase 9 – Weekly Reporting & Engagement Optimization",
-  "Phase 10 – Monthly Performance Review & Strategy Reset",
+  "Phase 1 - Discovery Call & Brand Persona Study",
+  "Phase 2 - Audience Mapping & Competitor Analysis",
+  "Phase 3 - Content Pillars and Grid Planning",
+  "Phase 4 - Creative Design & Caption Crafting",
+  "Phase 5 - Influencer and Collaboration Strategy",
+  "Phase 6 - Reels, Storyboards & Video Content Creation",
+  "Phase 7 - Ad Setup: Targeting & Budget Allocation",
+  "Phase 8 - Calendar Publishing & Peak Hour Scheduling",
+  "Phase 9 - Weekly Reporting & Engagement Optimization",
+  "Phase 10 - Monthly Performance Review & Strategy Reset",
 ];
 
 function HeroServicePage() {
@@ -528,27 +528,27 @@ function HeroServicePage() {
               {/* ✅ Title with Icon */}
               <p className="flex items-center gap-2 text-base sm:text-lg md:text-lg text-black/80 font-secondary">
                 <GoDotFill className="text-primary text-lg sm:text-xl md:text-xl" />
-                Full-Funnel Approach – From impressions to conversions, we cover
+                Full-Funnel Approach - From impressions to conversions, we cover
                 every step.
               </p>
               <p className="flex items-center gap-2 text-base sm:text-lg md:text-lg text-black/80 font-secondary">
                 <GoDotFill className="text-primary text-lg sm:text-xl md:text-xl" />
-                Creative + Data Synergy – Every campaign is powered by insights
+                Creative + Data Synergy - Every campaign is powered by insights
                 and creativity.
               </p>
               <p className="flex items-center gap-2 text-base sm:text-lg md:text-lg text-black/80 font-secondary">
                 <GoDotFill className="text-primary text-lg sm:text-xl md:text-xl" />
-                Global-Ready Campaigns – We understand audiences in India, UAE,
+                Global-Ready Campaigns - We understand audiences in India, UAE,
                 US, and more.
               </p>
               <p className="flex items-center gap-2 text-base sm:text-lg md:text-lg text-black/80 font-secondary">
                 <GoDotFill className="text-primary text-lg sm:text-xl md:text-xl" />
-                Dedicated Instagram Specialists – A team that lives and breathes
+                Dedicated Instagram Specialists - A team that lives and breathes
                 the algorithm.{" "}
               </p>
               <p className="flex items-center gap-2 text-base sm:text-lg md:text-lg text-black/80 font-secondary">
                 <GoDotFill className="text-primary text-lg sm:text-xl md:text-xl" />
-                Proven Track Record – Campaigns that convert, content that
+                Proven Track Record - Campaigns that convert, content that
                 clicks.{" "}
               </p>
             </div>

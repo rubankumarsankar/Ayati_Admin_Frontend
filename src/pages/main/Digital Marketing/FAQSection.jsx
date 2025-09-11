@@ -13,7 +13,7 @@ const faqs = [
   {
     question: "2. How soon will I see results?",
     answer:
-      "Paid ad campaigns can generate traffic instantly, while SEO and organic 	growth typically show strong, sustainable results within 3–6 months based 	on ongoing optimizations. ",
+      "Paid ad campaigns can generate traffic instantly, while SEO and organic 	growth typically show strong, sustainable results within 3-6 months based 	on ongoing optimizations. ",
   },
   {
     question: "3. What reporting do you provide?",

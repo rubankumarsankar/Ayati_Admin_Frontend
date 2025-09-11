@@ -24,7 +24,7 @@ const faqs = [
   {
     question: "4. How long before I see results from Instagram marketing? ",
     answer:
-      "Typically, initial traction can be seen in 4–6 weeks, but consistent engagement and growth are visible over 3 months.",
+      "Typically, initial traction can be seen in 4-6 weeks, but consistent engagement and growth are visible over 3 months.",
   },
   {
     question: "5. Do you also manage ad campaigns on Instagram? ",

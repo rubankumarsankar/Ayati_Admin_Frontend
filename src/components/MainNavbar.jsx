@@ -25,6 +25,7 @@ export const NAV = [
     items: [
       { label: "About", path: "/about-us" },
       { label: "Teams", path: "/team" },
+      { label: "Careers", path: "/careers" },
     ],
   },
   {

@@ -8,7 +8,7 @@ export default function CaseStudies() {
 
   const caseStudies = [
     {
-      title: "Automobile Excellence – Volvo",
+      title: "Automobile Excellence - Volvo",
       description:
         "Our collaboration with Volvo began over 3 years ago and continues to thrive. Together, we’ve elevated their brand presence across Chennai and Tamil Nadu, running hyper-local campaigns that strengthened engagement and dealership-level conversions.",
       image: "/assets/case-car.png",
@@ -22,14 +22,14 @@ export default function CaseStudies() {
       link: "#",
     },
     {
-      title: "Healthcare – Domestic & International Impact",
+      title: "Healthcare - Domestic & International Impact",
       description:
         "We’ve partnered with both domestic and international healthcare providers to enhance visibility and patient acquisition. From clinics in Chennai to global health brands in the USA & UAE, our campaigns improved keyword rankings and patient trust across markets.",
       image: "/assets/siva-hospital.png",
       link: "#",
     },
     {
-      title: "Technology & SaaS Expansion – Domestic & International",
+      title: "Technology & SaaS Expansion - Domestic & International",
       description:
         "A leading SaaS company Dataquel has collaborated with Ayatiworks from inception, ideation, execution and results. We have co-created a demand generation content framework to penetrate the market to generate 70% qualified traffic from the target audience in California.",
       image: "/assets/Tiger.png",

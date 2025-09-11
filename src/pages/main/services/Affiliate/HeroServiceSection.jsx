@@ -118,7 +118,7 @@ function HeroServicePage() {
             className="section-title text-left"
           >
             <span className="mb-2 block">
-              Affiliate Marketing Services by Ayatiworks – <br />
+              Affiliate Marketing Services by Ayatiworks - <br />
               Best Affiliate Marketing Agency in India
             </span>
             {/* Animated underline */}
