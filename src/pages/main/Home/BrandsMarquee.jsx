@@ -41,17 +41,15 @@ export default function BrandsMarquee() {
       {/* === Heading === */}
       <div className="mx-auto section-container">
         <motion.h2 className="section-title text-left" {...fadeUp(0)}>
-                    <span className="mb-2 block">
-                       Brands That Grew With Us
-                    </span>
-        
-                    <motion.div
-                      initial={{ scaleX: 0 }}
-                      whileInView={{ scaleX: 1 }}
-                      transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
-                      className="bg-secondary h-1 w-40 sm:w-56 md:w-72 lg:w-[350px] mt-3 origin-left rounded-full"
-                    />
-                  </motion.h2>
+          <span className="mb-2 block">Brands That Grew With Us</span>
+
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
+            className="bg-secondary h-1 w-40 sm:w-56 md:w-72 lg:w-[350px] mt-3 origin-left rounded-full"
+          />
+        </motion.h2>
       </div>
 
       {/* === Marquee Track === */}

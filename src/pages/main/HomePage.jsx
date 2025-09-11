@@ -15,7 +15,8 @@ import AyatiAboutSection from "./Home/AyatiAboutSection";
 import CaasEdgeSection from "./Home/CaasEdgeSection";
 import BrandsMarquee from "./Home/BrandsMarquee";
 import FocusSection from "./Home/FocusSection";
-import BenefitsTimeline from "./Home/BenefitsTimeline";
+import { BenefitsTimeline } from "./Home/BenefitsTimeline";
+import BenefitsFlow from "./Home/BenefitCard";
 
 function HomePage() {
   return (
@@ -28,6 +29,7 @@ function HomePage() {
       <BrandsMarquee />
       <FocusSection />
       <BenefitsTimeline />
+      {/* <BenefitsFlow /> */}
       {/* <WhatWeDo /> */}
       <WhatAyati />
       <PartnersInClimb />

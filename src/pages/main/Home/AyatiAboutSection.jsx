@@ -57,11 +57,11 @@ export default function AyatiAboutSection() {
               className="text-black/80 font-secondary text-lg leading-7"
               {...fadeUp(0.2)}
             >
-              We’re an award-winning digital marketing agency in Chennai trusted by
-              brands like Volvo, Nippo, Xiaomi, Herbale, and Tiger Foods. From
-              startups finding their voice to established players scaling new
-              markets, we make sure your brand isn’t just part of the conversation,
-              it leads it.
+              We’re an award-winning digital marketing agency in Chennai trusted
+              by brands like Volvo, Nippo, Xiaomi, Herbale, and Tiger Foods.
+              From startups finding their voice to established players scaling
+              new markets, we make sure your brand isn’t just part of the
+              conversation, it leads it.
             </motion.p>
           </div>
 

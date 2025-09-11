@@ -13,19 +13,19 @@ export default function CaasEdgeSection() {
   return (
     <section className="section bg-white">
       <div className="section-container mx-auto px-5">
-         {/* HEADLINE */}
-            <motion.h2 className="section-title text-left" {...fadeUp(0)}>
-              <span className="mb-2 block">
-                Our Edge: CaaS - Content as a Strategy
-              </span>
+        {/* HEADLINE */}
+        <motion.h2 className="section-title text-left" {...fadeUp(0)}>
+          <span className="mb-2 block">
+            Our Edge: CaaS - Content as a Strategy
+          </span>
 
-              <motion.div
-                initial={{ scaleX: 0 }}
-                whileInView={{ scaleX: 1 }}
-                transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
-                className="bg-secondary h-1 w-40 sm:w-56 md:w-72 lg:w-[350px] mt-3 origin-left rounded-full"
-              />
-            </motion.h2>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
+            className="bg-secondary h-1 w-40 sm:w-56 md:w-72 lg:w-[350px] mt-3 origin-left rounded-full"
+          />
+        </motion.h2>
         {/* Grid: 3 cols image (left) / 9 cols content (right) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 py-10">
           {/* LEFT: Image (3 cols) */}
@@ -48,8 +48,6 @@ export default function CaasEdgeSection() {
 
           {/* RIGHT: Content (9 cols) */}
           <div className="lg:col-span-9">
-           
-
             {/* INTRO */}
             <motion.p
               {...fadeUp(0.05)}
