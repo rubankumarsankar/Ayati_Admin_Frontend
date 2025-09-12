@@ -26,7 +26,7 @@ const services = [
     icon: Social_Media,
     title: "Multilingual Marketing",
     desc: "Reach beyond language barriers with our multilingual content solutions. Whether Tamil, Hindi, or global languages, we craft culturally relevant campaigns, adapt messaging seamlessly, and ensure your brand connects authentically with local and international audiences across every touchpoint.",
-    path: "/content-as-a-service/multilingual-arketing",
+    path: "/content-as-a-service/multilingual-marketing",
   },
 ];
 // Animation Variants

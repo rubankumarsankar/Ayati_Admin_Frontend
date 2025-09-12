@@ -27,7 +27,7 @@ const services = [
     icon: Instagram,
     title: "Online Reputation & Media Outreach",
     desc: "Leverage Instagram’s power with data-driven strategies. From reels and influencer tie-ups to targeted advertising, our Instagram marketing experts in Chennai help brands gain visibility, engagement, and customer trust on this fast-growing platform.",
-    path: "/digital-pr/online-reputation-service",
+    path: "/digital-pr/online-reputation-media-outreach",
   },
 ];
 // Animation Variants

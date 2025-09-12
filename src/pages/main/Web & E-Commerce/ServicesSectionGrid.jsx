@@ -15,38 +15,32 @@ const services = [
     icon: Seo,
     title: "Custom Website Design & Development ",
     desc: "Mobile-first, responsive, SEO-optimized websites.",
-    path: "/web-ecommerce/website-service",
+    path: "/web-ecommerce/web-development",
 
   },
   {
     icon: Social_Media,
     title: "E-Commerce Development ",
     desc: "Scalable online stores built on Shopify, WooCommerce, Magento, and custom platforms.",
-    path: "/web-ecommerce/e-commerce-service",
+    path: "/web-ecommerce/ecommerce-solutions",
   },
   {
     icon: Mail,
     title: "UI/UX Design ",
     desc: "Intuitive interfaces that maximize engagement and conversions.",
-    path: "/web-ecommerce/ui-and-ux-service",
+    path: "/web-ecommerce/ux-ui-design",
   },
   {
     icon: Instagram,
-    title: "SEO-Integrated Development ",
-    desc: "Technical SEO, schema, and site speed baked into every build.",
-    path: "/web-ecommerce/seo-integrated-service",
-  },
-  {
-    icon: Digital_Media,
-    title: "Web Applications ",
-    desc: "SaaS platforms and custom business solutions designed to scale.",
-    path: "/web-ecommerce/web-application-service",
+    title: "Shopify Development ",
+    desc: "Shopify Success Engineered by Ayatiworks,Your Trusted Shopify Development Agency.",
+    path: "/web-ecommerce/shopify-development",
   },
   {
     icon: Media_Planning,
     title: "Maintenance & Support ",
     desc: "Continuous upgrades, security patches, and performance monitoring.",
-    path: "/web-ecommerce/maintenance-service",
+    path: "/web-ecommerce/web-maintenance",
   },
 ];
 // Animation Variants

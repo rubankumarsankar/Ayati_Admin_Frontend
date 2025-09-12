@@ -14,7 +14,7 @@ export default function CaseStudies() {
       description:
         "In just 72 hours, Ayatiworks transformed Jeep India’s Independence Day merchandising push into a high-octane success. With a rugged microsite redesign, patriotic creatives, and pure organic buzz, the campaign generated 16,666 likes, 3,000 comments, 420 reposts, 1,778 shares, 123 orders, and ₹240,375 in sales , all without paid ads.",
       image: "/assets/jeep.png",
-      link: "/case-studies/jeep-case-study",
+      link: "#",
     },
 
     {

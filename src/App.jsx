@@ -144,7 +144,7 @@ function App() {
               <Route path="/seo-simplified" element={<SEOBlogPage />} />
 
               <Route
-                path="/digital-marketing-service/seo"
+                path="/digital-marketing-service/seo-service"
                 element={<SeoServicesPage />}
               />
               <Route
