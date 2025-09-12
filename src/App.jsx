@@ -20,6 +20,7 @@ import ScrollProgressBar from "./components/ScrollProgressBar";
 import DigitalPRPage from "./pages/main/DigitalPRPage";
 import WebAndECommerce from "./pages/main/Web&E-Commerce";
 import ContactUs from "./pages/main/ContactUs";
+import JeepCaseStudy from "./pages/main/Case Study/JeepCaseStudy";
 
 // ✅ Lazy-loaded Public Pages
 const NotFound = lazy(() => import("./components/NotFound"));
@@ -129,6 +130,7 @@ function App() {
               <Route path="/contact-us" element={<ContactUs />} />
               <Route path="/awards" element={<AwardsPage />} />
               <Route path="/case-studies" element={<CaseStudiesPage />} />
+              <Route path="/case-studies/jeep-case-study" element={<JeepCaseStudy />} />
               <Route
                 path="/digital-marketing-service"
                 element={<DigitalMarketingPage />}

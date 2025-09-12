@@ -10,7 +10,7 @@ export default function PixelsPerfected() {
       sub: "",
       desc: "Discover how Ayatiworks transformed Jeep India’s Independence Day merchandise microsite—revamped UI/UX, catchy creatives, and a 3-day social sprint that translated likes into ₹240K+ in sales.",
       tags: [],
-      cta: { label: "Read Case Study", path: "/case-studies/jeep-india" },
+      cta: { label: "Read Case Study", path: "/case-studies/jeep-case-study" },
     },
     {
       img: "/assets/volvo-car.png",

@@ -2,6 +2,7 @@ import React from "react";
 import TVImage from "/assets/tv-utsah.png";
 import FadeInWhenVisible from "../../../components/FadeInWhenVisible";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function PromoHero() {
   return (
@@ -11,24 +12,25 @@ export default function PromoHero() {
         <div className="bg-primary text-white rounded-xl px-4 sm:px-6 md:px-10 py-6 sm:py-8 flex flex-col md:flex-row items-center justify-between gap-4 section-container">
           <div className="text-center md:text-left text-lg sm:text-xl md:text-2xl lg:text-4xl leading-snug">
             <p className="font-primary font-medium leading-normal p-2 sm:p-4">
-              Learn what agencies do daily — run ads,{" "}
+              Clicks & Quirks. Growth That Works.{" "}
               <br className="hidden sm:block" />
-              scale brands, and get certified in just
-              <span className="text-secondary bg-white font-primary font-medium ml-2 px-2 py-0.5 rounded-md">
+              Turn Clicks into Pure Brand Alchemy.
+              {/* <span className="text-secondary bg-white font-primary font-medium ml-2 px-2 py-0.5 rounded-md">
                 30 days!
-              </span>
+              </span> */}
             </p>
           </div>
-          <a
-            href="#"
+          <Link
+            to="/contact-us"
             className="inline-block bg-secondary hover:bg-secondary/90 
-             font-secondary font-medium text-white 
+             font-primary font-medium text-white 
              px-4 sm:px-6 py-2.5 sm:py-3 rounded-full 
-             text-sm sm:text-base lg:text-lg
+             text-sm sm:text-lg lg:text-xl
              transition duration-300 ease-in-out shadow-md hover:shadow-lg"
+            aria-label="Contact Us"
           >
             CLICK HERE TO KNOW MORE
-          </a>
+          </Link>
         </div>
       </FadeInWhenVisible>
 
@@ -62,7 +64,7 @@ export default function PromoHero() {
       </FadeInWhenVisible>
 
       {/* ✅ Description */}
-      <FadeInWhenVisible delay={0.6}>
+      {/* <FadeInWhenVisible delay={0.6}>
         <div className="w-full max-w-5xl mt-8 sm:mt-10 mx-auto flex justify-center sm:text-left px-4">
           <p className="text-black/80 text-sm sm:text-base md:text-lg leading-relaxed font-secondary text-center sm:text-left">
             This year at Ayatiworks, we’re embracing Utsah—the enthusiasm and
@@ -81,15 +83,15 @@ export default function PromoHero() {
             Utsah! Let’s make it unforgettable!
           </h3>
         </div>
-      </FadeInWhenVisible>
+      </FadeInWhenVisible> */}
       {/* Divider */}
-      <motion.div
+      {/* <motion.div
         initial={{ scaleX: 0 }}
         whileInView={{ scaleX: 1 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
         viewport={{ once: true }}
         className="border-b border-primary h-1 mt-8 sm:mt-10 section-container"
-      ></motion.div>
+      ></motion.div> */}
     </section>
   );
 }

@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 export default function AwardsContensSection() {
   return (
     <section className="bg-white section-container ">
-
       {/* Bottom Section */}
       <div className="max-w-4xl mx-auto text-center mt-16">
         <motion.h2
@@ -40,7 +39,7 @@ export default function AwardsContensSection() {
           viewport={{ once: true }}
           className="section-title text-white text-center"
         >
-          <span className="mb-2 block">What These Awards Mean to Us</span>
+          <span className="mb-2 block">The Next Chapter </span>
 
           {/* Animated underline */}
           <motion.div
@@ -52,10 +51,10 @@ export default function AwardsContensSection() {
         </motion.h2>
 
         <p className="text-white font-secondary text-lg leading-relaxed max-w-3xl mx-auto mt-6">
-          For us, awards are not the finish line; they’re milestones in a much
-          larger journey. Each recognition fuels our drive to push boundaries,
-          explore new possibilities, and create even more value for the clients
-          who trust us.
+          The Next Chapter  Our story doesn’t stop here. With every project,
+          every partnership, and every success shared with our clients, we’re
+          building towards the next big recognition. Because at Ayatiworks, we
+          believe the NEXT IS NOW. 
         </p>
       </div>
     </section>

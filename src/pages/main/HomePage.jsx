@@ -26,9 +26,9 @@ function HomePage() {
       <PromoHero />
       <AyatiAboutSection />
       <CaasEdgeSection />
-      <BrandsMarquee />
-      <FocusSection />
-      <BenefitsTimeline />
+      {/* <BrandsMarquee /> */}
+      {/* <FocusSection /> */}
+      {/* <BenefitsTimeline /> */}
       {/* <BenefitsFlow /> */}
       {/* <WhatWeDo /> */}
       <WhatAyati />
@@ -37,7 +37,7 @@ function HomePage() {
       <PixelsPerfected />
       <DottedWorldMap />
       {/* <HomeGridSection /> */}
-      <AwardsSection />
+      {/* <AwardsSection /> */}
       <Connection />
     </>
   );

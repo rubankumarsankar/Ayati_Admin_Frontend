@@ -4,7 +4,7 @@ import HeroSection from "./Home/HeroSection";
 import PixelsPerfected from "./Home/PixelsPerfected";
 
 import Connection from "./Home/Connection";
-import CaseStudiesList from "./Awards/CaseStudiesList";
+import CaseStudiesList from "./Case Study/CaseStudiesList";
 
 function CaseStudiesPage() {
   return (

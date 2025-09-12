@@ -7,8 +7,16 @@ export default function CaseStudies() {
       description:
         "Our collaboration with Volvo began over 3 years ago and continues to thrive. Together, we’ve elevated their brand presence across Chennai and Tamil Nadu, running hyper-local campaigns that strengthened engagement and dealership-level conversions.",
       image: "/assets/case-car.png",
-      link: "#",
+      link: "/case-study/volvo",
     },
+    {
+      title: "Jeep India Independence Day Campaign",
+      description:
+        "In just 72 hours, Ayatiworks transformed Jeep India’s Independence Day merchandising push into a high-octane success. With a rugged microsite redesign, patriotic creatives, and pure organic buzz, the campaign generated 16,666 likes, 3,000 comments, 420 reposts, 1,778 shares, 123 orders, and ₹240,375 in sales—all without paid ads.",
+      image: "/assets/jeep.png",
+      link: "/case-studies/jeep-case-study",
+    },
+
     {
       title: "Retail & E-Commerce Growth",
       description:
@@ -107,17 +115,26 @@ export default function CaseStudies() {
                 <h3 className="text-2xl font-medium font-primary text-primary mb-3">
                   {study.title}
                 </h3>
-                <p className="text-gray-600 font-secondary text-sm flex-grow">
+                <p className="text-gray-600 font-secondary text-md flex-grow">
                   {study.description}
                 </p>
 
                 {/* Button */}
-                <a
+                <motion.a
                   href={study.link}
-                  className="mt-6 inline-block font-primary bg-primary text-white px-5 py-2 rounded-full text-sm font-medium shadow-md hover:bg-secondary transition self-start"
+                  className="mt-6 inline-block font-primary bg-primary text-white px-5 py-2 rounded-full text-lg font-medium shadow-md hover:bg-secondary transition self-center"
+                  initial={{ scale: 0.9, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  whileHover={{
+                    scale: 1.08,
+                    boxShadow: "0px 12px 25px rgba(0,0,0,0.15)",
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ duration: 0.3, ease: "easeOut" }}
+                  viewport={{ once: true }}
                 >
                   Read More
-                </a>
+                </motion.a>
               </div>
             </motion.div>
           ))}

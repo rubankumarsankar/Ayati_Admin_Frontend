@@ -21,15 +21,39 @@ export default function SolutionsSection() {
       icon: "/assets/good-vibe.png",
       basePath: "/digital-marketing-service",
       list: [
-        { label: "SEO Services", href: "/digital-marketing-service/seo-services" },
-        { label: "Social Media Marketing", href: "/digital-marketing-service/social-media-marketing" },
-        { label: "Email Marketing", href: "/digital-marketing-service/email-marketing" },
-        { label: "Instagram Marketing", href: "/digital-marketing-service/instagram-marketing" },
-        { label: "Affiliate Marketing", href: "/digital-marketing-service/affiliate-marketing" },
-        { label: "Programmatic Marketing", href: "/digital-marketing-service/programmatic-marketing" },
-        { label: "Video Marketing", href: "/digital-marketing-service/video-marketing" },
+        {
+          label: "SEO Services",
+          href: "/digital-marketing-service/seo-services",
+        },
+        {
+          label: "Social Media Marketing",
+          href: "/digital-marketing-service/social-media-marketing",
+        },
+        {
+          label: "Email Marketing",
+          href: "/digital-marketing-service/email-marketing",
+        },
+        {
+          label: "Instagram Marketing",
+          href: "/digital-marketing-service/instagram-marketing",
+        },
+        {
+          label: "Affiliate Marketing",
+          href: "/digital-marketing-service/affiliate-marketing",
+        },
+        {
+          label: "Programmatic Marketing",
+          href: "/digital-marketing-service/programmatic-marketing",
+        },
+        {
+          label: "Video Marketing",
+          href: "/digital-marketing-service/video-marketing",
+        },
       ],
-      cta: { label: "Explore Digital Marketing →", href: "/digital-marketing-service" },
+      cta: {
+        label: "Explore Digital Marketing →",
+        href: "/digital-marketing-service",
+      },
     },
     {
       cat: "",
@@ -37,11 +61,23 @@ export default function SolutionsSection() {
       icon: "/icon/01.png",
       basePath: "/content-as-a-service",
       list: [
-        { label: "Brand Consultant", href: "/content-as-a-service/brand-service" },
-        { label: "Video Creation", href: "/content-as-a-service/video-creation" },
-        { label: "Multi-lingual Marketing", href: "/content-as-a-service/multilingual-marketing" },
+        {
+          label: "Multi-lingual Marketing",
+          href: "/content-as-a-service/multilingual-marketing",
+        },
+        {
+          label: "Brand Consultant",
+          href: "/content-as-a-service/brand-service",
+        },
+        {
+          label: "Video Creation",
+          href: "/content-as-a-service/video-creation",
+        },
       ],
-      cta: { label: "Explore Content Services →", href: "/content-as-a-service" },
+      cta: {
+        label: "Explore Content Services →",
+        href: "/content-as-a-service",
+      },
     },
     {
       cat: "",
@@ -50,8 +86,14 @@ export default function SolutionsSection() {
       basePath: "/digital-pr",
       list: [
         { label: "Digital PR", href: "/digital-pr/digital-pr-service" },
-        { label: "Influencer Marketing", href: "/digital-pr/digital-pr/influencer-marketing" },
-        { label: "Online Reputation & Media Outreach", href: "/digital-pr/online-reputation-media-outreach" },
+        {
+          label: "Influencer Marketing",
+          href: "/digital-pr/digital-pr/influencer-marketing",
+        },
+        {
+          label: "Online Reputation & Media Outreach",
+          href: "/digital-pr/online-reputation-media-outreach",
+        },
       ],
       cta: { label: "Explore Digital PR →", href: "/digital-pr" },
     },
@@ -62,9 +104,18 @@ export default function SolutionsSection() {
       basePath: "/services/web-ecommerce",
       list: [
         { label: "UX/UI Design", href: "/web-ecommerce/ux-ui-design" },
-        { label: "Web Development Services", href: "/web-ecommerce/web-development" },
-        { label: "Web Maintenance Services", href: "/web-ecommerce/web-maintenance" },
-        { label: "Shopify Development Services", href: "/web-ecommerce/shopify-development" },
+        {
+          label: "Web Development Services",
+          href: "/web-ecommerce/web-development",
+        },
+        {
+          label: "Web Maintenance Services",
+          href: "/web-ecommerce/web-maintenance",
+        },
+        {
+          label: "Shopify Development Services",
+          href: "/web-ecommerce/shopify-development",
+        },
         { label: "E-commerce", href: "/web-ecommerce" },
       ],
       cta: { label: "Explore Web & E-commerce →", href: "/web-ecommerce" },
@@ -91,7 +142,7 @@ export default function SolutionsSection() {
           />
         </h3>
         <h3 className="text-secondary font-primary text-2xl sm:text-3xl lg:text-3xl text-center md:text-right">
-          360 Integrated Solutions
+          Fully Integrated Digital & Creative Agency
         </h3>
       </motion.div>
 
@@ -109,7 +160,9 @@ export default function SolutionsSection() {
             onClick={() => navigate(card.basePath)}
             role="button"
             tabIndex={0}
-            onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && navigate(card.basePath)}
+            onKeyDown={(e) =>
+              (e.key === "Enter" || e.key === " ") && navigate(card.basePath)
+            }
             className="relative flex flex-col bg-white p-8 rounded-2xl shadow-lg h-[480px] transition-all duration-300 cursor-pointer"
           >
             {/* Vertical Label (optional) */}
@@ -123,7 +176,9 @@ export default function SolutionsSection() {
 
             {/* Title + Icon */}
             <div className="flex items-center gap-3 mb-4">
-              <h3 className="font-primary text-secondary text-3xl flex-1">{card.title}</h3>
+              <h3 className="font-primary text-secondary text-3xl flex-1">
+                {card.title}
+              </h3>
               <img
                 src={card.icon}
                 alt={`${card.title} icon`}
@@ -142,7 +197,9 @@ export default function SolutionsSection() {
                 const label = typeof item === "string" ? item : item.label;
                 const href =
                   typeof item === "string"
-                    ? `${card.basePath}/${label.toLowerCase().replace(/[^a-z0-9]+/g, "-")}` // slugify fallback
+                    ? `${card.basePath}/${label
+                        .toLowerCase()
+                        .replace(/[^a-z0-9]+/g, "-")}` // slugify fallback
                     : item.href;
 
                 return (
