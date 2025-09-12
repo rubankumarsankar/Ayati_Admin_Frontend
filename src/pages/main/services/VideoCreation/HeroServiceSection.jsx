@@ -15,14 +15,14 @@ const steps = [
     id: 2,
     title: "Phase 2. Strategy",
     points: [
-      "Our team develops a creative roadmap—defining video style, tone, and purpose to ensure each project aligns with business goals.",
+      "Our team develops a creative roadmap , defining video style, tone, and purpose to ensure each project aligns with business goals.",
     ],
   },
   {
     id: 3,
     title: "Phase 3. Content Planning",
     points: [
-      "We plan concepts, shot lists, and production formats tailored to your campaign needs—be it explainer videos, brand films, or product showcases.",
+      "We plan concepts, shot lists, and production formats tailored to your campaign needs , be it explainer videos, brand films, or product showcases.",
     ],
   },
   {
@@ -95,7 +95,7 @@ const motives = [
     id: 3,
     title: "End-to-End Execution",
     cases: [
-      "From strategy and targeting to distribution and reporting—we handle it all under one roof.",
+      "From strategy and targeting to distribution and reporting , we handle it all under one roof.",
     ],
   },
   {
@@ -253,7 +253,7 @@ function HeroServicePage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/service/seo-3.png"
+                src="/assets/service/vid-1.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />
@@ -393,7 +393,7 @@ function HeroServicePage() {
           <div className="hidden md:block">
             <div className="sticky top-20">
               <img
-                src="/assets/service/brand-2.png"
+                src="/assets/service/vid-2.png"
                 alt="Volvo branding case study cover"
                 className="w-full h-auto mx-auto rounded-lg shadow-lg"
               />

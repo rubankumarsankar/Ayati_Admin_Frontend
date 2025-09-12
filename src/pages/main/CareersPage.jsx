@@ -22,7 +22,7 @@ function CareersPage() {
       <HeroSection />
       <CareerSectionPage />
       <JoinUsTimeline steps={steps} />
-      <LetsConnectForm />
+      {/* <LetsConnectForm /> */}
       <LifeAtAyatiworks />
       <PartnersInClimb />
 

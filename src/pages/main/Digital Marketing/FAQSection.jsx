@@ -33,7 +33,7 @@ const faqs = [
   {
     question: "6. Do you offer full-stack digital solutions?  ",
     answer:
-      "Yes! From strategy and content to technology—SEO, social media, performance ads, influencer marketing, web development, and maintenance, all are handled under one roof for seamless execution.",
+      "Yes! From strategy and content to technology , SEO, social media, performance ads, influencer marketing, web development, and maintenance, all are handled under one roof for seamless execution.",
   },
   {
     question: "7.	Do you offer ongoing after launching a campaign? ",

@@ -17,7 +17,7 @@ const benefits = [
   },
   {
     title: "Growth-First Mindset",
-    desc: "Every campaign is tied to real outcomes—building authority, driving engagement, and delivering long-term business growth.",
+    desc: "Every campaign is tied to real outcomes , building authority, driving engagement, and delivering long-term business growth.",
   },
 ];
 

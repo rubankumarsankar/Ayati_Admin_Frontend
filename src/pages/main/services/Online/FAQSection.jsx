@@ -18,7 +18,7 @@ const faqs = [
   {
     question: "3) Can small teams run this effectively?",
     answer:
-      "Yes. With playbooks, automation, and clear escalation paths, even lean teams can manage reputation well—focusing energy where human judgment matters most.",
+      "Yes. With playbooks, automation, and clear escalation paths, even lean teams can manage reputation well , focusing energy where human judgment matters most.",
   },
   {
     question: "4) What metrics should we track?",
@@ -43,7 +43,7 @@ const faqs = [
   {
     question: "8) Ready to Shape the Narrative?",
     answer:
-      "Reputation compounds. The earlier you invest in trust signals, the easier every downstream metric becomes—rankings, response rates, close rates, even hiring. If you’re ready to lead the conversation, let’s build a reputation engine that grows as fast as your ambitions. When trust is visible, everything accelerates—search clicks, media replies, partner confidence, and customer advocacy. Start where impact compounds fastest, then widen the circle, methodically, measurably, and with leadership that speaks before rumors do.",
+      "Reputation compounds. The earlier you invest in trust signals, the easier every downstream metric becomes , rankings, response rates, close rates, even hiring. If you’re ready to lead the conversation, let’s build a reputation engine that grows as fast as your ambitions. When trust is visible, everything accelerates , search clicks, media replies, partner confidence, and customer advocacy. Start where impact compounds fastest, then widen the circle, methodically, measurably, and with leadership that speaks before rumors do.",
   },
 ];
 

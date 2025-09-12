@@ -13,7 +13,7 @@ function AwardsPage() {
       <AwardsSectionPage />
       <AwardsMarqueeSection />
       <AwardsContensSection />
-      {/* <AwardsListSection /> */}
+      <AwardsListSection />
 
       <Connection />
     </>

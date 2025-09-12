@@ -15,7 +15,7 @@ export default function WhyCaasSection() {
         <div className="space-y-6 text-black/80 text-lg leading-relaxed">
           <p className="text-secondary">
             The way brands create content has changed dramatically. What worked
-            five years ago—a monthly campaign and a few social posts—is no
+            five years ago , a monthly campaign and a few social posts , is no
             longer enough. Today, content is the backbone of marketing, driving
             everything from brand awareness to lead generation and customer
             retention.
@@ -71,7 +71,7 @@ export default function WhyCaasSection() {
               Chennai and across Tamil Nadu
             </span>
             , where competition is fierce and audiences are diverse, CaaS is
-            more than just a convenience—it’s a{" "}
+            more than just a convenience , it’s a{" "}
             <span className="font-semibold text-primary">
               competitive advantage
             </span>

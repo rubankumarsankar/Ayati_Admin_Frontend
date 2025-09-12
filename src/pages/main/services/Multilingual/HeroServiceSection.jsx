@@ -174,7 +174,7 @@ function HeroServicePage() {
 
             <p className="text-sm sm:text-base md:text-lg font-secondary leading-relaxed">
               One country, 143 crore people, 121 languages, and over 19,500
-              mother tongues—a nation rich in linguistic diversity.
+              mother tongues , a nation rich in linguistic diversity.
             </p>
 
             <p className="text-sm sm:text-base md:text-lg font-secondary leading-relaxed">
@@ -185,7 +185,7 @@ function HeroServicePage() {
                 Ayatiworks
               </a>{" "}
               brings deep experience and expertise. Your brand’s voice can be
-              one, but it must reach audiences in their own dialects—we make
+              one, but it must reach audiences in their own dialects , we make
               that happen with flair.
             </p>
 
@@ -207,7 +207,7 @@ function HeroServicePage() {
                 Digital Marketing Consultants
               </a>{" "}
               across India and internationally, we deliver multilingual
-              strategies that are culturally relevant and impactful—driving
+              strategies that are culturally relevant and impactful , driving
               engagement and trust worldwide.
             </p>
 
@@ -285,7 +285,7 @@ function HeroServicePage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/service/seo-4.png"
+                src="/assets/service/mul-1.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />
@@ -457,7 +457,7 @@ function HeroServicePage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/service/seo-4.png"
+                src="/assets/service/mul-2.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />
@@ -494,7 +494,7 @@ function HeroServicePage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/service/brand-1.png"
+                src="/assets/service/mul-3.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />
@@ -710,7 +710,7 @@ function HeroServicePage() {
           <div className="hidden md:block">
             <div className="sticky top-20">
               <img
-                src="/assets/service/brand-5.png"
+                src="/assets/service/oni-5.png"
                 alt="Branding at Ayatiworks"
                 className="w-full h-auto mx-auto rounded-lg shadow-lg"
               />

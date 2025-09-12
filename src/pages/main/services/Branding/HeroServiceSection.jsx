@@ -550,7 +550,7 @@ function HeroServicePage() {
             >
               digital marketing
             </a>{" "}
-            to enhance your brand. We don’t just rely on this approach alone—our
+            to enhance your brand. We don’t just rely on this approach alone , our
             team uses many other proven strategies to ensure your brand reaches
             the right audience. This process is one of the frameworks that has
             consistently worked for our clients.
@@ -718,7 +718,7 @@ function HeroServicePage() {
                 Step 2: Strategy & Concept Development
               </p>
               <p className="text-sm sm:text-base md:text-lg font-secondary leading-relaxed text-black/80 pl-8">
-                We craft a brand roadmap—defining your essence, tone,
+                We craft a brand roadmap , defining your essence, tone,
                 positioning, and visual language. This strategic blueprint fuels
                 meaningful growth.
               </p>
@@ -746,7 +746,7 @@ function HeroServicePage() {
               <p className="text-sm sm:text-base md:text-lg font-secondary leading-relaxed text-black/80 pl-8">
                 We launch your brand across digital and physical platforms, then
                 continuously monitor, refine, and optimize based on real-world
-                data—maximizing impact.
+                data , maximizing impact.
               </p>
             </div>
           </div>
@@ -809,7 +809,7 @@ function HeroServicePage() {
 
             <p className="text-base sm:text-lg/8 md:text-lg/8 text-black/80 mt-4 font-secondary leading-relaxed">
               In 2022, Volvo engaged Ayatiworks to reinvigorate its branding for
-              the Indian market—blending global brand equity with regional
+              the Indian market , blending global brand equity with regional
               resonance.
             </p>
 
@@ -879,7 +879,7 @@ function HeroServicePage() {
             <p className="text-base sm:text-lg/8 md:text-lg/8 text-black/80 mt-8 font-secondary leading-relaxed">
               This case proves our belief: legacy brands can evolve with the
               right branding partner. Volvo’s story is now part of our own
-              3-year legacy of transformation—and still going strong.
+              3-year legacy of transformation , and still going strong.
             </p>
           </div>
         </article>
@@ -925,7 +925,7 @@ function HeroServicePage() {
               <div className="flex items-start gap-2 text-sm sm:text-base md:text-lg font-secondary leading-relaxed">
                 <GoDotFill className="text-primary text-xl shrink-0 mt-1" />
                 <span>
-                  Ayatiworks ensures your brand isn’t just seen—it's{" "}
+                  Ayatiworks ensures your brand isn’t just seen , it's{" "}
                   <strong>remembered, loved, and chosen</strong>.
                 </span>
               </div>

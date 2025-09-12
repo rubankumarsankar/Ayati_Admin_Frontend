@@ -338,7 +338,7 @@ function HeroServicePage() {
           of 2025. With a massive, mobile-first audience, Indian brands can: 
         </h3>
         <img
-          src="/assets/service/dummy.png"
+          src="/assets/service/inst-banner.png"
           alt="Email Service"
           className="w-full h-auto object-cover mb-2"
         />

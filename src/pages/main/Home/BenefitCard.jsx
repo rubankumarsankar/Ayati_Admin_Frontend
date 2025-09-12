@@ -152,7 +152,7 @@ export default function BenefitsFlow({ items = DEFAULT_ITEMS, title }) {
             />
           </svg>
 
-          {/* Cards — stacked on small screens; positioned from md+ */}
+          {/* Cards  ,  stacked on small screens; positioned from md+ */}
           <div className="grid grid-cols-1 gap-6 sm:gap-8 md:block">
             {/* 01 */}
             <div className="flex justify-center md:absolute md:left-[24px] md:top-[40px] lg:left-[40px] lg:top-[10px]">

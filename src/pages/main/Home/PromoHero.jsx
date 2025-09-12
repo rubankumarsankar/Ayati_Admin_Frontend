@@ -29,7 +29,7 @@ export default function PromoHero() {
              transition duration-300 ease-in-out shadow-md hover:shadow-lg"
             aria-label="Contact Us"
           >
-            CLICK HERE TO KNOW MORE
+            KNOW MORE
           </Link>
         </div>
       </FadeInWhenVisible>
@@ -67,7 +67,7 @@ export default function PromoHero() {
       {/* <FadeInWhenVisible delay={0.6}>
         <div className="w-full max-w-5xl mt-8 sm:mt-10 mx-auto flex justify-center sm:text-left px-4">
           <p className="text-black/80 text-sm sm:text-base md:text-lg leading-relaxed font-secondary text-center sm:text-left">
-            This year at Ayatiworks, we’re embracing Utsah—the enthusiasm and
+            This year at Ayatiworks, we’re embracing Utsah , the enthusiasm and
             energy that fuel everything we do. For us, Utsah means approaching
             every challenge with positivity, bringing fresh ideas to the table,
             and creating meaningful work that makes a difference. It’s about
@@ -79,7 +79,7 @@ export default function PromoHero() {
         </div>
         <div className="w-full max-w-5xl mt-8 sm:mt-10 mx-auto sm:text-left px-4">
           <h3 className="text-base sm:text-lg md:text-xl text-primary font-secondary text-center sm:text-left font-medium mt-6">
-            Here’s to a year of growth, creativity, and purpose—powered by
+            Here’s to a year of growth, creativity, and purpose , powered by
             Utsah! Let’s make it unforgettable!
           </h3>
         </div>

@@ -266,7 +266,7 @@ function HeroServicePage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/service/seo-3.png"
+                src="/assets/service/vid-1.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />

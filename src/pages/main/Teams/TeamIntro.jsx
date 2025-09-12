@@ -63,7 +63,7 @@ export default function TeamIntro() {
           clients! Whether it's sparking consumer conversations through brand
           marketing, launching online shopping sprees, building cool platforms
           for entertainment and finance, managing enterprise networks, or
-          supercharging performance— we’ve got it covered! Our secret sauce?
+          supercharging performance ,  we’ve got it covered! Our secret sauce?
           Practical, trustworthy, and dependable solutions that make your
           digital dreams a reality!
         </motion.p>

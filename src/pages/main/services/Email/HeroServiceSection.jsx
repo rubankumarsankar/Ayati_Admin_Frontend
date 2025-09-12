@@ -161,7 +161,7 @@ function HeroServicePage() {
             </h2>
             <p className="text-base sm:text-lg md:text-lg text-black/80 font-secondary font-medium leading-relaxed">
               We create segmented, personalized, and performance-focused
-              campaigns that keep your audience engaged—and buying. As a
+              campaigns that keep your audience engaged , and buying. As a
               results-first email marketing company, we help local businesses
               and global brands turn inboxes into sales channels with
               automation, analytics, and sharp strategy.
@@ -472,7 +472,7 @@ function HeroServicePage() {
               <p className="flex items-center gap-2 text-base sm:text-lg md:text-xl font-primary font-medium text-black/80">
                 <GoDotFill className="text-primary text-3xl" />
                 Once you’re clear on your X, we build the strategy to achieve
-                it—no gimmicks, just focused performance.
+                it , no gimmicks, just focused performance.
               </p>
             </div>
           </div>

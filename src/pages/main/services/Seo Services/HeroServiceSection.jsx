@@ -94,7 +94,7 @@ const motives = [
 const seoPoints = [
   {
     title: "Web Architecture",
-    text: "We architect a strategic framework that powers your website’s functionality, performance, and user experience. It involves how your site structure, design, and technical aspects work together to ensure seamless navigation, fast-loading speeds, and scalability. A well-planned web architecture boosts SEO, enhances user satisfaction, and delivers frictionless experiences—key factors in driving traffic from top-ranked search engines.",
+    text: "We architect a strategic framework that powers your website’s functionality, performance, and user experience. It involves how your site structure, design, and technical aspects work together to ensure seamless navigation, fast-loading speeds, and scalability. A well-planned web architecture boosts SEO, enhances user satisfaction, and delivers frictionless experiences , key factors in driving traffic from top-ranked search engines.",
   },
   {
     title: "Web Content SEO Optimized",
@@ -102,7 +102,7 @@ const seoPoints = [
   },
   {
     title: "Technical SEO",
-    text: "Technical SEO is the backbone of your website’s performance, ensuring search engines can crawl, index, and rank your pages effectively. It involves optimizations like faster site speed, secure connections (HTTPS), mobile-friendly design, structured data, and improved architecture. These elements collectively reduce bounce rates, cut about-section bottlenecks, fix crawl errors, and improve site rankings—resulting in greater reach, higher traffic, and conversions.",
+    text: "Technical SEO is the backbone of your website’s performance, ensuring search engines can crawl, index, and rank your pages effectively. It involves optimizations like faster site speed, secure connections (HTTPS), mobile-friendly design, structured data, and improved architecture. These elements collectively reduce bounce rates, cut about-section bottlenecks, fix crawl errors, and improve site rankings , resulting in greater reach, higher traffic, and conversions.",
   },
   {
     title: "On-Page Optimization",

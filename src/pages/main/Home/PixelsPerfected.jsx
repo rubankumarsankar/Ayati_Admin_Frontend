@@ -8,9 +8,9 @@ export default function PixelsPerfected() {
       title:
         "Digital Marketing for Automobile Brands | Jeep India Independence Day Merchandise by Ayatiworks",
       sub: "",
-      desc: "Discover how Ayatiworks transformed Jeep India’s Independence Day merchandise microsite—revamped UI/UX, catchy creatives, and a 3-day social sprint that translated likes into ₹240K+ in sales.",
+      desc: "Discover how Ayatiworks transformed Jeep India’s Independence Day merchandise microsite , revamped UI/UX, catchy creatives, and a 3-day social sprint that translated likes into ₹240K+ in sales.",
       tags: [],
-      cta: { label: "Read Case Study", path: "/case-studies/jeep-case-study" },
+      cta: { label: "Read Case Study", path: "#" },
     },
     {
       img: "/assets/volvo-car.png",
@@ -18,7 +18,7 @@ export default function PixelsPerfected() {
       sub: "Driven by legacy, powered by performance. Just like our campaigns.",
       desc: "Ayatiworks crafted high-impact digital campaigns for Volvo, blending sleek creatives with sharp performance strategies, resulting in maximum visibility, engagement, and brand recall across premium audience segments.",
       tags: ["Performance Campaign", "Social Media"],
-      cta: { label: "Read Case Study", path: "/case-studies/volvo" },
+      cta: { label: "Read Case Study", path: "#" },
     },
     {
       img: "/assets/apex-hands.png",
@@ -26,7 +26,7 @@ export default function PixelsPerfected() {
       sub: "Built for strength, branded for recall. A solid partnership in every sense.",
       desc: "As a 360° digital partner, we manage Apex Dura’s website, social media, creatives, and digital PR, building a durable digital foundation that matches the strength of their product.",
       tags: [],
-      cta: { label: "Read Case Study", path: "/case-studies/apex-dura" },
+      cta: { label: "Read Case Study", path: "#" },
     },
   ];
 
@@ -162,7 +162,7 @@ export default function PixelsPerfected() {
         ))}
 
         {/* Global CTA (See More) */}
-        <div className="flex justify-center mt-10">
+        {/* <div className="flex justify-center mt-10">
           <motion.a
             href="/case-studies"
             className="relative bg-secondary/90 hover:bg-secondary text-white font-primary text-lg md:text-xl font-medium py-3 px-10 rounded-full shadow-md hover:shadow-xl transition-all duration-300"
@@ -178,7 +178,7 @@ export default function PixelsPerfected() {
           >
             SEE MORE
           </motion.a>
-        </div>
+        </div> */}
       </div>
     </section>
   );

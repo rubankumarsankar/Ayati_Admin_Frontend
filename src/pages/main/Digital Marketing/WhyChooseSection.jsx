@@ -34,7 +34,7 @@ export default function WhyChooseSection() {
     },
     {
       title: "Trusted Partner",
-      desc: "We go beyond services—we become your digital growth partner with transparency and measurable results.",
+      desc: "We go beyond services , we become your digital growth partner with transparency and measurable results.",
       img: "/icon/04.png",
     },
   ];

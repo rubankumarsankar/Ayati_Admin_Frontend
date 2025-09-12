@@ -83,17 +83,17 @@ const items = [
   },
   {
     title: "Search Results Shaping (SERP Management)",
-    desc: "We strengthen owned and earned assets—site content, knowledge panels, profiles, and partner pages—so positive, high-authority pages dominate page one and push down unhelpful or outdated results.",
+    desc: "We strengthen owned and earned assets , site content, knowledge panels, profiles, and partner pages , so positive, high-authority pages dominate page one and push down unhelpful or outdated results.",
     icon: Search,
   },
   {
     title: "Crisis Preparedness & Response",
-    desc: "Playbooks, approvals, and spokesperson training before you need them; rapid messaging, triage, and media coordination if an incident occurs. Transparency first—then recovery and rebuild.",
+    desc: "Playbooks, approvals, and spokesperson training before you need them; rapid messaging, triage, and media coordination if an incident occurs. Transparency first , then recovery and rebuild.",
     icon: AlertTriangle,
   },
   {
     title: "Media Outreach & Earned Coverage",
-    desc: "Story mining, angle development, and targeted pitching. We secure articles, interviews, features, bylines, and podcast appearances—then amplify coverage across channels.",
+    desc: "Story mining, angle development, and targeted pitching. We secure articles, interviews, features, bylines, and podcast appearances , then amplify coverage across channels.",
     icon: Megaphone,
   },
   {
@@ -103,7 +103,7 @@ const items = [
   },
   {
     title: "Social Narrative Management",
-    desc: "Editorial calendars, issue mapping, and community management to keep the day-to-day narrative aligned with brand values—and ready to respond when conversations spike.",
+    desc: "Editorial calendars, issue mapping, and community management to keep the day-to-day narrative aligned with brand values , and ready to respond when conversations spike.",
     icon: MessageSquare,
   },
   {
@@ -113,7 +113,7 @@ const items = [
   },
   {
     title: "Media Asset Creation & Newsroom",
-    desc: "Journalist-ready assets, press kits, bios, fact sheets, data visuals, and b-roll—plus a fast, searchable newsroom so editors can verify details quickly and cover you accurately.",
+    desc: "Journalist-ready assets, press kits, bios, fact sheets, data visuals, and b-roll , plus a fast, searchable newsroom so editors can verify details quickly and cover you accurately.",
     icon: FileSpreadsheet,
   },
   {
@@ -472,7 +472,7 @@ function HeroServicePage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/service/aff-3.png"
+                src="/assets/service/oni-1.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />
@@ -482,7 +482,7 @@ function HeroServicePage() {
           {/* Right - Sticky Image */}
           <div className="text-black/80 space-y-6">
             {[
-              "Higher trust at every touchpoint — search, social, and media.",
+              "Higher trust at every touchpoint  ,  search, social, and media.",
               "Better rankings as authoritative coverage and reviews boost E-E-A-T signals.",
               "Faster sales cycles; fewer objections; improved win rates.",
               "Resilience during incidents due to prepared responses and clear ownership.",
@@ -576,7 +576,7 @@ function HeroServicePage() {
           {/* Left Content */}
           <div className="text-black/80 space-y-6">
             {[
-              "Dashboards track review velocity, star averages, SERP composition, share of voice, media placements, referral traffic, and assisted conversions. We interpret the “why” behind the charts—what triggered movement, what to double down on, and what to pause.",
+              "Dashboards track review velocity, star averages, SERP composition, share of voice, media placements, referral traffic, and assisted conversions. We interpret the “why” behind the charts , what triggered movement, what to double down on, and what to pause.",
               "Tooling may include brand mention trackers, review platforms, PR databases, newsroom distributions, and analytics suites. Reports are written in plain language with clear next steps, not just numbers.",
               "We align metrics to business outcomes for each model. B2B programs map media and reputation lifts to pipeline velocity, win rates, and deal size. B2C and D2C programs review health and share of voice to add-to-cart rate, repeat purchase, and lifetime value. For all, we annotate major events so that cause and effect are clear in hindsight.",
             ].map((text, i) => (
@@ -593,7 +593,7 @@ function HeroServicePage() {
           <div className="hidden md:block">
             <div className="sticky top-20">
               <img
-                src="/assets/service/aff-2.png"
+                src="/assets/service/oni-2.png"
                 alt="Search Engines Work"
                 className="w-full h-auto mx-auto rounded-lg shadow-lg"
               />
@@ -630,7 +630,7 @@ function HeroServicePage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/service/inf-2.png"
+                src="/assets/service/oni-3.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />
@@ -735,7 +735,7 @@ function HeroServicePage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/service/inf-2.png"
+                src="/assets/service/oni-4.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />

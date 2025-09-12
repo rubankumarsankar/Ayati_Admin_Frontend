@@ -186,7 +186,7 @@ const motives1 = [
     id: 4,
     title: "True Omnichannel: ",
     cases: [
-      "Display, native, video, CTV/OTT, audio, in-app, DOOH—planned as one journey.",
+      "Display, native, video, CTV/OTT, audio, in-app, DOOH , planned as one journey.",
     ],
   },
 ];
@@ -416,7 +416,7 @@ function HeroServicePage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/service/seo-3.png"
+                src="/assets/service/pro-1.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />
@@ -570,7 +570,7 @@ function HeroServicePage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/service/seo-2.png"
+                src="/assets/service/pro-2.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />
@@ -607,7 +607,7 @@ function HeroServicePage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/service/seo-4.png"
+                src="/assets/service/pro-3.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />
@@ -721,7 +721,7 @@ function HeroServicePage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/service/seo-4.png"
+                src="/assets/service/pro-4.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />
@@ -819,7 +819,7 @@ function HeroServicePage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/service/seo-4.png"
+                src="/assets/service/pro-5.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />
@@ -969,7 +969,7 @@ function HeroServicePage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/service/seo-4.png"
+                src="/assets/service/pro-6.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />
@@ -1004,7 +1004,7 @@ function HeroServicePage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/service/seo-4.png"
+                src="/assets/service/pro-7.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />
@@ -1107,7 +1107,7 @@ function HeroServicePage() {
             {/* ✅ Sticky works if parent (this div) doesn’t collapse */}
             <div className="sticky top-20">
               <img
-                src="/assets/service/seo-4.png"
+                src="/assets/service/pro-8.png"
                 alt="Search Engines Work"
                 className="w-full h-auto  mx-auto "
               />

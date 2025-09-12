@@ -44,7 +44,7 @@ export default function WhatWeDo() {
         {/* Right Side - Text */}
         <div className="md:w-1/2">
           <p className="text-black/80 text-base sm:text-lg leading-relaxed font-secondary">
-            This year at Ayatiworks, we’re embracing Utsah—the enthusiasm and
+            This year at Ayatiworks, we’re embracing Utsah , the enthusiasm and
             energy that fuel everything we do. For us, Utsah means approaching
             every challenge with positivity, bringing fresh ideas to the table,
             and creating meaningful work that makes a difference. It’s about

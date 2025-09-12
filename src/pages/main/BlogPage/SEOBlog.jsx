@@ -896,7 +896,7 @@ function SEOBlogPage() {
                   <span className="text-primary text-xl sm:text-2xl">• </span>
                   Lifelong Learning is the only way you can stay relevant in the
                   industry and create stunning results. Focus on the plan,
-                  progress, and acumen—when these align, the results will
+                  progress, and acumen , when these align, the results will
                   naturally follow.
                 </p>
               </div>

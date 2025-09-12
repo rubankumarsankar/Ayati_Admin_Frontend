@@ -308,7 +308,7 @@ export default function JeepCaseStudy() {
 
       {/* ===== Results ===== */}
       <div className="mx-auto w-full px-6 md:px-8 py-8 md:py-12 section-container">
-        <SectionTitle title="Results: Likes, Leads & Revenue—Fast" />
+        <SectionTitle title="Results: Likes, Leads & Revenue , Fast" />
         <div className="mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
           {results.map((r, i) => (
             <motion.div

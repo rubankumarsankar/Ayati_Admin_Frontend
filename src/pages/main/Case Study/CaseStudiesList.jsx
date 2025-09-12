@@ -7,12 +7,12 @@ export default function CaseStudies() {
       description:
         "Our collaboration with Volvo began over 3 years ago and continues to thrive. Together, we’ve elevated their brand presence across Chennai and Tamil Nadu, running hyper-local campaigns that strengthened engagement and dealership-level conversions.",
       image: "/assets/case-car.png",
-      link: "/case-study/volvo",
+      link: "#",
     },
     {
       title: "Jeep India Independence Day Campaign",
       description:
-        "In just 72 hours, Ayatiworks transformed Jeep India’s Independence Day merchandising push into a high-octane success. With a rugged microsite redesign, patriotic creatives, and pure organic buzz, the campaign generated 16,666 likes, 3,000 comments, 420 reposts, 1,778 shares, 123 orders, and ₹240,375 in sales—all without paid ads.",
+        "In just 72 hours, Ayatiworks transformed Jeep India’s Independence Day merchandising push into a high-octane success. With a rugged microsite redesign, patriotic creatives, and pure organic buzz, the campaign generated 16,666 likes, 3,000 comments, 420 reposts, 1,778 shares, 123 orders, and ₹240,375 in sales , all without paid ads.",
       image: "/assets/jeep.png",
       link: "/case-studies/jeep-case-study",
     },

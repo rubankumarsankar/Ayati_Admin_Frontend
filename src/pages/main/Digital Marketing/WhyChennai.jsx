@@ -11,11 +11,11 @@ export default function WhyChennai() {
     },
     {
       title: "Targeted Online Advertising in Tamil Nadu",
-      text: "Instead of wasting ad budgets, we design ROI-driven campaigns that reach the right audience—whether it’s B2B decision-makers, millennials in Chennai, or D2C buyers across Tamil Nadu.",
+      text: "Instead of wasting ad budgets, we design ROI-driven campaigns that reach the right audience , whether it’s B2B decision-makers, millennials in Chennai, or D2C buyers across Tamil Nadu.",
     },
     {
       title: "Content That Converts",
-      text: "Our team crafts engaging blogs, social posts, and ad creatives tailored to the Chennai audience—ensuring maximum reach and conversion.",
+      text: "Our team crafts engaging blogs, social posts, and ad creatives tailored to the Chennai audience , ensuring maximum reach and conversion.",
     },
     {
       title: "Social Media Influence",

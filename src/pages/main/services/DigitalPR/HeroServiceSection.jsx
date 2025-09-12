@@ -152,7 +152,7 @@ const motives2 = [
     id: 3,
     title: "Digital Storytelling & Content PR",
     cases: [
-      "Every brand has a story worth telling. We craft engaging digital-first narratives—articles, press releases, videos—that resonate across platforms.",
+      "Every brand has a story worth telling. We craft engaging digital-first narratives , articles, press releases, videos , that resonate across platforms.",
     ],
   },
   {
@@ -312,7 +312,7 @@ function HeroServicePage() {
 
             <p className="text-sm sm:text-base md:text-lg font-secondary leading-relaxed">
               Digital PR weaves together storytelling, SEO, and reputation
-              management so your brand isn’t just another name online—it becomes
+              management so your brand isn’t just another name online , it becomes
               a trusted voice, a familiar presence, and a thought leader.
               Instead of just chasing clicks, Digital PR builds relationships,
               authority, and loyalty.

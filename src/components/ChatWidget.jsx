@@ -14,7 +14,7 @@ export default function ChatWidget({ endpoint = ASK_URL, title = "Ask Ayati" }) 
     {
       role: "assistant",
       content:
-        "Hi! 👋 Ask me anything — I can answer general questions or guide you to the right page on this website.",
+        "Hi! 👋 Ask me anything  ,  I can answer general questions or guide you to the right page on this website.",
     },
   ]);
   const [input, setInput] = useState("");
@@ -215,7 +215,7 @@ export default function ChatWidget({ endpoint = ASK_URL, title = "Ask Ayati" }) 
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={onKeyDown}
-              placeholder="Ask about anything — pricing, services, or even general knowledge!"
+              placeholder="Ask about anything  ,  pricing, services, or even general knowledge!"
               className="w-full resize-none rounded-xl border px-3 py-2 text-sm outline-none focus:ring"
             />
             <div className="flex justify-between items-center mt-2">

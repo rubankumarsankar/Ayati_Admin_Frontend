@@ -71,7 +71,7 @@ export default function HowWeDoIt() {
           clients! Whether it’s sparking consumer conversations through brand
           marketing, launching online shopping sprees, building cool platforms
           for entertainment and finance, managing enterprise networks, or
-          supercharging performance—we’ve got it covered! Our secret sauce?
+          supercharging performance , we’ve got it covered! Our secret sauce?
           Practical, trustworthy, and dependable solutions that make your
           digital dreams a reality!
         </motion.p>
@@ -98,7 +98,7 @@ export default function HowWeDoIt() {
           <p className="text-xl/9 font-secondary leading-relaxed flex-1">
             Our squad of social media strategists is here to whip up captivating
             content that speaks to your audience's heart! Need a campaign? We
-            can take it from spark to spotlight in less than 24 hours—faster
+            can take it from spark to spotlight in less than 24 hours , faster
             than you can say ‘viral sensation!’
           </p>
         </motion.div>

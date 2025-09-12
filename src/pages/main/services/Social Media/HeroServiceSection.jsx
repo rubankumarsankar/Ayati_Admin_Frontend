@@ -16,7 +16,7 @@ const steps = [
     ],
     subtitle1: "The Game Changing Action:",
     points1: [
-      `A Chennai-based Online Fashion Magazine had inconsistent branding across platforms. We optimized their bio, visuals, and content strategy—leading to a 40% increase in profile visits in just a month.`,
+      `A Chennai-based Online Fashion Magazine had inconsistent branding across platforms. We optimized their bio, visuals, and content strategy , leading to a 40% increase in profile visits in just a month.`,
     ],
   },
   {
@@ -26,7 +26,7 @@ const steps = [
     subtitle:
       "We don’t just post; we create content your audience wants to see :",
     points: [
-      "Audience Segmentation: Breaking down your customers into personas—B2B professionals, Gen Z shoppers, local buyers, habitual buyers etc.",
+      "Audience Segmentation: Breaking down your customers into personas , B2B professionals, Gen Z shoppers, local buyers, habitual buyers etc.",
       "Platform-Specific Approach: What works on Instagram won’t work on LinkedIn. We craft strategies for each platform. ",
       "Peak Posting Time Analysis: Using data to post when your audience is most active.",
     ],
@@ -71,7 +71,7 @@ const steps = [
     id: 5,
     title: "Step 5: Community Management & Real-Time Engagement",
     subtitle:
-      "We don’t just post and ghost—our team actively engages with your audience :",
+      "We don’t just post and ghost , our team actively engages with your audience :",
 
     points: [
       "Quick Response to DMs & Comments: Quicker & Appropriate replies = better brand trust & rapport.",
@@ -105,7 +105,7 @@ const motives = [
     id: 1,
     title: "Motive - 1",
     subtitle:
-      "We Drive Sales—Not Just Likes. We create campaigns that turn engagement into real revenue :",
+      "We Drive Sales , Not Just Likes. We create campaigns that turn engagement into real revenue :",
     cases: [
       "Case Study: A Chennai-based fashion brand increased online sales by 185% in 4 months after shifting to our targeted Instagram and Facebook ad strategy.",
       "Case Study: A local restaurant chain saw a 42% boost in footfall using hyper-local Instagram promotions and Instagram influencer partnerships.",
@@ -121,7 +121,7 @@ const motives = [
       "100% ROI-Driven Strategies. We don’t waste budget on random posts; we execute precision-targeted campaigns :",
     cases: [
       "Data Insight: Brands that leverage social media marketing see 89% higher conversion rates compared to those that don’t.",
-      "Fact: Video content drives 1200% more shares than text and images combined—we integrate video-first strategies for higher engagement.",
+      "Fact: Video content drives 1200% more shares than text and images combined , we integrate video-first strategies for higher engagement.",
     ],
     subhead: "Why are we different?",
     points:
@@ -174,7 +174,7 @@ const motives = [
 const seoPoints = [
   {
     title: "Web Architecture",
-    text: "We architect a strategic framework that powers your website’s functionality, performance, and user experience. It involves how your site structure, design, and technical aspects work together to ensure seamless navigation, fast-loading speeds, and scalability. A well-planned web architecture boosts SEO, enhances user satisfaction, and delivers frictionless experiences—key factors in driving traffic from top-ranked search engines.",
+    text: "We architect a strategic framework that powers your website’s functionality, performance, and user experience. It involves how your site structure, design, and technical aspects work together to ensure seamless navigation, fast-loading speeds, and scalability. A well-planned web architecture boosts SEO, enhances user satisfaction, and delivers frictionless experiences , key factors in driving traffic from top-ranked search engines.",
   },
   {
     title: "Web Content SEO Optimized",
@@ -182,7 +182,7 @@ const seoPoints = [
   },
   {
     title: "Technical SEO",
-    text: "Technical SEO is the backbone of your website’s performance, ensuring search engines can crawl, index, and rank your pages effectively. It involves optimizations like faster site speed, secure connections (HTTPS), mobile-friendly design, structured data, and improved architecture. These elements collectively reduce bounce rates, cut about-section bottlenecks, fix crawl errors, and improve site rankings—resulting in greater reach, higher traffic, and conversions.",
+    text: "Technical SEO is the backbone of your website’s performance, ensuring search engines can crawl, index, and rank your pages effectively. It involves optimizations like faster site speed, secure connections (HTTPS), mobile-friendly design, structured data, and improved architecture. These elements collectively reduce bounce rates, cut about-section bottlenecks, fix crawl errors, and improve site rankings , resulting in greater reach, higher traffic, and conversions.",
   },
   {
     title: "On-Page Optimization",

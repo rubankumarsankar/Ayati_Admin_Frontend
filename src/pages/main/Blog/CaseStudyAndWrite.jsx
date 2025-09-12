@@ -73,7 +73,7 @@ export default function CaseStudyAndWrite() {
               className="mt-4 text-base md:text-lg font-secondary leading-7 text-black/80"
             >
               Discover how Ayatiworks transformed Jeep India’s Independence Day
-              merchandise microsite—revamped UI/UX, catchy creatives, and a
+              merchandise microsite , revamped UI/UX, catchy creatives, and a
               3-day social sprint that translated likes into ₹240K+ in sales.
             </motion.p>
 

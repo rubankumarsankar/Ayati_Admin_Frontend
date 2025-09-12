@@ -90,7 +90,7 @@ export default function WhyPartner() {
       <div className="max-w-4xl mx-auto px-6 mt-10 text-black/80 text-base sm:text-lg font-secondary">
         <p>
           With Ayatiworks as your CaaS partner, you’re not just outsourcing
-          content — you’re investing in a scalable system that powers
+          content  ,  you’re investing in a scalable system that powers
           sustainable, long-term digital growth.
         </p>
       </div>

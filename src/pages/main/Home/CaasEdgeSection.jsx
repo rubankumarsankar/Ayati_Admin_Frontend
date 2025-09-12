@@ -1,7 +1,7 @@
 import React from "react";
 import { motion, useReducedMotion } from "framer-motion";
 
-/** Our Edge: CaaS — Content as a Strategy */
+/** Our Edge: CaaS  ,  Content as a Strategy */
 export default function CaasEdgeSection() {
   const prefersReducedMotion = useReducedMotion();
 
@@ -35,7 +35,7 @@ export default function CaasEdgeSection() {
 
         {/* Grid: Mobile 1 col, lg 12 col */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 py-8 sm:py-10">
-          {/* LEFT: Image — hidden on mobile/tablet */}
+          {/* LEFT: Image  ,  hidden on mobile/tablet */}
           <motion.div
             className="hidden lg:block lg:col-span-3"
             initial={prefersReducedMotion ? {} : { opacity: 0, x: -30 }}
