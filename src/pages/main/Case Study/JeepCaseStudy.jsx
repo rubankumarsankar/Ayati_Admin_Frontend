@@ -52,51 +52,49 @@ const objectives = [
   {
     icon: <LayoutDashboard className="h-5 w-5" />,
     title: "Elevate microsite UX",
-    text: "Intuitive, Jeep-worthy storefront—sturdy, smooth, and conversion-first.",
+    text: "Elevate microsite experience with intuitive, Jeep-worthy design",
   },
   {
     icon: <Palette className="h-5 w-5" />,
     title: "Freedom-driven creatives",
-    text: "Patriotic flair + persuasive copy engineered to convert.",
+    text: "Create irresistible creatives that combine patriotic flair with persuasive pull",
   },
   {
     icon: <Hash className="h-5 w-5" />,
     title: "Maximize social momentum",
-    text: "Activate Jeep community to spark organic reach & conversation.",
+    text: "Maximize social momentum, tapping into Jeep’s existing followers to spark organic conversations",
   },
   {
     icon: <TrendingUp className="h-5 w-5" />,
     title: "Convert buzz to orders",
-    text: "Turn interest into ₹ orders in a tight 72-hour window.",
+    text: "Convert social buzz into sales, turning interest into ₹ orders on the clock",
   },
 ];
 
 const strategy = [
   {
-    icon: <Target className="h-5 w-5" />,
-    title: "Tight timeline ops",
-    text: "Treated like a trail run—every decision needed grip, control, momentum.",
-  },
-  {
     icon: <LayoutDashboard className="h-5 w-5" />,
     title: "UI/UX Redesign",
-    text: "Smooth, rugged storefront; bold yet accessible; shopping feels like a composed off-road drive.",
+    text: "Built a smooth, rugged storefront, bold yet accessible, making shopping feel like a smooth off-road run.",
   },
   {
     icon: <Flag className="h-5 w-5" />,
     title: "Independence Day creatives",
-    text: "“Jeep Army” energy with urgency—20% off Jeep Army merch, 21% off regular gear.",
+    text: "Freedom-driven visuals tied into “Jeep Army” energy, with punchy, sales-friendly copy that resonated with patriotism and urgency. ",
     extras: [
-      "20% off Jeep Army",
-      "21% off regular gear",
-      "#JeepArmy",
-      "#Jeeplife",
+      "(Jeep India advertised 20% off on exclusive Jeep Army merchandise,",
+      "21% off on regular gear) Facebook Instagram.",
     ],
   },
   {
     icon: <Rocket className="h-5 w-5" />,
-    title: "Organic launchpad",
-    text: "Instagram, Facebook, and X—no paid ads, just real fans moving the needle.",
+    title: "Social Launchpad",
+    text: ": Leveraged hashtags like #JeepArmy and #Jeeplife, mobilizing real fans across Instagram, Facebook, and X to like, comment, repost, and tag, a communal fuel injection.",
+  },
+  {
+    icon: <ThumbsUp className="h-5 w-5" />,
+    title: "Organic Buzz Engine: ",
+    text: "No paid ads, just authentic engagement tapped through limited-time messages like “Freedom drives us forward,” turning audiences into advocates.",
   },
 ];
 
@@ -131,7 +129,7 @@ const whyItWorked = [
   {
     icon: <Users className="h-5 w-5" />,
     title: "Organic engine power",
-    text: "Mobilized the Jeep community—real fans beat ad spend.",
+    text: "Mobilized the Jeep community, real fans beat ad spend.",
   },
   {
     icon: <Type className="h-5 w-5" />,
@@ -208,13 +206,13 @@ export default function JeepCaseStudy() {
               <div>
                 <SectionTitle title="The Challenge" />
                 <p className="mt-4 font-secondary text-lg text-gray-700 leading-relaxed">
-                  Jeep India rolled into Ayatiworks with a mission: overhaul the
-                  merchandise microsite with a sharper, more stylish UI/UX and
-                  launch Independence Day creatives that don’t just wave the
-                  flag—they make wallets open. With only three days on the
-                  clock, expectations were riding high. Jeep wanted copy that
-                  was catchy and salesy, and Ayatiworks delivered—under
-                  pressure.
+                  Jeep India rolled into Ayatiworks with a mission: to overhaul
+                  their merchandise microsite with a sharper, more stylish UI/UX
+                  and roll out Independence Day creatives that don’t just wave
+                  the flag, they make wallets open. With only three days on the
+                  clock, expectations were riding high, Jeep wanted copy that
+                  was catchy and salesy, and Ayatiworks delivered with style
+                  under pressure.
                 </p>
               </div>
               <motion.div {...scaleIn(0.1)} className="relative">
@@ -232,6 +230,13 @@ export default function JeepCaseStudy() {
       {/* ===== Objective ===== */}
       <div className="mx-auto w-full px-6 md:px-8 py-8 md:py-12 section-container ">
         <SectionTitle title="The Objective" />
+        <motion.h3
+          {...fadeUp(0)}
+          className="section-title text-2xl text-left mt-5"
+        >
+          To drive an Independence Day merchandising blitz that would:
+        </motion.h3>
+
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {objectives.map((o, i) => (
             <motion.article
@@ -256,6 +261,13 @@ export default function JeepCaseStudy() {
       {/* ===== Strategy ===== */}
       <div className="mx-auto px-6 md:px-8 py-8 md:py-12 w-full section-container ">
         <SectionTitle title="The Strategy" />
+        <motion.h3
+          {...fadeUp(0)}
+          className="section-title text-2xl text-left mt-5"
+        >
+          We treated this like a fast-paced trail drive, every element needed
+          grip, control, and momentum:
+        </motion.h3>
         <div className="mt-8 grid gap-6 md:grid-cols-2">
           {strategy.map((s, i) => (
             <motion.article
@@ -276,7 +288,7 @@ export default function JeepCaseStudy() {
               {s.extras?.length ? (
                 <div className="mt-4 flex flex-wrap items-center text-secondary gap-3 text-lg">
                   {s.extras.map((e) => (
-                    <Pill key={e} text={e}  />
+                    <Pill key={e} text={e} />
                   ))}
                 </div>
               ) : null}
@@ -288,14 +300,8 @@ export default function JeepCaseStudy() {
           {...fadeUp(0.2)}
           className="mt-8 rounded-2xl bg-primary/5 p-6 ring-1 ring-primary/10"
         >
-          <h4 className="text-2xl md:text-3xl font-medium text-primary">
-            From Scroll to Sale: The Transformation
-          </h4>
           <p className="mt-4 font-secondary text-lg text-gray-700 leading-relaxed">
-            Over three adrenaline-charged days, Ayatiworks shifted Jeep India’s
-            merchandising from a standard microsite to a turbocharged user
-            experience and social event—turning engagement into revenue before
-            the campaign cooled down.
+            Over three adrenaline-charged days, the campaign revved into life.
           </p>
         </motion.div>
       </div>
@@ -326,6 +332,15 @@ export default function JeepCaseStudy() {
             </motion.div>
           ))}
         </div>
+        <motion.div
+          {...fadeUp(0.2)}
+          className="mt-8 rounded-2xl bg-primary/5 p-6 ring-1 ring-primary/10"
+        >
+          <p className="mt-4 font-secondary text-lg text-gray-700 leading-relaxed">
+            We ignited social engagement and translated it into real revenue,
+            all before the campaign cooled down.{" "}
+          </p>
+        </motion.div>
       </div>
 
       {/* ===== Why it worked ===== */}
@@ -363,12 +378,14 @@ export default function JeepCaseStudy() {
           </h3>
           <p className="mx-auto mt-3 max-w-3xl font-secondary text-white/90">
             Whether you're an automobile brand, EdTech innovator, or fintech
-            disruptor, Ayatiworks crafts campaigns that don’t just cost—they
-            charge. Let’s put your next campaign into high gear.
+            disruptor, Ayatiworks knows how to craft campaigns that don't just
+            cost, they charge.
+            <br />
+            Let’s put your next campaign into high gear.
           </p>
 
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
-            <MotionLink href="/contact" text="Get in Touch" />
+            <MotionLink href="/contact-us" text="Get in Touch" />
             <MotionLink href="#work" text="See More Work" variant="outline" />
           </div>
         </motion.div>
@@ -381,10 +398,7 @@ export default function JeepCaseStudy() {
 function SectionTitle({ title }) {
   return (
     <div>
-      <motion.h3
-        {...fadeUp(0)}
-        className="section-title text-left"
-      >
+      <motion.h3 {...fadeUp(0)} className="section-title text-left">
         {title}
       </motion.h3>
       <Underline />

@@ -6,10 +6,10 @@ import { Link } from "react-router-dom";
 
 export default function PromoHero() {
   return (
-    <section className="section bg-white items-center">
+    <section className="section-container bg-white items-center">
       {/* ✅ Top Banner */}
       <FadeInWhenVisible y={-30}>
-        <div className="bg-primary text-white rounded-xl px-4 sm:px-6 md:px-10 py-6 sm:py-8 flex flex-col md:flex-row items-center justify-between gap-4 section-container">
+        <div className="bg-primary text-white rounded-xl px-4 sm:px-6 md:px-10 py-6 sm:py-8 flex flex-col md:flex-row items-center justify-between gap-4 ">
           <div className="text-center md:text-left text-lg sm:text-xl md:text-2xl lg:text-4xl leading-snug">
             <p className="font-primary font-medium leading-normal p-2 sm:p-4">
               Clicks & Quirks. Growth That Works.{" "}
