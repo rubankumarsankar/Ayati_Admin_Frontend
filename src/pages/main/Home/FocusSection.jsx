@@ -11,20 +11,22 @@ export default function FocusSection() {
 
   const items = [
     {
-      title: "Speed & Scale",
-      desc: "Agile enough for quick campaigns, robust enough for long-term strategy",
-      icon: "/assets/graph-3.png",
+      title: "ROI-First Planning",
+      desc: "Every dollar spent is tracked for impact.",
+      icon: "/assets/graph-5.png",
     },
+    
     {
       title: "Creative + Data Synergy",
       desc: "Ideas backed by analytics.",
       icon: "/assets/graph-4.png",
     },
     {
-      title: "ROI-First Planning",
-      desc: "Every dollar spent is tracked for impact.",
-      icon: "/assets/graph-5.png",
+      title: "Speed & Scale",
+      desc: "Agile enough for quick campaigns, robust enough for long-term strategy",
+      icon: "/assets/graph-3.png",
     },
+    
   ];
 
   return (

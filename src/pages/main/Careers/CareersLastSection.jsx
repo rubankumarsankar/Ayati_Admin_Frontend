@@ -1,15 +1,17 @@
 // CareersCTA.jsx
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom"; // ✅ import Link
+import { HashLink } from "react-router-hash-link";
 
 const fade = {
   hidden: { opacity: 0, y: 16 },
-  show:   { opacity: 1, y: 0, transition: { duration: 0.45 } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.45 } },
 };
 
 export default function CareersLastSection({
   email = "careers@ayatiworks.com",
-  applyHref = "#",
+  applyHref = "/careers/form", // ✅ route for your form page
 }) {
   return (
     <section className="bg-white section">
@@ -30,14 +32,15 @@ export default function CareersLastSection({
           whileInView="show"
           className="mt-6 text-lg font-secondary"
         >
-          Just tell us you can bring something unique to the table, and we are all ears!
+          Just tell us you can bring something unique to the table, and we are
+          all ears!
         </motion.p>
 
         <motion.p
           variants={fade}
           initial="hidden"
           whileInView="show"
-          className="mt-8 text-3xl font-primary  text-black"
+          className="mt-8 text-3xl font-primary text-black"
         >
           write to us @{" "}
           <a
@@ -84,15 +87,22 @@ export default function CareersLastSection({
           Are you ready to grow with us
         </motion.p>
 
-        <motion.a
+        {/* ✅ Use Link instead of <a> */}
+
+        <motion.div
           variants={fade}
           initial="hidden"
           whileInView="show"
-          href={applyHref}
-          className="mt-6 inline-flex items-center justify-center font-primary rounded-full bg-secondary px-7 py-3 text-xl uppercase tracking-wide text-white shadow-lg shadow-sky-300/40 transition hover:bg-[#1689c9] active:scale-95"
+          className="mt-6"
         >
-          Apply Now
-        </motion.a>
+          <HashLink
+            smooth
+            to="#apply" // 👈 this matches the id on your form
+            className="inline-flex items-center justify-center font-primary rounded-full bg-secondary px-7 py-3 text-xl uppercase tracking-wide text-white shadow-lg shadow-sky-300/40 transition hover:bg-[#1689c9] active:scale-95"
+          >
+            Apply Now
+          </HashLink>
+        </motion.div>
       </div>
     </section>
   );

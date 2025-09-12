@@ -27,7 +27,7 @@ function CareersPage() {
       <PartnersInClimb />
 
       <RolesMarquee />
-      <CareersLastSection />
+      <CareersLastSection  />
       <Connection />
     </>
   );

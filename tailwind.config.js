@@ -48,6 +48,15 @@ module.exports = withMT({
         "inner-xl": "inset 0 4px 8px rgba(0,0,0,0.2)", // inner shadow
         glow: "0 0 20px rgba(0, 200, 255, 0.6)", // neon glow style
       },
+      keyframes: {
+    marquee: {
+      "0%": { transform: "translateX(0%)" },
+      "100%": { transform: "translateX(-50%)" },
+    },
+  },
+  animation: {
+    marquee: "marquee 25s linear infinite",
+  },
     },
   },
   plugins: [],

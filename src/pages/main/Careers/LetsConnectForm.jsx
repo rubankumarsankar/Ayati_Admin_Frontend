@@ -1,31 +1,70 @@
 // LetsConnectForm.jsx
 import React from "react";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
+import { Careersform } from "../../../api/services";
 
 export default function LetsConnectForm() {
   const {
     register,
     handleSubmit,
     reset,
-    formState: { errors, isSubmitting, isSubmitSuccessful },
+    formState: { errors, isSubmitting },
   } = useForm({
     defaultValues: { name: "", email: "", message: "" },
   });
 
   const onSubmit = async (data) => {
-    // TODO: replace with your API call
-    await new Promise((r) => setTimeout(r, 700));
-    console.log("Form:", data);
-    reset();
-  };
+  // Show loading modal
+  Swal.fire({
+    title: "Submitting...",
+    text: "Please wait while we send your message.",
+    allowOutsideClick: false,
+    didOpen: () => {
+      Swal.showLoading();
+    },
+  });
+
+  try {
+    // ✅ Send as JSON
+    const res = await Careersform({
+      ...data,
+      
+    });
+
+    if (res?.success) {
+      Swal.fire({
+        icon: "success",
+        title: "Submitted!",
+        text: res?.message || "Thanks! We’ll get back to you soon.",
+        confirmButtonColor: "#3085d6",
+      });
+      reset();
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: res?.message || "Submission failed. Please try again.",
+        confirmButtonColor: "#d33",
+      });
+    }
+  } catch (err) {
+    Swal.fire({
+      icon: "error",
+      title: "Error",
+      text: "Something went wrong. Please try later.",
+      confirmButtonColor: "#d33",
+    });
+    console.error(err);
+  }
+};
+
 
   return (
-    <section className="w-full">
+    <section className="w-full " id="apply">
       <div className="mx-auto max-w-xl px-4 py-10 text-center">
         {/* Heading */}
-        <h2 className="section-title text-secondary">
-          Let’s Connect
-        </h2>
+        <h2 className="section-title text-secondary">Let’s Connect</h2>
         <p className="mt-5 text-lg text-black/80 font-secondary">
           Your Goal and Our Expertise!
         </p>
@@ -44,7 +83,6 @@ export default function LetsConnectForm() {
               className="peer block w-full rounded-lg border border-primary/90 bg-white px-4 py-3 text-sm text-slate-900 placeholder-primary/80 font-secondary outline-none ring-0 transition focus:border-sky-500 focus:ring-2 focus:ring-sky-200"
               {...register("name", { required: "Please enter your name" })}
             />
-            
           </div>
           {errors.name && (
             <p className="mt-1 text-xs text-red-500">{errors.name.message}</p>
@@ -101,13 +139,6 @@ export default function LetsConnectForm() {
               {isSubmitting ? "Submitting..." : "Submit"}
             </button>
           </div>
-
-          {/* Simple success note (optional) */}
-          {isSubmitSuccessful && (
-            <p className="mt-3 text-center text-xs text-emerald-600">
-              Thanks! We’ll get back to you soon.
-            </p>
-          )}
         </form>
       </div>
     </section>

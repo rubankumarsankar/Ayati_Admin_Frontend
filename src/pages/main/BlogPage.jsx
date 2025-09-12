@@ -1,10 +1,10 @@
 import React from "react";
 import HeroSection from "./Home/HeroSection";
 import GridSection from "./Blog/BlogGrid";
-import Connection from "./Home/Connection";
 import SlowMarquee from "./Blog/MarqueeCards";
 import CaseStudyAndWrite from "./Blog/CaseStudyAndWrite";
 import BlogSectionPage from "./Blog/BlogSectionPage";
+import Connection from "./Blog/Connection";
 
 function BlogPage() {
   return (

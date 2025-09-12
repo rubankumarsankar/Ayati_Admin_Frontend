@@ -10,3 +10,17 @@ export const Contactform = async (formData) => {
     return { success: false };
   }
 };
+
+
+export const Careersform = async (formData) => {
+  try {
+    const response = await axios.post(
+      "https://ayatiworks.com/Api/carrers.php",
+      formData
+    );
+    return response.data; // expect JSON from backend
+  } catch (error) {
+    console.error("Careersform API Error:", error);
+    return { success: false, message: "Something went wrong" };
+  }
+};

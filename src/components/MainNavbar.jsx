@@ -548,7 +548,7 @@ const drawerHeight = useViewportHeight(mobileOpen);
           <div className="animate-[fadeInScale_.35s_ease-out]">
             <Navbar className="relative w-[760px] max-w-[95vw] backdrop-blur shadow-3xl hover:shadow-glow px-3 py-2 flex flex-wrap items-center justify-center gap-2 rounded-full">
               {/* Logo */}
-              <Button variant="text" className="p-0 bg-transparent shadow-none">
+              <Button variant="text" className="p-0 hover:bg-transparent">
                 <Link
                   to="/"
                   onClick={(e) => {

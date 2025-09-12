@@ -97,51 +97,6 @@ export default function CaseStudyAndWrite() {
       {/* spacing */}
       <div className="h-16 sm:h-20" />
 
-      {/* ===== Write For Us ===== */}
-      <div className="mx-auto max-w-3xl text-center">
-        <motion.h2
-          initial={{ opacity: 0, y: -30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="section-title"
-        >
-          <span className="mb-2 block">Write for Us</span>
-        </motion.h2>
-
-        {/* underline outside the heading */}
-        <motion.div
-          initial={{ scaleX: 0 }}
-          whileInView={{ scaleX: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: "easeInOut", delay: 0.3 }}
-          className="mx-auto mt-3 h-1 w-40 sm:w-56 md:w-72 lg:w-[250px] origin-right rounded-full bg-secondary"
-        />
-
-        <motion.p
-          {...fadeUp(0.1)}
-          className="mx-auto mt-6 max-w-2xl text-sm md:text-base leading-7 text-black/70"
-        >
-          Got an insight, idea, or trend worth sharing with the world?
-          <br className="hidden sm:block" />
-          We welcome guest contributions from marketers, creators, and
-          innovators. Pitch your story and let’s amplify your voice.
-        </motion.p>
-
-        <motion.div {...fadeUp(0.15)} className="mt-8 text-center">
-          {/* React Router Link styled as a button */}
-          <MotionLink
-            to="/contact-us"
-            role="button"
-            aria-label="Contribute Now"
-            className="inline-flex items-center justify-center rounded-full bg-secondary/90 px-10 py-3 text-lg md:text-xl font-primary font-medium text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-secondary/40"
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.97 }}
-          >
-            Contribute Now
-          </MotionLink>
-        </motion.div>
-      </div>
     </section>
   );
 }

@@ -1,44 +1,52 @@
 // MarqueeCards.jsx
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom"; // 👈 for internal routes
 
 const cards = [
   {
     title: "Digital Marketing",
     text: "From SEO to Programmatic, discover how businesses build visibility, reach the right audiences, and scale growth through smart marketing.",
     img: "/assets/ms-1.png",
+    link: "/blogs/digital-marketing",
   },
   {
     title: "Content-as-Strategy",
     text: "When storytelling meets SEO. Learn how brands craft powerful narratives, win search rankings, and build authority with content that converts.",
     img: "/assets/ms-2.png",
+    link: "/blogs/content-strategy",
   },
   {
     title: "Digital PR",
     text: "Reputation is currency. Explore how brands earn trust, build credibility, and secure media visibility through modern PR practices.",
     img: "/assets/ms-3.png",
+    link: "/blogs/digital-pr",
+  },
+  {
+    title: "Web & E-Commerce ",
+    text: "From design to conversions, discover insights on UX, web strategy, and e-commerce innovations shaping digital-first businesses. ",
+    img: "/assets/ms-2.png",
+    link: "/blogs/web-ecommerce",
   },
 ];
 
 // Card UI (matches the look you shared: image + gradient + title/text)
 function ServiceCard({ item }) {
-  return (
-    <div className="relative w-[280px] sm:w-[320px] md:w-[360px] h-[480px] shrink-0 rounded-2xl overflow-hidden shadow-lg">
+  const isExternal = item.link?.startsWith("http");
+
+  const CardContent = (
+    <div className="relative w-[280px] sm:w-[320px] md:w-[360px] h-[480px] shrink-0 rounded-2xl overflow-hidden shadow-lg cursor-pointer group">
       <img
         src={item.img}
         alt={item.title}
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         loading="lazy"
       />
       {/* tint + vignette */}
-      <div
-        className={`absolute inset-0 bg-gradient-to-b ${item.tint} opacity-80`}
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
       {/* text */}
       <div className="absolute bottom-0 w-full">
         {/* blurred glass background */}
         <div className="absolute inset-0 backdrop-blur-xs bg-black/30 rounded-b-2xl" />
-
         <div className="relative p-5 sm:p-6 text-white">
           <h3 className="text-lg sm:text-2xl font-medium font-primary">
             {item.title}
@@ -49,6 +57,15 @@ function ServiceCard({ item }) {
         </div>
       </div>
     </div>
+  );
+
+  // Internal vs external link
+  return isExternal ? (
+    <a href={item.link} target="_blank" rel="noopener noreferrer">
+      {CardContent}
+    </a>
+  ) : (
+    <Link to={item.link}>{CardContent}</Link>
   );
 }
 
@@ -69,7 +86,6 @@ export default function SlowMarquee({ speed = 30, heading = " " }) {
             className="section-title text-left "
           >
             <span className="mb-2 block">{heading}</span>
-
             <motion.div
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
@@ -90,10 +106,8 @@ export default function SlowMarquee({ speed = 30, heading = " " }) {
             "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
         }}
       >
-        {/* Track (200% width: content duplicated) */}
         <motion.div
           className="flex gap-6 md:gap-8 w-max"
-          // animate from 0% to -50% (because items are duplicated)
           animate={{ x: ["0%", "-50%"] }}
           transition={{
             duration: speed,

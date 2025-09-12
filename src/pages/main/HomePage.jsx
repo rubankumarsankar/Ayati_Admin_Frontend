@@ -36,7 +36,7 @@ function HomePage() {
       
       <PixelsPerfected />
       <DottedWorldMap />
-      <HomeGridSection />
+      {/* <HomeGridSection /> */}
       <AwardsSection />
       <Connection />
     </>
