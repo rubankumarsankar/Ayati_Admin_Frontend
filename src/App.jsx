@@ -178,7 +178,7 @@ function App() {
                 element={<VideoCreationServicesPage />}
               />
               <Route
-                path="/content-as-a-service/multilingual-arketing"
+                path="/content-as-a-service/multilingual-marketing"
                 element={<MultilingualServicesPage />}
               />
               <Route

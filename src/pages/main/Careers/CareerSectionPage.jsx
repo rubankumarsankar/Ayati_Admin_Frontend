@@ -35,7 +35,7 @@ export default function CareerSectionPage() {
           className="text-black/80 space-y-6"
         >
           <h3 className="text-base/7 sm:text-lg/8 md:text-2xl/9 text-secondary font-primary font-medium">
-            Here’s a quick look at our core services
+            What Work with Us ?
           </h3>
           <p className="text-base/7 sm:text-lg/8 md:text-lg/9 text-black/80 font-secondary font-medium">
             We don’t just build campaigns, we build careers.  

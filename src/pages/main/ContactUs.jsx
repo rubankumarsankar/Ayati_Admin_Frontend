@@ -15,14 +15,15 @@ function ContactUs() {
   return (
     <>
       <HeroSection />
-      < ContactInnerPage/>
-      <Location />
+      <ContactInnerPage />
       <Form />
       <Address />
       <Digital />
       <Brand />
       <Map />
       <PartnersInClimb />
+      <Location />
+
       <Connection />
     </>
   );
