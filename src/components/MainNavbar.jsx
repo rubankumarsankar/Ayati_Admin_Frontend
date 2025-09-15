@@ -36,7 +36,7 @@ export const NAV = [
         heading: "Digital Marketing Services",
         basePath: "/digital-marketing-service",
         items: [
-          { label: "SEO Services", path: "/digital-marketing-service/seo" },
+          { label: "SEO Services", path: "/digital-marketing-service/seo-service" },
           {
             label: "Social Media Marketing",
             path: "/digital-marketing-service/social-media-marketing",
