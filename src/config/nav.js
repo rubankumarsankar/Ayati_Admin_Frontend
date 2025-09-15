@@ -66,7 +66,7 @@ export const NAV = [
     items: [
       { label: "Blogs", path: "/blogs" },
       { label: "Awards", path: "/awards" },
-      { label: "Case Studies", path: "/case-studies" },
+      { label: "Case Studies", path: "case-study" },
     ],
   },
 

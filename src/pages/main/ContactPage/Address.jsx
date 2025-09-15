@@ -8,7 +8,7 @@ export default function Address() {
     {
       title: "Email Address",
       icon: <Mail className="w-8 h-8" />,
-      content: ["upendran@ayatiworks.com", "lavetohar@ayatiworks.com"],
+      content: ["upendran@ayatiworks.com", "lovetohear@ayatiworks.com"],
     },
     {
       title: "Mobile Number",

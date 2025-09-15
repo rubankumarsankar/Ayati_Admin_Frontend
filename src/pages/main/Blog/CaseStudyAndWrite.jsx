@@ -80,7 +80,7 @@ export default function CaseStudyAndWrite() {
             <motion.div {...fadeUp(0.15)} className="mt-8 text-left">
               {/* React Router Link styled as a button */}
               <MotionLink
-                to="/case-studies/jeep"
+                to="case-study/jeep"
                 role="button"
                 aria-label="Read Full Case Study"
                 className="inline-flex items-center justify-center rounded-full bg-secondary/90 px-10 py-3 text-lg md:text-xl font-primary font-medium text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-secondary/40"

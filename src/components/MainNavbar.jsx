@@ -34,32 +34,32 @@ export const NAV = [
     groups: [
       {
         heading: "Digital Marketing Services",
-        basePath: "/digital-marketing-service",
+        basePath: "/digital-marketing-services",
         items: [
-          { label: "SEO Services", path: "/digital-marketing-service/seo-service" },
+          { label: "SEO Services", path: "/digital-marketing-services/seo" },
           {
             label: "Social Media Marketing",
-            path: "/digital-marketing-service/social-media-marketing",
+            path: "/digital-marketing-services/social-media-marketing",
           },
           {
             label: "Email Marketing",
-            path: "/digital-marketing-service/email-marketing",
+            path: "/digital-marketing-services/email-marketing",
           },
           {
             label: "Instagram Marketing",
-            path: "/digital-marketing-service/instagram-marketing",
+            path: "/digital-marketing-services/instagram-marketing",
           },
           {
             label: "Affiliate Marketing",
-            path: "/digital-marketing-service/affiliate-marketing",
+            path: "/digital-marketing-services/affiliate-marketing",
           },
           {
             label: "Programmatic Marketing",
-            path: "/digital-marketing-service/programmatic-marketing",
+            path: "/digital-marketing-services/programmatic-marketing",
           },
           {
             label: "Video Marketing",
-            path: "/digital-marketing-service/video-marketing",
+            path: "/digital-marketing-services/video-marketing",
           },
         ],
       },
@@ -124,7 +124,7 @@ export const NAV = [
     items: [
       { label: "Blogs", path: "/blogs" },
       { label: "Awards", path: "/awards" },
-      { label: "Case Studies", path: "/case-studies" },
+      { label: "Case Studies", path: "case-study" },
     ],
   },
   { kind: "link", label: "Contact", path: "/contact-us" },

@@ -129,10 +129,10 @@ function App() {
               <Route path="/careers" element={<CareersPage />} />
               <Route path="/contact-us" element={<ContactUs />} />
               <Route path="/awards" element={<AwardsPage />} />
-              <Route path="/case-studies" element={<CaseStudiesPage />} />
-              <Route path="/case-studies/jeep-case-study" element={<JeepCaseStudy />} />
+              <Route path="case-study" element={<CaseStudiesPage />} />
+              <Route path="case-study/jeep-case-study" element={<JeepCaseStudy />} />
               <Route
-                path="/digital-marketing-service"
+                path="/digital-marketing-services"
                 element={<DigitalMarketingPage />}
               />
               <Route
@@ -144,31 +144,31 @@ function App() {
               <Route path="/seo-simplified" element={<SEOBlogPage />} />
 
               <Route
-                path="/digital-marketing-service/seo-service"
+                path="/digital-marketing-services/seo"
                 element={<SeoServicesPage />}
               />
               <Route
-                path="/digital-marketing-service/social-media-marketing"
+                path="/digital-marketing-services/social-media-marketing"
                 element={<SocialMediaServicesPage />}
               />
               <Route
-                path="/digital-marketing-service/email-marketing"
+                path="/digital-marketing-services/email-marketing"
                 element={<EmailServicesPage />}
               />
               <Route
-                path="/digital-marketing-service/instagram-marketing"
+                path="/digital-marketing-services/instagram-marketing"
                 element={<InstagramServicesPage />}
               />
               <Route
-                path="/digital-marketing-service/affiliate-marketing"
+                path="/digital-marketing-services/affiliate-marketing"
                 element={<AffiliateMarketingServicesPage />}
               />
               <Route
-                path="/digital-marketing-service/programmatic-marketing"
+                path="/digital-marketing-services/programmatic-marketing"
                 element={<ProgrammaticServicesPage />}
               />
               <Route
-                path="/digital-marketing-service/video-marketing"
+                path="/digital-marketing-services/video-marketing"
                 element={<VideoMarketingServicesPage />}
               />
               <Route

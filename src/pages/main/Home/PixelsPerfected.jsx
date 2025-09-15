@@ -164,7 +164,7 @@ export default function PixelsPerfected() {
         {/* Global CTA (See More) */}
         {/* <div className="flex justify-center mt-10">
           <motion.a
-            href="/case-studies"
+            href="case-study"
             className="relative bg-secondary/90 hover:bg-secondary text-white font-primary text-lg md:text-xl font-medium py-3 px-10 rounded-full shadow-md hover:shadow-xl transition-all duration-300"
             initial={{ scale: 0.9, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}

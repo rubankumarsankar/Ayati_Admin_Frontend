@@ -318,7 +318,7 @@ export function CenteredLogoNavbar() {
               items={[
                 { label: "Blogs", path: "#" },
                 { label: "Awards", path: "/awards" },
-                { label: "Case Studies", path: "/case-studies" },
+                { label: "Case Studies", path: "case-study" },
                 // { label: "News", path: "/news" },
                 // { label: "Guides", path: "/guides" },
               ]}
