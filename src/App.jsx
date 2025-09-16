@@ -21,6 +21,8 @@ import DigitalPRPage from "./pages/main/DigitalPRPage";
 import WebAndECommerce from "./pages/main/Web&E-Commerce";
 import ContactUs from "./pages/main/ContactUs";
 import JeepCaseStudy from "./pages/main/Case Study/JeepCaseStudy";
+import TermsAndConditions from "./components/TermsAndConditions";
+import PrivacyPolicy from "./components/PrivacyPolicy";
 
 // ✅ Lazy-loaded Public Pages
 const NotFound = lazy(() => import("./components/NotFound"));
@@ -215,6 +217,8 @@ function App() {
                 path="/web-ecommerce/ecommerce-solutions"
                 element={<ECommerceServicesPage />}
               />
+              <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/comingsoon" element={<ComingSoon />} />
 
               <Route path="*" element={<NotFound />} />

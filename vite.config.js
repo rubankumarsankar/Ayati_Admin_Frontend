@@ -20,7 +20,7 @@ export default defineConfig({
 
       // Generate robots.txt alongside sitemap.xml
       generateRobotsTxt: false,
-      robots: [{ userAgent: '*', allow: '/' }],
+      robots: [{ userAgent: '*',   disallow:'' }],
 
       // Optional niceties
       changefreq: 'weekly',
