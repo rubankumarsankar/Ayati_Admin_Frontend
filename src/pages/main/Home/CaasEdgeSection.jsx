@@ -27,6 +27,74 @@ export default function CaasEdgeSection({
       href: "https://www.instagram.com/p/DOYlMKXkvA9/",
       poster: "/assets/caas/royal-3-poster.jpg",
     },
+    {
+      src: "/assets/caas/spark-1.mp4",
+      alt: "Campaign 4",
+      heeding:
+        "Lifestyle Change-na Life Change - 98% Diseases-ku Bye Bye! ",
+      href: "https://www.instagram.com/p/DIG1nPHPVbg/",
+      poster: "/assets/caas/royal-3-poster.jpg",
+    },
+    
+    {
+      src: "/assets/caas/spark-2.mp4",
+      alt: "Campaign 5",
+      heeding:
+        "Lifestyle Change-na Life Change - 98% Diseases-ku Bye Bye! ",
+      href: "https://www.instagram.com/p/DIG1nPHPVbg/",
+      poster: "/assets/caas/royal-3-poster.jpg",
+    },
+    
+    {
+      src: "/assets/caas/spark-3.mp4",
+      alt: "Campaign 6",
+      heeding:
+        "Lifestyle Change-na Life Change - 98% Diseases-ku Bye Bye! ",
+      href: "https://www.instagram.com/p/DJoxYUkpVx6/",
+      poster: "/assets/caas/royal-3-poster.jpg",
+    },
+    {
+      src: "/assets/caas/herbale.mp4",
+      alt: "Campaign 7",
+      heeding:
+        "Traffic Smog-ku Bye Bye - Herbale’s Pocket Hero On-the-Go!  ",
+      href: "https://www.youtube.com/watch?v=riCCr3lDm3s",
+      poster: "/assets/caas/royal-3-poster.jpg",
+    },
+    {
+      src: "/assets/caas/bhookle.mp4",
+      alt: "Campaign 8",
+      heeding:
+        "Bengaluru-ya, Yen Waiting? Amma Samayal Now Just a Tap Away - Bhookle Style! ",
+      href: "https://www.instagram.com/p/DFh6pTKK9d_/",
+      poster: "/assets/caas/royal-3-poster.jpg",
+    },
+    {
+      src: "/assets/caas/nithyam-1.mp4",
+      alt: "Campaign 9",
+      heeding:
+        "Onam-azing Flavors, Chennai Style - சுவை that speaks Kerala!  ",
+      href: "https://www.instagram.com/p/C_dGRtXtq4I/",
+      poster: "/assets/caas/royal-3-poster.jpg",
+    },
+    {
+      src: "/assets/caas/nithyam-2.mp4",
+      alt: "Campaign 10",
+      heeding:
+        "Onam-azing Flavors, Chennai Style - சுவை that speaks Kerala!  ",
+      href: "https://www.instagram.com/p/C_ZzSDrslgb/",
+      poster: "/assets/caas/royal-3-poster.jpg",
+    },
+    {
+      src: "/assets/caas/nithyam-3.mp4",
+      alt: "Campaign 11",
+      heeding:
+        "Onam-azing Flavors, Chennai Style - சுவை that speaks Kerala! ",
+      href: "https://www.instagram.com/p/C_5je4IyKYC/",
+      poster: "/assets/caas/royal-3-poster.jpg",
+    },
+    
+    
   ],
   autoPlay = true,
   intervalMs = 5000,
@@ -71,16 +139,7 @@ export default function CaasEdgeSection({
 
   return (
     <section className="relative bg-white section-container">
-      {/* accents */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-primary/10 blur-3xl"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute top-28 -right-16 h-64 w-64 rounded-full bg-secondary/10 blur-2xl"
-      />
-
+      
       <div className="mx-auto px-4 sm:px-6 lg:px-8 py-14">
         {/* HEADING (unchanged) */}
         <motion.h2 className="section-title text-left" {...fadeUp(0)}>
@@ -234,7 +293,7 @@ export default function CaasEdgeSection({
                         {/* caption under media (kept) */}
                         {title && (
                           <div className="px-4 py-2">
-                            <p className="text-xl font-medium text-secondary font-primary  leading-snug line-clamp-2">
+                            <p className="text-lg font-medium text-secondary font-primary  leading-snug line-clamp-2">
                               {title}
                             </p>
                           </div>
@@ -251,7 +310,7 @@ export default function CaasEdgeSection({
                   <button
                     onClick={prev}
                     aria-label="Previous"
-                    className="absolute left-3 top-1/2 -translate-y-1/2 grid h-9 w-9 place-items-center rounded-full bg-white/90 text-gray-900 shadow hover:bg-white"
+                    className="absolute left-3 top-1/2 -translate-y-1/2  grid h-9 w-9 place-items-center rounded-full bg-white/90 text-gray-900 shadow hover:bg-white"
                   >
                     <svg
                       viewBox="0 0 24 24"
@@ -291,13 +350,13 @@ export default function CaasEdgeSection({
 
               {/* dots */}
               {n > 1 && (
-                <div className="absolute bottom-3 left-0 right-0 flex items-center justify-center gap-2">
+                <div className="absolute bottom-3 left-0 mt-4 right-0 flex items-center justify-center gap-2">
                   {slides.map((_, d) => (
                     <button
                       key={d}
                       onClick={() => setI(d)}
                       aria-label={`Go to slide ${d + 1}`}
-                      className={`h-1.5 rounded-full transition-all ${
+                      className={`h-1.5 rounded-full mt-5 transition-all ${
                         i === d ? "w-6 bg-primary" : "w-2 bg-black/30"
                       }`}
                     />

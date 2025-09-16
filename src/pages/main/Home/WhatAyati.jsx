@@ -19,40 +19,40 @@ export default function SolutionsSection() {
       cat: "",
       title: "Digital Marketing Services",
       icon: "/assets/good-vibe.png",
-      basePath: "/digital-marketing-service",
+      basePath: "/digital-marketing-services",
       list: [
         {
           label: "SEO Services",
-          href: "/digital-marketing-service/seo-services",
+          href: "/digital-marketing-services/seo-",
         },
         {
           label: "Social Media Marketing",
-          href: "/digital-marketing-service/social-media-marketing",
+          href: "/digital-marketing-services/social-media-marketing",
         },
         {
           label: "Email Marketing",
-          href: "/digital-marketing-service/email-marketing",
+          href: "/digital-marketing-services/email-marketing",
         },
         {
           label: "Instagram Marketing",
-          href: "/digital-marketing-service/instagram-marketing",
+          href: "/digital-marketing-services/instagram-marketing",
         },
         {
           label: "Affiliate Marketing",
-          href: "/digital-marketing-service/affiliate-marketing",
+          href: "/digital-marketing-services/affiliate-marketing",
         },
         {
           label: "Programmatic Marketing",
-          href: "/digital-marketing-service/programmatic-marketing",
+          href: "/digital-marketing-services/programmatic-marketing",
         },
         {
           label: "Video Marketing",
-          href: "/digital-marketing-service/video-marketing",
+          href: "/digital-marketing-services/video-marketing",
         },
       ],
       cta: {
         label: "Explore Digital Marketing →",
-        href: "/digital-marketing-service",
+        href: "/digital-marketing-services",
       },
     },
     {
