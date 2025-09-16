@@ -9,27 +9,27 @@ export default function CaasEdgeSection({
       src: "/assets/caas/royal-1.jpg",
       alt: "Campaign 1",
       heeding:
-        "Any Script. Any Culture. One Impact – Ayatiworks Gets Your Brand Heard Everywhere",
+        "Any Script. Any Culture. One Impact - Ayatiworks Gets Your Brand Heard Everywhere",
       href: "https://www.instagram.com/p/DNGLwReMT4Y/?img_index=1",
     },
     {
       src: "/assets/caas/royal-2.jpg",
       alt: "Campaign 2",
       heeding:
-        "Any Script. Any Culture. One Impact – Ayatiworks Gets Your Brand Heard Everywhere",
+        "Any Script. Any Culture. One Impact - Ayatiworks Gets Your Brand Heard Everywhere",
       href: "https://www.instagram.com/p/DNayIEaNomV/?img_index=1",
     },
     {
       src: "/assets/caas/royal-3.mp4",
       alt: "Campaign 3",
       heeding:
-        "Any Script. Any Culture. One Impact – Ayatiworks Gets Your Brand Heard Everywhere",
+        "Any Script. Any Culture. One Impact - Ayatiworks Gets Your Brand Heard Everywhere",
       href: "https://www.instagram.com/p/DOYlMKXkvA9/",
       poster: "/assets/caas/royal-3-poster.jpg",
     },
   ],
   autoPlay = true,
-  intervalMs = 4500,
+  intervalMs = 5000,
   showOverlayHeading = true, // ← NEW: toggle overlay heading
 }) {
   const prefersReducedMotion = useReducedMotion();
@@ -229,21 +229,12 @@ export default function CaasEdgeSection({
                           )}
                         </div>
 
-                        {/* OVERLAY HEADING (on top of media) */}
-                        {showOverlayHeading && title && (
-                          <div className="pointer-events-none absolute top-2 left-2 right-2">
-                            <div className="inline-block max-w-[92%] rounded-md bg-black/55 px-3 py-2 text-white backdrop-blur-sm">
-                              <h4 className="text-[13px] sm:text-sm font-semibold leading-snug line-clamp-2">
-                                {title}
-                              </h4>
-                            </div>
-                          </div>
-                        )}
+                     
 
                         {/* caption under media (kept) */}
                         {title && (
-                          <div className="px-4 py-3">
-                            <p className="text-sm font-medium text-gray-800 leading-snug line-clamp-2">
+                          <div className="px-4 py-2">
+                            <p className="text-xl font-medium text-secondary font-primary  leading-snug line-clamp-2">
                               {title}
                             </p>
                           </div>
