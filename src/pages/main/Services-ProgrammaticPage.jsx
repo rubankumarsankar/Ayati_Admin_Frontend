@@ -7,21 +7,18 @@ import Connection from "./Home/Connection";
 import DottedWorldMap from "./Home/MapLocation";
 import HomeGridSection from "./Home/HomeGrid";
 import OurWideRange from "./services/Programmatic/OurWideRange";
-import { Title, Meta } from "react-head";
+
+import SEO from "../../components/SEO";
 
 function ProgrammaticServicesPage() {
   return (
     <>
-      <>
-        <Title>
-          Programmatic Marketing Company in Chennai , Programmatic Advertising
-          Services - Ayatiworks
-        </Title>
-        <Meta
-          name="description"
-          content="Revolutionize ads with programmatic marketing in Chennai! Precision targeting for maximum impact. Boost your campaigns today!"
-        />
-      </>
+      <SEO
+        title="Programmatic Marketing Company in Chennai , Programmatic Advertising
+          Services - Ayatiworks"
+        description="Revolutionize ads with programmatic marketing in Chennai! Precision targeting for maximum impact. Boost your campaigns today!"
+        canonical="https://www.ayatiworks.com/"
+      />
       <HeroSectionLayout />
 
       <HeroServicePage />

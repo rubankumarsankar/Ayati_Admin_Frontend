@@ -5,20 +5,17 @@ import AwardsListSection from "./Awards/AwardsList";
 import AwardsSectionPage from "./Awards/AwardSectionPage";
 import AwardsContensSection from "./Awards/AwardContensSection";
 import AwardsMarqueeSection from "./Awards/AwardsMarqueeSection";
-import { Title, Meta } from "react-head";
+
+import SEO from "../../components/SEO";
 
 function AwardsPage() {
   return (
     <>
-      <>
-        <Title>
-          Award-Winning Digital Marketing Agency Chennai, Ayatiworks{" "}
-        </Title>
-        <Meta
-          name="description"
-          content="Trust an award-winning digital marketing team in Chennai to elevate your brand! Proven strategies for success. Connect now!"
-        />
-      </>
+      <SEO
+        title="Award-Winning Digital Marketing Agency Chennai, Ayatiworks"
+        description="Trust an award-winning digital marketing team in Chennai to elevate your brand! Proven strategies for success. Connect now!"
+        canonical="https://www.ayatiworks.com/awards"
+      />
       <HeroSection />
       <AwardsSectionPage />
       <AwardsMarqueeSection />

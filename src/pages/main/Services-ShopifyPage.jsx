@@ -7,21 +7,19 @@ import Connection from "./Home/Connection";
 import DottedWorldMap from "./Home/MapLocation";
 import HomeGridSection from "./Home/HomeGrid";
 import OurWideRange from "./services/Shopify/OurWideRange";
-import { Title, Meta } from "react-head";
+
+import SEO from "../../components/SEO";
 
 function ShopifyServicesPage() {
   return (
     <>
-      <>
-        <Title>
-          Shopify development company chennai, Shopify experts in Chennai -
-          Ayatiworks
-        </Title>
-        <Meta
-          name="description"
-          content="Create a thriving online store with expert Shopify development in Chennai! Tailored solutions to boost sales. Start now!"
-        />
-      </>
+      
+      <SEO
+        title="Shopify development company chennai, Shopify experts in Chennai -
+          Ayatiworks"
+        description="Create a thriving online store with expert Shopify development in Chennai! Tailored solutions to boost sales. Start now!"
+        canonical="https://www.ayatiworks.com/web-ecommerce/shopify-development"
+      />
       <HeroSectionLayout />
 
       <HeroServicePage />

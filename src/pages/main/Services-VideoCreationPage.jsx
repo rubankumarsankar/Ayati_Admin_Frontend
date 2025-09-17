@@ -7,21 +7,18 @@ import Connection from "./Home/Connection";
 import DottedWorldMap from "./Home/MapLocation";
 import HomeGridSection from "./Home/HomeGrid";
 import OurWideRange from "./services/VideoCreation/OurWideRange";
-import { Title, Meta } from "react-head";
+
+import SEO from "../../components/SEO";
 
 function VideoCreationServicesPage() {
   return (
     <>
-      <>
-        <Title>
-          Video Creation Services in Chennai, Professional Video Content
-          Services in Chennai - Ayatiworks
-        </Title>
-        <Meta
-          name="description"
-          content="Engage audiences with professional video creation in Chennai! Stunning visuals to boost your brand’s story. Create now!"
-        />
-      </>
+      <SEO
+        title="Video Creation Services in Chennai, Professional Video Content
+          Services in Chennai - Ayatiworks"
+        description="Engage audiences with professional video creation in Chennai! Stunning visuals to boost your brand’s story. Create now!"
+        canonical="https://www.ayatiworks.com/content-as-a-service/video-creation"
+      />
       <HeroSectionLayout />
 
       <HeroServicePage />

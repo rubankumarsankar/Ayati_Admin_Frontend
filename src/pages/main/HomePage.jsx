@@ -18,9 +18,18 @@ import FocusSection from "./Home/FocusSection";
 import { BenefitsTimeline } from "./Home/BenefitsTimeline";
 import BenefitsFlow from "./Home/BenefitCard";
 
+import SEO from "../../components/SEO";
+
 function HomePage() {
   return (
     <>
+      <SEO
+        title=" Digital marketing agency Chennai, Best Digital marketing company near
+          me, Ayatiworks"
+        description="Fuel business growth with content-led Digital Marketing Agency Chennai using Content As A Strategy, from ideation to Return on Investment"
+        canonical="https://www.ayatiworks.com/"
+      />
+
       <HeroSection />
       {/* <HeroSectionLayout /> */}
       <PromoHero />
@@ -33,7 +42,7 @@ function HomePage() {
       {/* <WhatWeDo /> */}
       <WhatAyati />
       <PartnersInClimb />
-      
+
       <PixelsPerfected />
       <DottedWorldMap />
       {/* <HomeGridSection /> */}

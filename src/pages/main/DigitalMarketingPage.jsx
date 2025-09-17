@@ -11,21 +11,18 @@ import GrowthFramework from "./Digital Marketing/GrowthFramework";
 import MarketingServices from "./Digital Marketing/MarketingServices";
 import BenefitsSlider from "./Digital Marketing/BenefitsSlider";
 import WhyPartner from "./Digital Marketing/WhyPartner";
-import { Title, Meta } from "react-head";
+
+import SEO from "../../components/SEO";
 
 function DigitalMarketingPage() {
   return (
     <>
-      <>
-        <Title>
-          Digital Marketing Experts Chennai, Digital marketing company with
-          brand growth - Ayatiworks
-        </Title>
-        <Meta
-          name="description"
-          content="Boost your brand with expert digital marketing in Chennai! Proven strategies to drive growth and maximize ROI. Start your journey today!"
-        />
-      </>
+      <SEO
+        title="Digital Marketing Experts Chennai, Digital marketing company with
+          brand growth - Ayatiworks"
+        description="Boost your brand with expert digital marketing in Chennai! Proven strategies to drive growth and maximize ROI. Start your journey today!"
+        canonical="https://www.ayatiworks.com/digital-marketing-services"
+      />
       <HeroSection />
       <DigitalMarketingSection />
       <WhyChennai />

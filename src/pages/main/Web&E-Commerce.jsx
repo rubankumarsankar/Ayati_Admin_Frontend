@@ -11,21 +11,18 @@ import GrowthFramework from "./Web & E-Commerce/GrowthFramework";
 import MarketingServices from "./Web & E-Commerce/MarketingServices";
 import BenefitsSlider from "./Web & E-Commerce/BenefitsSlider";
 import WhyPartner from "./Web & E-Commerce/WhyPartner";
-import { Title, Meta } from "react-head";
+
+import SEO from "../../components/SEO";
 
 function WebAndECommerce() {
   return (
     <>
-      <>
-        <Title>
-          Web Ecommerce Services in Chennai, Ecommerce development experts -
-          Ayatiworks
-        </Title>
-        <Meta
-          name="description"
-          content="Launch your online store with expert ecommerce services in Chennai! Seamless development for maximum sales. Get started today!"
-        />
-      </>
+      <SEO
+        title="Web Ecommerce Services in Chennai, Ecommerce development experts -
+          Ayatiworks"
+        description="Launch your online store with expert ecommerce services in Chennai! Seamless development for maximum sales. Get started today!"
+        canonical="https://www.ayatiworks.com/web-ecommerce"
+      />
       <HeroSection />
       <WebAndECommerceSection />
       <WhyChennai />

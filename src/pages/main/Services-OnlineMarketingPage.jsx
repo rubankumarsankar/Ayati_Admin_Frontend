@@ -7,15 +7,17 @@ import Connection from "./Home/Connection";
 import DottedWorldMap from "./Home/MapLocation";
 import HomeGridSection from "./Home/HomeGrid";
 import OurWideRange from "./services/Online/OurWideRange";
-import { Title, Meta } from "react-head";
+
+import SEO from "../../components/SEO";
 
 function OnlineMarketingServicesPage() {
   return (
     <>
-      <>
-        <Title>Media Outreach Services, Online Reputation Experts Chennai - Ayatiworks</Title>
-        <Meta name="description" content="Strengthen your online reputation with expert media outreach in Chennai! Build trust and visibility. Start now!" />
-      </>
+      <SEO
+        title="Media Outreach Services, Online Reputation Experts Chennai - Ayatiworks"
+        description="Strengthen your online reputation with expert media outreach in Chennai! Build trust and visibility. Start now!"
+        canonical="https://www.ayatiworks.com/digital-pr/online-reputation-media-outreach"
+      />
       <HeroSectionLayout />
 
       <HeroServicePage />

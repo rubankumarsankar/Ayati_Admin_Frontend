@@ -7,21 +7,18 @@ import Connection from "./Home/Connection";
 import DottedWorldMap from "./Home/MapLocation";
 import HomeGridSection from "./Home/HomeGrid";
 import OurWideRange from "./services/Instagram/OurWideRange";
-import { Title, Meta } from "react-head";
+
+import SEO from "../../components/SEO";
 
 function InstagramServicesPage() {
   return (
     <>
-      <>
-        <Title>
-          Unlock digital marketing insights with our expert blog! Tips and
-          trends to boost your brand’s growth. Dive in now!
-        </Title>
-        <Meta
-          name="description"
-          content="Grow your brand on Instagram with expert marketing in Chennai! Creative strategies to boost engagement and sales. Get started today!"
-        />
-      </>
+      <SEO
+        title="Unlock digital marketing insights with our expert blog! Tips and
+          trends to boost your brand’s growth. Dive in now!"
+        description="Grow your brand on Instagram with expert marketing in Chennai! Creative strategies to boost engagement and sales. Get started today!"
+        canonical="https://www.ayatiworks.com/digital-marketing-services/instagram-marketing"
+      />
       <HeroSectionLayout />
 
       <HeroServicePage />

@@ -7,21 +7,18 @@ import Connection from "./Home/Connection";
 import DottedWorldMap from "./Home/MapLocation";
 import HomeGridSection from "./Home/HomeGrid";
 import OurWideRange from "./services/Video/OurWideRange";
-import { Title, Meta } from "react-head";
+
+import SEO from "../../components/SEO";
 
 function VideoMarketingServicesPage() {
   return (
     <>
-      <>
-        <Title>
-          Video Marketing Company in Chennai, YouTube Advertising and Video
-          Promotion company - Ayatiworks
-        </Title>
-        <Meta
-          name="description"
-          content="Captivate audiences with expert video marketing in Chennai! Boost your brand with YouTube ads and promotions. Start creating today!"
-        />
-      </>
+      <SEO
+        title="Video Marketing Company in Chennai, YouTube Advertising and Video
+          Promotion company - Ayatiworks"
+        description="Captivate audiences with expert video marketing in Chennai! Boost your brand with YouTube ads and promotions. Start creating today!"
+        canonical="https://www.ayatiworks.com/digital-marketing-services/video-marketing"
+      />
       <HeroSectionLayout />
 
       <HeroServicePage />

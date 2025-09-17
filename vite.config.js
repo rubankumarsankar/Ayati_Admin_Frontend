@@ -8,6 +8,18 @@ import Sitemap from 'vite-plugin-sitemap';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+// List SPA routes you want in the sitemap
+const dynamicRoutes = [
+  '/',                       // home
+  '/about',
+  '/services',
+  '/contact',
+  // add more real routes from your app:
+  // '/content-as-a-strategy/multilingual-marketing',
+  // '/digital-pr',
+  // '/case-studies/jeep-india-independence-day-merchandise',
+];
+
 export default defineConfig({
   plugins: [
     react(),
@@ -15,17 +27,26 @@ export default defineConfig({
       // Your canonical site URL
       hostname: 'https://ayatiworks.com',
 
-      // Make sure this matches build.outDir and Vercel’s Output Directory
+      // Matches Vite build output
       outDir: 'dist',
 
-      // Generate robots.txt alongside sitemap.xml
-      generateRobotsTxt: false,
-      robots: [{ userAgent: '*',   disallow:'' }],
+      // Important for SPAs: include client-only routes
+      dynamicRoutes, // <- add your routes here
+
+      // Optional: exclude private areas
+      exclude: ['/admin', '/dashboard', '/private'],
+
+      // Emit robots.txt (you had this off)
+      generateRobotsTxt: true,
+      robots: [
+        { userAgent: '*', disallow: [''] } // allow everything (or set disallow paths)
+      ],
 
       // Optional niceties
       changefreq: 'weekly',
       priority: 0.7,
-      // enforce: 'post' // (uncomment if you use other plugins that emit late)
+      // readable: true, // pretty-print XML if you like
+      // enforce: 'post',
     }),
   ],
 
@@ -37,9 +58,9 @@ export default defineConfig({
 
   build: {
     outDir: 'dist',
-    emptyOutDir: true, // ensures folder exists cleanly before plugin writes
+    emptyOutDir: true,
   },
 
-  base: '/', // keep for SPA on Vercel
+  base: '/',
   server: { port: 3002 },
 });
