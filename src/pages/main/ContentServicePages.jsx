@@ -12,10 +12,21 @@ import BenefitsSlider from "./Content as a Service/BenefitsSlider";
 import CaaSBenefits from "./Content as a Service/CaaSBenefits";
 import CaaSFramework from "./Content as a Service/GrowthFramework";
 import WhyPartner from "./Content as a Service/WhyPartner";
+import { Title, Meta } from "react-head";
 
 function ContentServicePages() {
   return (
     <>
+      <>
+        <Title>
+          Content as a Service in Chennai, Scalable Content Solutions for
+          Businesses - Ayatiworks
+        </Title>
+        <Meta
+          name="description"
+          content="Transform your brand with scalable content solutions in Chennai! Engaging content to drive growth and ROI. Discover more now!"
+        />
+      </>
       <HeroSection />
       <DigitalMarketingSection />
       <WhyChennai />

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 /** Our Edge: CaaS , Content as a Strategy */
 export default function CaasEdgeSection({
@@ -30,34 +31,30 @@ export default function CaasEdgeSection({
     {
       src: "/assets/caas/spark-1.mp4",
       alt: "Campaign 4",
-      heeding:
-        "Lifestyle Change-na Life Change - 98% Diseases-ku Bye Bye! ",
+      heeding: "Lifestyle Change-na Life Change - 98% Diseases-ku Bye Bye! ",
       href: "https://www.instagram.com/p/DIG1nPHPVbg/",
       poster: "/assets/caas/royal-3-poster.jpg",
     },
-    
+
     {
       src: "/assets/caas/spark-2.mp4",
       alt: "Campaign 5",
-      heeding:
-        "Lifestyle Change-na Life Change - 98% Diseases-ku Bye Bye! ",
+      heeding: "Lifestyle Change-na Life Change - 98% Diseases-ku Bye Bye! ",
       href: "https://www.instagram.com/p/DIG1nPHPVbg/",
       poster: "/assets/caas/royal-3-poster.jpg",
     },
-    
+
     {
       src: "/assets/caas/spark-3.mp4",
       alt: "Campaign 6",
-      heeding:
-        "Lifestyle Change-na Life Change - 98% Diseases-ku Bye Bye! ",
+      heeding: "Lifestyle Change-na Life Change - 98% Diseases-ku Bye Bye! ",
       href: "https://www.instagram.com/p/DJoxYUkpVx6/",
       poster: "/assets/caas/royal-3-poster.jpg",
     },
     {
       src: "/assets/caas/herbale.mp4",
       alt: "Campaign 7",
-      heeding:
-        "Traffic Smog-ku Bye Bye - Herbale’s Pocket Hero On-the-Go!  ",
+      heeding: "Traffic Smog-ku Bye Bye - Herbale’s Pocket Hero On-the-Go!  ",
       href: "https://www.youtube.com/watch?v=riCCr3lDm3s",
       poster: "/assets/caas/royal-3-poster.jpg",
     },
@@ -72,29 +69,24 @@ export default function CaasEdgeSection({
     {
       src: "/assets/caas/nithyam-1.mp4",
       alt: "Campaign 9",
-      heeding:
-        "Onam-azing Flavors, Chennai Style - சுவை that speaks Kerala!  ",
+      heeding: "Onam-azing Flavors, Chennai Style - சுவை that speaks Kerala!  ",
       href: "https://www.instagram.com/p/C_dGRtXtq4I/",
       poster: "/assets/caas/royal-3-poster.jpg",
     },
     {
       src: "/assets/caas/nithyam-2.mp4",
       alt: "Campaign 10",
-      heeding:
-        "Onam-azing Flavors, Chennai Style - சுவை that speaks Kerala!  ",
+      heeding: "Onam-azing Flavors, Chennai Style - சுவை that speaks Kerala!  ",
       href: "https://www.instagram.com/p/C_ZzSDrslgb/",
       poster: "/assets/caas/royal-3-poster.jpg",
     },
     {
       src: "/assets/caas/nithyam-3.mp4",
       alt: "Campaign 11",
-      heeding:
-        "Onam-azing Flavors, Chennai Style - சுவை that speaks Kerala! ",
+      heeding: "Onam-azing Flavors, Chennai Style - சுவை that speaks Kerala! ",
       href: "https://www.instagram.com/p/C_5je4IyKYC/",
       poster: "/assets/caas/royal-3-poster.jpg",
     },
-    
-    
   ],
   autoPlay = true,
   intervalMs = 5000,
@@ -134,12 +126,11 @@ export default function CaasEdgeSection({
       el?.removeEventListener("mouseleave", resume);
     };
   }, [autoPlay, prefersReducedMotion, intervalMs, n]);
-
+  const navigate = useNavigate();
   const isVideo = (src = "") => /\.(mp4|webm|ogg)$/i.test(src);
 
   return (
     <section className="relative bg-white section-container">
-      
       <div className="mx-auto px-4 sm:px-6 lg:px-8 py-14">
         {/* HEADING (unchanged) */}
         <motion.h2 className="section-title text-left" {...fadeUp(0)}>
@@ -192,7 +183,9 @@ export default function CaasEdgeSection({
               start-up lanes, from Bengaluru’s cosmopolitan buzz to Hyderabad’s
               cultural crossroads, we know the pulse, the language, and the
               little nuances that make your audience feel,{" "}
-              <span className="text-primary font-primary italic font-medium">“This is ours.”</span>
+              <span className="text-primary font-primary italic font-medium">
+                “This is ours.”
+              </span>
             </motion.p>
             <motion.p
               {...fadeUp(0.15)}
@@ -288,12 +281,10 @@ export default function CaasEdgeSection({
                           )}
                         </div>
 
-                     
-
                         {/* caption under media (kept) */}
                         {title && (
                           <div className="px-4 py-2">
-                            <p className="text-lg font-medium text-secondary font-primary  leading-snug line-clamp-2">
+                            <p className="text-lg font-medium mb-5 text-secondary font-primary  leading-snug line-clamp-2">
                               {title}
                             </p>
                           </div>
@@ -364,6 +355,23 @@ export default function CaasEdgeSection({
                 </div>
               )}
             </motion.div>
+            <div className="flex items-center justify-center w-full mt-4">
+              <motion.button
+                className="relative bg-secondary/90 hover:bg-secondary text-white font-primary text-lg md:text-xl font-medium py-3 px-10 rounded-full shadow-md hover:shadow-xl transition-all duration-300"
+                initial={{ scale: 0.9, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                whileHover={{
+                  scale: 1.08,
+                  boxShadow: "0px 12px 25px rgba(0,0,0,0.15)",
+                }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
+                viewport={{ once: true }}
+                onClick={() => navigate("/content-as-a-service/multilingual-marketing")}
+              >
+                For Multilingual Marketing Get In Touch
+              </motion.button>
+            </div>
 
             {/* <p className="mt-2 text-xs text-gray-500">Tap image/video to open link.</p> */}
           </div>

@@ -8,6 +8,7 @@ import LifeAtAyatiworks from "./Careers/LifeAtAyatiworks";
 import RolesMarquee from "./Careers/RolesMarquee";
 import CareersLastSection from "./Careers/CareersLastSection";
 import PartnersInClimb from "./Home/PartnersInClimb";
+import { Title, Meta } from "react-head";
 
 const steps = [
   { title: "Impact Every Day", subtitle: "" },
@@ -19,6 +20,13 @@ const steps = [
 function CareersPage() {
   return (
     <>
+      <>
+        <Title>Careers - Ayatiworks</Title>
+        <Meta
+          name="description"
+          content="Join a dynamic team shaping the future of digital marketing in Chennai! Exciting career opportunities await. Kickstart your journey today!"
+        />
+      </>
       <HeroSection />
       <CareerSectionPage />
       <JoinUsTimeline steps={steps} />
@@ -27,7 +35,7 @@ function CareersPage() {
       <PartnersInClimb />
 
       <RolesMarquee />
-      <CareersLastSection  />
+      <CareersLastSection />
       <Connection />
     </>
   );

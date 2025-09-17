@@ -5,10 +5,18 @@ import SlowMarquee from "./Blog/MarqueeCards";
 import CaseStudyAndWrite from "./Blog/CaseStudyAndWrite";
 import BlogSectionPage from "./Blog/BlogSectionPage";
 import Connection from "./Blog/Connection";
+import { Title, Meta } from "react-head";
 
 function BlogPage() {
   return (
     <>
+      <>
+        <Title>Ayatiworks - Blog</Title>
+        <Meta
+          name="description"
+          content="Unlock digital marketing insights with our expert blog! Tips and trends to boost your brand’s growth. Dive in now!"
+        />
+      </>
       <HeroSection />
       <BlogSectionPage />
       <SlowMarquee

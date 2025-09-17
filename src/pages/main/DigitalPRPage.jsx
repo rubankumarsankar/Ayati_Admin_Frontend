@@ -11,10 +11,21 @@ import GrowthFramework from "./Digital PR/GrowthFramework";
 import MarketingServices from "./Digital PR/MarketingServices";
 import BenefitsSlider from "./Digital PR/BenefitsSlider";
 import WhyPartner from "./Digital PR/WhyPartner";
+import { Title, Meta } from "react-head";
 
 function DigitalPRPage() {
   return (
     <>
+      <>
+        <Title>
+          Digital PR experts in Chennai, Reputation & Media Outreach -
+          Ayatiworks
+        </Title>
+        <Meta
+          name="description"
+          content="Elevate your brand with expert digital PR in Chennai! Boost reputation and media outreach for maximum impact. Get started now!"
+        />
+      </>
       <HeroSection />
       <DigitalMarketingSection />
       <WhyChennai />

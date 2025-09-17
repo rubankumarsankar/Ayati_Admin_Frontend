@@ -10,10 +10,12 @@ import { Title, Meta } from "react-head";
 function AboutUs() {
   return (
     <>
-      <Title>About Us | Ayatiworks</Title>
+      <Title>
+        About Ayatiworks - Experts in Digital Marketing & Branding Chennai
+      </Title>
       <Meta
         name="description"
-        content="Learn about Ayatiworks, our mission, vision, and expertise in digital marketing and video solutions."
+        content="Discover top digital marketing & branding experts in Chennai. Unleash your brand’s potential with innovative strategies tailored for success!"
       />
       <HeroSection />
       <AboutSection />

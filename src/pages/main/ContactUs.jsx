@@ -10,10 +10,18 @@ import Client from "./ContactPage/Client";
 import Connection from "./Home/Connection";
 import PartnersInClimb from "./Home/PartnersInClimb";
 import ContactInnerPage from "./ContactPage/ContactInnerPage";
+import { Title, Meta } from "react-head";
 
 function ContactUs() {
   return (
     <>
+      <>
+        <Title>Contact Us</Title>
+        <Meta
+          name="description"
+          content="Ready to grow your brand? Connect with Chennai’s top digital marketing experts today for tailored solutions that drive results! Reach out now!"
+        />
+      </>
       <HeroSection />
       <ContactInnerPage />
       <Form />
