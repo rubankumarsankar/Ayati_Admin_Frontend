@@ -149,10 +149,10 @@ const SECTIONS = [
           Clients and users may request access to, correction of, or updates to
           their personal information by contacting us at{" "}
           <a
-            href="mailto:lovetohear@ayatiworks.com"
+            href="mailto:info@ayatiworks.com"
             className="text-primary underline font-medium font-primary text-xl underline-offset-4 hover:text-secondary"
           >
-            lovetohear@ayatiworks.com
+            info@ayatiworks.com
           </a>
           . We will respond within a reasonable timeframe in line with Indian
           laws.
@@ -184,10 +184,10 @@ const SECTIONS = [
         <address className="not-italic">
           <div>Ayatiworks Technologies LLP</div>
           <a
-            href="mailto:lovetohear@ayatiworks.com"
+            href="mailto:info@ayatiworks.com"
             className="text-primary font-medium font-primary text-xl underline underline-offset-4 hover:text-secondary"
           >
-            lovetohear@ayatiworks.com
+            info@ayatiworks.com
           </a>
         </address>
       </>

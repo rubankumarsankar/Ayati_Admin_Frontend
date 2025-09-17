@@ -10,7 +10,7 @@ const fade = {
 };
 
 export default function CareersLastSection({
-  email = "lovetohear@ayatiworks.com",
+  email = "info@ayatiworks.com",
   applyHref = "/careers/form", // ✅ route for your form page
 }) {
   return (

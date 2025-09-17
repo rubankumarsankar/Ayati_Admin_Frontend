@@ -194,10 +194,10 @@ const sectionsData = [
         <address className="not-italic">
           <div>Ayatiworks Technologies LLP</div>
           <a
-            href="mailto:lovetohear@ayatiworks.com"
+            href="mailto:info@ayatiworks.com"
             className="text-primary hover:text-secondary font-primary text-xl underline underline-offset-4"
           >
-            lovetohear@ayatiworks.com
+            info@ayatiworks.com
           </a>
         </address>
       </>

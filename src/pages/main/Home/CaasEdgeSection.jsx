@@ -369,7 +369,7 @@ export default function CaasEdgeSection({
                 viewport={{ once: true }}
                 onClick={() => navigate("/content-as-a-service/multilingual-marketing")}
               >
-                For Multilingual Marketing Get In Touch
+                Get a FREE CAAS Plan Today!
               </motion.button>
             </div>
 

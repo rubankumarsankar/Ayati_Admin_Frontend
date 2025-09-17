@@ -95,7 +95,7 @@ export default function HowWeDoIt() {
             Customized Social Media <br />
             and Web Interactions
           </h3>
-          <p className="text-xl/9 font-secondary leading-relaxed flex-1">
+          <p className="text-lg/9 font-secondary leading-relaxed flex-1">
             Our squad of social media strategists is here to whip up captivating
             content that speaks to your audience's heart! Need a campaign? We
             can take it from spark to spotlight in less than 24 hours , faster
@@ -118,7 +118,7 @@ export default function HowWeDoIt() {
           <h3 className="text-3xl font-primary font-medium mb-10">
             Using Influencer Marketing to <br /> Build Credibility
           </h3>
-          <p className="text-xl/9 font-secondary leading-relaxed flex-1">
+          <p className="text-lg/9 font-secondary leading-relaxed flex-1">
             Did you know a whopping 88% of consumers trust online reviews? Our
             Influencer tool connects you with trendsetting mavens across various
             industries, helping you build trust and reputation faster than you
