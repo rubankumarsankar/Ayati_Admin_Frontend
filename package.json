@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@dr.pogodin/react-helmet": "^3.0.4",
+    "@emailjs/browser": "^4.4.1",
     "@headlessui/react": "^2.2.4",
     "@heroicons/react": "^2.2.0",
     "@material-tailwind/react": "^2.1.10",
@@ -34,7 +35,7 @@
     "react-intersection-observer": "^9.16.0",
     "react-router-dom": "^7.6.3",
     "react-router-hash-link": "^2.4.3",
-    "sweetalert2": "^11.22.2",
+    "sweetalert2": "^11.23.0",
     "swiper": "^11.2.10",
     "topojson-client": "^3.1.0",
     "vite-plugin-sitemap": "^0.8.2"
