@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import tvImage from "/assets/tv-dm.png"; // ✅ Replace with actual path
-import doodleIcon from "/assets/doodle.png"; // ✅ Replace with actual path
 
 export default function DigitalMarketingSection() {
   return (

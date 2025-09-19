@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import doodleIcon from "/assets/doodle.png"; // ✅ replace with your doodle path
 
 export default function ContactInnerPage() {
   // Animation Variants
